@@ -1,5 +1,6 @@
 import { apiEndpoint } from '@/types/apiEndpoint';
 import { listMovies } from '@/types/listMovies';
+import { movieDetail } from '@/types/movieDetail';
 
 const API_URL = 'https://yts.mx/api/v2/';
 
@@ -23,7 +24,7 @@ const fetchAPI = async (endPoint: apiEndpoint, params = {}) => {
 export const listMoviesApi = (params = {}): Promise<listMovies> => {
   return fetchAPI('list_movies.json', params);
 };
-export const movieDetailsApi = (params = {}): Promise<any> => {
+export const movieDetailsApi = (params = {}): Promise<movieDetail> => {
   return fetchAPI('movie_details.json', params);
 };
 export const movieParentalGuidesApi = (params = {}): Promise<any> => {
