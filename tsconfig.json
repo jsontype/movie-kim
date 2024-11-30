@@ -18,8 +18,7 @@
     "paths": {
       "@/*": ["./src/*"]
     },
-    "typeRoots": ["node_modules/@types"], // "typings" 제거
-    "types": ["jquery"], // 'datatables.net' 제거
+    "types": ["jquery"],
     "plugins": [
       {
         "name": "next"
@@ -30,12 +29,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "src/pages/form/form-validation.tsx",
-    "src/pages/special-pages/billing.tsx",
-    "src/components/DataTable.tsx",
-    "src/pages/design-system/typography.tsx",
-    "src/components/custom.d.ts",
-    ".next/types/**/*.ts"
+    "src/**/*"
   ],
   "exclude": ["node_modules"]
 }
