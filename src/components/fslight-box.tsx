@@ -1,12 +1,12 @@
 import React, { memo, Fragment, useState } from 'react'
 
-// // react-bootstrap
+// React-bootstrap
 import { Col } from 'react-bootstrap'
 
 // Next-Link
 import Link from 'next/link'
 
-//react fslight-box
+// React fslight-box
 import FsLightbox from 'fslightbox-react'
 
 interface Props {
