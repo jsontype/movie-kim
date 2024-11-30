@@ -10,16 +10,17 @@ import { geners } from '../../StaticData/data'
 const GenreSlider = memo(() => {
   return (
     <Fragment>
-        <SectionSlider className="movie-geners-block" title='Movie Geners' list={geners} slidesPerView={6} link="/genres/all-genre">
-        {(data) => (
-          <GenersCard
-          slug={data.slug}
-          title={data.title}
-          image={data.thumbnail}
-          type={data.type}
-        />
+      <SectionSlider
+        className="movie-geners-block"
+        title="Movie Geners"
+        list={geners}
+        slidesPerView={6}
+        link="/genres/all-genre"
+      >
+        {data => (
+          <GenersCard slug={data.slug} title={data.title} image={data.thumbnail} type={data.type} />
         )}
-        </SectionSlider>
+      </SectionSlider>
     </Fragment>
   )
 })

@@ -2,11 +2,18 @@
   "name": "streamit-nextjs",
   "version": "5.2.1",
   "private": true,
+  "type": "module",
   "scripts": {
+    "prepare": "husky install",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "format": "prettier --check --ignore-path .gitignore .",
+    "format:fix": "prettier --write --ignore-path .gitignore .",
+    "eslint": "eslint ./src",
+    "eslint:fix": "eslint --fix ./src",
+    "lint:check": "yarn format && yarn eslint",
+    "lint": "yarn format:fix && yarn eslint:fix && yarn format && yarn eslint"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",
@@ -16,11 +23,9 @@
     "choices.js": "^10.2.0",
     "fslightbox-react": "^1.7.6",
     "gsap": "^3.12.2",
-    "i": "^0.3.7",
     "lodash": "^4.17.21",
     "next": "^14.0.3",
     "next-redux-wrapper": "^8.1.0",
-    "npm": "^10.2.4",
     "react": "^18.2.0",
     "react-bootstrap": "^2.9.1",
     "react-countup": "^6.5.0",
@@ -39,9 +44,24 @@
     "@types/node": "^20",
     "@types/react": "^18.3.12",
     "@types/react-dom": "18.0.10",
-    "eslint": "^8",
+    "eslint": "^9.16.0",
     "eslint-config-next": "14.0.3",
+    "husky": "^9.1.7",
+    "prettier": "^3.4.1",
     "sass": "~1.64.2",
     "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=18.17.0"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "printWidth": 100,
+    "arrowParens": "avoid",
+    "bracketSpacing": true,
+    "jsxBracketSameLine": true,
+    "trailingComma": "all"
   }
 }

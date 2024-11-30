@@ -38,8 +38,8 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 ## Router Link
-- React | Next
 
+- React | Next
 
 ---
 
@@ -78,16 +78,12 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - /track-order | /merchandise/track-order
 - /whishlist | /merchandise/wishlist
 - /account | /merchandise/account
-- /   | merchandise/account/order     
-- /   | merchandise/account/logout    
-- /   | merchandise/account/download 
-- /   | merchandise/account/detail
-- /   | merchandise/account/address    
-- /   | merchandise/account/partials/AccountLayout 
-
-
-
-
+- / | merchandise/account/order
+- / | merchandise/account/logout
+- / | merchandise/account/download
+- / | merchandise/account/detail
+- / | merchandise/account/address
+- / | merchandise/account/partials/AccountLayout
 
 ---
 
@@ -95,7 +91,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ---
 
-- /watchlist-detail  | /watchlist-detail
+- /watchlist-detail | /watchlist-detail
 
 ---
 
@@ -107,7 +103,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - /view-all | /view-all
 
 ---
-
 
 - /cast | /cast
 - /cast-view-all | /cast/all-personality
@@ -149,7 +144,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - /blog-single/:type | /blog/single/auote
 - /blog-single/:type | /blog/single/gallery
 
-
 ---
 
 - /login | /auth/login
@@ -157,8 +151,3 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - /lost-password | /auth/lost-password
 
 ---
-
-
-
-
-

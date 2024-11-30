@@ -1,15 +1,15 @@
-import { Fragment, memo, useState } from "react";
+import { Fragment, memo, useState } from 'react'
 
 //components
-import SectionSlider from "../slider/SectionSlider";
-import CardStyle from "../cards/CardStyle";
+import SectionSlider from '../slider/SectionSlider'
+import CardStyle from '../cards/CardStyle'
 
 //static data
-import { topPics } from "../../StaticData/data";
+import { topPics } from '../../StaticData/data'
 
 const TopPicsForYou = memo(() => {
-  const [title] = useState("Top Pics For You");
-  const [topTen] = useState(topPics);
+  const [title] = useState('Top Pics For You')
+  const [topTen] = useState(topPics)
 
   return (
     <Fragment>
@@ -19,7 +19,7 @@ const TopPicsForYou = memo(() => {
         className="recommended-block streamit-block"
         slidesPerView={6}
       >
-        {(data) => (
+        {data => (
           <CardStyle
             image={data.image}
             title={data.title}
@@ -30,8 +30,8 @@ const TopPicsForYou = memo(() => {
         )}
       </SectionSlider>
     </Fragment>
-  );
+  )
 })
 
-TopPicsForYou.displayName = 'TopPicsForYou';
-export default TopPicsForYou;
+TopPicsForYou.displayName = 'TopPicsForYou'
+export default TopPicsForYou

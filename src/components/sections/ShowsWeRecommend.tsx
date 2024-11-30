@@ -1,14 +1,14 @@
-import { useState, Fragment, memo } from "react";
+import { useState, Fragment, memo } from 'react'
 
 //components
-import SectionSlider from "../slider/SectionSlider";
-import CardStyle from "../cards/CardStyle";
+import SectionSlider from '../slider/SectionSlider'
+import CardStyle from '../cards/CardStyle'
 
 //static data
-import { recommendedforYou } from "../../StaticData/data";
+import { recommendedforYou } from '../../StaticData/data'
 
 const ShowsWeRecommend = memo(() => {
-  const [title] = useState("Shows We Recommend");
+  const [title] = useState('Shows We Recommend')
 
   return (
     <Fragment>
@@ -17,7 +17,7 @@ const ShowsWeRecommend = memo(() => {
         list={recommendedforYou}
         className="recommended-block streamit-block"
       >
-        {(data) => (
+        {data => (
           <CardStyle
             image={data.image}
             title={data.title}
@@ -28,8 +28,8 @@ const ShowsWeRecommend = memo(() => {
         )}
       </SectionSlider>
     </Fragment>
-  );
+  )
 })
 
-ShowsWeRecommend.displayName = 'ShowsWeRecommend';
-export default ShowsWeRecommend;
+ShowsWeRecommend.displayName = 'ShowsWeRecommend'
+export default ShowsWeRecommend
