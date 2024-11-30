@@ -3,7 +3,7 @@ import React, { memo, Fragment, useState } from 'react'
 // React-bootstrap
 import { Col } from 'react-bootstrap'
 
-// Next-Link
+// Next Link
 import Link from 'next/link'
 
 // React fslight-box
