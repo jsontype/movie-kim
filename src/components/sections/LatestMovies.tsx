@@ -1,14 +1,14 @@
-import { Fragment, useState } from "react";
+import { Fragment, useState } from 'react'
 
 //components
-import SectionSlider from "../slider/SectionSlider";
-import CardStyle from "@/components/cards/CardStyle";
+import SectionSlider from '../slider/SectionSlider'
+import CardStyle from '@/components/cards/CardStyle'
 
 //static data
-import { latestMovie } from "@/StaticData/data";
+import { latestMovie } from '@/StaticData/data'
 
 const LatestMovies = () => {
-  const [title] = useState("Latest Movies");
+  const [title] = useState('Latest Movies')
 
   return (
     <Fragment>
@@ -18,7 +18,7 @@ const LatestMovies = () => {
         className="latest-block streamit-block"
         slidesPerView={6}
       >
-        {(data) => (
+        {data => (
           <CardStyle
             image={data.image}
             title={data.title}
@@ -29,8 +29,8 @@ const LatestMovies = () => {
         )}
       </SectionSlider>
     </Fragment>
-  );
-};
+  )
+}
 
-LatestMovies.DisplayName = LatestMovies;
-export default LatestMovies;
+LatestMovies.DisplayName = LatestMovies
+export default LatestMovies
