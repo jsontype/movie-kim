@@ -1,19 +1,19 @@
-import React, { Fragment, memo } from "react";
+import React, { Fragment, memo } from 'react'
 
 //react-router-dom
-import Link from "next/link";
+import Link from 'next/link'
 
 //static data
-import { blogRecent } from "../../../StaticData/blogs";
+import { blogRecent } from '../../../StaticData/blogs'
 
 interface post {
-  thumbnail: any;
-  title: string;
-  blogDate: string;
+  thumbnail: any
+  title: string
+  blogDate: string
 }
 
 const RecentPost = memo(() => {
-  const rescentPost: post[] = blogRecent as post[];
+  const rescentPost: post[] = blogRecent as post[]
 
   return (
     <Fragment>
@@ -40,23 +40,20 @@ const RecentPost = memo(() => {
                   <ul className="list-inline mb-2">
                     <li className="list-inline-item border-0 mb-0 pb-0">
                       <Link className="blog-data" href="#">
-                        <i
-                          className="fa fa-calendar-alt me-1"
-                          aria-hidden="true"
-                        ></i>
+                        <i className="fa fa-calendar-alt me-1" aria-hidden="true"></i>
                         {item.blogDate}
                       </Link>
                     </li>
                   </ul>
                 </div>
               </li>
-            );
+            )
           })}
         </ul>
       </div>
     </Fragment>
-  );
-});
+  )
+})
 
-RecentPost.displayName = "RecentPost";
-export default RecentPost;
+RecentPost.displayName = 'RecentPost'
+export default RecentPost

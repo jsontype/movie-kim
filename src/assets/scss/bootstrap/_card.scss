@@ -34,8 +34,7 @@
   word-wrap: break-word;
   background-color: var(--#{$prefix}card-bg);
   background-clip: border-box;
-  border: var(--#{$prefix}card-border-width) solid
-    var(--#{$prefix}card-border-color);
+  border: var(--#{$prefix}card-border-width) solid var(--#{$prefix}card-border-color);
   @include border-radius(var(--#{$prefix}card-border-radius));
   @include box-shadow(var(--#{$prefix}card-box-shadow));
 
@@ -107,34 +106,28 @@
 //
 
 .card-header {
-  padding: var(--#{$prefix}card-cap-padding-y)
-    var(--#{$prefix}card-cap-padding-x);
+  padding: var(--#{$prefix}card-cap-padding-y) var(--#{$prefix}card-cap-padding-x);
   margin-bottom: 0; // Removes the default margin-bottom of <hN>
   color: var(--#{$prefix}card-cap-color);
   background-color: var(--#{$prefix}card-cap-bg);
-  border-bottom: var(--#{$prefix}card-border-width) solid
-    var(--#{$prefix}card-border-color);
+  border-bottom: var(--#{$prefix}card-border-width) solid var(--#{$prefix}card-border-color);
 
   &:first-child {
     @include border-radius(
-      var(--#{$prefix}card-inner-border-radius)
-        var(--#{$prefix}card-inner-border-radius) 0 0
+      var(--#{$prefix}card-inner-border-radius) var(--#{$prefix}card-inner-border-radius) 0 0
     );
   }
 }
 
 .card-footer {
-  padding: var(--#{$prefix}card-cap-padding-y)
-    var(--#{$prefix}card-cap-padding-x);
+  padding: var(--#{$prefix}card-cap-padding-y) var(--#{$prefix}card-cap-padding-x);
   color: var(--#{$prefix}card-cap-color);
   background-color: var(--#{$prefix}card-cap-bg);
-  border-top: var(--#{$prefix}card-border-width) solid
-    var(--#{$prefix}card-border-color);
+  border-top: var(--#{$prefix}card-border-width) solid var(--#{$prefix}card-border-color);
 
   &:last-child {
     @include border-radius(
-      0 0 var(--#{$prefix}card-inner-border-radius)
-        var(--#{$prefix}card-inner-border-radius)
+      0 0 var(--#{$prefix}card-inner-border-radius) var(--#{$prefix}card-inner-border-radius)
     );
   }
 }

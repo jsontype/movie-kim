@@ -7,18 +7,14 @@
     flex-direction: column;
     justify-content: flex-end;
     padding: 1.25em;
-    background: linear-gradient(
-      24.12deg,
-      var(--bs-black) 0.77%,
-      transparent 96.59%
-    );
+    background: linear-gradient(24.12deg, var(--bs-black) 0.77%, transparent 96.59%);
   }
 }
 
 .cast-images {
   &::before {
     position: absolute;
-    content: "";
+    content: '';
     top: auto;
     bottom: 0;
     left: 0;

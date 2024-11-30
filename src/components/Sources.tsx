@@ -1,7 +1,7 @@
-import React, { Fragment, memo } from "react";
+import React, { Fragment, memo } from 'react'
 
 //react-router-dom
-import Link from "next/link";
+import Link from 'next/link'
 
 const Sources = memo(() => {
   return (
@@ -21,10 +21,7 @@ const Sources = memo(() => {
             <tr>
               <td>
                 <div className="iq-button">
-                  <Link
-                    href="/movies/detail"
-                    className="btn text-uppercase position-relative"
-                  >
+                  <Link href="/movies/detail" className="btn text-uppercase position-relative">
                     <span className="button-text"> Play Now</span>
                     <i className="fa-solid fa-play"></i>
                   </Link>
@@ -38,10 +35,7 @@ const Sources = memo(() => {
             <tr>
               <td>
                 <div className="iq-button">
-                  <Link
-                    href="/movies/detail"
-                    className="btn text-uppercase position-relative"
-                  >
+                  <Link href="/movies/detail" className="btn text-uppercase position-relative">
                     <span className="button-text"> Play Now</span>
                     <i className="fa-solid fa-play"></i>
                   </Link>
@@ -55,10 +49,7 @@ const Sources = memo(() => {
             <tr>
               <td>
                 <div className="iq-button">
-                  <Link
-                    href="/movies/detail"
-                    className="btn text-uppercase position-relative"
-                  >
+                  <Link href="/movies/detail" className="btn text-uppercase position-relative">
                     <span className="button-text"> Play Now</span>
                     <i className="fa-solid fa-play"></i>
                   </Link>
@@ -73,7 +64,7 @@ const Sources = memo(() => {
         </table>
       </div>
     </Fragment>
-  );
-});
+  )
+})
 
-export default Sources;
+export default Sources

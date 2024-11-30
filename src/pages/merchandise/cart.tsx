@@ -1,56 +1,56 @@
-import React from "react";
+import React from 'react'
 
 // Custom Hook
-import { useBreadcrumb } from "@/utilities/usePage";
+import { useBreadcrumb } from '@/utilities/usePage'
 
 // Next-Link
-import Link from "next/link";
+import Link from 'next/link'
 
 //react bootstrap
-import { Container, Row, Col, Table } from "react-bootstrap";
+import { Container, Row, Col, Table } from 'react-bootstrap'
 
 // Next-Image
-import Image from "next/image";
+import Image from 'next/image'
 
 // img
-import img1 from "../../../public/assets/images/shop/product/08.webp";
-import img2 from "../../../public/assets/images/shop/product/09.webp";
-import img3 from "../../../public/assets/images/shop/product/10.webp";
+import img1 from '../../../public/assets/images/shop/product/08.webp'
+import img2 from '../../../public/assets/images/shop/product/09.webp'
+import img3 from '../../../public/assets/images/shop/product/10.webp'
 
 // Components
-import Counter from "@/components/counter";
-import CustomButton from "@/components/CustomButton";
+import Counter from '@/components/counter'
+import CustomButton from '@/components/CustomButton'
 
 //plugins
-import Swal from "sweetalert2";
-import CastPage from "../cast";
+import Swal from 'sweetalert2'
+import CastPage from '../cast'
 
 const CartPage = () => {
-  useBreadcrumb("Cart");
+  useBreadcrumb('Cart')
 
   const swal = () => {
     Swal.fire({
-      title: "Are you sure?",
-      text: "You want to delete this item",
-      icon: "error",
-      background: "#141314",
-      color: "#ffffff",
+      title: 'Are you sure?',
+      text: 'You want to delete this item',
+      icon: 'error',
+      background: '#141314',
+      color: '#ffffff',
       showCancelButton: true,
       backdrop: `rgba(60,60,60,0.8)`,
-      confirmButtonText: "Yes, delete it!",
-      confirmButtonColor: "#c03221",
-    }).then((result) => {
+      confirmButtonText: 'Yes, delete it!',
+      confirmButtonColor: '#c03221',
+    }).then(result => {
       if (result.isConfirmed) {
         Swal.fire({
-          title: "Deleted!",
-          text: "Your item has been deleted.",
-          icon: "success",
-          background: "#141314",
-          color: "#ffffff",
-        });
+          title: 'Deleted!',
+          text: 'Your item has been deleted.',
+          icon: 'success',
+          background: '#141314',
+          color: '#ffffff',
+        })
       }
-    });
-  };
+    })
+  }
   return (
     <>
       <div className="cart-page  section-padding">
@@ -59,18 +59,13 @@ const CartPage = () => {
             <ul className="cart-page-items d-flex justify-content-center list-inline align-items-center gap-3 gap-md-5 flex-wrap">
               <li className="cart-page-item active">
                 <span className="cart-pre-heading badge cart-pre-number bg-primary border-radius rounded-circle me-1">
-                  {" "}
+                  {' '}
                   1
                 </span>
                 <span className="cart-page-link ">Shopping Cart </span>
               </li>
               <li>
-                <svg
-                  width="25"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+                <svg width="25" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     fillRule="evenodd"
                     clipRule="evenodd"
@@ -90,18 +85,11 @@ const CartPage = () => {
                 </svg>
               </li>
               <li>
-                <span className=" cart-pre-number border-radius rounded-circle me-1">
-                  2{" "}
-                </span>
+                <span className=" cart-pre-number border-radius rounded-circle me-1">2 </span>
                 <span className="cart-page-link ">Checkout </span>
               </li>
               <li>
-                <svg
-                  width="25"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+                <svg width="25" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     fillRule="evenodd"
                     clipRule="evenodd"
@@ -121,10 +109,7 @@ const CartPage = () => {
                 </svg>
               </li>
               <li>
-                <span className=" cart-pre-number border-radius rounded-circle me-1">
-                  {" "}
-                  3{" "}
-                </span>
+                <span className=" cart-pre-number border-radius rounded-circle me-1"> 3 </span>
                 <span className="cart-page-link ">Order Summary </span>
               </li>
             </ul>
@@ -214,9 +199,7 @@ const CartPage = () => {
                         <Link className="d-block mb-2" href="#">
                           <Image className="avatar-80" src={img3} alt="" />
                         </Link>
-                        <span className="text-white">
-                          Hand Sanitizer Bottle
-                        </span>
+                        <span className="text-white">Hand Sanitizer Bottle</span>
                       </div>
                     </td>
                     <td>
@@ -251,19 +234,11 @@ const CartPage = () => {
                     placeholder="Coupon code"
                   />
                   <div className=" d-inline-block">
-                    <CustomButton
-                      buttonTitle="Apply Coupon"
-                      link="#"
-                      linkButton="false"
-                    />
+                    <CustomButton buttonTitle="Apply Coupon" link="#" linkButton="false" />
                   </div>
                 </div>
                 <div className="button-primary">
-                  <CustomButton
-                    buttonTitle="Update Cart"
-                    link="#"
-                    linkButton="false"
-                  />
+                  <CustomButton buttonTitle="Update Cart" link="#" linkButton="false" />
                 </div>
               </div>
             </Col>
@@ -305,8 +280,8 @@ const CartPage = () => {
         </Container>
       </div>
     </>
-  );
-};
+  )
+}
 
-CartPage.layout = "Merchandise";
-export default CartPage;
+CartPage.layout = 'Merchandise'
+export default CartPage

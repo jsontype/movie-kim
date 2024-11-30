@@ -1,42 +1,42 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react'
 
 //router
-import Link from "next/link";
+import Link from 'next/link'
 
 //breadcrumb
-import BreadCrumbWidget from "@/components/BreadcrumbWidget";
+import BreadCrumbWidget from '@/components/BreadcrumbWidget'
 
 // header
-import HeaderDefault from "@/components/merchandise/partials/HeaderDefault";
+import HeaderDefault from '@/components/merchandise/partials/HeaderDefault'
 
 // footer
-import FooterDefault from "@/components/merchandise/partials/FooterDefault";
+import FooterDefault from '@/components/merchandise/partials/FooterDefault'
 
 //seetingoffCanvas
-import SettingOffCanvas from "../components/setting/SettingOffCanvas";
+import SettingOffCanvas from '../components/setting/SettingOffCanvas'
 
 const Merchandise = ({ children }: any) => {
-  const [animationClass, setAnimationClass] = useState("animate__fadeIn");
+  const [animationClass, setAnimationClass] = useState('animate__fadeIn')
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
   const handleScroll = () => {
     if (document.documentElement.scrollTop > 250) {
-      setAnimationClass("animate__fadeIn");
+      setAnimationClass('animate__fadeIn')
     } else {
-      setAnimationClass("animate__fadeOut");
+      setAnimationClass('animate__fadeOut')
     }
-  };
+  }
 
   useEffect(() => {
-    handleScroll();
-    window.addEventListener("scroll", handleScroll);
+    handleScroll()
+    window.addEventListener('scroll', handleScroll)
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
   return (
     <>
       <main className="main-content">
@@ -48,7 +48,7 @@ const Merchandise = ({ children }: any) => {
       <FooterDefault />
       <div
         id="back-to-top"
-        style={{ display: "none" }}
+        style={{ display: 'none' }}
         className={`animate__animated ${animationClass}`}
         onClick={scrollToTop}
       >
@@ -62,7 +62,7 @@ const Merchandise = ({ children }: any) => {
       </div>
       <SettingOffCanvas />
     </>
-  );
-};
+  )
+}
 
-export default Merchandise;
+export default Merchandise

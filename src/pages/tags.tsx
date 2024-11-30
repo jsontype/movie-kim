@@ -1,22 +1,22 @@
-import React, { Fragment, memo } from "react";
+import React, { Fragment, memo } from 'react'
 
 // react-bootstrap
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from 'react-bootstrap'
 
 //router
-import Link from "next/link";
+import Link from 'next/link'
 
 // components
-import TagsCard from "../components/cards/TagsCard";
+import TagsCard from '../components/cards/TagsCard'
 
 // data
-import { movieTags, tvShowsTags, videoTags } from "../StaticData/data";
+import { movieTags, tvShowsTags, videoTags } from '../StaticData/data'
 
 //custom hook
-import { useBreadcrumb } from "@/utilities/usePage";
+import { useBreadcrumb } from '@/utilities/usePage'
 
 const TagsPage = memo(() => {
-  useBreadcrumb("Tags");
+  useBreadcrumb('Tags')
   return (
     <Fragment>
       <section className="section-padding">
@@ -86,8 +86,8 @@ const TagsPage = memo(() => {
         </Container>
       </section>
     </Fragment>
-  );
-});
+  )
+})
 
-TagsPage.displayName = "TagsPage";
-export default TagsPage;
+TagsPage.displayName = 'TagsPage'
+export default TagsPage

@@ -55,7 +55,7 @@ header {
         > a {
           &::before {
             position: absolute;
-            content: "";
+            content: '';
             background: var(--bs-primary);
             top: 0;
             bottom: 0;
@@ -69,7 +69,7 @@ header {
 
           &::after {
             position: absolute;
-            content: "";
+            content: '';
             background: transparent -webkit-gradient(
                 linear,
                 right top,
@@ -163,8 +163,7 @@ header {
 
   .search-box {
     .form-group {
-      animation: scale-out-hor-right 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53)
-        both;
+      animation: scale-out-hor-right 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
     }
 
     .iq-search-bar {
@@ -209,7 +208,7 @@ header {
 
         &::after,
         &::before {
-          content: "";
+          content: '';
           position: absolute;
           left: 0;
           transition: all 0.2s;
@@ -229,7 +228,7 @@ header {
       }
     }
 
-    &[aria-expanded="true"] {
+    &[aria-expanded='true'] {
       .navbar-toggler-btn {
         .navbar-toggler-icon {
           background-color: transparent;
@@ -323,9 +322,7 @@ header {
           a {
             transition: var(--sidebar-transition);
             transition-duration: var(--sidebar-transition-duration);
-            transition-timing-function: var(
-              --sidebar-transition-function-ease-in-out
-            );
+            transition-timing-function: var(--sidebar-transition-function-ease-in-out);
             padding: 0.5rem 1.25rem 0.5rem 1.25rem;
           }
 
@@ -343,9 +340,7 @@ header {
               font-weight: 500;
               transition: var(--sidebar-transition);
               transition-duration: var(--sidebar-transition-duration);
-              transition-timing-function: var(
-                --sidebar-transition-function-ease-in-out
-              );
+              transition-timing-function: var(--sidebar-transition-function-ease-in-out);
             }
           }
         }
@@ -467,7 +462,7 @@ header {
         }
 
         &:not(.collapsed) {
-          &[aria-expanded="true"] {
+          &[aria-expanded='true'] {
             color: var(--bs-primary);
 
             .right-icon {
@@ -637,7 +632,7 @@ header {
 
           > a::before {
             position: absolute;
-            content: "";
+            content: '';
             background: var(--bs-primary);
             top: 0;
             bottom: 0;
@@ -660,7 +655,7 @@ header {
 
           > a::after {
             position: absolute;
-            content: "";
+            content: '';
             background: transparent -webkit-gradient(
                 linear,
                 right top,
@@ -742,7 +737,7 @@ header {
       margin-right: 0;
     }
 
-    a[aria-expanded="true"] {
+    a[aria-expanded='true'] {
       .arrow-active {
         opacity: 0;
         display: none;
@@ -774,7 +769,7 @@ header {
 }
 
 .iq-nav-menu li a .arrow-hover,
-.iq-nav-menu li a[aria-expanded="true"] .arrow-active {
+.iq-nav-menu li a[aria-expanded='true'] .arrow-active {
   opacity: 0;
   display: none;
   font-size: 0.75em;

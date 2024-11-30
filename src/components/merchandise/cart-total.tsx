@@ -1,7 +1,7 @@
-import React, { Fragment, memo } from "react";
+import React, { Fragment, memo } from 'react'
 
 interface CartTotalProps {
-  final_price?: string;
+  final_price?: string
 }
 
 const CartTotal = memo((props: CartTotalProps) => {
@@ -26,7 +26,7 @@ const CartTotal = memo((props: CartTotalProps) => {
             <strong>
               <span className="amount">
                 <bdi className="final text-primary">
-                  <span className=""></span> {props.final_price}{" "}
+                  <span className=""></span> {props.final_price}{' '}
                 </bdi>
               </span>
             </strong>
@@ -34,8 +34,8 @@ const CartTotal = memo((props: CartTotalProps) => {
         </tr>
       </tbody>
     </Fragment>
-  );
-});
+  )
+})
 
-CartTotal.displayName = "CartTotal";
-export default CartTotal;
+CartTotal.displayName = 'CartTotal'
+export default CartTotal

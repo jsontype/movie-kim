@@ -1,27 +1,25 @@
-import { useState, useEffect, memo, Fragment } from "react";
+import { useState, useEffect, memo, Fragment } from 'react'
 
 //react-bootstrap
-import { Offcanvas, Row, Col } from "react-bootstrap";
+import { Offcanvas, Row, Col } from 'react-bootstrap'
 
 // Redux Selector / Action
-import { useSelector } from "react-redux";
+import { useSelector } from 'react-redux'
 
 // Import selectors & action from setting store
-import * as SettingSelector from "../../store/setting/selectors";
+import * as SettingSelector from '../../store/setting/selectors'
 
 // Section Components
 // Style Setting Section Components
-import ColorCustomizer from "./sections/color-customizer";
-import Direction from "./sections/direction";
+import ColorCustomizer from './sections/color-customizer'
+import Direction from './sections/direction'
 
 const SettingOffCanvas = memo(() => {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(false)
 
   // Define selectors
-  const themeSchemeDirection = useSelector(
-    SettingSelector.theme_scheme_direction,
-  );
-  const themeColor = useSelector(SettingSelector.theme_color);
+  const themeSchemeDirection = useSelector(SettingSelector.theme_scheme_direction)
+  const themeColor = useSelector(SettingSelector.theme_color)
   return (
     <Fragment>
       <div className="rtl-box">
@@ -29,9 +27,9 @@ const SettingOffCanvas = memo(() => {
           className="btn btn-fixed-end btn-icon btn-setting"
           id="settingbutton"
           role="button"
-          onClick={(e) => {
-            e.stopPropagation();
-            setShow(true);
+          onClick={e => {
+            e.stopPropagation()
+            setShow(true)
           }}
         >
           <svg
@@ -49,17 +47,12 @@ const SettingOffCanvas = memo(() => {
           </svg>
         </a>
         <div
-          className={`offcanvas offcanvas-end live-customizer end ${
-            show ? "show" : "hiding"
-          }`}
+          className={`offcanvas offcanvas-end live-customizer end ${show ? 'show' : 'hiding'}`}
           // placement={`${themeSchemeDirection === "rtl" ? 'start' : 'end'}`}
         >
           <div className="offcanvas-header">
             <div className="d-flex align-items-center">
-              <h5
-                id="live-customizer-label"
-                className="offcanvas-title text-dark"
-              >
+              <h5 id="live-customizer-label" className="offcanvas-title text-dark">
                 Live Customizer
               </h5>
             </div>
@@ -91,9 +84,7 @@ const SettingOffCanvas = memo(() => {
               <Col lg={12}>
                 <div>
                   <div>
-                    <Direction
-                      themeSchemeDirection={themeSchemeDirection}
-                    ></Direction>
+                    <Direction themeSchemeDirection={themeSchemeDirection}></Direction>
                     <ColorCustomizer themeColor={themeColor}></ColorCustomizer>
                   </div>
                 </div>
@@ -103,8 +94,8 @@ const SettingOffCanvas = memo(() => {
         </div>
       </div>
     </Fragment>
-  );
-});
+  )
+})
 
-SettingOffCanvas.displayName = "SettingOffCanvas";
-export default SettingOffCanvas;
+SettingOffCanvas.displayName = 'SettingOffCanvas'
+export default SettingOffCanvas

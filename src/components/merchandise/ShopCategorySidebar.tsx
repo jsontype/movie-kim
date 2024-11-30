@@ -1,17 +1,17 @@
-import { Fragment, memo, useState, ReactNode } from "react";
+import { Fragment, memo, useState, ReactNode } from 'react'
 
 // react-bootstrap
-import { Collapse, Form } from "react-bootstrap";
+import { Collapse, Form } from 'react-bootstrap'
 
 // Next-Link
-import Link from "next/link";
+import Link from 'next/link'
 
 interface ShopCategorySidebarProps {
-  children?: ReactNode;
+  children?: ReactNode
 }
 
 const ShopCategorySidebar = memo((props: ShopCategorySidebarProps) => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false)
   return (
     <Fragment>
       <div className="shop-box">
@@ -83,7 +83,7 @@ const ShopCategorySidebar = memo((props: ShopCategorySidebarProps) => {
         {props.children}
       </div>
     </Fragment>
-  );
-});
-ShopCategorySidebar.displayName = "ShopCategorySidebar";
-export default ShopCategorySidebar;
+  )
+})
+ShopCategorySidebar.displayName = 'ShopCategorySidebar'
+export default ShopCategorySidebar

@@ -1,11 +1,11 @@
-var player = videojs("videoPlayer", {
+var player = videojs('videoPlayer', {
   autoplay: muted,
   controls: true,
-  poster: "images/slider/slider1.jpg",
+  poster: 'images/slider/slider1.jpg',
   loop: true,
   plugins: {
     hotkeys: {
       enableModifiersForNumbers: false,
     },
   },
-});
+})

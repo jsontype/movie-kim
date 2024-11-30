@@ -1,16 +1,16 @@
-import React, { Fragment, memo } from "react";
+import React, { Fragment, memo } from 'react'
 
 //react-router-dom
-import Link from "next/link";
+import Link from 'next/link'
 
 interface Props {
-  thumbnail: any;
-  blogDate: String;
-  username: String;
-  title: String;
-  description: String;
-  categories: String;
-  tags: string[];
+  thumbnail: any
+  blogDate: String
+  username: String
+  title: String
+  description: String
+  categories: String
+  tags: string[]
 }
 
 const CardBlogList = memo((props: Props) => {
@@ -43,10 +43,7 @@ const CardBlogList = memo((props: Props) => {
             </Link>
             <p className="line-count-2">{props.description}</p>
             <div className="iq-button">
-              <Link
-                className="btn text-uppercase position-relative"
-                href="/blogs/detail"
-              >
+              <Link className="btn text-uppercase position-relative" href="/blogs/detail">
                 Read More
                 <i className="fa-solid fa-play"></i>
               </Link>
@@ -68,15 +65,15 @@ const CardBlogList = memo((props: Props) => {
                   <li key={index}>
                     <Link href="/blogs/filter/tags">{item}</Link>
                   </li>
-                );
+                )
               })}
             </ul>
           </div>
         </div>
       </article>
     </Fragment>
-  );
-});
+  )
+})
 
-CardBlogList.displayName = "CardBlogList";
-export default CardBlogList;
+CardBlogList.displayName = 'CardBlogList'
+export default CardBlogList

@@ -1,27 +1,27 @@
-import { memo } from "react";
+import { memo } from 'react'
 
 //react bootstrap
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from 'react-bootstrap'
 
 //components
-import ProductCard from "@/components/merchandise/product-card";
-import ProductDetailCard from "@/components/cards/ProductDetailCard";
+import ProductCard from '@/components/merchandise/product-card'
+import ProductDetailCard from '@/components/cards/ProductDetailCard'
 
 //static data
-import { newProduct, products } from "@/StaticData/shop";
+import { newProduct, products } from '@/StaticData/shop'
 
 // swiper
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Navigation } from 'swiper'
 
 // Redux Selector / Action
-import { useSelector } from "react-redux";
-import { theme_scheme_direction } from "@/store/setting/selectors";
+import { useSelector } from 'react-redux'
+import { theme_scheme_direction } from '@/store/setting/selectors'
 
 const ProductDetail = memo(() => {
-  const themeSchemeDirection = useSelector(theme_scheme_direction);
-  const product = "believe-mask";
-  const productDetail = products.find((item) => item.slug === product);
+  const themeSchemeDirection = useSelector(theme_scheme_direction)
+  const product = 'believe-mask'
+  const productDetail = products.find(item => item.slug === product)
   return (
     <>
       <div className="site-main">
@@ -58,8 +58,8 @@ const ProductDetail = memo(() => {
                 dir={String(themeSchemeDirection)}
                 slidesPerView={4}
                 navigation={{
-                  prevEl: ".swiper-button-prev",
-                  nextEl: ".swiper-button-next",
+                  prevEl: '.swiper-button-prev',
+                  nextEl: '.swiper-button-next',
                 }}
                 loop={true}
                 modules={[Navigation]}
@@ -107,7 +107,7 @@ const ProductDetail = memo(() => {
                         slug={item.slug}
                       />
                     </SwiperSlide>
-                  );
+                  )
                 })}
               </Swiper>
             </div>
@@ -115,8 +115,8 @@ const ProductDetail = memo(() => {
         </div>
       </div>
     </>
-  );
-});
+  )
+})
 
-ProductDetail.displayName = "ProductDetail";
-export default ProductDetail;
+ProductDetail.displayName = 'ProductDetail'
+export default ProductDetail

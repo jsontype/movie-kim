@@ -1,4 +1,4 @@
-import React, { memo, Fragment, useState } from "react";
+import React, { memo, Fragment, useState } from 'react'
 
 // react-bootstrap
 import {
@@ -12,68 +12,65 @@ import {
   Offcanvas,
   Collapse,
   Navbar,
-} from "react-bootstrap";
+} from 'react-bootstrap'
 
 //router
-import Link from "next/link";
-import { useRouter } from "next/router";
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 // components
-import Logo from "../../logo";
-import CustomToggle from "../../CustomToggle";
-import Counter from "../../counter";
+import Logo from '../../logo'
+import CustomToggle from '../../CustomToggle'
+import Counter from '../../counter'
 
 const HeaderMerchandise = memo(() => {
-  const location = useRouter();
+  const location = useRouter()
 
   const cart = [
     {
-      thumbnail: "/assets/images/shop/product/02.webp",
-      name: "Believe Mask",
-      price: "$13.00",
-      class: "mb-4 pb-4 border-bottom",
+      thumbnail: '/assets/images/shop/product/02.webp',
+      name: 'Believe Mask',
+      price: '$13.00',
+      class: 'mb-4 pb-4 border-bottom',
     },
     {
-      thumbnail: "/assets/images/shop/product/04.webp",
-      name: "Black Cap",
-      price: "$18.00",
-      class: "mb-4 pb-4 border-bottom",
+      thumbnail: '/assets/images/shop/product/04.webp',
+      name: 'Black Cap',
+      price: '$18.00',
+      class: 'mb-4 pb-4 border-bottom',
     },
     {
-      thumbnail: "/assets/images/shop/product/05.webp",
-      name: "Boxing Gloves",
-      price: "$18.00",
-      class: "",
+      thumbnail: '/assets/images/shop/product/05.webp',
+      name: 'Boxing Gloves',
+      price: '$18.00',
+      class: '',
     },
-  ];
+  ]
 
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(false)
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const handleClose = () => setShow(false)
+  const handleShow = () => setShow(true)
 
-  const [show1, setShow1] = useState(false);
-  const [show2, setShow2] = useState(false);
+  const [show1, setShow1] = useState(false)
+  const [show2, setShow2] = useState(false)
 
-  const handleClose1 = () => setShow2(false);
+  const handleClose1 = () => setShow2(false)
 
-  const [open, setOpen] = useState(false);
-  const [open1, setOpen1] = useState(false);
-  const [open2, setOpen2] = useState(false);
-  const [open3, setOpen3] = useState(false);
-  const [open4, setOpen4] = useState(false);
-  const [open5, setOpen5] = useState(false);
-  const [open6, setOpen6] = useState(false);
-  const [open7, setOpen7] = useState(false);
-  const [open8, setOpen8] = useState(false);
+  const [open, setOpen] = useState(false)
+  const [open1, setOpen1] = useState(false)
+  const [open2, setOpen2] = useState(false)
+  const [open3, setOpen3] = useState(false)
+  const [open4, setOpen4] = useState(false)
+  const [open5, setOpen5] = useState(false)
+  const [open6, setOpen6] = useState(false)
+  const [open7, setOpen7] = useState(false)
+  const [open8, setOpen8] = useState(false)
 
   return (
     <>
       <Fragment>
-        <header
-          className="header-center-home header-merchandise "
-          id="default-header"
-        >
+        <header className="header-center-home header-merchandise " id="default-header">
           <div className="header-top d-xl-block d-none">
             <Container fluid>
               <Row className="align-items-center">
@@ -86,11 +83,7 @@ const HeaderMerchandise = memo(() => {
                       <li className="me-0">
                         <div className="search-box-2">
                           <Form>
-                            <input
-                              type="text"
-                              className="form-control"
-                              placeholder="Search..."
-                            />
+                            <input type="text" className="form-control" placeholder="Search..." />
                             <i className="search-btn">
                               <svg
                                 width="16"
@@ -121,11 +114,7 @@ const HeaderMerchandise = memo(() => {
                       </li>
 
                       <li className="me-0">
-                        <Link
-                          className="text-white"
-                          href="#"
-                          onClick={handleShow}
-                        >
+                        <Link className="text-white" href="#" onClick={handleShow}>
                           <span className="btn-icon rounded-pill user-icons">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -234,9 +223,7 @@ const HeaderMerchandise = memo(() => {
                                   strokeLinejoin="round"
                                 ></path>
                               </svg>
-                              <h6 className="mb-0 font-size-14 fw-normal">
-                                My Account
-                              </h6>
+                              <h6 className="mb-0 font-size-14 fw-normal">My Account</h6>
                             </Link>
                           </li>
                           <li>
@@ -256,9 +243,7 @@ const HeaderMerchandise = memo(() => {
                                   fill="white"
                                 ></path>
                               </svg>
-                              <h6 className="mb-0 font-size-14 fw-normal">
-                                Watchlist
-                              </h6>
+                              <h6 className="mb-0 font-size-14 fw-normal">Watchlist</h6>
                             </Link>
                           </li>
                           <li>
@@ -267,9 +252,7 @@ const HeaderMerchandise = memo(() => {
                               className="iq-sub-card d-flex align-items-center gap-3"
                             >
                               <i className="fa-regular fa-star"></i>
-                              <h6 className="mb-0 font-size-14 fw-normal">
-                                Subscription
-                              </h6>
+                              <h6 className="mb-0 font-size-14 fw-normal">Subscription</h6>
                             </Link>
                           </li>
                           <li>
@@ -289,9 +272,7 @@ const HeaderMerchandise = memo(() => {
                                   fill="currentColor"
                                 ></path>
                               </svg>
-                              <h6 className="mb-0 font-size-14 fw-normal">
-                                Logout
-                              </h6>
+                              <h6 className="mb-0 font-size-14 fw-normal">Logout</h6>
                             </Link>
                           </li>
                         </Dropdown.Menu>
@@ -303,10 +284,7 @@ const HeaderMerchandise = memo(() => {
             </Container>
           </div>
           <div className="header-bottom header-sticky">
-            <Navbar
-              expand="xl"
-              className="nav navbar-light iq-navbar header-hover-menu py-xl-0"
-            >
+            <Navbar expand="xl" className="nav navbar-light iq-navbar header-hover-menu py-xl-0">
               <Container fluid className="navbar-inner">
                 <div className="d-flex align-items-center justify-content-between w-100 landing-header">
                   <div className="d-xl-none d-flex gap-3 gap-xl-0 align-items-center">
@@ -319,11 +297,7 @@ const HeaderMerchandise = memo(() => {
                         className="d-xl-none btn btn-primary rounded-pill p-1 pt-0 toggle-rounded-btn"
                         onClick={() => setShow2(!show2)}
                       >
-                        <svg
-                          width="20px"
-                          className="icon-20"
-                          viewBox="0 0 24 24"
-                        >
+                        <svg width="20px" className="icon-20" viewBox="0 0 24 24">
                           <path
                             fill="currentColor"
                             d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"
@@ -335,9 +309,9 @@ const HeaderMerchandise = memo(() => {
                   </div>
                   <Navbar
                     expand="xl"
-                    className={`offcanvas mobile-offcanvas nav hover-nav horizontal-nav py-xl-0 ${show2 === true ? "show" : ""} `}
+                    className={`offcanvas mobile-offcanvas nav hover-nav horizontal-nav py-xl-0 ${show2 === true ? 'show' : ''} `}
                     style={{
-                      visibility: `${show2 === true ? "visible" : "hidden"}`,
+                      visibility: `${show2 === true ? 'visible' : 'hidden'}`,
                     }}
                   >
                     <Container fluid className="p-lg-0">
@@ -346,16 +320,13 @@ const HeaderMerchandise = memo(() => {
                           <Logo />
                         </div>
                       </Offcanvas.Header>
-                      <ul
-                        className="navbar-nav iq-nav-menu  list-unstyled"
-                        id="header-menu"
-                      >
+                      <ul className="navbar-nav iq-nav-menu  list-unstyled" id="header-menu">
                         <Nav.Item as="li">
                           <Nav.Link
                             aria-expanded={open}
                             href=""
                             onClick={() => setOpen(!open)}
-                            className={`${location.pathname === "/merchandise" || location.pathname === "/" || location.pathname === "/home" || location.pathname === "/movies" || location.pathname === "/tv-shows" || location.pathname === "/videos" ? "active" : ""}`}
+                            className={`${location.pathname === '/merchandise' || location.pathname === '/' || location.pathname === '/home' || location.pathname === '/movies' || location.pathname === '/tv-shows' || location.pathname === '/videos' ? 'active' : ''}`}
                           >
                             <span className="item-name">Home</span>
                             <span className="menu-icon ms-2">
@@ -380,66 +351,62 @@ const HeaderMerchandise = memo(() => {
                               <Nav.Item as="li">
                                 <Link
                                   href="/"
-                                  className={`${location.pathname === "/" ? "active" : ""} nav-link`}
+                                  className={`${location.pathname === '/' ? 'active' : ''} nav-link`}
                                 >
-                                  {" "}
-                                  OTT Home{" "}
+                                  {' '}
+                                  OTT Home{' '}
                                 </Link>
                               </Nav.Item>
                               <Nav.Item as="li">
                                 <Link
                                   href="/home"
-                                  className={`${location.pathname === "/home" ? "active" : ""} nav-link`}
+                                  className={`${location.pathname === '/home' ? 'active' : ''} nav-link`}
                                 >
-                                  {" "}
-                                  Home{" "}
+                                  {' '}
+                                  Home{' '}
                                 </Link>
                               </Nav.Item>
                               <Nav.Item as="li">
                                 <Link
                                   href="/movies"
-                                  className={`${location.pathname === "/movies" ? "active" : ""} nav-link`}
+                                  className={`${location.pathname === '/movies' ? 'active' : ''} nav-link`}
                                 >
-                                  {" "}
-                                  Movie{" "}
+                                  {' '}
+                                  Movie{' '}
                                 </Link>
                               </Nav.Item>
                               <Nav.Item as="li">
                                 <Link
                                   href="/tv-shows"
-                                  className={`${location.pathname === "/tv-shows" ? "active" : ""} nav-link`}
+                                  className={`${location.pathname === '/tv-shows' ? 'active' : ''} nav-link`}
                                 >
-                                  {" "}
-                                  TV Show{" "}
+                                  {' '}
+                                  TV Show{' '}
                                 </Link>
                               </Nav.Item>
                               <Nav.Item as="li">
                                 <Link
                                   href="/videos"
-                                  className={`${location.pathname === "/videos" ? "active" : ""} nav-link`}
+                                  className={`${location.pathname === '/videos' ? 'active' : ''} nav-link`}
                                 >
-                                  {" "}
-                                  Video{" "}
+                                  {' '}
+                                  Video{' '}
                                 </Link>
                               </Nav.Item>
                               <Nav.Item as="li">
                                 <Link
                                   href="/merchandise"
-                                  className={`${location.pathname === "/merchandise" ? "active" : ""} nav-link`}
+                                  className={`${location.pathname === '/merchandise' ? 'active' : ''} nav-link`}
                                 >
-                                  {" "}
-                                  Merchandise Store{" "}
+                                  {' '}
+                                  Merchandise Store{' '}
                                 </Link>
                               </Nav.Item>
                             </ul>
                           </Collapse>
                         </Nav.Item>
                         <Nav.Item as="li">
-                          <Nav.Link
-                            aria-expanded={open1}
-                            href=""
-                            onClick={() => setOpen1(!open1)}
-                          >
+                          <Nav.Link aria-expanded={open1} href="" onClick={() => setOpen1(!open1)}>
                             <span className="item-name">Features</span>
                             <span className="menu-icon ms-2">
                               <i
@@ -458,63 +425,60 @@ const HeaderMerchandise = memo(() => {
                               </span>
                             </span>
                           </Nav.Link>
-                          <Collapse
-                            in={open1}
-                            className="sub-nav list-unstyled"
-                          >
+                          <Collapse in={open1} className="sub-nav list-unstyled">
                             <ul>
                               <Nav.Item as="li">
                                 <Link
                                   href="/movies/restricted"
-                                  className={`${location.pathname === "/movies/restricted" ? "active" : ""} nav-link`}
+                                  className={`${location.pathname === '/movies/restricted' ? 'active' : ''} nav-link`}
                                 >
-                                  {" "}
-                                  Restricted Content{" "}
+                                  {' '}
+                                  Restricted Content{' '}
                                 </Link>
                               </Nav.Item>
                               <Nav.Item as="li">
                                 <Link
                                   href="/movies/related"
-                                  className={`${location.pathname === "/movies/related" ? "active" : ""} nav-link`}
+                                  className={`${location.pathname === '/movies/related' ? 'active' : ''} nav-link`}
                                 >
-                                  {" "}
-                                  Related Merchandise{" "}
+                                  {' '}
+                                  Related Merchandise{' '}
                                 </Link>
                               </Nav.Item>
                               <Nav.Item as="li">
                                 <Link
                                   href="/play-list"
-                                  className={`${location.pathname === "/play-list" ? "active" : ""} nav-link`}
+                                  className={`${location.pathname === '/play-list' ? 'active' : ''} nav-link`}
                                 >
-                                  {" "}
-                                  Playlist{" "}
+                                  {' '}
+                                  Playlist{' '}
                                 </Link>
                               </Nav.Item>
                               <Nav.Item as="li">
                                 <Link
                                   href="/genres"
-                                  className={`${location.pathname === "/genres" ? "active" : ""} nav-link`}
+                                  className={`${location.pathname === '/genres' ? 'active' : ''} nav-link`}
                                 >
-                                  {" "}
-                                  Genres{" "}
+                                  {' '}
+                                  Genres{' '}
                                 </Link>
                               </Nav.Item>
                               <Nav.Item as="li">
                                 <Link
                                   href="/cast"
-                                  className={`${location.pathname === "/cast" ? "active" : ""} nav-link`}
+                                  className={`${location.pathname === '/cast' ? 'active' : ''} nav-link`}
                                 >
-                                  {" "}
-                                  Cast{" "}
+                                  {' '}
+                                  Cast{' '}
                                 </Link>
                               </Nav.Item>
                               <Nav.Item as="li">
                                 <Link
                                   href="/tags"
-                                  className={`${location.pathname === "/tags" ? "active" : ""} nav-link`}
+                                  className={`${location.pathname === '/tags' ? 'active' : ''} nav-link`}
                                 >
-                                  {" "}
-                                  Tags{" "}
+                                  {' '}
+                                  Tags{' '}
                                 </Link>
                               </Nav.Item>
                             </ul>
@@ -525,7 +489,7 @@ const HeaderMerchandise = memo(() => {
                             aria-expanded={open2}
                             href=""
                             onClick={() => setOpen2(!open2)}
-                            className={`${location.pathname === "/extra/about-us" || location.pathname === "/extra/contact-us" || location.pathname === "/fa1" || location.pathname === "/extra/privacy-policy" || location.pathname === "/pricing" || location.pathname === "/coming-soon" ? "active" : ""}`}
+                            className={`${location.pathname === '/extra/about-us' || location.pathname === '/extra/contact-us' || location.pathname === '/fa1' || location.pathname === '/extra/privacy-policy' || location.pathname === '/pricing' || location.pathname === '/coming-soon' ? 'active' : ''}`}
                           >
                             <span className="item-name">Pages</span>
                             <span className="menu-icon ms-2">
@@ -545,60 +509,42 @@ const HeaderMerchandise = memo(() => {
                               </span>
                             </span>
                           </Nav.Link>
-                          <Collapse
-                            in={open2}
-                            className="sub-nav list-unstyled"
-                          >
+                          <Collapse in={open2} className="sub-nav list-unstyled">
                             <ul>
                               <Nav.Item as="li">
-                                <Link
-                                  href="/extra/about-us"
-                                  className="nav-link"
-                                >
-                                  {" "}
-                                  About Us{" "}
+                                <Link href="/extra/about-us" className="nav-link">
+                                  {' '}
+                                  About Us{' '}
                                 </Link>
                               </Nav.Item>
                               <Nav.Item as="li">
-                                <Link
-                                  href="/extra/contact-us"
-                                  className="nav-link"
-                                >
-                                  {" "}
-                                  Contact Us{" "}
+                                <Link href="/extra/contact-us" className="nav-link">
+                                  {' '}
+                                  Contact Us{' '}
                                 </Link>
                               </Nav.Item>
                               <Nav.Item as="li">
                                 <Link href="/extra/faq" className="nav-link">
-                                  {" "}
-                                  FAQ{" "}
+                                  {' '}
+                                  FAQ{' '}
                                 </Link>
                               </Nav.Item>
                               <Nav.Item as="li">
-                                <Link
-                                  href="/extra/privacy-policy"
-                                  className="nav-link"
-                                >
-                                  {" "}
-                                  Privacy Policy{" "}
+                                <Link href="/extra/privacy-policy" className="nav-link">
+                                  {' '}
+                                  Privacy Policy{' '}
                                 </Link>
                               </Nav.Item>
                               <Nav.Item as="li">
-                                <Link
-                                  href="/extra/pricing-plan"
-                                  className="nav-link"
-                                >
-                                  {" "}
-                                  Pricing Plan{" "}
+                                <Link href="/extra/pricing-plan" className="nav-link">
+                                  {' '}
+                                  Pricing Plan{' '}
                                 </Link>
                               </Nav.Item>
                               <Nav.Item as="li">
-                                <Link
-                                  href="/extra/coming-soon"
-                                  className="nav-link"
-                                >
-                                  {" "}
-                                  Coming Soon{" "}
+                                <Link href="/extra/coming-soon" className="nav-link">
+                                  {' '}
+                                  Coming Soon{' '}
                                 </Link>
                               </Nav.Item>
                               <Nav.Item as="li">
@@ -625,27 +571,18 @@ const HeaderMerchandise = memo(() => {
                                     </span>
                                   </span>
                                 </Nav.Link>
-                                <Collapse
-                                  in={open3}
-                                  className="sub-nav list-unstyled"
-                                >
+                                <Collapse in={open3} className="sub-nav list-unstyled">
                                   <ul>
                                     <Nav.Item as="li">
-                                      <Link
-                                        href="/extra/error-page-one"
-                                        className="nav-link"
-                                      >
-                                        {" "}
-                                        Error Page 1{" "}
+                                      <Link href="/extra/error-page-one" className="nav-link">
+                                        {' '}
+                                        Error Page 1{' '}
                                       </Link>
                                     </Nav.Item>
                                     <Nav.Item as="li">
-                                      <Link
-                                        href="/extra/error-page-two"
-                                        className="nav-link"
-                                      >
-                                        {" "}
-                                        Error Page 2{" "}
+                                      <Link href="/extra/error-page-two" className="nav-link">
+                                        {' '}
+                                        Error Page 2{' '}
                                       </Link>
                                     </Nav.Item>
                                   </ul>
@@ -659,7 +596,7 @@ const HeaderMerchandise = memo(() => {
                             aria-expanded={open4}
                             href=""
                             onClick={() => setOpen4(!open4)}
-                            className={`${location.pathname === "/blogs" || location.pathname === "/blogs/grid/one-column" || location.pathname === "/blogs/grid/two-column" || location.pathname === "/blogs/grid/three-column" || location.pathname === "blogs/small-grid" || location.pathname === "/blogs/sidebar/left" || location.pathname === "/blogs/sidebar/right" || location.pathname === "/blogs/template" || location.pathname === "/blogs-detail" || location.pathname === "/blogs/single/audio" || location.pathname === "/blogs/single/video" || location.pathname === "/blogs/single/link" || location.pathname === "/blogs/single/quote" || location.pathname === "/blogs/single/gallery" ? "active" : ""}`}
+                            className={`${location.pathname === '/blogs' || location.pathname === '/blogs/grid/one-column' || location.pathname === '/blogs/grid/two-column' || location.pathname === '/blogs/grid/three-column' || location.pathname === 'blogs/small-grid' || location.pathname === '/blogs/sidebar/left' || location.pathname === '/blogs/sidebar/right' || location.pathname === '/blogs/template' || location.pathname === '/blogs-detail' || location.pathname === '/blogs/single/audio' || location.pathname === '/blogs/single/video' || location.pathname === '/blogs/single/link' || location.pathname === '/blogs/single/quote' || location.pathname === '/blogs/single/gallery' ? 'active' : ''}`}
                           >
                             <span className="item-name">Blog</span>
                             <span className="menu-icon ms-2">
@@ -679,18 +616,15 @@ const HeaderMerchandise = memo(() => {
                               </span>
                             </span>
                           </Nav.Link>
-                          <Collapse
-                            in={open4}
-                            className="sub-nav list-unstyled"
-                          >
+                          <Collapse in={open4} className="sub-nav list-unstyled">
                             <ul>
                               <Nav.Item as="li">
                                 <Link
                                   href="/blogs"
-                                  className={`${location.pathname === "/blogs" ? "active" : ""} nav-link`}
+                                  className={`${location.pathname === '/blogs' ? 'active' : ''} nav-link`}
                                 >
-                                  {" "}
-                                  Listing{" "}
+                                  {' '}
+                                  Listing{' '}
                                 </Link>
                               </Nav.Item>
                               <Nav.Item as="li">
@@ -698,7 +632,7 @@ const HeaderMerchandise = memo(() => {
                                   aria-expanded={open5}
                                   href=""
                                   onClick={() => setOpen5(!open5)}
-                                  className={`${location.pathname === "/blogs/grid/one-column" || location.pathname === "/blogs/grid/two-column" || location.pathname === "/blogs/grid/three-column" || location.pathname === "/blogs/grid/four-column" ? "active" : ""}`}
+                                  className={`${location.pathname === '/blogs/grid/one-column' || location.pathname === '/blogs/grid/two-column' || location.pathname === '/blogs/grid/three-column' || location.pathname === '/blogs/grid/four-column' ? 'active' : ''}`}
                                 >
                                   <span className="item-name">Blog grid</span>
                                   <span className="menu-icon">
@@ -718,45 +652,42 @@ const HeaderMerchandise = memo(() => {
                                     </span>
                                   </span>
                                 </Nav.Link>
-                                <Collapse
-                                  in={open5}
-                                  className="sub-nav list-unstyled"
-                                >
+                                <Collapse in={open5} className="sub-nav list-unstyled">
                                   <ul>
                                     <Nav.Item as="li">
                                       <Link
                                         href="/blogs/grid/one-column"
-                                        className={`${location.pathname === "/blogs/grid/one-column" ? "active" : ""} nav-link`}
+                                        className={`${location.pathname === '/blogs/grid/one-column' ? 'active' : ''} nav-link`}
                                       >
-                                        {" "}
-                                        1 Column{" "}
+                                        {' '}
+                                        1 Column{' '}
                                       </Link>
                                     </Nav.Item>
                                     <Nav.Item as="li">
                                       <Link
                                         href="/blogs/grid/two-column"
-                                        className={`${location.pathname === "/blogs/grid/two-column" ? "active" : ""} nav-link`}
+                                        className={`${location.pathname === '/blogs/grid/two-column' ? 'active' : ''} nav-link`}
                                       >
-                                        {" "}
+                                        {' '}
                                         2 column
                                       </Link>
                                     </Nav.Item>
                                     <Nav.Item as="li">
                                       <Link
                                         href="/blogs/grid/three-column"
-                                        className={`${location.pathname === "/blogs/grid/three-column" ? "active" : ""} nav-link`}
+                                        className={`${location.pathname === '/blogs/grid/three-column' ? 'active' : ''} nav-link`}
                                       >
-                                        {" "}
-                                        3 column{" "}
+                                        {' '}
+                                        3 column{' '}
                                       </Link>
                                     </Nav.Item>
                                     <Nav.Item as="li">
                                       <Link
                                         href="/blogs/grid/four-column"
-                                        className={`${location.pathname === "/blogs/grid/four-column" ? "active" : ""} nav-link`}
+                                        className={`${location.pathname === '/blogs/grid/four-column' ? 'active' : ''} nav-link`}
                                       >
-                                        {" "}
-                                        4 column{" "}
+                                        {' '}
+                                        4 column{' '}
                                       </Link>
                                     </Nav.Item>
                                   </ul>
@@ -767,11 +698,9 @@ const HeaderMerchandise = memo(() => {
                                   aria-expanded={open6}
                                   href=""
                                   onClick={() => setOpen6(!open6)}
-                                  className={`${location.pathname === "/blogs/sidebar/left" || location.pathname === "/blog-sidebar/right" ? "active" : ""}`}
+                                  className={`${location.pathname === '/blogs/sidebar/left' || location.pathname === '/blog-sidebar/right' ? 'active' : ''}`}
                                 >
-                                  <span className="item-name">
-                                    Blog Sidebar
-                                  </span>
+                                  <span className="item-name">Blog Sidebar</span>
                                   <span className="menu-icon">
                                     <i
                                       className="fa fa-caret-right toggledrop-desktop right-icon"
@@ -789,27 +718,24 @@ const HeaderMerchandise = memo(() => {
                                     </span>
                                   </span>
                                 </Nav.Link>
-                                <Collapse
-                                  in={open6}
-                                  className="sub-nav list-unstyled"
-                                >
+                                <Collapse in={open6} className="sub-nav list-unstyled">
                                   <ul>
                                     <Nav.Item as="li">
                                       <Link
                                         href="/blogs/sidebar/left"
-                                        className={`${location.pathname === "/blog-sidebar/left" ? "active" : ""} nav-link`}
+                                        className={`${location.pathname === '/blog-sidebar/left' ? 'active' : ''} nav-link`}
                                       >
-                                        {" "}
-                                        Left Sidebar{" "}
+                                        {' '}
+                                        Left Sidebar{' '}
                                       </Link>
                                     </Nav.Item>
                                     <Nav.Item as="li">
                                       <Link
                                         href="/blogs/sidebar/right"
-                                        className={`${location.pathname === "/blog-sidebar/right" ? "active" : ""} nav-link`}
+                                        className={`${location.pathname === '/blog-sidebar/right' ? 'active' : ''} nav-link`}
                                       >
-                                        {" "}
-                                        Right Sidebar{" "}
+                                        {' '}
+                                        Right Sidebar{' '}
                                       </Link>
                                     </Nav.Item>
                                   </ul>
@@ -820,7 +746,7 @@ const HeaderMerchandise = memo(() => {
                                   aria-expanded={open7}
                                   href=""
                                   onClick={() => setOpen7(!open7)}
-                                  className={`${location.pathname === "/blogs/template" || location.pathname === "/blogs-detail" || location.pathname === "/blogs/single/audio" || location.pathname === "/blogs/single/video" || location.pathname === "/blogs/single/link" || location.pathname === "/blogs/single/quote" || location.pathname === "/blogs/single/gallery" ? "active" : ""}`}
+                                  className={`${location.pathname === '/blogs/template' || location.pathname === '/blogs-detail' || location.pathname === '/blogs/single/audio' || location.pathname === '/blogs/single/video' || location.pathname === '/blogs/single/link' || location.pathname === '/blogs/single/quote' || location.pathname === '/blogs/single/gallery' ? 'active' : ''}`}
                                 >
                                   <span className="item-name">Blog Single</span>
                                   <span className="menu-icon">
@@ -840,72 +766,69 @@ const HeaderMerchandise = memo(() => {
                                     </span>
                                   </span>
                                 </Nav.Link>
-                                <Collapse
-                                  in={open7}
-                                  className="sub-nav list-unstyled"
-                                >
+                                <Collapse in={open7} className="sub-nav list-unstyled">
                                   <ul>
                                     <Nav.Item as="li">
                                       <Link
                                         href="/blogs/template"
-                                        className={`${location.pathname === "/blogs/template" ? "active" : ""} nav-link`}
+                                        className={`${location.pathname === '/blogs/template' ? 'active' : ''} nav-link`}
                                       >
-                                        {" "}
-                                        Blog Template{" "}
+                                        {' '}
+                                        Blog Template{' '}
                                       </Link>
                                     </Nav.Item>
                                     <Nav.Item as="li">
                                       <Link
                                         href="/blogs/detail"
-                                        className={`${location.pathname === "/blogs/detail" ? "active" : ""} nav-link`}
+                                        className={`${location.pathname === '/blogs/detail' ? 'active' : ''} nav-link`}
                                       >
-                                        {" "}
-                                        Standard{" "}
+                                        {' '}
+                                        Standard{' '}
                                       </Link>
                                     </Nav.Item>
                                     <Nav.Item as="li">
                                       <Link
                                         href="/blogs/single/audio"
-                                        className={`${location.pathname === "/blogs/single/audio" ? "active" : ""} nav-link`}
+                                        className={`${location.pathname === '/blogs/single/audio' ? 'active' : ''} nav-link`}
                                       >
-                                        {" "}
-                                        Audio{" "}
+                                        {' '}
+                                        Audio{' '}
                                       </Link>
                                     </Nav.Item>
                                     <Nav.Item as="li">
                                       <Link
                                         href="/blogs/single/video"
-                                        className={`${location.pathname === "/blogs/single/video" ? "active" : ""} nav-link`}
+                                        className={`${location.pathname === '/blogs/single/video' ? 'active' : ''} nav-link`}
                                       >
-                                        {" "}
-                                        Video{" "}
+                                        {' '}
+                                        Video{' '}
                                       </Link>
                                     </Nav.Item>
                                     <Nav.Item as="li">
                                       <Link
                                         href="/blogs/single/link"
-                                        className={`${location.pathname === "/blogs/single/link" ? "active" : ""} nav-link`}
+                                        className={`${location.pathname === '/blogs/single/link' ? 'active' : ''} nav-link`}
                                       >
-                                        {" "}
-                                        Link{" "}
+                                        {' '}
+                                        Link{' '}
                                       </Link>
                                     </Nav.Item>
                                     <Nav.Item as="li">
                                       <Link
                                         href="/blogs/single/quote"
-                                        className={`${location.pathname === "/blogs/single/quote" ? "active" : ""} nav-link`}
+                                        className={`${location.pathname === '/blogs/single/quote' ? 'active' : ''} nav-link`}
                                       >
-                                        {" "}
-                                        Quote{" "}
+                                        {' '}
+                                        Quote{' '}
                                       </Link>
                                     </Nav.Item>
                                     <Nav.Item as="li">
                                       <Link
                                         href="/blogs/single/gallery"
-                                        className={`${location.pathname === "/blogs/single/gallery" ? "active" : ""} nav-link`}
+                                        className={`${location.pathname === '/blogs/single/gallery' ? 'active' : ''} nav-link`}
                                       >
-                                        {" "}
-                                        Gallery{" "}
+                                        {' '}
+                                        Gallery{' '}
                                       </Link>
                                     </Nav.Item>
                                   </ul>
@@ -919,7 +842,7 @@ const HeaderMerchandise = memo(() => {
                             aria-expanded={open8}
                             href=""
                             onClick={() => setOpen8(!open8)}
-                            className={`${location.asPath.split("/").includes("merchandise") && location.asPath.split("/").length > 2 ? "active" : ""}`}
+                            className={`${location.asPath.split('/').includes('merchandise') && location.asPath.split('/').length > 2 ? 'active' : ''}`}
                           >
                             <span className="item-name">Shop</span>
                             <span className="menu-icon ms-2">
@@ -939,63 +862,60 @@ const HeaderMerchandise = memo(() => {
                               </span>
                             </span>
                           </Nav.Link>
-                          <Collapse
-                            in={open8}
-                            className="sub-nav list-unstyled"
-                          >
+                          <Collapse in={open8} className="sub-nav list-unstyled">
                             <ul>
                               <Nav.Item as="li">
                                 <Link
                                   href="/merchandise/shop"
-                                  className={`${location.pathname === "/merchandise/shop" ? "active" : ""} nav-link`}
+                                  className={`${location.pathname === '/merchandise/shop' ? 'active' : ''} nav-link`}
                                 >
-                                  {" "}
-                                  Shop{" "}
+                                  {' '}
+                                  Shop{' '}
                                 </Link>
                               </Nav.Item>
                               <Nav.Item as="li">
                                 <Link
                                   href="/merchandise/account"
-                                  className={`${location.pathname === "/merchandise/account" ? "active" : ""} nav-link`}
+                                  className={`${location.pathname === '/merchandise/account' ? 'active' : ''} nav-link`}
                                 >
-                                  {" "}
-                                  My Account Page{" "}
+                                  {' '}
+                                  My Account Page{' '}
                                 </Link>
                               </Nav.Item>
                               <Nav.Item as="li">
                                 <Link
                                   href="/merchandise/cart"
-                                  className={`${location.pathname === "/merchandise/cart" ? "active" : ""} nav-link`}
+                                  className={`${location.pathname === '/merchandise/cart' ? 'active' : ''} nav-link`}
                                 >
-                                  {" "}
-                                  Cart Page{" "}
+                                  {' '}
+                                  Cart Page{' '}
                                 </Link>
                               </Nav.Item>
                               <Nav.Item as="li">
                                 <Link
                                   href="/merchandise/wishlist"
-                                  className={`${location.pathname === "/merchandise/wishlist" ? "active" : ""} nav-link`}
+                                  className={`${location.pathname === '/merchandise/wishlist' ? 'active' : ''} nav-link`}
                                 >
-                                  {" "}
-                                  Wishlist Page{" "}
+                                  {' '}
+                                  Wishlist Page{' '}
                                 </Link>
                               </Nav.Item>
                               <Nav.Item as="li">
                                 <Link
                                   href="/merchandise/checkout"
-                                  className={`${location.pathname === "/merchandise/checkout" ? "active" : ""} nav-link`}
+                                  className={`${location.pathname === '/merchandise/checkout' ? 'active' : ''} nav-link`}
                                 >
-                                  {" "}
-                                  Checkout Page{" "}
+                                  {' '}
+                                  Checkout Page{' '}
                                 </Link>
                               </Nav.Item>
                               <Nav.Item as="li">
                                 <Link
                                   href="/merchandise/track-order"
-                                  className={`${location.pathname === "/merchandise/track-order" ? "active" : ""} nav-link`}
+                                  className={`${location.pathname === '/merchandise/track-order' ? 'active' : ''} nav-link`}
                                 >
-                                  {" "}
-                                  Order Tracking{" "}
+                                  {' '}
+                                  Order Tracking{' '}
                                 </Link>
                               </Nav.Item>
                             </ul>
@@ -1006,10 +926,7 @@ const HeaderMerchandise = memo(() => {
 
                     <div className="navbar-right menu-right">
                       <ul className="d-flex align-items-center list-inline m-0">
-                        <Dropdown
-                          as="li"
-                          className="nav-item nav-icon position-relative"
-                        >
+                        <Dropdown as="li" className="nav-item nav-icon position-relative">
                           <Dropdown.Menu className="search-box iq-search-bar d-search p-0 m-0">
                             <Form action="#" className="search-form">
                               <div className="form-group position-relative">
@@ -1029,10 +946,7 @@ const HeaderMerchandise = memo(() => {
                           <Dropdown.Menu className="iq-sub-dropdown iq-user-dropdown">
                             <div className="iq-card shadow-none m-0">
                               <div className="iq-card-body p-0 ps-3 pe-3">
-                                <Link
-                                  href="/auth/login"
-                                  className="iq-sub-card setting-dropdown"
-                                >
+                                <Link href="/auth/login" className="iq-sub-card setting-dropdown">
                                   <div className="d-flex align-items-center">
                                     <div className="right-icon">
                                       <svg
@@ -1138,7 +1052,7 @@ const HeaderMerchandise = memo(() => {
                       </span>
                     </Button>
                     <div
-                      className={`p-3 navbar-collapse ${show1 === true ? "collapse show" : "collapse"}`}
+                      className={`p-3 navbar-collapse ${show1 === true ? 'collapse show' : 'collapse'}`}
                       id="navbarSupportedContent"
                     >
                       <div className="iq-meta-menu-container d-xl-block d-none">
@@ -1147,9 +1061,7 @@ const HeaderMerchandise = memo(() => {
                             <Link href="/merchandise/account">My Account</Link>
                           </li>
                           <li>
-                            <Link href="https://iqonic.desky.support/">
-                              Customer Support
-                            </Link>
+                            <Link href="https://iqonic.desky.support/">Customer Support</Link>
                           </li>
                           <li>
                             <Link href="/extra/contact-us">Help?</Link>
@@ -1337,9 +1249,7 @@ const HeaderMerchandise = memo(() => {
                                     strokeLinejoin="round"
                                   ></path>
                                 </svg>
-                                <h6 className="mb-0 font-size-14 fw-normal">
-                                  My Account
-                                </h6>
+                                <h6 className="mb-0 font-size-14 fw-normal">My Account</h6>
                               </Link>
                               <Link
                                 href="/play-list"
@@ -1357,18 +1267,14 @@ const HeaderMerchandise = memo(() => {
                                     fill="white"
                                   ></path>
                                 </svg>
-                                <h6 className="mb-0 font-size-14 fw-normal">
-                                  Watchlist
-                                </h6>
+                                <h6 className="mb-0 font-size-14 fw-normal">Watchlist</h6>
                               </Link>
                               <Link
                                 href="/pricing"
                                 className="iq-sub-card d-flex align-items-center gap-3"
                               >
                                 <i className="fa-regular fa-star"></i>
-                                <h6 className="mb-0 font-size-14 fw-normal">
-                                  Subscription
-                                </h6>
+                                <h6 className="mb-0 font-size-14 fw-normal">Subscription</h6>
                               </Link>
                               <Link
                                 href="/auth/login"
@@ -1386,9 +1292,7 @@ const HeaderMerchandise = memo(() => {
                                     fill="currentColor"
                                   ></path>
                                 </svg>
-                                <h6 className="mb-0 font-size-14 fw-normal">
-                                  Logout
-                                </h6>
+                                <h6 className="mb-0 font-size-14 fw-normal">Logout</h6>
                               </Link>
                             </div>
                           </li>
@@ -1416,7 +1320,7 @@ const HeaderMerchandise = memo(() => {
                 <ul className="cart-items-list m-0 list-inline">
                   {cart.map((item, index) => {
                     return (
-                      <li className={"cart-item " + item.class} key={index}>
+                      <li className={'cart-item ' + item.class} key={index}>
                         <div className="cart-item-block d-flex gap-3">
                           <div className="image flex-shrink-0">
                             <img
@@ -1427,27 +1331,20 @@ const HeaderMerchandise = memo(() => {
                             />
                           </div>
                           <div className="cart-block-content position-relative flex-grow-1 pe-5">
-                            <h6 className="mb-36 text-capitalize">
-                              {item.name}
-                            </h6>
-                            <span className="text-primary small">
-                              {item.price}
-                            </span>
+                            <h6 className="mb-36 text-capitalize">{item.name}</h6>
+                            <span className="text-primary small">{item.price}</span>
                             <div className="mt-3">
                               <Counter />
                             </div>
                             <div className="position-absolute top-0 end-0">
-                              <Link
-                                href="#"
-                                className="text-white delete-btn text-capitalize"
-                              >
+                              <Link href="#" className="text-white delete-btn text-capitalize">
                                 delete
                               </Link>
                             </div>
                           </div>
                         </div>
                       </li>
-                    );
+                    )
                   })}
                 </ul>
               </div>
@@ -1477,7 +1374,7 @@ const HeaderMerchandise = memo(() => {
         </Offcanvas>
       </Fragment>
     </>
-  );
-});
-HeaderMerchandise.displayName = "HeaderMerchandise";
-export default HeaderMerchandise;
+  )
+})
+HeaderMerchandise.displayName = 'HeaderMerchandise'
+export default HeaderMerchandise

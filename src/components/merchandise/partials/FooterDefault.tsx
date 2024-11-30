@@ -1,16 +1,16 @@
-import React, { Fragment, memo } from "react";
+import React, { Fragment, memo } from 'react'
 
 //react-bootstrap
-import { Button, Col, Container, Form, Row } from "react-bootstrap";
+import { Button, Col, Container, Form, Row } from 'react-bootstrap'
 
 //react-router-dom
-import Link from "next/link";
+import Link from 'next/link'
 
 //components
-import Logo from "../../logo";
+import Logo from '../../logo'
 
 const MerchandiseFooter = memo(() => {
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear()
   return (
     <Fragment>
       <footer className="footer-merchandise">
@@ -26,11 +26,8 @@ const MerchandiseFooter = memo(() => {
                     <Link href="tel:+4805550103"> + (480) 555-0103</Link>
                   </h4>
                   <span className="d-inline-block mt-4 mb-0 font-size-14">
-                    {" "}
-                    Email Us:{" "}
-                    <Link href="maito:customer@streamit.com">
-                      customer@streamit.com
-                    </Link>
+                    {' '}
+                    Email Us: <Link href="maito:customer@streamit.com">customer@streamit.com</Link>
                   </span>
                   <div className="mt-5">
                     <p className="text-uppercase letter-spacing-1 font-size-14 mb-1">
@@ -94,11 +91,7 @@ const MerchandiseFooter = memo(() => {
                         placeholder="Email*"
                       />
                       <div className="iq-button">
-                        <Button
-                          type="submit"
-                          className="btn btn-sm"
-                          id="button-addon2"
-                        >
+                        <Button type="submit" className="btn btn-sm" id="button-addon2">
                           Subscribe
                         </Button>
                       </div>
@@ -139,9 +132,7 @@ const MerchandiseFooter = memo(() => {
                     </div>
                   </Row>
                   <div className="mt-5">
-                    <p className="pt-3 mb-3 text-uppercase">
-                      We Accept Payments
-                    </p>
+                    <p className="pt-3 mb-3 text-uppercase">We Accept Payments</p>
                     <ul className="list-inline d-flex align-items-center flex-wrap gap-3 m-0">
                       <li>
                         <img src="/assets/images/footer/01.webp" alt="visa" />
@@ -173,7 +164,7 @@ const MerchandiseFooter = memo(() => {
               </Col>
               <Col md="6" className="text-md-end text-center">
                 <p className="m-0 font-size-14">
-                  Powered by{" "}
+                  Powered by{' '}
                   <Link href="https://iqonic.design/" target="_blank">
                     IQONIC DESIGN
                   </Link>
@@ -184,8 +175,8 @@ const MerchandiseFooter = memo(() => {
         </div>
       </footer>
     </Fragment>
-  );
-});
+  )
+})
 
-MerchandiseFooter.displayName = "MerchandiseFooter";
-export default MerchandiseFooter;
+MerchandiseFooter.displayName = 'MerchandiseFooter'
+export default MerchandiseFooter

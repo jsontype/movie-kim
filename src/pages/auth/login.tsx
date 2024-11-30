@@ -1,13 +1,13 @@
-import React, { Fragment } from "react";
+import React, { Fragment } from 'react'
 
 //react bootstrap
-import { Col, Container, Form, Row } from "react-bootstrap";
+import { Col, Container, Form, Row } from 'react-bootstrap'
 
 //router
-import Link from "next/link";
+import Link from 'next/link'
 
 //components
-import Logo from "../../components/logo";
+import Logo from '../../components/logo'
 
 const Login = () => {
   return (
@@ -16,11 +16,11 @@ const Login = () => {
         <div
           className="vh-100"
           style={{
-            backgroundImage: "url(/assets/images/pages/01.webp)",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            position: "relative",
-            minHeight: "500px",
+            backgroundImage: 'url(/assets/images/pages/01.webp)',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            position: 'relative',
+            minHeight: '500px',
           }}
         >
           <Container>
@@ -35,21 +35,11 @@ const Login = () => {
                       <Form.Label className="text-white fw-500 mb-2">
                         Username or Email Address
                       </Form.Label>
-                      <Form.Control
-                        type="text"
-                        className="rounded-0"
-                        required
-                      />
+                      <Form.Control type="text" className="rounded-0" required />
                     </Form.Group>
                     <Form.Group className="mb-3">
-                      <Form.Label className="text-white fw-500 mb-2">
-                        PassWord
-                      </Form.Label>
-                      <Form.Control
-                        type="password"
-                        className="rounded-0"
-                        required
-                      />
+                      <Form.Label className="text-white fw-500 mb-2">PassWord</Form.Label>
+                      <Form.Control type="password" className="rounded-0" required />
                     </Form.Group>
                     <Form.Group className="text-end mb-3">
                       <Link
@@ -65,10 +55,7 @@ const Login = () => {
                     </Form.Label>
                     <div className="full-button">
                       <div className="iq-button">
-                        <Link
-                          href="#"
-                          className="btn text-uppercase position-relative"
-                        >
+                        <Link href="#" className="btn text-uppercase position-relative">
                           <span className="button-text">log in</span>
                           <i className="fa-solid fa-play"></i>
                         </Link>
@@ -76,7 +63,7 @@ const Login = () => {
                     </div>
                   </Form>
                   <p className="my-4 text-center fw-500 text-white">
-                    New to Streamit?{" "}
+                    New to Streamit?{' '}
                     <Link href="/auth/sign-up" className="text-primary ms-1">
                       Register
                     </Link>
@@ -88,10 +75,7 @@ const Login = () => {
                   </div>
                   <ul className="p-0 pt-4 m-0 list-unstyled widget_social_media text-center">
                     <li className="">
-                      <Link
-                        href="https:/www.google.com/"
-                        className="position-relative"
-                      >
+                      <Link href="https:/www.google.com/" className="position-relative">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="24"
@@ -119,10 +103,7 @@ const Login = () => {
                       </Link>
                     </li>
                     <li className="">
-                      <Link
-                        href="https:/facebook.com/"
-                        className="position-relative"
-                      >
+                      <Link href="https:/facebook.com/" className="position-relative">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="26"
@@ -155,10 +136,7 @@ const Login = () => {
                       </Link>
                     </li>
                     <li className="">
-                      <Link
-                        href="https:/twitter.com/"
-                        className="position-relative"
-                      >
+                      <Link href="https:/twitter.com/" className="position-relative">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="24"
@@ -181,8 +159,8 @@ const Login = () => {
         </div>
       </main>
     </Fragment>
-  );
-};
+  )
+}
 
-Login.layout = "Blank";
-export default Login;
+Login.layout = 'Blank'
+export default Login

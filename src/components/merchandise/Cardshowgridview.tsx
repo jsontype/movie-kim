@@ -1,57 +1,57 @@
-import { Fragment, memo, useState } from "react";
+import { Fragment, memo, useState } from 'react'
 
 // Next-Link
-import Link from "next/link";
+import Link from 'next/link'
 
 // components
-import RatingStar from "../rating-star";
-import ProductModal from "./ProductModal";
+import RatingStar from '../rating-star'
+import ProductModal from './ProductModal'
 
 //sweetalert2
-import Swal from "sweetalert2";
-import "sweetalert2/src/sweetalert2.scss";
+import Swal from 'sweetalert2'
+import 'sweetalert2/src/sweetalert2.scss'
 
 interface CardShopGridViewProps {
-  is_sale?: boolean;
-  is_new?: boolean;
-  thumbnail?: string;
-  product_name?: string;
-  price?: string;
-  final_price?: string;
-  rating?: string;
-  count1?: string;
-  slug?: string;
+  is_sale?: boolean
+  is_new?: boolean
+  thumbnail?: string
+  product_name?: string
+  price?: string
+  final_price?: string
+  rating?: string
+  count1?: string
+  slug?: string
 }
 
 const CardShopGridView = memo((props: CardShopGridViewProps) => {
   const showSwal = () => {
     Swal.fire({
-      title: "Added!",
-      text: "Your item has been added to the cart.",
-      icon: "success",
-      confirmButtonText: "Ok",
-      background: "#141314",
-      color: "#ffffff",
-    });
-  };
+      title: 'Added!',
+      text: 'Your item has been added to the cart.',
+      icon: 'success',
+      confirmButtonText: 'Ok',
+      background: '#141314',
+      color: '#ffffff',
+    })
+  }
 
   const showSwalwish = () => {
     Swal.fire({
-      title: "Added!",
-      text: "Your item has been added to the Wishlist.",
-      icon: "success",
-      confirmButtonText: "Ok",
-      background: "#141314",
-      color: "#ffffff",
-    });
-  };
+      title: 'Added!',
+      text: 'Your item has been added to the Wishlist.',
+      icon: 'success',
+      confirmButtonText: 'Ok',
+      background: '#141314',
+      color: '#ffffff',
+    })
+  }
 
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(false)
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-  const isSale = props.is_sale;
-  const isNew = props.is_new;
+  const handleClose = () => setShow(false)
+  const handleShow = () => setShow(true)
+  const isSale = props.is_sale
+  const isNew = props.is_new
   return (
     <Fragment>
       <div className="product-block">
@@ -60,17 +60,12 @@ const CardShopGridView = memo((props: CardShopGridViewProps) => {
         ) : isNew ? (
           <span className="onsale bg-primary">New!</span>
         ) : (
-          ""
+          ''
         )}
         <div className="image-wrap">
           <Link href="/merchandise/product-detail">
             <div className="product-image">
-              <img
-                src={props.thumbnail}
-                className="img-fluid w-100"
-                alt=""
-                loading="lazy"
-              />
+              <img src={props.thumbnail} className="img-fluid w-100" alt="" loading="lazy" />
             </div>
           </Link>
           <div className="buttons-holder">
@@ -84,11 +79,7 @@ const CardShopGridView = memo((props: CardShopGridViewProps) => {
                 <div className="on-first-load">
                   {/* <!-- ADD TO WISHLIST --> */}
                   <div className="add-button">
-                    <Link
-                      href="#"
-                      className="add_to_wishlist"
-                      onClick={showSwalwish}
-                    >
+                    <Link href="#" className="add_to_wishlist" onClick={showSwalwish}>
                       <i className="fa fa-heart"></i>
                     </Link>
                   </div>
@@ -131,7 +122,7 @@ const CardShopGridView = memo((props: CardShopGridViewProps) => {
         <div className="product-caption">
           <h5 className="product__title">
             <Link href="/merchandise/product-detail" className="title-link">
-              {" "}
+              {' '}
               {props.product_name}
             </Link>
           </h5>
@@ -143,19 +134,15 @@ const CardShopGridView = memo((props: CardShopGridViewProps) => {
           </div>
           <div className="container-rating">
             <div className="star-rating text-primary">
-              <RatingStar
-                count={props.rating}
-                count1={props.count1}
-                starColor="text-warning"
-              />
+              <RatingStar count={props.rating} count1={props.count1} starColor="text-warning" />
             </div>
           </div>
         </div>
       </div>
       <ProductModal show={show} handleClose={handleClose} />
     </Fragment>
-  );
-});
+  )
+})
 
-CardShopGridView.displayName = "CardShopGridView";
-export default CardShopGridView;
+CardShopGridView.displayName = 'CardShopGridView'
+export default CardShopGridView

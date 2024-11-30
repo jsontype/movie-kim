@@ -1,14 +1,14 @@
-import { Html, Head, Main, NextScript } from "next/document";
+import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
   const style = {
-    "--header-height": "74px",
-  };
+    '--header-height': '74px',
+  }
   return (
     <Html
       lang="en"
       data-bs-theme="dark"
-      style={{ "--header-height": "74px" } as React.CSSProperties}
+      style={{ '--header-height': '74px' } as React.CSSProperties}
     >
       <Head />
       <meta />
@@ -28,5 +28,5 @@ export default function Document() {
         <NextScript />
       </body>
     </Html>
-  );
+  )
 }

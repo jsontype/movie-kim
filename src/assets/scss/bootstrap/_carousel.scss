@@ -235,7 +235,7 @@
 
 @if $enable-dark-mode {
   @include color-mode(dark) {
-    @if $color-mode-type == "media-query" {
+    @if $color-mode-type == 'media-query' {
       .carousel {
         @include carousel-dark();
       }

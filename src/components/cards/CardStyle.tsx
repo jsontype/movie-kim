@@ -1,14 +1,14 @@
-import { Fragment, memo } from "react";
+import { Fragment, memo } from 'react'
 
 //react-router-dom
-import Link from "next/link";
+import Link from 'next/link'
 
 interface Props {
-  link: string;
-  watchlistLink: string;
-  image: string;
-  title: string;
-  movieTime: string;
+  link: string
+  watchlistLink: string
+  image: string
+  title: string
+  movieTime: string
 }
 
 const CardStyle = memo((props: Props) => {
@@ -34,9 +34,7 @@ const CardStyle = memo((props: Props) => {
                   <Link href={props.link}>{props.title}</Link>
                 </h5>
                 <div className="movie-time d-flex align-items-center my-2">
-                  <span className="movie-time-text font-normal">
-                    {props.movieTime}
-                  </span>
+                  <span className="movie-time-text font-normal">{props.movieTime}</span>
                 </div>
               </div>
               <div className="watchlist">
@@ -139,8 +137,8 @@ const CardStyle = memo((props: Props) => {
         </div>
       </div>
     </Fragment>
-  );
-});
+  )
+})
 
-CardStyle.displayName = "CardStyle";
-export default CardStyle;
+CardStyle.displayName = 'CardStyle'
+export default CardStyle

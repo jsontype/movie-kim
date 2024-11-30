@@ -101,7 +101,7 @@
     }
   }
 
-  .btn[aria-expanded="true"] {
+  .btn[aria-expanded='true'] {
     .right-icon {
       transform: rotate(90deg);
     }
@@ -115,15 +115,15 @@
   overflow: auto;
 }
 
-[id="modal"] .bd-example .btn,
-[id="buttons"] .bd-example .btn,
-[id="tooltips"] .bd-example .btn,
-[id="popovers"] .bd-example .btn,
-[id="dropdowns"] .bd-example .btn-group,
-[id="dropdowns"] .bd-example .dropdown,
-[id="dropdowns"] .bd-example .dropup,
-[id="dropdowns"] .bd-example .dropend,
-[id="dropdowns"] .bd-example .dropstart {
+[id='modal'] .bd-example .btn,
+[id='buttons'] .bd-example .btn,
+[id='tooltips'] .bd-example .btn,
+[id='popovers'] .bd-example .btn,
+[id='dropdowns'] .bd-example .btn-group,
+[id='dropdowns'] .bd-example .dropdown,
+[id='dropdowns'] .bd-example .dropup,
+[id='dropdowns'] .bd-example .dropend,
+[id='dropdowns'] .bd-example .dropstart {
   // margin: 0 1rem 1rem 0;
   margin-top: 0.5rem;
 }

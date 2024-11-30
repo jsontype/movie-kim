@@ -1,13 +1,13 @@
-import { Fragment, memo } from "react";
+import { Fragment, memo } from 'react'
 
 // Next-Link
-import Link from "next/link";
+import Link from 'next/link'
 
 interface GenersCardProps {
-  image?: any;
-  title?: string;
-  slug?: string;
-  type?: string;
+  image?: any
+  title?: string
+  slug?: string
+  type?: string
 }
 
 const GenersCard = memo((props: GenersCardProps) => {
@@ -25,7 +25,7 @@ const GenersCard = memo((props: GenersCardProps) => {
               <h6 className="mb-0 iq-title">
                 <Link
                   href={{
-                    pathname: "/view-all",
+                    pathname: '/view-all',
                   }}
                   className="text-decoration-none text-capitalize line-count-2 p-2"
                 >
@@ -37,8 +37,8 @@ const GenersCard = memo((props: GenersCardProps) => {
         </div>
       </div>
     </Fragment>
-  );
-});
+  )
+})
 
-GenersCard.displayName = "GenersCard";
-export default GenersCard;
+GenersCard.displayName = 'GenersCard'
+export default GenersCard

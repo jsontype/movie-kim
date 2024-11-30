@@ -1,9 +1,9 @@
-import React, { Fragment, memo } from "react";
+import React, { Fragment, memo } from 'react'
 
 interface CheckOutProps {
-  thumbnail?: any;
-  product_name?: string;
-  final_price?: string;
+  thumbnail?: any
+  product_name?: string
+  final_price?: string
 }
 const CheckoutCard = memo((props: CheckOutProps) => {
   return (
@@ -29,9 +29,7 @@ const CheckoutCard = memo((props: CheckOutProps) => {
               <div className="text">
                 <span>{props.product_name}</span>
                 <br />
-                <strong className="product-quantity text-white">
-                  QTY:&nbsp;1
-                </strong>
+                <strong className="product-quantity text-white">QTY:&nbsp;1</strong>
               </div>
             </td>
             <td className="product-total">
@@ -63,8 +61,8 @@ const CheckoutCard = memo((props: CheckOutProps) => {
         </tfoot>
       </table>
     </Fragment>
-  );
-});
+  )
+})
 
-CheckoutCard.displayName = "CheckoutCard";
-export default CheckoutCard;
+CheckoutCard.displayName = 'CheckoutCard'
+export default CheckoutCard

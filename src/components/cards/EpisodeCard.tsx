@@ -1,13 +1,13 @@
-import { FC, Fragment, memo } from "react";
-import Link from "next/link";
+import { FC, Fragment, memo } from 'react'
+import Link from 'next/link'
 
 interface EpisodeCardProps {
-  image: string;
-  link: string;
-  showEpisod: string;
-  episodDate: string;
-  episodTime: string;
-  episodTitle: string;
+  image: string
+  link: string
+  showEpisod: string
+  episodDate: string
+  episodTime: string
+  episodTitle: string
 }
 
 const EpisodeCard: FC<EpisodeCardProps> = memo(
@@ -17,12 +17,7 @@ const EpisodeCard: FC<EpisodeCardProps> = memo(
         <div className="episode-block">
           <div className="block-image position-relative">
             <Link href={link}>
-              <img
-                src={image}
-                className="img-fluid img-zoom"
-                loading="lazy"
-                alt=""
-              />
+              <img src={image} className="img-fluid img-zoom" loading="lazy" alt="" />
             </Link>
             <div className="episode-number">{showEpisod}</div>
             <div className="episode-play">
@@ -33,9 +28,7 @@ const EpisodeCard: FC<EpisodeCardProps> = memo(
           </div>
           <div className="epi-desc p-3">
             <div className="d-flex align-items-center justify-content-between mb-3">
-              <span className="border-gredient-left text-white rel-date">
-                {episodDate}
-              </span>
+              <span className="border-gredient-left text-white rel-date">{episodDate}</span>
               <span className="text-primary run-time">{episodTime}</span>
             </div>
             <Link href="/tv-shows/episode">
@@ -44,9 +37,9 @@ const EpisodeCard: FC<EpisodeCardProps> = memo(
           </div>
         </div>
       </Fragment>
-    );
+    )
   },
-);
+)
 
-EpisodeCard.displayName = "EpisodeCard";
-export default EpisodeCard;
+EpisodeCard.displayName = 'EpisodeCard'
+export default EpisodeCard

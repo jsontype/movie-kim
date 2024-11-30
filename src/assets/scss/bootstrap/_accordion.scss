@@ -19,9 +19,7 @@
   --#{$prefix}accordion-btn-icon-width: #{$accordion-icon-width};
   --#{$prefix}accordion-btn-icon-transform: #{$accordion-icon-transform};
   --#{$prefix}accordion-btn-icon-transition: #{$accordion-icon-transition};
-  --#{$prefix}accordion-btn-active-icon: #{escape-svg(
-      $accordion-button-active-icon
-    )};
+  --#{$prefix}accordion-btn-active-icon: #{escape-svg($accordion-button-active-icon)};
   --#{$prefix}accordion-btn-focus-border-color: #{$accordion-button-focus-border-color};
   --#{$prefix}accordion-btn-focus-box-shadow: #{$accordion-button-focus-box-shadow};
   --#{$prefix}accordion-body-padding-x: #{$accordion-body-padding-x};
@@ -36,8 +34,7 @@
   display: flex;
   align-items: center;
   width: 100%;
-  padding: var(--#{$prefix}accordion-btn-padding-y)
-    var(--#{$prefix}accordion-btn-padding-x);
+  padding: var(--#{$prefix}accordion-btn-padding-y) var(--#{$prefix}accordion-btn-padding-x);
   @include font-size($font-size-base);
   color: var(--#{$prefix}accordion-btn-color);
   text-align: left; // Reset button style
@@ -65,7 +62,7 @@
     width: var(--#{$prefix}accordion-btn-icon-width);
     height: var(--#{$prefix}accordion-btn-icon-width);
     margin-left: auto;
-    content: "";
+    content: '';
     background-image: var(--#{$prefix}accordion-btn-icon);
     background-repeat: no-repeat;
     background-size: var(--#{$prefix}accordion-btn-icon-width);
@@ -91,16 +88,13 @@
 .accordion-item {
   color: var(--#{$prefix}accordion-color);
   background-color: var(--#{$prefix}accordion-bg);
-  border: var(--#{$prefix}accordion-border-width) solid
-    var(--#{$prefix}accordion-border-color);
+  border: var(--#{$prefix}accordion-border-width) solid var(--#{$prefix}accordion-border-color);
 
   &:first-of-type {
     @include border-top-radius(var(--#{$prefix}accordion-border-radius));
 
     .accordion-button {
-      @include border-top-radius(
-        var(--#{$prefix}accordion-inner-border-radius)
-      );
+      @include border-top-radius(var(--#{$prefix}accordion-inner-border-radius));
     }
   }
 
@@ -114,9 +108,7 @@
 
     .accordion-button {
       &.collapsed {
-        @include border-bottom-radius(
-          var(--#{$prefix}accordion-inner-border-radius)
-        );
+        @include border-bottom-radius(var(--#{$prefix}accordion-inner-border-radius));
       }
     }
 
@@ -127,8 +119,7 @@
 }
 
 .accordion-body {
-  padding: var(--#{$prefix}accordion-body-padding-y)
-    var(--#{$prefix}accordion-body-padding-x);
+  padding: var(--#{$prefix}accordion-body-padding-y) var(--#{$prefix}accordion-body-padding-x);
 }
 
 // Flush accordion items
@@ -165,9 +156,7 @@
   @include color-mode(dark) {
     .accordion-button::after {
       --#{$prefix}accordion-btn-icon: #{escape-svg($accordion-button-icon-dark)};
-      --#{$prefix}accordion-btn-active-icon: #{escape-svg(
-          $accordion-button-active-icon-dark
-        )};
+      --#{$prefix}accordion-btn-active-icon: #{escape-svg($accordion-button-active-icon-dark)};
     }
   }
 }

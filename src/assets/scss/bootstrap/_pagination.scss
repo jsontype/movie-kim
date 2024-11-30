@@ -29,14 +29,12 @@
 .page-link {
   position: relative;
   display: block;
-  padding: var(--#{$prefix}pagination-padding-y)
-    var(--#{$prefix}pagination-padding-x);
+  padding: var(--#{$prefix}pagination-padding-y) var(--#{$prefix}pagination-padding-x);
   @include font-size(var(--#{$prefix}pagination-font-size));
   color: var(--#{$prefix}pagination-color);
   text-decoration: if($link-decoration == none, null, none);
   background-color: var(--#{$prefix}pagination-bg);
-  border: var(--#{$prefix}pagination-border-width) solid
-    var(--#{$prefix}pagination-border-color);
+  border: var(--#{$prefix}pagination-border-width) solid var(--#{$prefix}pagination-border-color);
   @include transition($pagination-transition);
 
   &:hover {

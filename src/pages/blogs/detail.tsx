@@ -1,36 +1,36 @@
-import React, { Fragment, memo } from "react";
+import React, { Fragment, memo } from 'react'
 
 //react-bootstrap
-import { Row, Col, Container } from "react-bootstrap";
+import { Row, Col, Container } from 'react-bootstrap'
 
 //router
-import Link from "next/link";
+import Link from 'next/link'
 
 //static data
-import { blogs } from "../../StaticData/blogs";
+import { blogs } from '../../StaticData/blogs'
 
 //components
-import DetailMetaList from "../../components/blog/DetailMetaList";
-import FormWidget from "../../components/blog/FormWidget";
+import DetailMetaList from '../../components/blog/DetailMetaList'
+import FormWidget from '../../components/blog/FormWidget'
 
 //custom hook
-import { useBreadcrumb } from "@/utilities/usePage";
+import { useBreadcrumb } from '@/utilities/usePage'
 
 interface BlogDetail {
-  id: string;
-  categories: string;
-  title: string;
-  userImage: string;
-  username: string;
-  blogDate: string;
-  tags: [string];
-  longDescription: string;
+  id: string
+  categories: string
+  title: string
+  userImage: string
+  username: string
+  blogDate: string
+  tags: [string]
+  longDescription: string
 }
 
 const BlogDetail = () => {
-  const slug = "the-most-anticipated-movies";
-  const blog: BlogDetail | any = blogs.find((item) => item.slug === slug);
-  useBreadcrumb("The Most Anticipated Movies");
+  const slug = 'the-most-anticipated-movies'
+  const blog: BlogDetail | any = blogs.find(item => item.slug === slug)
+  useBreadcrumb('The Most Anticipated Movies')
   return (
     <Fragment>
       {blog !== undefined && blog !== null ? (
@@ -40,22 +40,14 @@ const BlogDetail = () => {
               <Col xl="8">
                 <div className="iq-blog blog-detail">
                   <Link href="" className="blog-image d-block overflow-hidden">
-                    <img
-                      src={blog.thumbnail}
-                      loading="lazy"
-                      alt=""
-                      className="img-fluid w-100"
-                    />
+                    <img src={blog.thumbnail} loading="lazy" alt="" className="img-fluid w-100" />
                   </Link>
                   <div className="iq-blog-box pt-4">
                     <div className="iq-blog-meta d-flex mb-3">
                       <ul className="iq-blogtag list-inline">
                         <li className="border-gredient-left">
                           <Link href="/blogs/filter/author" className="iq-user">
-                            <i
-                              className="fa fa-user-o me-1"
-                              aria-hidden="true"
-                            ></i>
+                            <i className="fa fa-user-o me-1" aria-hidden="true"></i>
                             {blog.username}
                           </Link>
                         </li>
@@ -63,11 +55,8 @@ const BlogDetail = () => {
                       <ul className="list-inline mb-0 ms-2">
                         <li className="border-gredient-left">
                           <Link rel="bookmark" href="/blogs/filter/date">
-                            <i
-                              className="far fa-calendar-alt me-1"
-                              aria-hidden="true"
-                            ></i>
-                            {blog.blogDate}{" "}
+                            <i className="far fa-calendar-alt me-1" aria-hidden="true"></i>
+                            {blog.blogDate}{' '}
                           </Link>
                         </li>
                       </ul>
@@ -92,10 +81,10 @@ const BlogDetail = () => {
           </Container>
         </div>
       ) : (
-        ""
+        ''
       )}
     </Fragment>
-  );
-};
+  )
+}
 
-export default BlogDetail;
+export default BlogDetail

@@ -1,178 +1,178 @@
-import React, { Fragment, memo } from "react";
+import React, { Fragment, memo } from 'react'
 
 //react-bootstrap
-import { Row, Col, Container, Nav, Tab } from "react-bootstrap";
+import { Row, Col, Container, Nav, Tab } from 'react-bootstrap'
 
 // Next-Link
-import Link from "next/link";
+import Link from 'next/link'
 
 //components
-import ReviewComponent from "@/components/ReviewComponent";
-import RatingStar from "@/components/rating-star";
-import FsLightBox from "@/components/fslight-box";
-import Sources from "@/components/Sources";
-import VideoJS from "@/components/plugins/VideoJs";
+import ReviewComponent from '@/components/ReviewComponent'
+import RatingStar from '@/components/rating-star'
+import FsLightBox from '@/components/fslight-box'
+import Sources from '@/components/Sources'
+import VideoJS from '@/components/plugins/VideoJs'
 
 //function
-import { generateImgPath } from "@/StaticData/data";
+import { generateImgPath } from '@/StaticData/data'
 
 //utilites
-import { useEnterExit } from "@/utilities/usePage";
+import { useEnterExit } from '@/utilities/usePage'
 
 //swiper
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Navigation } from 'swiper'
 
 // Redux Selector / Action
-import { useSelector } from "react-redux";
-import { theme_scheme_direction } from "@/store/setting/selectors";
-import videojs from "video.js";
+import { useSelector } from 'react-redux'
+import { theme_scheme_direction } from '@/store/setting/selectors'
+import videojs from 'video.js'
 const EpisodePage = memo(() => {
-  useEnterExit();
+  useEnterExit()
 
-  const playerRef = React.useRef(null);
-  const themeSchemeDirection = useSelector(theme_scheme_direction);
+  const playerRef = React.useRef(null)
+  const themeSchemeDirection = useSelector(theme_scheme_direction)
 
   const videoJsOptions = {
     autoplay: false,
     controls: true,
     responsive: true,
-    techOrder: ["youtube"],
+    techOrder: ['youtube'],
     sources: [
       {
-        src: "https://www.youtube.com/watch?v=QCGq1epI9pQ",
-        type: "video/youtube",
+        src: 'https://www.youtube.com/watch?v=QCGq1epI9pQ',
+        type: 'video/youtube',
       },
     ],
     youtube: { iv_load_policy: 1 },
-  };
+  }
 
   const handlePlayerReady = (player: any) => {
-    playerRef.current = player;
+    playerRef.current = player
 
     // You can handle player events here, for example:
-    player.on("waiting", () => {
-      videojs.log("player is waiting");
-    });
+    player.on('waiting', () => {
+      videojs.log('player is waiting')
+    })
 
-    player.on("dispose", () => {
-      videojs.log("player will dispose");
-    });
-  };
+    player.on('dispose', () => {
+      videojs.log('player will dispose')
+    })
+  }
 
   // date, type
   const shows = {
     id: 1,
-    slug: "football-3",
-    thumbnail: generateImgPath("/assets/images/genre/01.webp"),
-    title: "Football 3",
+    slug: 'football-3',
+    thumbnail: generateImgPath('/assets/images/genre/01.webp'),
+    title: 'Football 3',
     detail:
       "Zombie Island is a 1998 direct-to-video animated comedy horror film based on Hanna-Barbera's Scooby-Doo Saturday-morning cartoons. In the film, Shaggy, Scooby, Fred, Velma, and Daphne reunite after a year-long hiatus from Mystery, Inc. to investigate a bayou island said to be haunted by the ghost of the pirate Morgan Moonscar. The film was directed by Jim Stenstrum, from a screenplay by Glenn Leopold.",
-    season_type: "Season 1",
-    certificate: "Adventure",
+    season_type: 'Season 1',
+    certificate: 'Adventure',
     rating: 3.3,
-    episode_no: "S01E03",
+    episode_no: 'S01E03',
     likes: 9,
-    rating_from: "Imdb",
-    geners: ["Comedy", "Drama"],
-    tags: ["brother", "brother-relationship", "kings", "vikings"],
-    video_link: "",
-    views: "1.2k views",
-    video_type: "video",
+    rating_from: 'Imdb',
+    geners: ['Comedy', 'Drama'],
+    tags: ['brother', 'brother-relationship', 'kings', 'vikings'],
+    video_link: '',
+    views: '1.2k views',
+    video_type: 'video',
     is_restricted: false,
     episodes: [
       {
-        thumbnail: generateImgPath("/assets/images/tv-show/episodes/02.webp"),
-        episode_no: "S01E02",
-        release_date: "October 8, 2020",
-        duration: "35min",
-        name: "Zombie World 2",
+        thumbnail: generateImgPath('/assets/images/tv-show/episodes/02.webp'),
+        episode_no: 'S01E02',
+        release_date: 'October 8, 2020',
+        duration: '35min',
+        name: 'Zombie World 2',
       },
       {
-        thumbnail: generateImgPath("/assets/images/tv-show/episodes/03.webp"),
-        episode_no: "S01E03",
-        release_date: "October 15, 2020",
-        duration: "36min",
-        name: "Zombie World 3",
+        thumbnail: generateImgPath('/assets/images/tv-show/episodes/03.webp'),
+        episode_no: 'S01E03',
+        release_date: 'October 15, 2020',
+        duration: '36min',
+        name: 'Zombie World 3',
       },
       {
-        thumbnail: generateImgPath("/assets/images/tv-show/episodes/04.webp"),
-        episode_no: "S01E04",
-        release_date: "October 22, 2020",
-        duration: "41min",
-        name: "Zombie World 4",
+        thumbnail: generateImgPath('/assets/images/tv-show/episodes/04.webp'),
+        episode_no: 'S01E04',
+        release_date: 'October 22, 2020',
+        duration: '41min',
+        name: 'Zombie World 4',
       },
       {
-        thumbnail: generateImgPath("/assets/images/tv-show/episodes/01.webp"),
-        episode_no: "S01E04",
-        release_date: "October 1, 2020",
-        duration: "45min",
-        name: "Zombie World 1",
+        thumbnail: generateImgPath('/assets/images/tv-show/episodes/01.webp'),
+        episode_no: 'S01E04',
+        release_date: 'October 1, 2020',
+        duration: '45min',
+        name: 'Zombie World 1',
       },
       {
-        thumbnail: generateImgPath("/assets/images/tv-show/episodes/02.webp"),
-        episode_no: "S01E02",
-        release_date: "October 8, 2020",
-        duration: "35min",
-        name: "Zombie World 2",
+        thumbnail: generateImgPath('/assets/images/tv-show/episodes/02.webp'),
+        episode_no: 'S01E02',
+        release_date: 'October 8, 2020',
+        duration: '35min',
+        name: 'Zombie World 2',
       },
       {
-        thumbnail: generateImgPath("/assets/images/tv-show/episodes/03.webp"),
-        episode_no: "S01E03",
-        release_date: "October 15, 2020",
-        duration: "36min",
-        name: "Zombie World 3",
+        thumbnail: generateImgPath('/assets/images/tv-show/episodes/03.webp'),
+        episode_no: 'S01E03',
+        release_date: 'October 15, 2020',
+        duration: '36min',
+        name: 'Zombie World 3',
       },
       {
-        thumbnail: generateImgPath("/assets/images/tv-show/episodes/04.webp"),
-        episode_no: "S01E04",
-        release_date: "October 22, 2020",
-        duration: "41min",
-        name: "Zombie World 4",
+        thumbnail: generateImgPath('/assets/images/tv-show/episodes/04.webp'),
+        episode_no: 'S01E04',
+        release_date: 'October 22, 2020',
+        duration: '41min',
+        name: 'Zombie World 4',
       },
       {
-        thumbnail: generateImgPath("/assets/images/tv-show/episodes/01.webp"),
-        episode_no: "S01E04",
-        release_date: "October 1, 2020",
-        duration: "45min",
-        name: "Zombie World 1",
+        thumbnail: generateImgPath('/assets/images/tv-show/episodes/01.webp'),
+        episode_no: 'S01E04',
+        release_date: 'October 1, 2020',
+        duration: '45min',
+        name: 'Zombie World 1',
       },
     ],
 
     cast: [
       {
-        title: "James Chinlund",
-        thumbnail: generateImgPath("/assets/images/genre/g1.webp"),
-        as: "As James",
+        title: 'James Chinlund',
+        thumbnail: generateImgPath('/assets/images/genre/g1.webp'),
+        as: 'As James',
       },
       {
-        title: "James Earl Jones",
-        thumbnail: generateImgPath("/assets/images/genre/g2.webp"),
-        as: "As Jones",
+        title: 'James Earl Jones',
+        thumbnail: generateImgPath('/assets/images/genre/g2.webp'),
+        as: 'As Jones',
       },
     ],
     crew: [
       {
-        title: "Jeff Nathanson ",
-        thumbnail: generateImgPath("/assets/images/genre/g3.webp"),
-        as: "Writing",
+        title: 'Jeff Nathanson ',
+        thumbnail: generateImgPath('/assets/images/genre/g3.webp'),
+        as: 'Writing',
       },
       {
-        title: " Irene Mecchi ",
-        thumbnail: generateImgPath("/assets/images/genre/g5.webp"),
-        as: "Writing",
+        title: ' Irene Mecchi ',
+        thumbnail: generateImgPath('/assets/images/genre/g5.webp'),
+        as: 'Writing',
       },
       {
-        title: " Karen Gilchrist ",
-        thumbnail: generateImgPath("/assets/images/genre/g4.webp"),
-        as: "Production",
+        title: ' Karen Gilchrist ',
+        thumbnail: generateImgPath('/assets/images/genre/g4.webp'),
+        as: 'Production',
       },
     ],
-    created_by_username: "Admin",
-    created_at: "Feb 2019",
-    ranking: "#1 in Series Today ",
-    date: "Nov 2020",
-  };
+    created_by_username: 'Admin',
+    created_at: 'Feb 2019',
+    ranking: '#1 in Series Today ',
+    date: 'Nov 2020',
+  }
 
   return (
     <Fragment>
@@ -201,9 +201,7 @@ const EpisodePage = memo(() => {
                     <span className="text-white">
                       {shows.rating}
                       <img
-                        src={generateImgPath(
-                          "/assets/images/movies/imdb-logo.svg",
-                        )}
+                        src={generateImgPath('/assets/images/movies/imdb-logo.svg')}
                         alt="imdb-logo"
                         className="img-fluid ms-2"
                       />
@@ -353,9 +351,7 @@ const EpisodePage = memo(() => {
         <Container fluid>
           <div className="overflow-hidden">
             <div className="d-flex align-items-center justify-content-between px-3 pt-2 my-4">
-              <h5 className="main-title text-capitalize mb-0">
-                Latest Episodes
-              </h5>
+              <h5 className="main-title text-capitalize mb-0">Latest Episodes</h5>
             </div>
             <div className="card-style-slider">
               <Swiper
@@ -369,8 +365,8 @@ const EpisodePage = memo(() => {
                 spaceBetween={5}
                 // wrapperClass="p-0 m-0  list-inline"
                 navigation={{
-                  prevEl: ".swiper-button-prev",
-                  nextEl: ".swiper-button-next",
+                  prevEl: '.swiper-button-prev',
+                  nextEl: '.swiper-button-next',
                 }}
                 breakpoints={{
                   0: {
@@ -408,9 +404,7 @@ const EpisodePage = memo(() => {
                               loading="lazy"
                             />
                           </Link>
-                          <div className="episode-number">
-                            {item.episode_no}
-                          </div>
+                          <div className="episode-number">{item.episode_no}</div>
                           <div className="episode-play">
                             <Link href="/tv-shows/episode">
                               <i className="fa-solid fa-play"></i>
@@ -422,19 +416,15 @@ const EpisodePage = memo(() => {
                             <span className="border-gredient-left text-white rel-date">
                               {item.release_date}
                             </span>
-                            <span className="text-primary run-time">
-                              {item.duration}
-                            </span>
+                            <span className="text-primary run-time">{item.duration}</span>
                           </div>
                           <Link href="/tv-shows/episode">
-                            <h5 className="epi-name text-white mb-0">
-                              {item.name}
-                            </h5>
+                            <h5 className="epi-name text-white mb-0">{item.name}</h5>
                           </Link>
                         </div>
                       </div>
                     </SwiperSlide>
-                  );
+                  )
                 })}
                 <div className="swiper-button swiper-button-next"></div>
                 <div className="swiper-button swiper-button-prev"></div>
@@ -444,8 +434,8 @@ const EpisodePage = memo(() => {
         </Container>
       </div>
     </Fragment>
-  );
-});
+  )
+})
 
-EpisodePage.displayName = "EpisodePage";
-export default EpisodePage;
+EpisodePage.displayName = 'EpisodePage'
+export default EpisodePage

@@ -1,19 +1,19 @@
-import { memo, Fragment } from "react";
+import { memo, Fragment } from 'react'
 
 // react-bootstrap
-import { Container, Row, Col, Form } from "react-bootstrap";
+import { Container, Row, Col, Form } from 'react-bootstrap'
 
 // next link
-import Link from "next/link";
+import Link from 'next/link'
 
 // next image
-import Image from "next/image";
+import Image from 'next/image'
 
 //custom hook
-import { useBreadcrumb } from "@/utilities/usePage";
+import { useBreadcrumb } from '@/utilities/usePage'
 
 const ContactPage = memo(() => {
-  useBreadcrumb("Contact us");
+  useBreadcrumb('Contact us')
   return (
     <Fragment>
       <div className="section-padding">
@@ -22,9 +22,7 @@ const ContactPage = memo(() => {
             <Col lg="8">
               <div className="title-box">
                 <h2>Create With Us</h2>
-                <p className="mb-0">
-                  To learn more about how Streamit can help you, contact us.
-                </p>
+                <p className="mb-0">To learn more about how Streamit can help you, contact us.</p>
               </div>
               <Form className="mb-5 mb-lg-0">
                 <Row>
@@ -83,10 +81,7 @@ const ContactPage = memo(() => {
             <Col lg="3">
               <div className="border-bottom pb-4 mb-4">
                 <h5>Come See Us</h5>
-                <span>
-                  Townhouse Agency Consoling. LLC 50 ean 2 See, 41A Xo New York
-                  NY 20159
-                </span>
+                <span>Townhouse Agency Consoling. LLC 50 ean 2 See, 41A Xo New York NY 20159</span>
               </div>
               <div className="border-bottom pb-4 mb-4">
                 <h5>Get In Touch</h5>
@@ -99,34 +94,22 @@ const ContactPage = memo(() => {
                 <h5>Follow Us</h5>
                 <ul className="p-0 m-0 mt-4 list-unstyled widget_social_media">
                   <li className="">
-                    <Link
-                      href="https://www.facebook.com/"
-                      className="position-relative"
-                    >
+                    <Link href="https://www.facebook.com/" className="position-relative">
                       <i className="fab fa-facebook"></i>
                     </Link>
                   </li>
                   <li className="">
-                    <Link
-                      href="https://twitter.com/"
-                      className="position-relative"
-                    >
+                    <Link href="https://twitter.com/" className="position-relative">
                       <i className="fab fa-twitter"></i>
                     </Link>
                   </li>
                   <li className="">
-                    <Link
-                      href="https://github.com/"
-                      className="position-relative"
-                    >
+                    <Link href="https://github.com/" className="position-relative">
                       <i className="fab fa-github"></i>
                     </Link>
                   </li>
                   <li className="">
-                    <Link
-                      href="https://www.instagram.com/"
-                      className="position-relative"
-                    >
+                    <Link href="https://www.instagram.com/" className="position-relative">
                       <i className="fab fa-instagram"></i>
                     </Link>
                   </li>
@@ -152,8 +135,8 @@ const ContactPage = memo(() => {
             <Col lg="10">
               <div className="title-box">
                 <h3 className="fw-500">
-                  To Learn More About How Streamit Can Help You, Contact Us.
-                  We'd Be Happy To Take On The Challenge!
+                  To Learn More About How Streamit Can Help You, Contact Us. We'd Be Happy To Take
+                  On The Challenge!
                 </h3>
               </div>
             </Col>
@@ -183,20 +166,14 @@ const ContactPage = memo(() => {
                     ></path>
                   </svg>
                 </div>
-                <div style={{ zIndex: "1" }}>
-                  <h6 className="font-size-18 fw-500 mb-4">
-                    For General Enquiries
-                  </h6>
+                <div style={{ zIndex: '1' }}>
+                  <h6 className="font-size-18 fw-500 mb-4">For General Enquiries</h6>
                   <p className="mb-1 font-size-14">
-                    Call On:{" "}
-                    <span className="text-primary">(144) 1234 4567</span>
+                    Call On: <span className="text-primary">(144) 1234 4567</span>
                   </p>
                   <p className="mb-0">
-                    Mail:{" "}
-                    <Link
-                      href="mailto:info@medyapim.com"
-                      className="text-white fw-500"
-                    >
+                    Mail:{' '}
+                    <Link href="mailto:info@medyapim.com" className="text-white fw-500">
                       info@enquiries.com
                     </Link>
                   </p>
@@ -226,18 +203,14 @@ const ContactPage = memo(() => {
                     ></path>
                   </svg>
                 </div>
-                <div style={{ zIndex: "1" }}>
+                <div style={{ zIndex: '1' }}>
                   <h6 className="font-size-18 fw-500 mb-4">For user support</h6>
                   <p className="mb-1 font-size-14">
-                    Call On:{" "}
-                    <span className="text-primary">(144) 4321 4567</span>
+                    Call On: <span className="text-primary">(144) 4321 4567</span>
                   </p>
                   <p className="mb-0">
-                    Mail:{" "}
-                    <Link
-                      href="mailto:info@medyapim.com"
-                      className="text-white fw-500"
-                    >
+                    Mail:{' '}
+                    <Link href="mailto:info@medyapim.com" className="text-white fw-500">
                       support@enquiries.com
                     </Link>
                   </p>
@@ -271,20 +244,14 @@ const ContactPage = memo(() => {
                     ></path>
                   </svg>
                 </div>
-                <div style={{ zIndex: "1" }}>
-                  <h6 className="font-size-18 fw-500 mb-4">
-                    For sales Support
-                  </h6>
+                <div style={{ zIndex: '1' }}>
+                  <h6 className="font-size-18 fw-500 mb-4">For sales Support</h6>
                   <p className="mb-1 font-size-14">
-                    Call On:{" "}
-                    <span className="text-primary">(144) 1234 1234</span>
+                    Call On: <span className="text-primary">(144) 1234 1234</span>
                   </p>
                   <p className="mb-0">
-                    Mail:{" "}
-                    <Link
-                      href="mailto:info@medyapim.com"
-                      className="text-white fw-500"
-                    >
+                    Mail:{' '}
+                    <Link href="mailto:info@medyapim.com" className="text-white fw-500">
                       user@enquiries.com
                     </Link>
                   </p>
@@ -295,8 +262,8 @@ const ContactPage = memo(() => {
         </Container>
       </div>
     </Fragment>
-  );
-});
+  )
+})
 
-ContactPage.displayName = "ContactPage";
-export default ContactPage;
+ContactPage.displayName = 'ContactPage'
+export default ContactPage

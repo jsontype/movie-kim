@@ -201,7 +201,7 @@ table {
         background: var(--bs-gray-900);
 
         &::before {
-          content: "";
+          content: '';
           display: block;
           border: 1em solid var(--bs-gray-900);
           border-right-color: transparent;

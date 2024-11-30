@@ -1,7 +1,7 @@
-import React, { Fragment, memo } from "react";
+import React, { Fragment, memo } from 'react'
 
 //react-boostrap
-import { Button, Form, Row, Col } from "react-bootstrap";
+import { Button, Form, Row, Col } from 'react-bootstrap'
 
 const ReviewComponent = memo(() => {
   return (
@@ -12,9 +12,7 @@ const ReviewComponent = memo(() => {
         </div>
         <div className="review_form">
           <div className="comment-respond">
-            <h3 className="fw-500 my-2">
-              Be the first to review “Zombie Island”
-            </h3>
+            <h3 className="fw-500 my-2">Be the first to review “Zombie Island”</h3>
             <Row>
               <Col md="12">
                 <Form.Group className="form-group">
@@ -43,25 +41,15 @@ const ReviewComponent = memo(() => {
                   <Form.Label>
                     Email <span className="text-danger"> *</span>
                   </Form.Label>
-                  <Form.Control
-                    type="email"
-                    name="email"
-                    size={"lg"}
-                    required
-                  />
+                  <Form.Control type="email" name="email" size={'lg'} required />
                 </Form.Group>
               </Col>
               <Col md="12">
                 <Form.Group className="form-group">
                   <div className="mt-3 mt-3 d-flex gap-2 align-items-center">
-                    <Form.Check.Input
-                      className="mt-0"
-                      type="checkbox"
-                      id="check1"
-                    />
+                    <Form.Check.Input className="mt-0" type="checkbox" id="check1" />
                     <Form.Check.Label htmlFor="check1">
-                      Save my name, email, and website in this browser for the
-                      next time I comment.
+                      Save my name, email, and website in this browser for the next time I comment.
                     </Form.Check.Label>
                   </div>
                 </Form.Group>
@@ -87,7 +75,7 @@ const ReviewComponent = memo(() => {
         </div>
       </div>
     </Fragment>
-  );
-});
+  )
+})
 
-export default ReviewComponent;
+export default ReviewComponent

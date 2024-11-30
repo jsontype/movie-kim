@@ -12,8 +12,7 @@
   --#{$prefix}offcanvas-border-width: #{$offcanvas-border-width};
   --#{$prefix}offcanvas-border-color: #{$offcanvas-border-color};
   --#{$prefix}offcanvas-box-shadow: #{$offcanvas-box-shadow};
-  --#{$prefix}offcanvas-transition: #{transform $offcanvas-transition-duration
-    ease-in-out};
+  --#{$prefix}offcanvas-transition: #{transform $offcanvas-transition-duration ease-in-out};
   --#{$prefix}offcanvas-title-line-height: #{$offcanvas-title-line-height};
   // scss-docs-end offcanvas-css-vars
 }
@@ -98,7 +97,7 @@
       }
     }
 
-    @if not($infix == "") {
+    @if not($infix == '') {
       @include media-breakpoint-up($next) {
         --#{$prefix}offcanvas-height: auto;
         --#{$prefix}offcanvas-border-width: 0;
@@ -133,8 +132,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--#{$prefix}offcanvas-padding-y)
-    var(--#{$prefix}offcanvas-padding-x);
+  padding: var(--#{$prefix}offcanvas-padding-y) var(--#{$prefix}offcanvas-padding-x);
 
   .btn-close {
     padding: calc(var(--#{$prefix}offcanvas-padding-y) * 0.5)
@@ -152,7 +150,6 @@
 
 .offcanvas-body {
   flex-grow: 1;
-  padding: var(--#{$prefix}offcanvas-padding-y)
-    var(--#{$prefix}offcanvas-padding-x);
+  padding: var(--#{$prefix}offcanvas-padding-y) var(--#{$prefix}offcanvas-padding-x);
   overflow-y: auto;
 }

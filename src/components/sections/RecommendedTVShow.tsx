@@ -1,14 +1,14 @@
-import { FC, Fragment, memo, useState } from "react";
+import { FC, Fragment, memo, useState } from 'react'
 
 //components
-import SectionSlider from "../slider/SectionSlider";
-import CardStyle from "../cards/CardStyle";
+import SectionSlider from '../slider/SectionSlider'
+import CardStyle from '../cards/CardStyle'
 
 //static data
-import { recommendedforYou } from "../../StaticData/data";
+import { recommendedforYou } from '../../StaticData/data'
 
 const RecommendedTVShow = memo(() => {
-  const [title] = useState("recommended TV Show");
+  const [title] = useState('recommended TV Show')
 
   return (
     <Fragment>
@@ -18,7 +18,7 @@ const RecommendedTVShow = memo(() => {
         className="recommended-block streamit-block"
         slidesPerView={6}
       >
-        {(data) => (
+        {data => (
           <CardStyle
             image={data.image}
             title={data.title}
@@ -29,8 +29,8 @@ const RecommendedTVShow = memo(() => {
         )}
       </SectionSlider>
     </Fragment>
-  );
-});
+  )
+})
 
-RecommendedTVShow.displayName = "RecommendedTVShow";
-export default RecommendedTVShow;
+RecommendedTVShow.displayName = 'RecommendedTVShow'
+export default RecommendedTVShow

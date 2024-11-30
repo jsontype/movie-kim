@@ -1,17 +1,17 @@
-import React, { Fragment, memo } from "react";
+import React, { Fragment, memo } from 'react'
 
 //react-router-dom
-import Link from "next/link";
+import Link from 'next/link'
 
 interface Props {
-  children?: React.ReactNode;
-  thumbnail: any;
-  date: string;
-  username: string;
-  title: string;
-  description: string;
-  categories?: string;
-  tags?: string[];
+  children?: React.ReactNode
+  thumbnail: any
+  date: string
+  username: string
+  title: string
+  description: string
+  categories?: string
+  tags?: string[]
 }
 
 const CardBlogGrid = memo((props: Props) => {
@@ -20,12 +20,7 @@ const CardBlogGrid = memo((props: Props) => {
       <div className="iq-blog-box">
         <div className="iq-blog-image clearfix">
           <Link href="/blogs/detail">
-            <img
-              src={props.thumbnail}
-              alt=""
-              loading="lazy"
-              className="img-fluid w-100"
-            />
+            <img src={props.thumbnail} alt="" loading="lazy" className="img-fluid w-100" />
           </Link>
         </div>
         <div className="iq-blog-detail">
@@ -50,10 +45,7 @@ const CardBlogGrid = memo((props: Props) => {
           </div>
           <p className="line-count-2">{props.description}</p>
           <div className="iq-button link-button">
-            <Link
-              href="/blogs/detail"
-              className="btn text-capitalize position-relative"
-            >
+            <Link href="/blogs/detail" className="btn text-capitalize position-relative">
               <span className="button-text">
                 Read More
                 <i className="fa fa-angle-right ml-2" aria-hidden="true"></i>
@@ -63,8 +55,8 @@ const CardBlogGrid = memo((props: Props) => {
         </div>
       </div>
     </Fragment>
-  );
-});
+  )
+})
 
-CardBlogGrid.displayName = "CardBlogGrid";
-export default CardBlogGrid;
+CardBlogGrid.displayName = 'CardBlogGrid'
+export default CardBlogGrid

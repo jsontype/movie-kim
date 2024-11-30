@@ -19,8 +19,7 @@
       .card-hover {
         &:hover {
           .block-images {
-            transform: scale3d(1.1, 1.1, 1) translate3d(-12%, 0, 0)
-              perspective(31.25rem);
+            transform: scale3d(1.1, 1.1, 1) translate3d(-12%, 0, 0) perspective(31.25rem);
           }
         }
       }
@@ -29,8 +28,7 @@
       .card-hover {
         &:hover {
           .block-images {
-            transform: scale3d(1.1, 1.1, 1) translate3d(12%, 0, 0)
-              perspective(31.25rem);
+            transform: scale3d(1.1, 1.1, 1) translate3d(12%, 0, 0) perspective(31.25rem);
           }
         }
       }

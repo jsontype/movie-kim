@@ -1,19 +1,19 @@
-import React, { useEffect, Fragment } from "react";
+import React, { useEffect, Fragment } from 'react'
 
 //react-bootstrap
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row } from 'react-bootstrap'
 
 //components
-import ProductCard from "@/components/merchandise/product-card";
+import ProductCard from '@/components/merchandise/product-card'
 
 //static data
-import { newProduct } from "@/StaticData/shop";
+import { newProduct } from '@/StaticData/shop'
 
 // Custom Hook
-import { useBreadcrumb } from "@/utilities/usePage";
+import { useBreadcrumb } from '@/utilities/usePage'
 
 const AllProductPage = () => {
-  useBreadcrumb("View All");
+  useBreadcrumb('View All')
   return (
     <Fragment>
       <section className="section-padding">
@@ -34,7 +34,7 @@ const AllProductPage = () => {
                     slug={item.slug}
                   />
                 </Col>
-              );
+              )
             })}
             {newProduct.slice(0, 5).map((item: any, index: any) => {
               return (
@@ -51,14 +51,14 @@ const AllProductPage = () => {
                     slug={item.slug}
                   />
                 </Col>
-              );
+              )
             })}
           </Row>
         </Container>
       </section>
     </Fragment>
-  );
-};
+  )
+}
 
-AllProductPage.displayName = "AllProductPage";
-export default AllProductPage;
+AllProductPage.displayName = 'AllProductPage'
+export default AllProductPage

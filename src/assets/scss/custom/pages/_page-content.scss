@@ -264,7 +264,7 @@ Rtl Box & Color Customizer
     &::before {
       background: rgba(var(--bs-black-rgb), 0.5);
       position: absolute;
-      content: "";
+      content: '';
       top: 0;
       bottom: 0;
       left: 0;
@@ -302,7 +302,7 @@ Rtl Box & Color Customizer
     width: 100%;
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       bottom: 0;
       left: 0;
@@ -332,7 +332,7 @@ Rtl Box & Color Customizer
   z-index: 1;
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     left: 50%;
     top: 50%;
@@ -489,7 +489,7 @@ Rtl Box & Color Customizer
 }
 
 .counter-1::after {
-  content: "+";
+  content: '+';
   color: var(--bs-primary);
   font-weight: $font-weight-semibold;
 }
@@ -795,7 +795,7 @@ Rtl Box & Color Customizer
   height: 100vh;
 }
 
-[data-bs-theme="hulu"] {
+[data-bs-theme='hulu'] {
   .iq-button {
     .btn {
       color: var(--bs-black);

@@ -1,39 +1,39 @@
-import React, { Fragment } from "react";
+import React, { Fragment } from 'react'
 
 // Next-Link
-import Link from "next/link";
+import Link from 'next/link'
 
 // Next-Image
-import Image from "next/image";
+import Image from 'next/image'
 
 // react-bootstrap
-import { Row, Col, Container } from "react-bootstrap";
+import { Row, Col, Container } from 'react-bootstrap'
 
 // components
-import ShopSectionSlider from "@/components/slider/ShopSectionSlider";
-import ProductCard from "@/components/merchandise/product-card";
-import Logo from "@/components/logo";
-import CustomButton from "@/components/CustomButton";
+import ShopSectionSlider from '@/components/slider/ShopSectionSlider'
+import ProductCard from '@/components/merchandise/product-card'
+import Logo from '@/components/logo'
+import CustomButton from '@/components/CustomButton'
 
 //data
-import { heroSlider, newProduct, category } from "@/StaticData/shop";
+import { heroSlider, newProduct, category } from '@/StaticData/shop'
 
 // swiper
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Navigation } from 'swiper'
 
 // Redux Selector / Action
-import { useSelector } from "react-redux";
-import { theme_scheme_direction } from "@/store/setting/selectors";
+import { useSelector } from 'react-redux'
+import { theme_scheme_direction } from '@/store/setting/selectors'
 
 // Images
-import img1 from "../../../public/assets/images/shop/card/capton-america.webp";
-import img2 from "../../../public/assets/images/shop/card/deadpool.webp";
-import img3 from "../../../public/assets/images/shop/card/multipal.webp";
-import location from "../../../public/assets/images/shop/card/location.webp";
+import img1 from '../../../public/assets/images/shop/card/capton-america.webp'
+import img2 from '../../../public/assets/images/shop/card/deadpool.webp'
+import img3 from '../../../public/assets/images/shop/card/multipal.webp'
+import location from '../../../public/assets/images/shop/card/location.webp'
 
 const MerchandiseHome = () => {
-  const themeSchemeDirection = useSelector(theme_scheme_direction);
+  const themeSchemeDirection = useSelector(theme_scheme_direction)
 
   return (
     <Fragment>
@@ -41,8 +41,8 @@ const MerchandiseHome = () => {
         key={String(themeSchemeDirection)}
         dir={String(themeSchemeDirection)}
         navigation={{
-          prevEl: ".swiper-banner-button-prev",
-          nextEl: ".swiper-banner-button-next",
+          prevEl: '.swiper-banner-button-prev',
+          nextEl: '.swiper-banner-button-next',
         }}
         loop={true}
         modules={[Navigation]}
@@ -52,19 +52,12 @@ const MerchandiseHome = () => {
           return (
             <SwiperSlide className="slide m-0 p-0 home-slider" key={index}>
               <Link href="/merchandise/product-detail" className="card-link">
-                <img
-                  src={item.thumbnail}
-                  alt="swiperimg"
-                  className="img-fluid w-100"
-                />
+                <img src={item.thumbnail} alt="swiperimg" className="img-fluid w-100" />
               </Link>
             </SwiperSlide>
-          );
+          )
         })}
-        <div
-          className="swiper-banner-button-prev swiper-nav"
-          id="home-banner-slider-prev"
-        >
+        <div className="swiper-banner-button-prev swiper-nav" id="home-banner-slider-prev">
           <i></i>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -77,10 +70,7 @@ const MerchandiseHome = () => {
             <circle r="20" cy="22" cx="22"></circle>
           </svg>
         </div>
-        <div
-          className="swiper-banner-button-next swiper-nav"
-          id="home-banner-slider-next"
-        >
+        <div className="swiper-banner-button-next swiper-nav" id="home-banner-slider-next">
           <i></i>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -104,8 +94,8 @@ const MerchandiseHome = () => {
             key={String(themeSchemeDirection)}
             dir={String(themeSchemeDirection)}
             navigation={{
-              prevEl: ".swiper-button-prev",
-              nextEl: ".swiper-button-next",
+              prevEl: '.swiper-button-prev',
+              nextEl: '.swiper-button-next',
             }}
             modules={[Navigation]}
             breakpoints={{
@@ -129,7 +119,7 @@ const MerchandiseHome = () => {
                     slug={item.slug}
                   />
                 </SwiperSlide>
-              );
+              )
             })}
             <div className="swiper-button swiper-button-next"></div>
             <div className="swiper-button swiper-button-prev"></div>
@@ -146,19 +136,14 @@ const MerchandiseHome = () => {
                 <div
                   className="card-img-overlay product-card-img-overlay"
                   style={{
-                    backgroundImage:
-                      "url(../../assets/images/shop/card/01.webp)",
+                    backgroundImage: 'url(../../assets/images/shop/card/01.webp)',
                   }}
                 ></div>
                 <div className="card-body w-100">
                   <h5 className="card-title">Ghost Spider </h5>
                   <h4 className="parent-heading">Monster-House</h4>
                   <div className="iq-btn-container">
-                    <CustomButton
-                      linkButton="true"
-                      buttonTitle="ShopNow"
-                      link="/"
-                    />
+                    <CustomButton linkButton="true" buttonTitle="ShopNow" link="/" />
                   </div>
                 </div>
               </div>
@@ -167,19 +152,14 @@ const MerchandiseHome = () => {
                 <div
                   className="card-img-overlay product-card-img-overlay mt-lg-0 mt-md-4 mt-4"
                   style={{
-                    backgroundImage:
-                      "url(../../assets/images/shop/card/02.webp)",
+                    backgroundImage: 'url(../../assets/images/shop/card/02.webp)',
                   }}
                 ></div>
                 <div className="card-body w-100">
                   <h5 className="card-title">Harry David </h5>
                   <h4 className="parent-heading">Warner Bro Films</h4>
                   <div className="iq-btn-container">
-                    <CustomButton
-                      linkButton="true"
-                      buttonTitle="ShopNow"
-                      link="/"
-                    />
+                    <CustomButton linkButton="true" buttonTitle="ShopNow" link="/" />
                   </div>
                 </div>
               </div>
@@ -190,46 +170,32 @@ const MerchandiseHome = () => {
                 <div
                   className="card-img-overlay product-card-img-overlay"
                   style={{
-                    backgroundImage:
-                      "url(../../assets/images/shop/card/03.webp)",
+                    backgroundImage: 'url(../../assets/images/shop/card/03.webp)',
                   }}
                 ></div>
                 <div className="card-body w-100">
                   <h5 className="card-title">Avengers </h5>
                   <h4 className="parent-heading">Marvel Studios</h4>
                   <div className="iq-btn-container">
-                    <CustomButton
-                      linkButton="true"
-                      buttonTitle="ShopNow"
-                      link="/"
-                    />
+                    <CustomButton linkButton="true" buttonTitle="ShopNow" link="/" />
                   </div>
                 </div>
               </div>
             </Col>
-            <Col
-              lg="4"
-              md="12"
-              className="d-flex flex-column mt-lg-0 mt-md-4 mt-4"
-            >
+            <Col lg="4" md="12" className="d-flex flex-column mt-lg-0 mt-md-4 mt-4">
               <div className="product-box right-1-productbox">
                 <Link href="/merchandise/shop" className="card-link"></Link>
                 <div
                   className="card-img-overlay product-card-img-overlay md-mt-5"
                   style={{
-                    backgroundImage:
-                      "url(../../assets/images/shop/card/04.webp)",
+                    backgroundImage: 'url(../../assets/images/shop/card/04.webp)',
                   }}
                 ></div>
                 <div className="card-body w-100">
                   <h5 className="card-title">Harry David </h5>
                   <h4 className="parent-heading">Warner Bros Films</h4>
                   <div className="iq-btn-container">
-                    <CustomButton
-                      linkButton="true"
-                      buttonTitle="ShopNow"
-                      link="/"
-                    />
+                    <CustomButton linkButton="true" buttonTitle="ShopNow" link="/" />
                   </div>
                 </div>
               </div>
@@ -238,19 +204,14 @@ const MerchandiseHome = () => {
                 <div
                   className="card-img-overlay product-card-img-overlay mt-lg-0 mt-md-4 mt-4"
                   style={{
-                    backgroundImage:
-                      "url(../../assets/images/shop/card/05.webp)",
+                    backgroundImage: 'url(../../assets/images/shop/card/05.webp)',
                   }}
                 ></div>
                 <div className="card-body w-100">
                   <h5 className="card-title">Fantasia </h5>
                   <h4 className="parent-heading">Disney World</h4>
                   <div className="iq-btn-container">
-                    <CustomButton
-                      linkButton="true"
-                      buttonTitle="ShopNow"
-                      link="/"
-                    />
+                    <CustomButton linkButton="true" buttonTitle="ShopNow" link="/" />
                   </div>
                 </div>
               </div>
@@ -263,9 +224,7 @@ const MerchandiseHome = () => {
         <Container fluid>
           <div className="overflow-hidden">
             <div className="d-flex align-items-center justify-content-between px-3 my-4">
-              <h5 className="main-title text-capitalize mb-0">
-                Newest Products
-              </h5>
+              <h5 className="main-title text-capitalize mb-0">Newest Products</h5>
               <Link
                 href="/merchandise/all-product"
                 className="text-primary iq-view-all text-decoration-none flex-none"
@@ -279,8 +238,8 @@ const MerchandiseHome = () => {
                 dir={String(themeSchemeDirection)}
                 slidesPerView={5}
                 navigation={{
-                  prevEl: ".swiper-button-prev",
-                  nextEl: ".swiper-button-next",
+                  prevEl: '.swiper-button-prev',
+                  nextEl: '.swiper-button-next',
                 }}
                 loop={true}
                 modules={[Navigation]}
@@ -325,7 +284,7 @@ const MerchandiseHome = () => {
                         slug={item.slug}
                       />
                     </SwiperSlide>
-                  );
+                  )
                 })}
                 <div className="swiper-button swiper-button-next"></div>
                 <div className="swiper-button swiper-button-prev"></div>
@@ -341,17 +300,12 @@ const MerchandiseHome = () => {
             <Col lg="6" md="6">
               <div className="categorie-about-left">
                 <div className="categorie-about-image">
-                  <Image
-                    src={img1}
-                    className="img-fluid"
-                    alt="Captain America"
-                  />
+                  <Image src={img1} className="img-fluid" alt="Captain America" />
                 </div>
                 <div className=" text-left mb-4 pt-3">
                   <h4 className="mb-2 line-count-1">Captain America</h4>
                   <p className="mb-4 mt-2 line-count-3">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry.
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                   </p>
                   <CustomButton
                     linkButton="false"
@@ -369,8 +323,7 @@ const MerchandiseHome = () => {
                 <div className=" text-left mb-4 pt-3">
                   <h4 className="mb-2 line-count-1">Dead Pool</h4>
                   <p className="mb-4 mt-2 line-count-3">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry.
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                   </p>
                   <CustomButton
                     linkButton="false"
@@ -387,10 +340,10 @@ const MerchandiseHome = () => {
       <section
         className="section-padding"
         style={{
-          backgroundImage: "url(../assets/images/shop/card/bg-img.webp)",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
+          backgroundImage: 'url(../assets/images/shop/card/bg-img.webp)',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
         }}
       >
         <div className="container-fluid">
@@ -400,13 +353,9 @@ const MerchandiseHome = () => {
             </div>
             <div className="col-lg-6 col-md-12 mt-4 mt-md-0">
               <Logo />
-              <h2 className="mt-3 mb-3">
-                {" "}
-                Wear Streamit, Buy Streamit and Love Streamit{" "}
-              </h2>
+              <h2 className="mt-3 mb-3"> Wear Streamit, Buy Streamit and Love Streamit </h2>
               <p className="mb-4 line-count-3">
-                Buy exclusive streamit products from our store and get amazing
-                benefits.
+                Buy exclusive streamit products from our store and get amazing benefits.
               </p>
               <CustomButton
                 linkButton="false"
@@ -436,8 +385,8 @@ const MerchandiseHome = () => {
                 dir={String(themeSchemeDirection)}
                 slidesPerView={5}
                 navigation={{
-                  prevEl: ".swiper-button-prev",
-                  nextEl: ".swiper-button-next",
+                  prevEl: '.swiper-button-prev',
+                  nextEl: '.swiper-button-next',
                 }}
                 loop={true}
                 modules={[Navigation]}
@@ -482,7 +431,7 @@ const MerchandiseHome = () => {
                         slug={item.slug}
                       />
                     </SwiperSlide>
-                  );
+                  )
                 })}
                 <div className="swiper-button swiper-button-next"></div>
                 <div className="swiper-button swiper-button-prev"></div>
@@ -512,10 +461,7 @@ const MerchandiseHome = () => {
             </Row>
             <div className="d-flex align-items-center gap-3">
               <h5 className="m-0">Working Hours: </h5>
-              <i className="text-primary shop_store_time">
-                {" "}
-                Mon – Fri : 09:00 AM to 06:00 PM
-              </i>
+              <i className="text-primary shop_store_time"> Mon – Fri : 09:00 AM to 06:00 PM</i>
             </div>
           </Col>
           <Col lg="6" md="12" className="shop-contact">
@@ -524,8 +470,8 @@ const MerchandiseHome = () => {
         </Row>
       </div>
     </Fragment>
-  );
-};
+  )
+}
 
-MerchandiseHome.layout = "Merchandise";
-export default MerchandiseHome;
+MerchandiseHome.layout = 'Merchandise'
+export default MerchandiseHome

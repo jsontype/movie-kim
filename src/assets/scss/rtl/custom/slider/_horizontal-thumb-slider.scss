@@ -5,11 +5,7 @@
         direction: ltr;
         left: 0;
         right: auto;
-        background: linear-gradient(
-          270deg,
-          #141414 0%,
-          rgba(20, 20, 20, 0) 100%
-        );
+        background: linear-gradient(270deg, #141414 0%, rgba(20, 20, 20, 0) 100%);
         padding: 2.1875rem 2.1875rem 2.1875rem 0;
         .swiper-wrapper {
           .swiper-slide {
@@ -39,16 +35,8 @@
       }
       .slider-images {
         .slider--image {
-          background: linear-gradient(
-              -90.3deg,
-              #181616 9.88%,
-              rgba(19, 18, 18, 0) 31.52%
-            ),
-            linear-gradient(
-              -266.54deg,
-              #181616 13.29%,
-              rgba(19, 18, 18, 0) 98.41%
-            );
+          background: linear-gradient(-90.3deg, #181616 9.88%, rgba(19, 18, 18, 0) 31.52%),
+            linear-gradient(-266.54deg, #181616 13.29%, rgba(19, 18, 18, 0) 98.41%);
         }
         .description {
           left: auto;

@@ -89,11 +89,7 @@
 
     .swiper-slide {
       .block-images {
-        background: linear-gradient(
-          0deg,
-          var(--bs-black) 0%,
-          rgba(var(--bs-black-rgb), 0) 51.04%
-        );
+        background: linear-gradient(0deg, var(--bs-black) 0%, rgba(var(--bs-black-rgb), 0) 51.04%);
         border-bottom: 2px solid transparent;
         border-radius: $border-radius;
         transition: all 0.45s ease 0s;

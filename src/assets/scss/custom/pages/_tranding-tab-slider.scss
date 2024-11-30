@@ -60,7 +60,7 @@
           rgba(83, 100, 141, 0) 100%
         );
         width: 100%;
-        content: "";
+        content: '';
         position: absolute;
         top: 0;
         left: 0;
@@ -223,7 +223,7 @@
           padding-right: 0.9375rem;
 
           &::before {
-            content: "";
+            content: '';
             height: 0.375rem;
             width: 0.375rem;
             background: var(--bs-white);
@@ -339,7 +339,7 @@
 
   .tab-watch-trailer {
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       left: 0;
@@ -381,7 +381,7 @@
     rgba(83, 100, 141, 0) 100%
   );
   width: 100%;
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;

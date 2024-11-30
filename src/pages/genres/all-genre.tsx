@@ -1,22 +1,22 @@
-import React, { Fragment, memo } from "react";
+import React, { Fragment, memo } from 'react'
 
 //router
-import Link from "next/link";
+import Link from 'next/link'
 
 //react-bootstrap
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row } from 'react-bootstrap'
 
 // data
-import { geners } from "@/StaticData/data";
+import { geners } from '@/StaticData/data'
 
 //components
-import GenersCard from "@/components/cards/GanresCard";
+import GenersCard from '@/components/cards/GanresCard'
 
 //custom hooks
-import { useBreadcrumb } from "@/utilities/usePage";
+import { useBreadcrumb } from '@/utilities/usePage'
 
 const AllGenres = memo(() => {
-  useBreadcrumb("View All");
+  useBreadcrumb('View All')
   return (
     <Fragment>
       <section className="section-padding">
@@ -28,11 +28,7 @@ const AllGenres = memo(() => {
               </div>
             </Col>
           </Row>
-          <Row
-            xl="5"
-            md="2"
-            className="row-cols-1 geners-card geners-style-grid"
-          >
+          <Row xl="5" md="2" className="row-cols-1 geners-card geners-style-grid">
             {geners.map((item, index) => (
               <Col key={index} className="slide-items">
                 <GenersCard
@@ -47,8 +43,8 @@ const AllGenres = memo(() => {
         </Container>
       </section>
     </Fragment>
-  );
-});
+  )
+})
 
-AllGenres.displayName = "AllGenres";
-export default AllGenres;
+AllGenres.displayName = 'AllGenres'
+export default AllGenres

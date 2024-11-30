@@ -52,12 +52,8 @@
   }
 
   &::after {
-    content: "";
-    background: linear-gradient(
-      180deg,
-      var(--bs-primary) 0,
-      rgba(var(--bs-primary-rgb), 0) 100%
-    );
+    content: '';
+    background: linear-gradient(180deg, var(--bs-primary) 0, rgba(var(--bs-primary-rgb), 0) 100%);
     position: absolute;
     top: -0.125em;
     bottom: -0.125em;

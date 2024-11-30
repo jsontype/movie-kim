@@ -1,10 +1,10 @@
-[data-bs-theme="dark"] {
+[data-bs-theme='dark'] {
   --#{$prefix}gray-900: #141314;
   --#{$prefix}gray-900-rgb: 20, 19, 20;
   --#{$prefix}gray-800: #343a40;
 }
 
-[data-bs-theme="hotstar"] {
+[data-bs-theme='hotstar'] {
   --#{$prefix}primary: #0959e4;
   --#{$prefix}primary-rgb: 22, 121, 231;
   --#{$prefix}secondary-color: #fff;
@@ -20,7 +20,7 @@
   --#{$prefix}gray-800-rgb: 37, 40, 51;
 }
 
-[data-bs-theme="amazonprime"] {
+[data-bs-theme='amazonprime'] {
   --#{$prefix}primary: #1a98ff;
   --#{$prefix}primary-rgb: 26, 152, 255;
   --#{$prefix}secondary-color: #fff;
@@ -36,7 +36,7 @@
   --#{$prefix}gray-800-rgb: 25, 30, 37;
 }
 
-[data-bs-theme="hulu"] {
+[data-bs-theme='hulu'] {
   --#{$prefix}primary: #3ee783;
   --#{$prefix}primary-rgb: 62, 231, 131;
   --#{$prefix}secondary-color: #fff;

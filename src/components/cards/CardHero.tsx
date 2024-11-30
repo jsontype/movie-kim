@@ -1,33 +1,23 @@
-import { Fragment, memo, useState } from "react";
-import { Col, Row } from "react-bootstrap";
-import Link from "next/link";
-import FsLightbox from "fslightbox-react";
+import { Fragment, memo, useState } from 'react'
+import { Col, Row } from 'react-bootstrap'
+import Link from 'next/link'
+import FsLightbox from 'fslightbox-react'
 
 interface CardHeroProps {
-  link: string;
-  title: string;
-  rating?: number;
-  certificate?: string;
-  views?: number;
-  time: string;
-  seasonType?: string;
-  createdAt: string;
-  detail: string;
+  link: string
+  title: string
+  rating?: number
+  certificate?: string
+  views?: number
+  time: string
+  seasonType?: string
+  createdAt: string
+  detail: string
 }
 
 const CardHero: React.FC<CardHeroProps> = memo(
-  ({
-    link,
-    title,
-    rating,
-    certificate,
-    views,
-    time,
-    seasonType,
-    createdAt,
-    detail,
-  }) => {
-    const [toggler, setToggler] = useState(false);
+  ({ link, title, rating, certificate, views, time, seasonType, createdAt, detail }) => {
+    const [toggler, setToggler] = useState(false)
 
     return (
       <Fragment>
@@ -73,43 +63,27 @@ const CardHero: React.FC<CardHeroProps> = memo(
                         {rating} <span className="ms-1">(lmdb)</span>
                       </span>
                     ) : (
-                      ""
+                      ''
                     )}
                   </div>
                 </div>
                 <div className="d-flex align-items-center movie-banner-time">
-                  {certificate ? (
-                    <span className="badge bg-secondary p-2">
-                      {certificate}
-                    </span>
-                  ) : (
-                    ""
-                  )}
+                  {certificate ? <span className="badge bg-secondary p-2">{certificate}</span> : ''}
                   {views !== undefined ? (
                     <span className="badge bg-secondary p-2">
-                      {" "}
-                      <i className="fa fa-eye me-1"></i> {views} views{" "}
+                      {' '}
+                      <i className="fa fa-eye me-1"></i> {views} views{' '}
                     </span>
                   ) : (
-                    ""
+                    ''
                   )}
                   <span className="mx-2 mx-md-2">
-                    <i
-                      className="ri-checkbox-blank-circle-fill"
-                      style={{ fontSize: "7px" }}
-                    ></i>
+                    <i className="ri-checkbox-blank-circle-fill" style={{ fontSize: '7px' }}></i>
                   </span>
                   <span className="trending-time font-normal"> {time}</span>
-                  {seasonType ? (
-                    <span className="mx-2 mx-md-2">{seasonType}</span>
-                  ) : (
-                    ""
-                  )}
+                  {seasonType ? <span className="mx-2 mx-md-2">{seasonType}</span> : ''}
                   <span className="mx-2 mx-md-2">
-                    <i
-                      className="ri-checkbox-blank-circle-fill"
-                      style={{ fontSize: "7px" }}
-                    ></i>
+                    <i className="ri-checkbox-blank-circle-fill" style={{ fontSize: '7px' }}></i>
                   </span>
                   <span className="trending-year font-normal">{createdAt}</span>
                 </div>
@@ -132,22 +106,13 @@ const CardHero: React.FC<CardHeroProps> = memo(
                   data-iq-duration="1"
                   data-iq-delay=".6"
                 >
-                  <Link
-                    href={link}
-                    role="button"
-                    className="btn btn-hover iq-button"
-                  >
-                    <i className="fa fa-play me-1" aria-hidden="true"></i> Play
-                    Now
+                  <Link href={link} role="button" className="btn btn-hover iq-button">
+                    <i className="fa fa-play me-1" aria-hidden="true"></i> Play Now
                   </Link>
                 </div>
               </div>
             </Col>
-            <Col
-              lg="5"
-              md="12"
-              className="trailor-video iq-slider d-none d-lg-block"
-            >
+            <Col lg="5" md="12" className="trailor-video iq-slider d-none d-lg-block">
               <Link href="#" className="video-open playbtn" tabIndex={0}>
                 <svg
                   version="1.1"
@@ -182,28 +147,25 @@ const CardHero: React.FC<CardHeroProps> = memo(
                     r="103.3"
                   ></circle>
                 </svg>
-                <span
-                  className="w-trailor text-uppercase"
-                  onClick={() => setToggler(!toggler)}
-                >
+                <span className="w-trailor text-uppercase" onClick={() => setToggler(!toggler)}>
                   Watch Trailer
                 </span>
               </Link>
               <FsLightbox
                 toggler={toggler}
                 sources={[
-                  "https://i.imgur.com/fsyrScY.jpg",
-                  "https://www.youtube.com/watch?v=3nQNiWdeH2Q",
-                  "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+                  'https://i.imgur.com/fsyrScY.jpg',
+                  'https://www.youtube.com/watch?v=3nQNiWdeH2Q',
+                  'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
                 ]}
               />
             </Col>
           </Row>
         </div>
       </Fragment>
-    );
+    )
   },
-);
+)
 
-CardHero.displayName = "CardHero";
-export default CardHero;
+CardHero.displayName = 'CardHero'
+export default CardHero

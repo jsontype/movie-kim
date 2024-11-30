@@ -1,8 +1,8 @@
-import { memo, Fragment } from "react";
-import RadioBtn from "../elements/radio-btn";
+import { memo, Fragment } from 'react'
+import RadioBtn from '../elements/radio-btn'
 
 interface Props {
-  themeSchemeDirection?: any;
+  themeSchemeDirection?: any
 }
 
 const Direction = memo((props: Props) => {
@@ -35,8 +35,8 @@ const Direction = memo((props: Props) => {
         </div>
       </div>
     </Fragment>
-  );
-});
+  )
+})
 
-Direction.displayName = "Direction";
-export default Direction;
+Direction.displayName = 'Direction'
+export default Direction

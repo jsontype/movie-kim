@@ -1,12 +1,12 @@
-import React, { useState, memo, Fragment } from "react";
+import React, { useState, memo, Fragment } from 'react'
 
 //React-bootstrap
-import { Button } from "react-bootstrap";
+import { Button } from 'react-bootstrap'
 
 const Counter = memo(() => {
-  const [counter, setCount] = useState(2);
-  const increase = () => setCount(counter + 1);
-  const decrease = () => setCount(counter > 0 ? counter - 1 : 0);
+  const [counter, setCount] = useState(2)
+  const increase = () => setCount(counter + 1)
+  const decrease = () => setCount(counter > 0 ? counter - 1 : 0)
   return (
     <Fragment>
       <div
@@ -61,8 +61,8 @@ const Counter = memo(() => {
         </Button>
       </div>
     </Fragment>
-  );
-});
+  )
+})
 
-Counter.displayName = "Counter";
-export default Counter;
+Counter.displayName = 'Counter'
+export default Counter

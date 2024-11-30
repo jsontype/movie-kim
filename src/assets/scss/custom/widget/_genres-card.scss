@@ -3,20 +3,12 @@
     backface-visibility: hidden;
 
     .img-box {
-      background: linear-gradient(
-          0deg,
-          rgba(12, 11, 17, 0.25) 0%,
-          rgba(12, 11, 17, 0.25) 100%
-        ),
-        linear-gradient(
-          180deg,
-          rgba(12, 11, 17, 0) 56%,
-          rgba(12, 11, 17, 0.2) 100%
-        );
+      background: linear-gradient(0deg, rgba(12, 11, 17, 0.25) 0%, rgba(12, 11, 17, 0.25) 100%),
+        linear-gradient(180deg, rgba(12, 11, 17, 0) 56%, rgba(12, 11, 17, 0.2) 100%);
 
       &::before {
         position: absolute;
-        content: "";
+        content: '';
         top: 0;
         bottom: 0;
         left: 0;

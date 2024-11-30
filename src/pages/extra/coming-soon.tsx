@@ -1,13 +1,13 @@
-import { Fragment } from "react";
+import { Fragment } from 'react'
 
 //react bootstrap
-import { Button, Container } from "react-bootstrap";
+import { Button, Container } from 'react-bootstrap'
 
 // next link
-import Link from "next/link";
+import Link from 'next/link'
 
 //function
-import { generateImgPath } from "../../StaticData/data";
+import { generateImgPath } from '../../StaticData/data'
 
 const CommingSoonPage = () => {
   return (
@@ -15,13 +15,11 @@ const CommingSoonPage = () => {
       <div
         className="section-padding height-auto-100 image-flip-rtl"
         style={{
-          backgroundImage: `url(${generateImgPath(
-            "/assets/images/pages/coming-soon.webp",
-          )})`,
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          position: "relative",
-          minHeight: "500px",
+          backgroundImage: `url(${generateImgPath('/assets/images/pages/coming-soon.webp')})`,
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+          position: 'relative',
+          minHeight: '500px',
         }}
       >
         <Container className="h-100">
@@ -77,34 +75,22 @@ const CommingSoonPage = () => {
               <span className="font-size-14 me-3">Follow Us:</span>
               <ul className="p-0 m-0 list-unstyled widget_social_media">
                 <li className="">
-                  <Link
-                    href="https://www.facebook.com/"
-                    className="position-relative"
-                  >
+                  <Link href="https://www.facebook.com/" className="position-relative">
                     <i className="fab fa-facebook"></i>
                   </Link>
                 </li>
                 <li className="">
-                  <Link
-                    href="https://twitter.com/"
-                    className="position-relative"
-                  >
+                  <Link href="https://twitter.com/" className="position-relative">
                     <i className="fab fa-twitter"></i>
                   </Link>
                 </li>
                 <li className="">
-                  <Link
-                    href="https://github.com/"
-                    className="position-relative"
-                  >
+                  <Link href="https://github.com/" className="position-relative">
                     <i className="fab fa-github"></i>
                   </Link>
                 </li>
                 <li className="">
-                  <Link
-                    href="https://www.instagram.com/"
-                    className="position-relative"
-                  >
+                  <Link href="https://www.instagram.com/" className="position-relative">
                     <i className="fab fa-instagram"></i>
                   </Link>
                 </li>
@@ -114,8 +100,8 @@ const CommingSoonPage = () => {
         </Container>
       </div>
     </Fragment>
-  );
-};
+  )
+}
 
-CommingSoonPage.layout = "Blank";
-export default CommingSoonPage;
+CommingSoonPage.layout = 'Blank'
+export default CommingSoonPage

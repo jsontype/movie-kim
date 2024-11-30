@@ -1,14 +1,14 @@
-import { useState, Fragment, memo } from "react";
+import { useState, Fragment, memo } from 'react'
 
 //componets
-import SectionSlider from "../slider/SectionSlider";
-import CardStyle from "../cards/CardStyle";
+import SectionSlider from '../slider/SectionSlider'
+import CardStyle from '../cards/CardStyle'
 
 //static data
-import { populerSlider } from "../../StaticData/data";
+import { populerSlider } from '../../StaticData/data'
 
 const PopularMovies = memo(() => {
-  const [title] = useState("Popular Movies");
+  const [title] = useState('Popular Movies')
 
   return (
     <Fragment>
@@ -17,7 +17,7 @@ const PopularMovies = memo(() => {
         list={populerSlider}
         className="popular-movies-block streamit-block"
       >
-        {(data) => (
+        {data => (
           <CardStyle
             image={data.image}
             title={data.title}
@@ -28,8 +28,8 @@ const PopularMovies = memo(() => {
         )}
       </SectionSlider>
     </Fragment>
-  );
-});
+  )
+})
 
-PopularMovies.displayName = "PopularMovies";
-export default PopularMovies;
+PopularMovies.displayName = 'PopularMovies'
+export default PopularMovies

@@ -1,13 +1,13 @@
-import React, { Fragment, memo } from "react";
+import React, { Fragment, memo } from 'react'
 
 //react-router-dom
 // import { Link } from "react-router-dom";
-import Link from "next/link";
+import Link from 'next/link'
 
 interface ProductCartProps {
-  thumbnail?: string;
-  product_name?: string;
-  final_price?: string;
+  thumbnail?: string
+  product_name?: string
+  final_price?: string
 }
 
 const ProductCart = memo((props: ProductCartProps) => {
@@ -17,13 +17,7 @@ const ProductCart = memo((props: ProductCartProps) => {
         <td className="product-name" data-title="Product">
           <div className="product-thumbnail">
             <Link href="/merchandise/product-detail">
-              <img
-                width="300"
-                height="400"
-                src={props.thumbnail}
-                alt="image"
-                loading="lazy"
-              />
+              <img width="300" height="400" src={props.thumbnail} alt="image" loading="lazy" />
             </Link>
             <Link href="/merchandise/product-detail" className="cart_item_name">
               {props.product_name}
@@ -39,10 +33,7 @@ const ProductCart = memo((props: ProductCartProps) => {
           <span className="quantity shop-quantity">
             <label className="screen-reader-text" htmlFor="quantity1"></label>
             <button type="button" className="minus shopminus">
-              <i
-                className="fa fa-minus text-white fa-1x"
-                aria-hidden="true"
-              ></i>
+              <i className="fa fa-minus text-white fa-1x" aria-hidden="true"></i>
             </button>
             <input
               id="quantity1"
@@ -87,11 +78,7 @@ const ProductCart = memo((props: ProductCartProps) => {
               defaultValue=""
               placeholder="Coupon Code"
             />
-            <button
-              className="iq-button btn btn-hover"
-              type="button"
-              name="apply_coupon"
-            >
+            <button className="iq-button btn btn-hover" type="button" name="apply_coupon">
               Apply coupon
             </button>
           </div>
@@ -104,18 +91,13 @@ const ProductCart = memo((props: ProductCartProps) => {
           >
             Update cart
           </button>
-          <input
-            id="cart-nonce"
-            type="hidden"
-            name="cart-nonce"
-            defaultValue=""
-          />
+          <input id="cart-nonce" type="hidden" name="cart-nonce" defaultValue="" />
           <input type="hidden" name="" defaultValue="" />
         </td>
       </tr>
     </Fragment>
-  );
-});
+  )
+})
 
-ProductCart.displayName = "ProductCart";
-export default ProductCart;
+ProductCart.displayName = 'ProductCart'
+export default ProductCart

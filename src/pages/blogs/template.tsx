@@ -1,37 +1,35 @@
-import React, { memo, Fragment } from "react";
+import React, { memo, Fragment } from 'react'
 
 //react-bootstrap
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row } from 'react-bootstrap'
 
 //router
-import Link from "next/link";
+import Link from 'next/link'
 
 //static data
-import { blogs } from "../../StaticData/blogs";
+import { blogs } from '../../StaticData/blogs'
 
 //components
-import FormWidget from "../../components/blog/FormWidget";
-import DetailMetaList from "../../components/blog/DetailMetaList";
+import FormWidget from '../../components/blog/FormWidget'
+import DetailMetaList from '../../components/blog/DetailMetaList'
 
 //custom hook
-import { useBreadcrumb } from "@/utilities/usePage";
+import { useBreadcrumb } from '@/utilities/usePage'
 
 interface BlogDetail {
-  id: [string];
-  categories: string;
-  title: string;
-  userImage: string;
-  username: string;
-  blogDate: string;
-  tags: [string];
-  longDescription: string;
+  id: [string]
+  categories: string
+  title: string
+  userImage: string
+  username: string
+  blogDate: string
+  tags: [string]
+  longDescription: string
 }
 const TemplatePage = memo(() => {
-  const slug = "everything-you-need-to-know-about";
-  const blog: BlogDetail | any = blogs.find((item) => item.slug === slug);
-  useBreadcrumb(
-    'Scarlett Drops Out Of Playing a Transgender Man Following Backlash"',
-  );
+  const slug = 'everything-you-need-to-know-about'
+  const blog: BlogDetail | any = blogs.find(item => item.slug === slug)
+  useBreadcrumb('Scarlett Drops Out Of Playing a Transgender Man Following Backlash"')
   return (
     <Fragment>
       {blog !== undefined && blog !== null ? (
@@ -106,7 +104,7 @@ const TemplatePage = memo(() => {
                         className="img-fluid avatar-40 rounded-circle"
                       />
                       <div className="gap-1 d-flex align-items-center font-size-14">
-                        By{" "}
+                        By{' '}
                         <span>
                           <Link href="" className="fw-500 text-capitalize">
                             {blog.username}
@@ -191,16 +189,11 @@ const TemplatePage = memo(() => {
                     </div>
                   </div>
                 </div>
-                <div
-                  dangerouslySetInnerHTML={{ __html: blog.longDescription }}
-                ></div>
+                <div dangerouslySetInnerHTML={{ __html: blog.longDescription }}></div>
                 <div className="iq-blog-tag">
                   <ul className="p-0 m-0 list-unstyled gap-2 widget_tags">
                     <li>
-                      <i
-                        className="fas fa-tags text-primary"
-                        aria-hidden="true"
-                      ></i>
+                      <i className="fas fa-tags text-primary" aria-hidden="true"></i>
                       <span className="font-size-12 fw-semibold">TAGS:</span>
                     </li>
                     {blog.tags.map((item: string, index: string) => {
@@ -210,18 +203,14 @@ const TemplatePage = memo(() => {
                             {item}
                           </Link>
                         </li>
-                      );
+                      )
                     })}
                   </ul>
                 </div>
                 <div className="widget my-5 my-md-0">
                   <div className="iq-author-meta-details d-flex align-items-start align-items-md-center gap-4 flex-column flex-md-row">
                     <div className="iq-author-image">
-                      <img
-                        src={blog.userImage}
-                        alt="user"
-                        className="img-fluid rounded"
-                      />
+                      <img src={blog.userImage} alt="user" className="img-fluid rounded" />
                     </div>
                     <div>
                       <h5>{blog.username}</h5>
@@ -250,10 +239,7 @@ const TemplatePage = memo(() => {
                     </div>
                   </div>
                 </div>
-                <FormWidget
-                  nextLink="/blogs/detail"
-                  prevLink="/blogs/single/gallery"
-                />
+                <FormWidget nextLink="/blogs/detail" prevLink="/blogs/single/gallery" />
               </Col>
               <Col lg="4" md="12" sm="12">
                 <DetailMetaList />
@@ -262,11 +248,11 @@ const TemplatePage = memo(() => {
           </Container>
         </div>
       ) : (
-        ""
+        ''
       )}
     </Fragment>
-  );
-});
+  )
+})
 
-TemplatePage.displayName = "TemplatePage";
-export default TemplatePage;
+TemplatePage.displayName = 'TemplatePage'
+export default TemplatePage

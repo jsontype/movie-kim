@@ -1,13 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react'
 
 // Custom Hook
-import { useBreadcrumb } from "@/utilities/usePage";
+import { useBreadcrumb } from '@/utilities/usePage'
 
 // react-bootstrap
-import { Container, Table, Row, Col } from "react-bootstrap";
+import { Container, Table, Row, Col } from 'react-bootstrap'
 
 const TrackOrderPage = () => {
-  useBreadcrumb("Order Tracking");
+  useBreadcrumb('Order Tracking')
   return (
     <>
       <section className="section-padding">
@@ -15,19 +15,11 @@ const TrackOrderPage = () => {
           <div className="main-cart mb-3 mb-md-5 pb-0 pb-md-5">
             <ul className="cart-page-items d-flex justify-content-center list-inline align-items-center gap-3 gap-md-5 flex-wrap">
               <li className="cart-page-item">
-                <span className=" cart-pre-number  border-radius rounded-circle me-1">
-                  {" "}
-                  1{" "}
-                </span>
+                <span className=" cart-pre-number  border-radius rounded-circle me-1"> 1 </span>
                 <span className="cart-page-link ">Shopping Cart </span>
               </li>
               <li className="cart-page-item">
-                <svg
-                  width="25"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+                <svg width="25" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     fillRule="evenodd"
                     clipRule="evenodd"
@@ -47,19 +39,11 @@ const TrackOrderPage = () => {
                 </svg>
               </li>
               <li className="cart-page-item">
-                <span className=" cart-pre-number  border-radius rounded-circle me-1">
-                  {" "}
-                  2{" "}
-                </span>
+                <span className=" cart-pre-number  border-radius rounded-circle me-1"> 2 </span>
                 <span className="cart-page-link ">Checkout </span>
               </li>
               <li className="cart-page-item">
-                <svg
-                  width="25"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+                <svg width="25" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     fillRule="evenodd"
                     clipRule="evenodd"
@@ -80,8 +64,8 @@ const TrackOrderPage = () => {
               </li>
               <li className="cart-page-item active">
                 <span className="cart-pre-heading badge bg-primary cart-pre-number border-radius rounded-circle me-1">
-                  {" "}
-                  3{" "}
+                  {' '}
+                  3{' '}
                 </span>
                 <span className="cart-page-link ">Order Summary </span>
               </li>
@@ -121,8 +105,7 @@ const TrackOrderPage = () => {
                   <tbody>
                     <tr className="order_item">
                       <td>
-                        Bag Pack{" "}
-                        <strong className="product-quantity">×&nbsp;1</strong>
+                        Bag Pack <strong className="product-quantity">×&nbsp;1</strong>
                       </td>
                       <td className="text-end">
                         <span className="amount">
@@ -221,7 +204,7 @@ const TrackOrderPage = () => {
         </Container>
       </section>
     </>
-  );
-};
+  )
+}
 
-export default TrackOrderPage;
+export default TrackOrderPage

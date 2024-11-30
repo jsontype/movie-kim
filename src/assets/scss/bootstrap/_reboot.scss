@@ -230,10 +230,7 @@ sup {
 // Links
 
 a {
-  color: rgba(
-    var(--#{$prefix}link-color-rgb),
-    var(--#{$prefix}link-opacity, 1)
-  );
+  color: rgba(var(--#{$prefix}link-color-rgb), var(--#{$prefix}link-opacity, 1));
   text-decoration: $link-decoration;
 
   &:hover {
@@ -408,7 +405,7 @@ select {
 // Set the cursor for non-`<button>` buttons
 //
 // Details at https://github.com/twbs/bootstrap/pull/30562
-[role="button"] {
+[role='button'] {
   cursor: pointer;
 }
 
@@ -426,9 +423,9 @@ select {
 // Remove the dropdown arrow only from text type inputs built with datalists in Chrome.
 // See https://stackoverflow.com/a/54997118
 
-[list]:not([type="date"]):not([type="datetime-local"]):not([type="month"]):not(
-    [type="week"]
-  ):not([type="time"])::-webkit-calendar-picker-indicator {
+[list]:not([type='date']):not([type='datetime-local']):not([type='month']):not([type='week']):not(
+    [type='time']
+  )::-webkit-calendar-picker-indicator {
   display: none !important;
 }
 
@@ -519,7 +516,7 @@ legend {
 //    https://github.com/twbs/bootstrap/issues/11586.
 // 2. Correct the outline style in Safari.
 
-[type="search"] {
+[type='search'] {
   -webkit-appearance: textfield; // 1
   outline-offset: -2px; // 2
 }

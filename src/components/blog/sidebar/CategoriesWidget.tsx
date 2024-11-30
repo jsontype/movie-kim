@@ -1,10 +1,10 @@
-import React, { Fragment, memo } from "react";
+import React, { Fragment, memo } from 'react'
 
 //react-router-dom
-import Link from "next/link";
+import Link from 'next/link'
 
 //static data
-import { blogCategories } from "../../../StaticData/blogs";
+import { blogCategories } from '../../../StaticData/blogs'
 
 const CategoriesWidget = memo(() => {
   return (
@@ -15,21 +15,18 @@ const CategoriesWidget = memo(() => {
           {blogCategories.map((item, index) => {
             return (
               <li className="text-capitalize" key={index}>
-                <Link
-                  href="/blogs/filter/category"
-                  className="position-relative"
-                >
+                <Link href="/blogs/filter/category" className="position-relative">
                   {item.title}
                 </Link>
                 <span className="post_count">({item.post_count})</span>
               </li>
-            );
+            )
           })}
         </ul>
       </div>
     </Fragment>
-  );
-});
+  )
+})
 
-CategoriesWidget.displayName = "CategoriesWidget";
-export default CategoriesWidget;
+CategoriesWidget.displayName = 'CategoriesWidget'
+export default CategoriesWidget

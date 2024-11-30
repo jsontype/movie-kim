@@ -1,13 +1,13 @@
-import CustomButton from "@/components/CustomButton";
-import Link from "next/link";
-import React from "react";
-import { Col, Container, Form, Nav, Row, Tab, Table } from "react-bootstrap";
+import CustomButton from '@/components/CustomButton'
+import Link from 'next/link'
+import React from 'react'
+import { Col, Container, Form, Nav, Row, Tab, Table } from 'react-bootstrap'
 
 // custom Hook
-import { useBreadcrumb } from "@/utilities/usePage";
+import { useBreadcrumb } from '@/utilities/usePage'
 
 const Dashboard = () => {
-  useBreadcrumb("My account");
+  useBreadcrumb('My account')
   return (
     <>
       <div className="section-padding service-details">
@@ -25,55 +25,37 @@ const Dashboard = () => {
                       role="tablist"
                     >
                       <Nav.Item as="li" className="pb-3">
-                        <Nav.Link
-                          eventKey="first"
-                          className="p-0 bg-transparent"
-                        >
+                        <Nav.Link eventKey="first" className="p-0 bg-transparent">
                           <i className="fas fa-tachometer-alt"></i>
                           <span className="ms-2">Dashboard</span>
                         </Nav.Link>
                       </Nav.Item>
                       <Nav.Item as="li" className="py-3">
-                        <Nav.Link
-                          eventKey="second"
-                          className="p-0 bg-transparent"
-                        >
+                        <Nav.Link eventKey="second" className="p-0 bg-transparent">
                           <i className="fas fa-list"></i>
                           <span className="ms-2">Orders</span>
                         </Nav.Link>
                       </Nav.Item>
                       <Nav.Item as="li" className="py-3">
-                        <Nav.Link
-                          eventKey="third"
-                          className="p-0 bg-transparent"
-                        >
+                        <Nav.Link eventKey="third" className="p-0 bg-transparent">
                           <i className="fas fa-download"></i>
                           <span className="ms-2">Downloads</span>
                         </Nav.Link>
                       </Nav.Item>
                       <Nav.Item as="li" className="py-3">
-                        <Nav.Link
-                          eventKey="fourth"
-                          className="p-0 bg-transparent"
-                        >
+                        <Nav.Link eventKey="fourth" className="p-0 bg-transparent">
                           <i className="fas fa-map-marker-alt"></i>
                           <span className="ms-2">Address</span>
                         </Nav.Link>
                       </Nav.Item>
                       <Nav.Item as="li" className="py-3">
-                        <Nav.Link
-                          eventKey="five"
-                          className="p-0 bg-transparent"
-                        >
+                        <Nav.Link eventKey="five" className="p-0 bg-transparent">
                           <i className="fas fa-user"></i>
                           <span className="ms-2">Account details</span>
                         </Nav.Link>
                       </Nav.Item>
                       <Nav.Item as="li" className="pt-3">
-                        <Nav.Link
-                          eventKey="sixth"
-                          className="p-0 bg-transparent"
-                        >
+                        <Nav.Link eventKey="sixth" className="p-0 bg-transparent">
                           <i className="fas fa-sign-out-alt"></i>
                           <span className="ms-2">Logout</span>
                         </Nav.Link>
@@ -90,14 +72,10 @@ const Dashboard = () => {
                         Hello Jenny (not Jenny? <Link href="#">Log out</Link>)
                       </p>
                       <p>
-                        From your account dashboard you can view your{" "}
-                        <Link href="#">recent orders</Link>, manage your{" "}
-                        <Link href="#">shipping and billing addresses</Link>,
-                        and{" "}
-                        <Link href="#">
-                          edit your password and account details
-                        </Link>
-                        .
+                        From your account dashboard you can view your{' '}
+                        <Link href="#">recent orders</Link>, manage your{' '}
+                        <Link href="#">shipping and billing addresses</Link>, and{' '}
+                        <Link href="#">edit your password and account details</Link>.
                       </p>
                     </div>
                   </Tab.Pane>
@@ -121,21 +99,9 @@ const Dashboard = () => {
                             <td>$215.00 For 0 Items</td>
                             <td>
                               <div className="d-flex align-items-center gap-2">
-                                <CustomButton
-                                  buttonTitle="pay"
-                                  link="#"
-                                  linkButton="false"
-                                />
-                                <CustomButton
-                                  buttonTitle="view"
-                                  link="#"
-                                  linkButton="false"
-                                />
-                                <CustomButton
-                                  buttonTitle="cancel"
-                                  link="#"
-                                  linkButton="false"
-                                />
+                                <CustomButton buttonTitle="pay" link="#" linkButton="false" />
+                                <CustomButton buttonTitle="view" link="#" linkButton="false" />
+                                <CustomButton buttonTitle="cancel" link="#" linkButton="false" />
                               </div>
                             </td>
                           </tr>
@@ -146,21 +112,9 @@ const Dashboard = () => {
                             <td>$522.00 For 0 Items</td>
                             <td>
                               <div className="d-flex align-items-center gap-2">
-                                <CustomButton
-                                  buttonTitle="pay"
-                                  link="#"
-                                  linkButton="false"
-                                />
-                                <CustomButton
-                                  buttonTitle="view"
-                                  link="#"
-                                  linkButton="false"
-                                />
-                                <CustomButton
-                                  buttonTitle="cancel"
-                                  link="#"
-                                  linkButton="false"
-                                />
+                                <CustomButton buttonTitle="pay" link="#" linkButton="false" />
+                                <CustomButton buttonTitle="view" link="#" linkButton="false" />
+                                <CustomButton buttonTitle="cancel" link="#" linkButton="false" />
                               </div>
                             </td>
                           </tr>
@@ -171,21 +125,9 @@ const Dashboard = () => {
                             <td>$243.00 For 0 Items</td>
                             <td>
                               <div className="d-flex align-items-center gap-2">
-                                <CustomButton
-                                  buttonTitle="pay"
-                                  link="#"
-                                  linkButton="false"
-                                />
-                                <CustomButton
-                                  buttonTitle="view"
-                                  link="#"
-                                  linkButton="false"
-                                />
-                                <CustomButton
-                                  buttonTitle="cancel"
-                                  link="#"
-                                  linkButton="false"
-                                />
+                                <CustomButton buttonTitle="pay" link="#" linkButton="false" />
+                                <CustomButton buttonTitle="view" link="#" linkButton="false" />
+                                <CustomButton buttonTitle="cancel" link="#" linkButton="false" />
                               </div>
                             </td>
                           </tr>
@@ -205,11 +147,7 @@ const Dashboard = () => {
                             <td>$64.00 For 0 Items</td>
                             <td className="fs-6">
                               <div className="d-flex align-items-center gap-2">
-                                <CustomButton
-                                  buttonTitle="view"
-                                  link="#"
-                                  linkButton="false"
-                                />
+                                <CustomButton buttonTitle="view" link="#" linkButton="false" />
                               </div>
                             </td>
                           </tr>
@@ -220,11 +158,7 @@ const Dashboard = () => {
                             <td>$159.00 For 0 Items</td>
                             <td className="fs-6">
                               <div className="d-flex align-items-center gap-2">
-                                <CustomButton
-                                  buttonTitle="view"
-                                  link="#"
-                                  linkButton="false"
-                                />
+                                <CustomButton buttonTitle="view" link="#" linkButton="false" />
                               </div>
                             </td>
                           </tr>
@@ -238,9 +172,7 @@ const Dashboard = () => {
                         <thead>
                           <tr className="border-bottom">
                             <th className="fw-bolder p-3">Product</th>
-                            <th className="fw-bolder p-3">
-                              Downloads Remaining
-                            </th>
+                            <th className="fw-bolder p-3">Downloads Remaining</th>
                             <th className="fw-bolder p-3">Expires</th>
                             <th className="fw-bolder p-3">Download</th>
                           </tr>
@@ -251,11 +183,7 @@ const Dashboard = () => {
                             <td className="p-3">∞</td>
                             <td className="p-3 fs-6">Never</td>
                             <td className="p-3">
-                              <Link
-                                href="#"
-                                className="p-2 bg-primary text-white fs-6"
-                                download
-                              >
+                              <Link href="#" className="p-2 bg-primary text-white fs-6" download>
                                 Product Demo
                               </Link>
                             </td>
@@ -267,8 +195,7 @@ const Dashboard = () => {
                   <Tab.Pane className=" fade" eventKey="fourth">
                     <div className="text-body p-4">
                       <p className="my-3">
-                        The following addresses will be used on the checkout
-                        page by default.
+                        The following addresses will be used on the checkout page by default.
                       </p>
                       <div className="d-flex align-items-center justify-content-between my-5 gap-2 flex-wrap">
                         <h4 className="mb-0">Billing Address.</h4>
@@ -290,8 +217,7 @@ const Dashboard = () => {
                           <Form>
                             <div className="form-group mb-5">
                               <label className="mb-2">
-                                First name&nbsp;{" "}
-                                <span className="text-danger">*</span>
+                                First name&nbsp; <span className="text-danger">*</span>
                               </label>
                               <input
                                 type="text"
@@ -303,8 +229,7 @@ const Dashboard = () => {
                             </div>
                             <div className="form-group mb-5">
                               <label className="mb-2">
-                                Last name&nbsp;{" "}
-                                <span className="text-danger">*</span>
+                                Last name&nbsp; <span className="text-danger">*</span>
                               </label>
                               <input
                                 type="text"
@@ -315,9 +240,7 @@ const Dashboard = () => {
                               />
                             </div>
                             <div className="form-group mb-5">
-                              <label className="mb-2">
-                                Company name (optional)
-                              </label>
+                              <label className="mb-2">Company name (optional)</label>
                               <input
                                 type="text"
                                 name="last-name"
@@ -327,8 +250,7 @@ const Dashboard = () => {
                             </div>
                             <div className="form-group mb-5">
                               <label className="mb-2">
-                                Country / Region &nbsp;{" "}
-                                <span className="text-danger">*</span>
+                                Country / Region &nbsp; <span className="text-danger">*</span>
                               </label>
                               <div className="mb-5">
                                 <select
@@ -336,9 +258,7 @@ const Dashboard = () => {
                                   aria-label="select country"
                                   required
                                 >
-                                  <option defaultValue="">
-                                    Choose a country
-                                  </option>
+                                  <option defaultValue="">Choose a country</option>
                                   <option value="1">India</option>
                                   <option value="2">United Kingdom</option>
                                   <option value="3">United States</option>
@@ -349,8 +269,7 @@ const Dashboard = () => {
                             </div>
                             <div className="form-group mb-5">
                               <label className="mb-2">
-                                Street address&nbsp;{" "}
-                                <span className="text-danger">*</span>
+                                Street address&nbsp; <span className="text-danger">*</span>
                               </label>
                               <input
                                 type="text"
@@ -369,8 +288,7 @@ const Dashboard = () => {
                             </div>
                             <div className="form-group mb-5">
                               <label className="mb-2">
-                                Town / City&nbsp;{" "}
-                                <span className="text-danger">*</span>
+                                Town / City&nbsp; <span className="text-danger">*</span>
                               </label>
                               <input
                                 type="text"
@@ -382,17 +300,14 @@ const Dashboard = () => {
                             </div>
                             <div className="form-group mb-5">
                               <label className="mb-2">
-                                State&nbsp;{" "}
-                                <span className="text-danger">*</span>
+                                State&nbsp; <span className="text-danger">*</span>
                               </label>
                               <div className="mb-5">
                                 <select
                                   className="select2-basic-single js-states form-control"
                                   aria-label="select state"
                                 >
-                                  <option defaultValue="">
-                                    Choose a State
-                                  </option>
+                                  <option defaultValue="">Choose a State</option>
                                   <option value="1">Gujarat</option>
                                   <option value="2">Delhi</option>
                                   <option value="3">Goa</option>
@@ -403,8 +318,7 @@ const Dashboard = () => {
                             </div>
                             <div className="form-group mb-5">
                               <label className="mb-2">
-                                PIN code&nbsp;{" "}
-                                <span className="text-danger">*</span>
+                                PIN code&nbsp; <span className="text-danger">*</span>
                               </label>
                               <input
                                 type="text"
@@ -416,8 +330,7 @@ const Dashboard = () => {
                             </div>
                             <div className="form-group mb-5">
                               <label className="mb-2">
-                                Phone&nbsp;{" "}
-                                <span className="text-danger">*</span>
+                                Phone&nbsp; <span className="text-danger">*</span>
                               </label>
                               <input
                                 type="tel"
@@ -429,8 +342,7 @@ const Dashboard = () => {
                             </div>
                             <div className="form-group mb-5">
                               <label className="mb-2">
-                                Email address&nbsp;{" "}
-                                <span className="text-danger">*</span>
+                                Email address&nbsp; <span className="text-danger">*</span>
                               </label>
                               <input
                                 type="email"
@@ -478,9 +390,7 @@ const Dashboard = () => {
                             <td className="seprator p-2">
                               <span>:</span>
                             </td>
-                            <td className="p-2">
-                              4517 Washington Ave, Manchester.
-                            </td>
+                            <td className="p-2">4517 Washington Ave, Manchester.</td>
                           </tr>
                           <tr>
                             <td className="label-name p-2">E-mail</td>
@@ -518,8 +428,7 @@ const Dashboard = () => {
                           <Form>
                             <div className="form-group mb-5">
                               <label className="mb-2">
-                                First name&nbsp;{" "}
-                                <span className="text-danger">*</span>
+                                First name&nbsp; <span className="text-danger">*</span>
                               </label>
                               <input
                                 type="text"
@@ -531,8 +440,7 @@ const Dashboard = () => {
                             </div>
                             <div className="form-group mb-5">
                               <label className="mb-2">
-                                Last name&nbsp;{" "}
-                                <span className="text-danger">*</span>
+                                Last name&nbsp; <span className="text-danger">*</span>
                               </label>
                               <input
                                 type="text"
@@ -543,9 +451,7 @@ const Dashboard = () => {
                               />
                             </div>
                             <div className="form-group mb-5">
-                              <label className="mb-2">
-                                Company name (optional)
-                              </label>
+                              <label className="mb-2">Company name (optional)</label>
                               <input
                                 type="text"
                                 name="last-name"
@@ -555,8 +461,7 @@ const Dashboard = () => {
                             </div>
                             <div className="form-group mb-5">
                               <label className="mb-2">
-                                Country / Region &nbsp;{" "}
-                                <span className="text-danger">*</span>
+                                Country / Region &nbsp; <span className="text-danger">*</span>
                               </label>
                               <div className="mb-5">
                                 <select
@@ -564,9 +469,7 @@ const Dashboard = () => {
                                   aria-label="select country"
                                   required
                                 >
-                                  <option defaultValue="">
-                                    Choose a country
-                                  </option>
+                                  <option defaultValue="">Choose a country</option>
                                   <option value="1">India</option>
                                   <option value="2">United Kingdom</option>
                                   <option value="3">United States</option>
@@ -577,8 +480,7 @@ const Dashboard = () => {
                             </div>
                             <div className="form-group mb-5">
                               <label className="mb-2">
-                                Street address&nbsp;{" "}
-                                <span className="text-danger">*</span>
+                                Street address&nbsp; <span className="text-danger">*</span>
                               </label>
                               <input
                                 type="text"
@@ -597,8 +499,7 @@ const Dashboard = () => {
                             </div>
                             <div className="form-group mb-5">
                               <label className="mb-2">
-                                Town / City&nbsp;{" "}
-                                <span className="text-danger">*</span>
+                                Town / City&nbsp; <span className="text-danger">*</span>
                               </label>
                               <input
                                 type="text"
@@ -610,17 +511,14 @@ const Dashboard = () => {
                             </div>
                             <div className="form-group mb-5">
                               <label className="mb-2">
-                                State&nbsp;{" "}
-                                <span className="text-danger">*</span>
+                                State&nbsp; <span className="text-danger">*</span>
                               </label>
                               <div className="mb-5">
                                 <select
                                   className="select2-basic-single js-states"
                                   aria-label="select state"
                                 >
-                                  <option defaultValue="">
-                                    Choose a State
-                                  </option>
+                                  <option defaultValue="">Choose a State</option>
                                   <option value="1">Gujarat</option>
                                   <option value="2">Delhi</option>
                                   <option value="3">Goa</option>
@@ -631,8 +529,7 @@ const Dashboard = () => {
                             </div>
                             <div className="form-group mb-5">
                               <label className="mb-2">
-                                PIN code&nbsp;{" "}
-                                <span className="text-danger">*</span>
+                                PIN code&nbsp; <span className="text-danger">*</span>
                               </label>
                               <input
                                 type="text"
@@ -644,8 +541,7 @@ const Dashboard = () => {
                             </div>
                             <div className="form-group mb-5">
                               <label className="mb-2">
-                                Phone&nbsp;{" "}
-                                <span className="text-danger">*</span>
+                                Phone&nbsp; <span className="text-danger">*</span>
                               </label>
                               <input
                                 type="tel"
@@ -657,8 +553,7 @@ const Dashboard = () => {
                             </div>
                             <div className="form-group mb-5">
                               <label className="mb-2">
-                                Email address&nbsp;{" "}
-                                <span className="text-danger">*</span>
+                                Email address&nbsp; <span className="text-danger">*</span>
                               </label>
                               <input
                                 type="email"
@@ -706,9 +601,7 @@ const Dashboard = () => {
                             <td className="seprator p-2">
                               <span>:</span>
                             </td>
-                            <td className="p-2">
-                              4517 Washington Ave, Manchester.
-                            </td>
+                            <td className="p-2">4517 Washington Ave, Manchester.</td>
                           </tr>
                           <tr>
                             <td className="label-name p-2">E-mail</td>
@@ -732,8 +625,7 @@ const Dashboard = () => {
                     <form>
                       <div className="form-group mb-5">
                         <label className="mb-2">
-                          First name&nbsp;{" "}
-                          <span className="text-danger">*</span>
+                          First name&nbsp; <span className="text-danger">*</span>
                         </label>
                         <input
                           type="text"
@@ -757,8 +649,7 @@ const Dashboard = () => {
                       </div>
                       <div className="form-group mb-5">
                         <label className="mb-2">
-                          Display name&nbsp;{" "}
-                          <span className="text-danger">*</span>
+                          Display name&nbsp; <span className="text-danger">*</span>
                         </label>
                         <input
                           type="text"
@@ -769,13 +660,12 @@ const Dashboard = () => {
                         />
                       </div>
                       <em className="d-block mb-5">
-                        This will be how your name will be displayed in the
-                        account section and in reviews
+                        This will be how your name will be displayed in the account section and in
+                        reviews
                       </em>
                       <div className="form-group mb-5">
                         <label className="mb-2">
-                          Email address&nbsp;{" "}
-                          <span className="text-danger">*</span>
+                          Email address&nbsp; <span className="text-danger">*</span>
                         </label>
                         <input
                           type="email"
@@ -790,36 +680,20 @@ const Dashboard = () => {
                         <label className="mb-2">
                           Current password (leave blank to leave unchanged)
                         </label>
-                        <input
-                          type="password"
-                          name="password"
-                          className="form-control"
-                        />
+                        <input type="password" name="password" className="form-control" />
                       </div>
                       <div className="form-group mb-5">
                         <label className="mb-2">
                           New password (leave blank to leave unchanged)
                         </label>
-                        <input
-                          type="password"
-                          name="password"
-                          className="form-control"
-                        />
+                        <input type="password" name="password" className="form-control" />
                       </div>
                       <div className="form-group mb-5">
                         <label className="mb-2">Confirm new password</label>
-                        <input
-                          type="password"
-                          name="password"
-                          className="form-control"
-                        />
+                        <input type="password" name="password" className="form-control" />
                       </div>
                       <div className="form-group">
-                        <CustomButton
-                          buttonTitle="save changes"
-                          link="#"
-                          linkButton="false"
-                        />
+                        <CustomButton buttonTitle="save changes" link="#" linkButton="false" />
                       </div>
                     </form>
                   </Tab.Pane>
@@ -848,19 +722,11 @@ const Dashboard = () => {
                               />
                             </div>
                             <label className="custom-form-field mb-5">
-                              <input
-                                type="checkbox"
-                                required
-                                className="mr-2"
-                              />
+                              <input type="checkbox" required className="mr-2" />
                               <span className="checkmark"></span>
                               <span>Remember me</span>
                             </label>
-                            <CustomButton
-                              buttonTitle="Login"
-                              link="#"
-                              linkButton="false"
-                            />
+                            <CustomButton buttonTitle="Login" link="#" linkButton="false" />
                           </Form>
                           <div className="mt-3">
                             <CustomButton
@@ -871,9 +737,7 @@ const Dashboard = () => {
                           </div>
                         </div>
                         <div className="col-md-6">
-                          <h4 className="mb-5 mt-5 mt-lg-0 mt-md-0 text-primary">
-                            Register
-                          </h4>
+                          <h4 className="mb-5 mt-5 mt-lg-0 mt-md-0 text-primary">Register</h4>
                           <form method="post">
                             <div className="mb-4">
                               <input
@@ -903,22 +767,15 @@ const Dashboard = () => {
                               />
                             </div>
                             <p className="mb-5">
-                              {" "}
-                              Your personal data will be used to support your
-                              experience throughout this website, to manage
-                              access to your account, and for other purposes
-                              described in our{" "}
-                              <Link href="/privacy-policy">
-                                {" "}
+                              {' '}
+                              Your personal data will be used to support your experience throughout
+                              this website, to manage access to your account, and for other purposes
+                              described in our <Link href="/privacy-policy">
+                                {' '}
                                 privacy policy
-                              </Link>
-                              .
+                              </Link>.
                             </p>
-                            <CustomButton
-                              buttonTitle="register"
-                              link="#"
-                              linkButton="false"
-                            />
+                            <CustomButton buttonTitle="register" link="#" linkButton="false" />
                           </form>
                         </div>
                       </div>
@@ -931,7 +788,7 @@ const Dashboard = () => {
         </Container>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Dashboard;
+export default Dashboard

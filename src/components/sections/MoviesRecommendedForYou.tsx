@@ -1,14 +1,14 @@
-import { useState, Fragment, memo } from "react";
+import { useState, Fragment, memo } from 'react'
 
 //components
-import SectionSlider from "../slider/SectionSlider";
-import CardStyle from "../cards/CardStyle";
+import SectionSlider from '../slider/SectionSlider'
+import CardStyle from '../cards/CardStyle'
 
 //static data
-import { recommendedforYou } from "../../StaticData/data";
+import { recommendedforYou } from '../../StaticData/data'
 
 const MoviesRecommendedForYou = memo(() => {
-  const [title] = useState("Movies Recommended For You");
+  const [title] = useState('Movies Recommended For You')
 
   return (
     <Fragment>
@@ -18,7 +18,7 @@ const MoviesRecommendedForYou = memo(() => {
         className="recommended-block"
         slidesPerView={6}
       >
-        {(data) => (
+        {data => (
           <CardStyle
             image={data.image}
             title={data.title}
@@ -29,8 +29,8 @@ const MoviesRecommendedForYou = memo(() => {
         )}
       </SectionSlider>
     </Fragment>
-  );
-});
+  )
+})
 
-MoviesRecommendedForYou.displayName = "MoviesRecommendedForYou";
-export default MoviesRecommendedForYou;
+MoviesRecommendedForYou.displayName = 'MoviesRecommendedForYou'
+export default MoviesRecommendedForYou

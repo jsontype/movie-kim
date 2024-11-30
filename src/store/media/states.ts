@@ -33,4 +33,4 @@ export const state = {
   videoTags: [],
   // cast
   cast: [],
-};
+}

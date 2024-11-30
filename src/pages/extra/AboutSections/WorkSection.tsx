@@ -1,7 +1,7 @@
-import { memo, Fragment, CSSProperties } from "react";
+import { memo, Fragment, CSSProperties } from 'react'
 
 //react-bootstrap
-import { Container, Col, Row } from "react-bootstrap";
+import { Container, Col, Row } from 'react-bootstrap'
 
 const WorkSection = memo(() => {
   return (
@@ -18,9 +18,7 @@ const WorkSection = memo(() => {
                   x="0px"
                   y="0px"
                   viewBox="0 0 2000 2000"
-                  style={
-                    { enableBackground: "new 0 0 2000 2000" } as CSSProperties
-                  }
+                  style={{ enableBackground: 'new 0 0 2000 2000' } as CSSProperties}
                 >
                   <g>
                     <g id="XMLID_5_">
@@ -167,9 +165,7 @@ const WorkSection = memo(() => {
                   x="0px"
                   y="0px"
                   viewBox="0 0 5000 5000"
-                  style={
-                    { enableBackground: "new 0 0 5000 5000" } as CSSProperties
-                  }
+                  style={{ enableBackground: 'new 0 0 5000 5000' } as CSSProperties}
                 >
                   <path
                     className="st9"
@@ -222,9 +218,7 @@ const WorkSection = memo(() => {
                   x="0px"
                   y="0px"
                   viewBox="0 0 150 150"
-                  style={
-                    { enableBackground: "new 0 0 150 150" } as CSSProperties
-                  }
+                  style={{ enableBackground: 'new 0 0 150 150' } as CSSProperties}
                 >
                   <path
                     className="st0"
@@ -252,9 +246,7 @@ const WorkSection = memo(() => {
                   x="0px"
                   y="0px"
                   viewBox="0 0 5000 5000"
-                  style={
-                    { enableBackground: "new 0 0 5000 5000" } as CSSProperties
-                  }
+                  style={{ enableBackground: 'new 0 0 5000 5000' } as CSSProperties}
                 >
                   {/* <style> .st4{fill-rule:evenodd;clip-rule:evenodd;fill:#ACACAC;} .st5{fill-rule:evenodd;clip-rule:evenodd;fill:#E1111B;} .st6{fill-rule:evenodd;clip-rule:evenodd;fill:#969696;} </style> */}
                   <g>
@@ -284,9 +276,7 @@ const WorkSection = memo(() => {
                   x="0px"
                   y="0px"
                   viewBox="0 0 800 800"
-                  style={
-                    { enableBackground: "new 0 0 150 150" } as CSSProperties
-                  }
+                  style={{ enableBackground: 'new 0 0 150 150' } as CSSProperties}
                 >
                   {/* <style> .st7{fill:#ACACAC;} .st8{fill:#E1111B;} </style> */}
                   <g id="Layer_4">
@@ -311,26 +301,10 @@ const WorkSection = memo(() => {
                         fill="#ACACAC"
                         d="M474.1,625.9c-0.6-0.9-0.8-2-0.5-3.1c0.3-1.1,0.9-1.9,1.8-2.5c0.9-0.6,2-0.8,3-0.5c1.1,0.3,2,0.9,2.6,1.8 l18.6,29.4l18.7-29.4c0.6-0.9,1.4-1.6,2.5-1.8c1.1-0.2,2.1-0.1,3.1,0.5c1,0.6,1.5,1.5,1.8,2.5c0.2,1.1,0.1,2.1-0.5,3.1l-21.4,33.9 v19.7c0,1.1-0.4,2.1-1.2,2.9c-0.8,0.8-1.8,1.2-2.9,1.2c-1.1,0-2.1-0.4-2.9-1.2c-0.8-0.8-1.2-1.7-1.2-2.9v-19.7L474.1,625.9z"
                       ></path>
-                      <path
-                        className="st7"
-                        fill="#ACACAC"
-                        d="M445.1,683.6h-39.5"
-                      ></path>
-                      <path
-                        className="st7"
-                        fill="#ACACAC"
-                        d="M484.2,683.6"
-                      ></path>
-                      <path
-                        className="st7"
-                        fill="#ACACAC"
-                        d="M557.1,683.6"
-                      ></path>
-                      <path
-                        className="st7"
-                        fill="#ACACAC"
-                        d="M621.8,683.6"
-                      ></path>
+                      <path className="st7" fill="#ACACAC" d="M445.1,683.6h-39.5"></path>
+                      <path className="st7" fill="#ACACAC" d="M484.2,683.6"></path>
+                      <path className="st7" fill="#ACACAC" d="M557.1,683.6"></path>
+                      <path className="st7" fill="#ACACAC" d="M621.8,683.6"></path>
                     </g>
                     <g>
                       <path
@@ -459,8 +433,8 @@ const WorkSection = memo(() => {
         </Container>
       </div>
     </Fragment>
-  );
-});
+  )
+})
 
-WorkSection.displayName = "WorkSection";
-export default WorkSection;
+WorkSection.displayName = 'WorkSection'
+export default WorkSection

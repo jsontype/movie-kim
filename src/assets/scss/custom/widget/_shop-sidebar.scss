@@ -20,7 +20,7 @@
       position: relative;
 
       &::before {
-        content: "\f0d7";
+        content: '\f0d7';
         position: absolute;
         top: -10px;
         left: 0;
@@ -100,7 +100,7 @@ ul.shop_list_checkbox li {
 }
 
 .shop_list_checkbox li .shop_checkbox_label:before {
-  content: "";
+  content: '';
   height: 100%;
   width: 100%;
   border: 2px solid var(--bs-gray-900);

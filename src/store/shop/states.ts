@@ -8,4 +8,4 @@ export const state = {
   bestseller: [],
   myWishlist: [],
   myCart: [],
-};
+}

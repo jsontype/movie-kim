@@ -1,27 +1,27 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react'
 
 // Custom Hokk
-import { useBreadcrumb } from "@/utilities/usePage";
+import { useBreadcrumb } from '@/utilities/usePage'
 
 // Next-Link
-import Link from "next/link";
+import Link from 'next/link'
 
 // Next-Image
-import Image from "next/image";
+import Image from 'next/image'
 
 // react-bootstrap
-import { Table } from "react-bootstrap";
+import { Table } from 'react-bootstrap'
 
 // Components
-import CustomButton from "@/components/CustomButton";
+import CustomButton from '@/components/CustomButton'
 
 // img
-import img1 from "../../../public/assets/images/shop/product/01.webp";
-import img2 from "../../../public/assets/images/shop/product/02.webp";
-import img3 from "../../../public/assets/images/shop/product/03.webp";
+import img1 from '../../../public/assets/images/shop/product/01.webp'
+import img2 from '../../../public/assets/images/shop/product/02.webp'
+import img3 from '../../../public/assets/images/shop/product/03.webp'
 
 const WishlistPage = () => {
-  useBreadcrumb("Wishlist");
+  useBreadcrumb('Wishlist')
   return (
     <>
       <div className="wishlist-page section-padding">
@@ -183,7 +183,7 @@ const WishlistPage = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default WishlistPage;
+export default WishlistPage

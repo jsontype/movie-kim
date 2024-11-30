@@ -101,8 +101,7 @@
   pointer-events: auto;
   background-color: var(--#{$prefix}modal-bg);
   background-clip: padding-box;
-  border: var(--#{$prefix}modal-border-width) solid
-    var(--#{$prefix}modal-border-color);
+  border: var(--#{$prefix}modal-border-width) solid var(--#{$prefix}modal-border-color);
   @include border-radius(var(--#{$prefix}modal-border-radius));
   @include box-shadow(var(--#{$prefix}modal-box-shadow));
   // Remove focus outline from opened modal
@@ -168,9 +167,7 @@
   flex-wrap: wrap;
   align-items: center; // vertically center
   justify-content: flex-end; // Right align buttons with flex property because text-align doesn't work on flex items
-  padding: calc(
-    var(--#{$prefix}modal-padding) - var(--#{$prefix}modal-footer-gap) * 0.5
-  );
+  padding: calc(var(--#{$prefix}modal-padding) - var(--#{$prefix}modal-footer-gap) * 0.5);
   background-color: var(--#{$prefix}modal-footer-bg);
   border-top: var(--#{$prefix}modal-footer-border-width) solid
     var(--#{$prefix}modal-footer-border-color);
@@ -221,7 +218,7 @@
 // scss-docs-start modal-fullscreen-loop
 @each $breakpoint in map-keys($grid-breakpoints) {
   $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
-  $postfix: if($infix != "", $infix + "-down", "");
+  $postfix: if($infix != '', $infix + '-down', '');
 
   @include media-breakpoint-down($breakpoint) {
     .modal-fullscreen#{$postfix} {

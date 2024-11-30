@@ -1,10 +1,10 @@
-import React, { Fragment, memo } from "react";
+import React, { Fragment, memo } from 'react'
 
 // Next-Link
-import Link from "next/link";
+import Link from 'next/link'
 
 interface TagCardProps {
-  title?: string;
+  title?: string
 }
 
 const TagsCard = memo((props: TagCardProps) => {
@@ -14,8 +14,8 @@ const TagsCard = memo((props: TagCardProps) => {
         <span className="iq-tag-box">{props.title}</span>
       </Link>
     </Fragment>
-  );
-});
+  )
+})
 
-TagsCard.displayName = "TagsCard";
-export default TagsCard;
+TagsCard.displayName = 'TagsCard'
+export default TagsCard

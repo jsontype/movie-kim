@@ -1,27 +1,27 @@
-import { memo } from "react";
+import { memo } from 'react'
 
 // react-bootstrap
-import { Container, Form, Row, Col, Table } from "react-bootstrap";
+import { Container, Form, Row, Col, Table } from 'react-bootstrap'
 
 // Custom Hook
-import { useBreadcrumb } from "@/utilities/usePage";
+import { useBreadcrumb } from '@/utilities/usePage'
 
 // Next-Link
-import Link from "next/link";
+import Link from 'next/link'
 
 // Next-Image
-import Image from "next/image";
+import Image from 'next/image'
 
 // components
-import CustomButton from "../../components/CustomButton";
+import CustomButton from '../../components/CustomButton'
 
 // img
-import img1 from "../../../public/assets/images/shop/product/01.webp";
-import img2 from "../../../public/assets/images/shop/product/07.webp";
-import img3 from "../../../public/assets/images/shop/product/05.webp";
+import img1 from '../../../public/assets/images/shop/product/01.webp'
+import img2 from '../../../public/assets/images/shop/product/07.webp'
+import img3 from '../../../public/assets/images/shop/product/05.webp'
 
 const CheckoutPage = () => {
-  useBreadcrumb("Checkout");
+  useBreadcrumb('Checkout')
   return (
     <>
       <div className="checkout-page  section-padding">
@@ -29,19 +29,11 @@ const CheckoutPage = () => {
           <div className="main-cart mb-3 mb-md-5 pb-0 pb-md-5">
             <ul className="cart-page-items d-flex justify-content-center list-inline align-items-center gap-3 gap-md-5 flex-wrap">
               <li className="cart-page-item">
-                <span className=" cart-pre-number  border-radius rounded-circle me-1">
-                  {" "}
-                  1{" "}
-                </span>
+                <span className=" cart-pre-number  border-radius rounded-circle me-1"> 1 </span>
                 <span className="cart-page-link ">Shopping Cart </span>
               </li>
               <li className="cart-page-item">
-                <svg
-                  width="25"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+                <svg width="25" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     fillRule="evenodd"
                     clipRule="evenodd"
@@ -62,17 +54,12 @@ const CheckoutPage = () => {
               </li>
               <li className="cart-page-item  active">
                 <span className="cart-pre-heading badge cart-pre-number bg-primary border-radius rounded-circle me-1">
-                  2{" "}
+                  2{' '}
                 </span>
                 <span className="cart-page-link ">Checkout </span>
               </li>
               <li className="cart-page-item">
-                <svg
-                  width="25"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+                <svg width="25" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     fillRule="evenodd"
                     clipRule="evenodd"
@@ -92,10 +79,7 @@ const CheckoutPage = () => {
                 </svg>
               </li>
               <li className="cart-page-item ">
-                <span className=" cart-pre-number  border-radius rounded-circle me-1">
-                  {" "}
-                  3{" "}
-                </span>
+                <span className=" cart-pre-number  border-radius rounded-circle me-1"> 3 </span>
                 <span className="cart-page-link ">Order Summary </span>
               </li>
             </ul>
@@ -119,9 +103,7 @@ const CheckoutPage = () => {
             </div>
             <div id="apply-coupon" className="collapse mt-5">
               <Form className="checkout-coupon">
-                <p className="mt-0">
-                  If you have a coupon code, please apply it below.
-                </p>
+                <p className="mt-0">If you have a coupon code, please apply it below.</p>
                 <div className="iq-checkout-coupon">
                   <input
                     name="coupon-code"
@@ -130,11 +112,7 @@ const CheckoutPage = () => {
                     placeholder="Coupon code"
                     className="form-control"
                   />
-                  <CustomButton
-                    buttonTitle="apply coupon"
-                    link="#"
-                    linkButton="false"
-                  />
+                  <CustomButton buttonTitle="apply coupon" link="#" linkButton="false" />
                 </div>
               </Form>
             </div>
@@ -281,9 +259,7 @@ const CheckoutPage = () => {
                           <div className="text">
                             <span className="fw-500 text-body">Bag Pack</span>
                             <br />
-                            <strong className="text-white font-size-12 fw-bold">
-                              QTY:&nbsp;1
-                            </strong>
+                            <strong className="text-white font-size-12 fw-bold">QTY:&nbsp;1</strong>
                           </div>
                         </td>
                         <td className="product-total">
@@ -307,13 +283,9 @@ const CheckoutPage = () => {
                             />
                           </div>
                           <div className="text">
-                            <span className="fw-500 text-body">
-                              cartoon-character
-                            </span>
+                            <span className="fw-500 text-body">cartoon-character</span>
                             <br />
-                            <strong className="text-white font-size-12 fw-bold">
-                              QTY:&nbsp;1
-                            </strong>
+                            <strong className="text-white font-size-12 fw-bold">QTY:&nbsp;1</strong>
                           </div>
                         </td>
                         <td className="product-total">
@@ -337,13 +309,9 @@ const CheckoutPage = () => {
                             />
                           </div>
                           <div className="text">
-                            <span className="fw-500 text-body">
-                              Boxing Gloves
-                            </span>
+                            <span className="fw-500 text-body">Boxing Gloves</span>
                             <br />
-                            <strong className="text-white font-size-12 fw-bold">
-                              QTY:&nbsp;1
-                            </strong>
+                            <strong className="text-white font-size-12 fw-bold">QTY:&nbsp;1</strong>
                           </div>
                         </td>
                         <td className="product-total">
@@ -357,9 +325,7 @@ const CheckoutPage = () => {
                     </tbody>
                     <tfoot>
                       <tr className="border-bottom">
-                        <td className="ps-0 p-3 fw-500 font-size-18">
-                          Subtotal
-                        </td>
+                        <td className="ps-0 p-3 fw-500 font-size-18">Subtotal</td>
                         <td className="pe-0 p-3 fw-500 text-end">
                           <span className="mb-0 text-body">$71.00</span>
                         </td>
@@ -392,10 +358,7 @@ const CheckoutPage = () => {
                                   id="flexRadioDefault1"
                                   defaultChecked
                                 />
-                                <label
-                                  className="form-check-label"
-                                  htmlFor="flexRadioDefault1"
-                                >
+                                <label className="form-check-label" htmlFor="flexRadioDefault1">
                                   Direct bank transfer
                                 </label>
                               </span>
@@ -407,10 +370,9 @@ const CheckoutPage = () => {
                             data-bs-parent="#accordionPayment"
                           >
                             <div className="accordion-body">
-                              Make your payment directly into our bank account.
-                              Please use your Order ID as the payment reference.
-                              Your order will not be shipped until the funds
-                              have cleared in our account.
+                              Make your payment directly into our bank account. Please use your
+                              Order ID as the payment reference. Your order will not be shipped
+                              until the funds have cleared in our account.
                             </div>
                           </div>
                         </div>
@@ -430,10 +392,7 @@ const CheckoutPage = () => {
                                   name="flexRadioDefault"
                                   id="flexRadioDefault2"
                                 />
-                                <label
-                                  className="form-check-label"
-                                  htmlFor="flexRadioDefault2"
-                                >
+                                <label className="form-check-label" htmlFor="flexRadioDefault2">
                                   Check payments
                                 </label>
                               </span>
@@ -446,8 +405,8 @@ const CheckoutPage = () => {
                             data-bs-parent="#accordionPayment"
                           >
                             <div className="accordion-body">
-                              Please send a check to Store Name, Store Street,
-                              Store Town, Store State / County, Store Postcode.
+                              Please send a check to Store Name, Store Street, Store Town, Store
+                              State / County, Store Postcode.
                             </div>
                           </div>
                         </div>
@@ -467,10 +426,7 @@ const CheckoutPage = () => {
                                   name="flexRadioDefault"
                                   id="flexRadioDefault3"
                                 />
-                                <label
-                                  className="form-check-label"
-                                  htmlFor="flexRadioDefault3"
-                                >
+                                <label className="form-check-label" htmlFor="flexRadioDefault3">
                                   Cash on delivery
                                 </label>
                               </span>
@@ -482,17 +438,14 @@ const CheckoutPage = () => {
                             aria-labelledby="payment-3"
                             data-bs-parent="#accordionPayment"
                           >
-                            <div className="accordion-body">
-                              Pay with cash upon delivery.
-                            </div>
+                            <div className="accordion-body">Pay with cash upon delivery.</div>
                           </div>
                         </div>
                       </div>
                     </div>
                     <p className="mt-3 mb-5">
-                      Your personal data will be used to process your order,
-                      support your experience throughout this website, and for
-                      other purposes described in our{" "}
+                      Your personal data will be used to process your order, support your experience
+                      throughout this website, and for other purposes described in our{' '}
                       <Link href="/extra/privacy-policy">privacy policy</Link>.
                     </p>
                     <CustomButton
@@ -508,7 +461,7 @@ const CheckoutPage = () => {
         </Container>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default CheckoutPage;
+export default CheckoutPage

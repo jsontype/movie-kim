@@ -56,10 +56,7 @@
   > .form-control-plaintext,
   > .form-select {
     ~ label {
-      color: rgba(
-        var(--#{$prefix}body-color-rgb),
-        #{$form-floating-label-opacity}
-      );
+      color: rgba(var(--#{$prefix}body-color-rgb), #{$form-floating-label-opacity});
       transform: $form-floating-label-transform;
 
       &::after {
@@ -67,7 +64,7 @@
         inset: $form-floating-padding-y ($form-floating-padding-x * 0.5);
         z-index: -1;
         height: $form-floating-label-height;
-        content: "";
+        content: '';
         background-color: $input-bg;
         @include border-radius($input-border-radius);
       }
@@ -76,10 +73,7 @@
   // Duplicated because `:-webkit-autofill` invalidates other selectors when grouped
   > .form-control:-webkit-autofill {
     ~ label {
-      color: rgba(
-        var(--#{$prefix}body-color-rgb),
-        #{$form-floating-label-opacity}
-      );
+      color: rgba(var(--#{$prefix}body-color-rgb), #{$form-floating-label-opacity});
       transform: $form-floating-label-transform;
     }
   }

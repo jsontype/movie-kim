@@ -11,6 +11,7 @@
     "format:fix": "prettier --write --ignore-path .gitignore .",
     "eslint": "eslint ./src",
     "eslint:fix": "eslint --fix ./src",
+    "lint:check": "yarn format && yarn eslint",
     "lint": "yarn format:fix && yarn eslint:fix && yarn format && yarn eslint"
   },
   "dependencies": {

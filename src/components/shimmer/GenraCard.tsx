@@ -1,11 +1,11 @@
-import React, { memo, Fragment } from "react";
+import React, { memo, Fragment } from 'react'
 
 // react-bootsrap
-import { Container, Row, Col, Placeholder } from "react-bootstrap";
+import { Container, Row, Col, Placeholder } from 'react-bootstrap'
 
 // components
 
-const CardgenraShimmer = memo((props) => {
+const CardgenraShimmer = memo(props => {
   return (
     <Fragment>
       <div className=" pb-3">
@@ -14,15 +14,12 @@ const CardgenraShimmer = memo((props) => {
             <Placeholder
               className=""
               style={{
-                backgroundColor: "#3e3e3e",
-                height: "11.8rem",
-                width: "20.9rem",
+                backgroundColor: '#3e3e3e',
+                height: '11.8rem',
+                width: '20.9rem',
               }}
             >
-              <Placeholder
-                xs={3}
-                style={{ marginTop: "5em", marginLeft: "7.5em" }}
-              />
+              <Placeholder xs={3} style={{ marginTop: '5em', marginLeft: '7.5em' }} />
             </Placeholder>
           </Placeholder>
           {/* <Placeholder as="p" animation="glow" className="mb-0">
@@ -37,8 +34,8 @@ const CardgenraShimmer = memo((props) => {
         </div>
       </div>
     </Fragment>
-  );
-});
+  )
+})
 
-CardgenraShimmer.displayName = "CardgenraShimmer";
-export default CardgenraShimmer;
+CardgenraShimmer.displayName = 'CardgenraShimmer'
+export default CardgenraShimmer

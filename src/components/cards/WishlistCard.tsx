@@ -1,13 +1,13 @@
-import React, { Fragment, memo } from "react";
+import React, { Fragment, memo } from 'react'
 
 //react-router-dom
-import Link from "next/link";
+import Link from 'next/link'
 
 interface Props {
-  image: string;
-  title: string;
-  views: string;
-  duration: string;
+  image: string
+  title: string
+  views: string
+  duration: string
 }
 
 const WishlistCard = memo((props: Props) => {
@@ -28,8 +28,8 @@ const WishlistCard = memo((props: Props) => {
           </div>
           <div className="card-description">
             <h5 className="text-capitalize fw-500">
-              {" "}
-              <Link href="/videos/detail">{props.title}</Link>{" "}
+              {' '}
+              <Link href="/videos/detail">{props.title}</Link>{' '}
             </h5>
             <div className="seperator d-flex align-items-center">
               <span className="text-body fw-semibold font-size-12 text-capitalize">
@@ -44,8 +44,8 @@ const WishlistCard = memo((props: Props) => {
         </div>
       </div>
     </Fragment>
-  );
-});
+  )
+})
 
-WishlistCard.displayName = "WishlistCard";
-export default WishlistCard;
+WishlistCard.displayName = 'WishlistCard'
+export default WishlistCard

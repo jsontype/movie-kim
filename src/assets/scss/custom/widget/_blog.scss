@@ -157,7 +157,7 @@
 
   &:after {
     position: absolute;
-    content: "";
+    content: '';
     background: var(--bs-gray-900);
     width: 1px;
     height: 65px;
@@ -224,7 +224,7 @@ blockquote,
 }
 
 blockquote cite {
-  font-family: "Heebo", sans-serif;
+  font-family: 'Heebo', sans-serif;
   font-weight: bold;
 }
 

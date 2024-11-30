@@ -1,49 +1,49 @@
-import React, { Fragment, memo, useState } from "react";
+import React, { Fragment, memo, useState } from 'react'
 
 //react-bootstrap
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row } from 'react-bootstrap'
 
 //router
-import Link from "next/link";
+import Link from 'next/link'
 
 //fslight-box
-import FsLightbox from "fslightbox-react";
+import FsLightbox from 'fslightbox-react'
 
 //components
-import WishlistCard from "../components/cards/WishlistCard";
+import WishlistCard from '../components/cards/WishlistCard'
 
 const WatchlistDetail = memo(() => {
-  const [toggler, setToggler] = useState(false);
+  const [toggler, setToggler] = useState(false)
   const watchlist = [
     {
-      id: "01",
-      thumbnail: "/assets/images/movies/latest/01.webp",
-      title: "mortal nories",
-      duration: "1 month ago",
-      views: "30 views",
+      id: '01',
+      thumbnail: '/assets/images/movies/latest/01.webp',
+      title: 'mortal nories',
+      duration: '1 month ago',
+      views: '30 views',
     },
     {
-      id: "02",
-      thumbnail: "/assets/images/movies/latest/02.webp",
-      title: "advetre",
-      duration: "3 month ago",
-      views: "75 views",
+      id: '02',
+      thumbnail: '/assets/images/movies/latest/02.webp',
+      title: 'advetre',
+      duration: '3 month ago',
+      views: '75 views',
     },
     {
-      id: "03",
-      thumbnail: "/assets/images/movies/latest/03.webp",
-      title: "net ailo",
-      duration: "2 month ago",
-      views: "150 views",
+      id: '03',
+      thumbnail: '/assets/images/movies/latest/03.webp',
+      title: 'net ailo',
+      duration: '2 month ago',
+      views: '150 views',
     },
     {
-      id: "04",
-      thumbnail: "/assets/images/movies/latest/04.webp",
-      title: "ariivaal",
-      duration: "5 month ago",
-      views: "300 views",
+      id: '04',
+      thumbnail: '/assets/images/movies/latest/04.webp',
+      title: 'ariivaal',
+      duration: '5 month ago',
+      views: '300 views',
     },
-  ];
+  ]
   return (
     <Fragment>
       <section className="section-padding">
@@ -113,9 +113,7 @@ const WatchlistDetail = memo(() => {
               <div className="playlist-listing mt-4 mt-md-0">
                 <h4 className="fw-500">Playlist Demo 1</h4>
                 <div className="seperator d-flex align-items-center">
-                  <span className="text-body fw-semibold font-size-12 text-capitalize">
-                    public
-                  </span>
+                  <span className="text-body fw-semibold font-size-12 text-capitalize">public</span>
                   <span className="circle circle-small"></span>
                   <span className="text-body fw-semibold font-size-12 text-capitalize">
                     5 videos
@@ -132,7 +130,7 @@ const WatchlistDetail = memo(() => {
                           views={item.views}
                         />
                       </li>
-                    );
+                    )
                   })}
                 </ul>
               </div>
@@ -144,11 +142,11 @@ const WatchlistDetail = memo(() => {
         maxYoutubeVideoDimensions={{ width: 700, height: 400 }}
         exitFullscreenOnClose={true}
         toggler={toggler}
-        sources={["/assets/images/video/trailer.mp4"]}
+        sources={['/assets/images/video/trailer.mp4']}
       />
     </Fragment>
-  );
-});
+  )
+})
 
-WatchlistDetail.displayName = "WatchlistDetail";
-export default WatchlistDetail;
+WatchlistDetail.displayName = 'WatchlistDetail'
+export default WatchlistDetail

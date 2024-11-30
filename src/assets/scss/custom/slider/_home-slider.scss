@@ -11,7 +11,7 @@
 
   &::before,
   &::after {
-    content: "";
+    content: '';
     display: block;
     position: absolute;
     left: 0.063rem;
@@ -46,7 +46,7 @@
 
     &::before,
     &::after {
-      content: "";
+      content: '';
       width: 0.625rem;
       height: 0.125rem;
       border-radius: 0.063rem;
@@ -128,7 +128,7 @@
         rgba(83, 100, 141, 0) 100%
       );
       width: 100%;
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       left: 0;

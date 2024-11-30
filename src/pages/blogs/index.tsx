@@ -1,20 +1,20 @@
-import React, { Fragment, memo } from "react";
+import React, { Fragment, memo } from 'react'
 
 //react bootstrap
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from 'react-bootstrap'
 
 //components
-import CardBlogList from "../../components/cards/CardBlogList";
-import DetailMetaList from "../../components/blog/DetailMetaList";
+import CardBlogList from '../../components/cards/CardBlogList'
+import DetailMetaList from '../../components/blog/DetailMetaList'
 
 //static data
-import { blogs } from "../../StaticData/blogs";
+import { blogs } from '../../StaticData/blogs'
 
 //custom hook
-import { useBreadcrumb } from "@/utilities/usePage";
+import { useBreadcrumb } from '@/utilities/usePage'
 
 const BLogs = memo(() => {
-  useBreadcrumb("Blog List");
+  useBreadcrumb('Blog List')
   return (
     <Fragment>
       <div className="section-padding">
@@ -33,7 +33,7 @@ const BLogs = memo(() => {
                     tags={item.tags}
                     description={item.description}
                   />
-                );
+                )
               })}
             </Col>
             <Col lg="4" sm="12">
@@ -43,8 +43,8 @@ const BLogs = memo(() => {
         </Container>
       </div>
     </Fragment>
-  );
-});
+  )
+})
 
-BLogs.displayName = "BLogs";
-export default BLogs;
+BLogs.displayName = 'BLogs'
+export default BLogs

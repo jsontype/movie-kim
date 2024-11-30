@@ -3,7 +3,7 @@
 
 // scss-docs-start form-validation-mixins
 @mixin form-validation-state-selector($state) {
-  @if ($state == "valid" or $state == "invalid") {
+  @if ($state == 'valid' or $state == 'invalid') {
     .was-validated #{if(&, "&", "")}:#{$state},
     #{if(&, "&", "")}.is-#{$state} {
       @content;
@@ -80,10 +80,7 @@
     @include form-validation-state-selector($state) {
       @if $enable-validation-icons {
         padding-right: $input-height-inner;
-        background-position: top
-          $input-height-inner-quarter
-          right
-          $input-height-inner-quarter;
+        background-position: top $input-height-inner-quarter right $input-height-inner-quarter;
       }
     }
   }
@@ -94,11 +91,10 @@
 
       @if $enable-validation-icons {
         &:not([multiple]):not([size]),
-        &:not([multiple])[size="1"] {
+        &:not([multiple])[size='1'] {
           --#{$prefix}form-select-bg-icon: #{escape-svg($icon)};
           padding-right: $form-select-feedback-icon-padding-end;
-          background-position: $form-select-bg-position,
-            $form-select-feedback-icon-position;
+          background-position: $form-select-bg-position, $form-select-feedback-icon-position;
           background-size: $form-select-bg-size, $form-select-feedback-icon-size;
         }
       }
@@ -146,9 +142,9 @@
     > .form-select:not(:focus),
     > .form-floating:not(:focus-within) {
       @include form-validation-state-selector($state) {
-        @if $state == "valid" {
+        @if $state == 'valid' {
           z-index: 3;
-        } @else if $state == "invalid" {
+        } @else if $state == 'invalid' {
           z-index: 4;
         }
       }

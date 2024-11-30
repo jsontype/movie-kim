@@ -35,8 +35,7 @@
   vertical-align: middle;
   cursor: if($enable-button-pointers, pointer, null);
   user-select: none;
-  border: var(--#{$prefix}btn-border-width) solid
-    var(--#{$prefix}btn-border-color);
+  border: var(--#{$prefix}btn-border-width) solid var(--#{$prefix}btn-border-color);
   @include border-radius(var(--#{$prefix}btn-border-radius));
   @include gradient-bg(var(--#{$prefix}btn-bg));
   @include box-shadow(var(--#{$prefix}btn-box-shadow));
@@ -63,8 +62,7 @@
     outline: 0;
     // Avoid using mixin so we can pass custom focus shadow properly
     @if $enable-shadows {
-      box-shadow: var(--#{$prefix}btn-box-shadow),
-        var(--#{$prefix}btn-focus-box-shadow);
+      box-shadow: var(--#{$prefix}btn-box-shadow), var(--#{$prefix}btn-focus-box-shadow);
     } @else {
       box-shadow: var(--#{$prefix}btn-focus-box-shadow);
     }
@@ -75,8 +73,7 @@
     outline: 0;
     // Avoid using mixin so we can pass custom focus shadow properly
     @if $enable-shadows {
-      box-shadow: var(--#{$prefix}btn-box-shadow),
-        var(--#{$prefix}btn-focus-box-shadow);
+      box-shadow: var(--#{$prefix}btn-box-shadow), var(--#{$prefix}btn-focus-box-shadow);
     } @else {
       box-shadow: var(--#{$prefix}btn-focus-box-shadow);
     }
@@ -97,8 +94,7 @@
     &:focus-visible {
       // Avoid using mixin so we can pass custom focus shadow properly
       @if $enable-shadows {
-        box-shadow: var(--#{$prefix}btn-active-shadow),
-          var(--#{$prefix}btn-focus-box-shadow);
+        box-shadow: var(--#{$prefix}btn-active-shadow), var(--#{$prefix}btn-focus-box-shadow);
       } @else {
         box-shadow: var(--#{$prefix}btn-focus-box-shadow);
       }
@@ -125,7 +121,7 @@
 // scss-docs-start btn-variant-loops
 @each $color, $value in $theme-colors {
   .btn-#{$color} {
-    @if $color == "light" {
+    @if $color == 'light' {
       @include button-variant(
         $value,
         $value,
@@ -134,7 +130,7 @@
         $active-background: shade-color($value, $btn-active-bg-shade-amount),
         $active-border: shade-color($value, $btn-active-border-shade-amount)
       );
-    } @else if $color == "dark" {
+    } @else if $color == 'dark' {
       @include button-variant(
         $value,
         $value,

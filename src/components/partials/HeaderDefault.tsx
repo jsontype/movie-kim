@@ -1,71 +1,60 @@
-import { memo, Fragment, useState, useEffect } from "react";
+import { memo, Fragment, useState, useEffect } from 'react'
 
 // react-bootstrap
-import {
-  Button,
-  Nav,
-  Collapse,
-  Navbar,
-  Offcanvas,
-  Container,
-  Dropdown,
-} from "react-bootstrap";
+import { Button, Nav, Collapse, Navbar, Offcanvas, Container, Dropdown } from 'react-bootstrap'
 
 //router
-import Link from "next/link";
-import { useRouter } from "next/router";
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 // components
-import Logo from "../logo";
-import CustomToggle from "../CustomToggle";
+import Logo from '../logo'
+import CustomToggle from '../CustomToggle'
 
 const HeaderDefault = memo(() => {
-  const [isMega, setIsMega] = useState(true);
-  const location = useRouter();
+  const [isMega, setIsMega] = useState(true)
+  const location = useRouter()
 
-  const [show1, setShow1] = useState(false);
-  const [show, setShow] = useState(false);
+  const [show1, setShow1] = useState(false)
+  const [show, setShow] = useState(false)
 
-  const [open, setOpen] = useState(false);
-  const [open1, setOpen1] = useState(false);
-  const [open2, setOpen2] = useState(false);
-  const [open3, setOpen3] = useState(false);
-  const [open4, setOpen4] = useState(false);
-  const [open5, setOpen5] = useState(false);
-  const [open6, setOpen6] = useState(false);
-  const [open7, setOpen7] = useState(false);
-  const [open8, setOpen8] = useState(false);
+  const [open, setOpen] = useState(false)
+  const [open1, setOpen1] = useState(false)
+  const [open2, setOpen2] = useState(false)
+  const [open3, setOpen3] = useState(false)
+  const [open4, setOpen4] = useState(false)
+  const [open5, setOpen5] = useState(false)
+  const [open6, setOpen6] = useState(false)
+  const [open7, setOpen7] = useState(false)
+  const [open8, setOpen8] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
-      const headerSticky = document.querySelector(".header-sticky");
+      const headerSticky = document.querySelector('.header-sticky')
       if (headerSticky) {
         if (window.scrollY > 1) {
-          headerSticky.classList.add("sticky");
+          headerSticky.classList.add('sticky')
         } else {
-          headerSticky.classList.remove("sticky");
+          headerSticky.classList.remove('sticky')
         }
       }
-    };
+    }
 
     const updateIsMega = () => {
-      setIsMega(location.asPath === "/");
-    };
+      setIsMega(location.asPath === '/')
+    }
 
-    window.addEventListener("scroll", handleScroll);
-    updateIsMega();
+    window.addEventListener('scroll', handleScroll)
+    updateIsMega()
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [location]);
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [location])
   return (
     <Fragment>
       <header className="header-center-home header-default header-sticky">
-        <Navbar
-          expand="xl"
-          className="nav navbar-light iq-navbar header-hover-menu py-xl-0"
-        >
+        <Navbar expand="xl" className="nav navbar-light iq-navbar header-hover-menu py-xl-0">
           <Container fluid className="navbar-inner">
             <div className="d-flex align-items-center justify-content-between w-100 landing-header">
               <div className="d-flex gap-3 gap-xl-0 align-items-center">
@@ -91,10 +80,10 @@ const HeaderDefault = memo(() => {
               <Navbar
                 expand="xl"
                 className={`offcanvas mobile-offcanvas nav hover-nav horizontal-nav py-xl-0 ${
-                  show1 === true ? "show" : ""
-                } ${isMega ? "mega-menu-content" : ""}`}
+                  show1 === true ? 'show' : ''
+                } ${isMega ? 'mega-menu-content' : ''}`}
                 style={{
-                  visibility: `${show1 === true ? "visible" : "hidden"}`,
+                  visibility: `${show1 === true ? 'visible' : 'hidden'}`,
                 }}
                 id="navbar_main"
               >
@@ -104,23 +93,20 @@ const HeaderDefault = memo(() => {
                       <Logo></Logo>
                     </div>
                   </Offcanvas.Header>
-                  <ul
-                    className="navbar-nav iq-nav-menu list-unstyled"
-                    id="header-menu"
-                  >
+                  <ul className="navbar-nav iq-nav-menu list-unstyled" id="header-menu">
                     <Nav.Item as="li">
                       <Nav.Link
                         aria-expanded={open}
                         onClick={() => setOpen(!open)}
                         className={`${
-                          location.asPath === "/" ||
-                          location.asPath === "/home" ||
-                          location.asPath === "/movies" ||
-                          location.asPath === "/tv-shows" ||
-                          location.asPath === "/videos" ||
-                          location.asPath === "/merchandise"
-                            ? "active"
-                            : ""
+                          location.asPath === '/' ||
+                          location.asPath === '/home' ||
+                          location.asPath === '/movies' ||
+                          location.asPath === '/tv-shows' ||
+                          location.asPath === '/videos' ||
+                          location.asPath === '/merchandise'
+                            ? 'active'
+                            : ''
                         }`}
                       >
                         <span className="item-name">Home</span>
@@ -143,15 +129,15 @@ const HeaderDefault = memo(() => {
                       </Nav.Link>
                       <Collapse
                         className={`sub-nav justify-content-center list-unstyled ${
-                          isMega ? " mega-menu-item" : ""
+                          isMega ? ' mega-menu-item' : ''
                         }`}
                       >
                         <ul>
                           <Nav.Item as="li">
                             <Link
                               className={`${
-                                location.asPath === "/" ? "active" : ""
-                              } nav-link ${isMega ? "p-0" : ""}`}
+                                location.asPath === '/' ? 'active' : ''
+                              } nav-link ${isMega ? 'p-0' : ''}`}
                               href="/"
                             >
                               {isMega ? (
@@ -161,7 +147,7 @@ const HeaderDefault = memo(() => {
                                   className="img-fluid d-xl-block d-none"
                                 />
                               ) : (
-                                ""
+                                ''
                               )}
                               <span className="d-inline-block">OTT Home</span>
                             </Link>
@@ -169,8 +155,8 @@ const HeaderDefault = memo(() => {
                           <Nav.Item as="li">
                             <Link
                               className={`${
-                                location.asPath === "/home" ? "active" : ""
-                              } nav-link ${isMega ? "p-0" : ""}`}
+                                location.asPath === '/home' ? 'active' : ''
+                              } nav-link ${isMega ? 'p-0' : ''}`}
                               href="/home"
                             >
                               {isMega ? (
@@ -180,7 +166,7 @@ const HeaderDefault = memo(() => {
                                   className="img-fluid d-xl-block d-none"
                                 />
                               ) : (
-                                ""
+                                ''
                               )}
                               <span className="d-inline-block">Home</span>
                             </Link>
@@ -188,8 +174,8 @@ const HeaderDefault = memo(() => {
                           <Nav.Item as="li">
                             <Link
                               className={`${
-                                location.asPath === "/movies" ? "active" : ""
-                              } nav-link ${isMega ? "p-0" : ""}`}
+                                location.asPath === '/movies' ? 'active' : ''
+                              } nav-link ${isMega ? 'p-0' : ''}`}
                               href="/movies"
                             >
                               {isMega ? (
@@ -199,7 +185,7 @@ const HeaderDefault = memo(() => {
                                   className="img-fluid d-xl-block d-none"
                                 />
                               ) : (
-                                ""
+                                ''
                               )}
                               <span className="d-inline-block">Movie</span>
                             </Link>
@@ -207,8 +193,8 @@ const HeaderDefault = memo(() => {
                           <Nav.Item as="li">
                             <Link
                               className={`${
-                                location.asPath === "/tv-shows" ? "active" : ""
-                              } nav-link ${isMega ? "p-0" : ""}`}
+                                location.asPath === '/tv-shows' ? 'active' : ''
+                              } nav-link ${isMega ? 'p-0' : ''}`}
                               href="/tv-shows"
                             >
                               {isMega ? (
@@ -218,7 +204,7 @@ const HeaderDefault = memo(() => {
                                   className="img-fluid d-xl-block d-none"
                                 />
                               ) : (
-                                ""
+                                ''
                               )}
                               <span className="d-inline-block">TV Show</span>
                             </Link>
@@ -226,8 +212,8 @@ const HeaderDefault = memo(() => {
                           <Nav.Item as="li">
                             <Link
                               className={`${
-                                location.asPath === "/videos" ? "active" : ""
-                              } nav-link ${isMega ? "p-0" : ""}`}
+                                location.asPath === '/videos' ? 'active' : ''
+                              } nav-link ${isMega ? 'p-0' : ''}`}
                               href="/videos"
                             >
                               {isMega ? (
@@ -237,7 +223,7 @@ const HeaderDefault = memo(() => {
                                   className="img-fluid d-xl-block d-none"
                                 />
                               ) : (
-                                ""
+                                ''
                               )}
                               <span className="d-inline-block">Video</span>
                             </Link>
@@ -245,10 +231,8 @@ const HeaderDefault = memo(() => {
                           <Nav.Item as="li">
                             <Link
                               className={`${
-                                location.asPath === "/merchandise"
-                                  ? "active"
-                                  : ""
-                              } nav-link ${isMega ? "p-0" : ""}`}
+                                location.asPath === '/merchandise' ? 'active' : ''
+                              } nav-link ${isMega ? 'p-0' : ''}`}
                               href="/merchandise"
                             >
                               {isMega ? (
@@ -258,11 +242,9 @@ const HeaderDefault = memo(() => {
                                   className="img-fluid d-xl-block d-none"
                                 />
                               ) : (
-                                ""
+                                ''
                               )}
-                              <span className="d-inline-block">
-                                Merchandise Store
-                              </span>
+                              <span className="d-inline-block">Merchandise Store</span>
                             </Link>
                           </Nav.Item>
                         </ul>
@@ -274,15 +256,15 @@ const HeaderDefault = memo(() => {
                         href=""
                         onClick={() => setOpen1(!open1)}
                         className={`${
-                          location.asPath === "/movies/related" ||
-                          location.asPath === "/movies/restricted" ||
-                          location.asPath === "/play-list" ||
-                          location.asPath === "/genres" ||
-                          location.asPath === "/cast" ||
-                          location.asPath === "/tags" ||
-                          location.asPath === "/watchlist-detail"
-                            ? "active"
-                            : ""
+                          location.asPath === '/movies/related' ||
+                          location.asPath === '/movies/restricted' ||
+                          location.asPath === '/play-list' ||
+                          location.asPath === '/genres' ||
+                          location.asPath === '/cast' ||
+                          location.asPath === '/tags' ||
+                          location.asPath === '/watchlist-detail'
+                            ? 'active'
+                            : ''
                         }`}
                       >
                         <span className="item-name">Features</span>
@@ -309,73 +291,65 @@ const HeaderDefault = memo(() => {
                             <Link
                               href="/movies/restricted"
                               className={`${
-                                location.asPath === "/movies/restricted"
-                                  ? "active"
-                                  : ""
+                                location.asPath === '/movies/restricted' ? 'active' : ''
                               } nav-link`}
                             >
-                              {" "}
-                              Restricted Content{" "}
+                              {' '}
+                              Restricted Content{' '}
                             </Link>
                           </Nav.Item>
                           <Nav.Item as="li">
                             <Link
                               href="/movies/related"
                               className={`${
-                                location.asPath === "/movies/related"
-                                  ? "active"
-                                  : ""
+                                location.asPath === '/movies/related' ? 'active' : ''
                               } nav-link`}
                             >
-                              {" "}
-                              Related Merchandise{" "}
+                              {' '}
+                              Related Merchandise{' '}
                             </Link>
                           </Nav.Item>
                           <Nav.Item as="li">
                             <Link
                               href="/play-list"
                               className={`${
-                                location.asPath === "/play-list" ||
-                                location.asPath === "/watchlist-detail"
-                                  ? "active"
-                                  : ""
+                                location.asPath === '/play-list' ||
+                                location.asPath === '/watchlist-detail'
+                                  ? 'active'
+                                  : ''
                               } nav-link`}
                             >
-                              {" "}
-                              Playlist{" "}
+                              {' '}
+                              Playlist{' '}
                             </Link>
                           </Nav.Item>
                           <Nav.Item as="li">
                             <Link
                               href="/genres"
                               className={`${
-                                location.asPath === "/genres" ? "active" : ""
+                                location.asPath === '/genres' ? 'active' : ''
                               } nav-link`}
                             >
-                              {" "}
-                              Genres{" "}
+                              {' '}
+                              Genres{' '}
                             </Link>
                           </Nav.Item>
                           <Nav.Item as="li">
                             <Link
                               href="/cast"
-                              className={`${
-                                location.asPath === "/cast" ? "active" : ""
-                              } nav-link`}
+                              className={`${location.asPath === '/cast' ? 'active' : ''} nav-link`}
                             >
-                              {" "}
-                              Cast{" "}
+                              {' '}
+                              Cast{' '}
                             </Link>
                           </Nav.Item>
                           <Nav.Item as="li">
                             <Link
                               href="/tags"
-                              className={`${
-                                location.asPath === "/tags" ? "active" : ""
-                              } nav-link`}
+                              className={`${location.asPath === '/tags' ? 'active' : ''} nav-link`}
                             >
-                              {" "}
-                              Tags{" "}
+                              {' '}
+                              Tags{' '}
                             </Link>
                           </Nav.Item>
                         </ul>
@@ -387,9 +361,7 @@ const HeaderDefault = memo(() => {
                         href=""
                         onClick={() => setOpen2(!open2)}
                         className={`${
-                          location.asPath.split("/").includes("extra")
-                            ? "active"
-                            : ""
+                          location.asPath.split('/').includes('extra') ? 'active' : ''
                         }`}
                       >
                         <span className="item-name">Pages</span>
@@ -416,72 +388,61 @@ const HeaderDefault = memo(() => {
                             <Link
                               href="/extra/about-us"
                               className={`${
-                                location.asPath === "/extra/about-us"
-                                  ? "active"
-                                  : ""
+                                location.asPath === '/extra/about-us' ? 'active' : ''
                               } nav-link`}
                             >
-                              {" "}
-                              About Us{" "}
+                              {' '}
+                              About Us{' '}
                             </Link>
                           </Nav.Item>
                           <Nav.Item as="li">
                             <Link
                               href="/extra/contact-us"
                               className={`${
-                                location.asPath === "/extra/contact-us"
-                                  ? "active"
-                                  : ""
+                                location.asPath === '/extra/contact-us' ? 'active' : ''
                               } nav-link`}
                             >
-                              {" "}
-                              Contact Us{" "}
+                              {' '}
+                              Contact Us{' '}
                             </Link>
                           </Nav.Item>
                           <Nav.Item as="li">
                             <Link
                               href="/extra/faq"
                               className={`${
-                                location.asPath === "/extra/faq" ? "active" : ""
+                                location.asPath === '/extra/faq' ? 'active' : ''
                               } nav-link`}
                             >
-                              {" "}
-                              FAQ{" "}
+                              {' '}
+                              FAQ{' '}
                             </Link>
                           </Nav.Item>
                           <Nav.Item as="li">
                             <Link
                               href="/extra/privacy-policy"
                               className={`${
-                                location.asPath === "/extra/privacy-policy"
-                                  ? "active"
-                                  : ""
+                                location.asPath === '/extra/privacy-policy' ? 'active' : ''
                               } nav-link`}
                             >
-                              {" "}
-                              Privacy Policy{" "}
+                              {' '}
+                              Privacy Policy{' '}
                             </Link>
                           </Nav.Item>
                           <Nav.Item as="li">
                             <Link
                               href="/extra/pricing-plan"
                               className={`${
-                                location.asPath === "/extra/pricing-plan"
-                                  ? "active"
-                                  : ""
+                                location.asPath === '/extra/pricing-plan' ? 'active' : ''
                               } nav-link`}
                             >
-                              {" "}
-                              Pricing Plan{" "}
+                              {' '}
+                              Pricing Plan{' '}
                             </Link>
                           </Nav.Item>
                           <Nav.Item as="li">
-                            <Link
-                              href="/extra/coming-soon"
-                              className={`nav-link`}
-                            >
-                              {" "}
-                              Coming Soon{" "}
+                            <Link href="/extra/coming-soon" className={`nav-link`}>
+                              {' '}
+                              Coming Soon{' '}
                             </Link>
                           </Nav.Item>
                           <Nav.Item as="li">
@@ -508,27 +469,18 @@ const HeaderDefault = memo(() => {
                                 </span>
                               </span>
                             </Nav.Link>
-                            <Collapse
-                              in={open3}
-                              className="sub-nav list-unstyled"
-                            >
+                            <Collapse in={open3} className="sub-nav list-unstyled">
                               <ul>
                                 <Nav.Item as="li">
-                                  <Link
-                                    href="/extra/error-page-one"
-                                    className={`nav-link`}
-                                  >
-                                    {" "}
-                                    Error Page 1{" "}
+                                  <Link href="/extra/error-page-one" className={`nav-link`}>
+                                    {' '}
+                                    Error Page 1{' '}
                                   </Link>
                                 </Nav.Item>
                                 <Nav.Item as="li">
-                                  <Link
-                                    href="/extra/error-page-two"
-                                    className={`nav-link`}
-                                  >
-                                    {" "}
-                                    Error Page 2{" "}
+                                  <Link href="/extra/error-page-two" className={`nav-link`}>
+                                    {' '}
+                                    Error Page 2{' '}
                                   </Link>
                                 </Nav.Item>
                               </ul>
@@ -543,9 +495,7 @@ const HeaderDefault = memo(() => {
                         href=""
                         onClick={() => setOpen4(!open4)}
                         className={`${
-                          location.asPath.split("/").includes("blogs")
-                            ? "active"
-                            : ""
+                          location.asPath.split('/').includes('blogs') ? 'active' : ''
                         }`}
                       >
                         <span className="item-name">Blog</span>
@@ -571,21 +521,19 @@ const HeaderDefault = memo(() => {
                           <Nav.Item as="li">
                             <Link
                               href="/blogs"
-                              className={`${
-                                location.asPath === "/blogs" ? "active" : ""
-                              } nav-link`}
+                              className={`${location.asPath === '/blogs' ? 'active' : ''} nav-link`}
                             >
-                              {" "}
-                              Listing{" "}
+                              {' '}
+                              Listing{' '}
                             </Link>
                           </Nav.Item>
                           <Nav.Item as="li">
                             <Nav.Link
                               className={`${
-                                location.asPath.split("/").includes("blogs") &&
-                                location.asPath.split("/").includes("grid")
-                                  ? "active"
-                                  : ""
+                                location.asPath.split('/').includes('blogs') &&
+                                location.asPath.split('/').includes('grid')
+                                  ? 'active'
+                                  : ''
                               }`}
                               aria-expanded={open5}
                               href=""
@@ -609,36 +557,27 @@ const HeaderDefault = memo(() => {
                                 </span>
                               </span>
                             </Nav.Link>
-                            <Collapse
-                              in={open5}
-                              className="sub-nav list-unstyled"
-                            >
+                            <Collapse in={open5} className="sub-nav list-unstyled">
                               <ul>
                                 <Nav.Item as="li">
                                   <Link
                                     href="/blogs/grid/one-column"
                                     className={`${
-                                      location.asPath ===
-                                      "/blogs/grid/one-column"
-                                        ? "active"
-                                        : ""
+                                      location.asPath === '/blogs/grid/one-column' ? 'active' : ''
                                     } nav-link`}
                                   >
-                                    {" "}
-                                    1 Column{" "}
+                                    {' '}
+                                    1 Column{' '}
                                   </Link>
                                 </Nav.Item>
                                 <Nav.Item as="li">
                                   <Link
                                     href="/blogs/grid/two-column"
                                     className={`${
-                                      location.asPath ===
-                                      "/blogs/grid/two-column"
-                                        ? "active"
-                                        : ""
+                                      location.asPath === '/blogs/grid/two-column' ? 'active' : ''
                                     } nav-link`}
                                   >
-                                    {" "}
+                                    {' '}
                                     2 column
                                   </Link>
                                 </Nav.Item>
@@ -646,28 +585,22 @@ const HeaderDefault = memo(() => {
                                   <Link
                                     href="/blogs/grid/three-column"
                                     className={`${
-                                      location.asPath ===
-                                      "/blogs/grid/three-column"
-                                        ? "active"
-                                        : ""
+                                      location.asPath === '/blogs/grid/three-column' ? 'active' : ''
                                     } nav-link`}
                                   >
-                                    {" "}
-                                    3 column{" "}
+                                    {' '}
+                                    3 column{' '}
                                   </Link>
                                 </Nav.Item>
                                 <Nav.Item as="li">
                                   <Link
                                     href="/blogs/grid/four-column"
                                     className={`${
-                                      location.asPath ===
-                                      "/blogs/grid/four-column"
-                                        ? "active"
-                                        : ""
+                                      location.asPath === '/blogs/grid/four-column' ? 'active' : ''
                                     } nav-link`}
                                   >
-                                    {" "}
-                                    4 column{" "}
+                                    {' '}
+                                    4 column{' '}
                                   </Link>
                                 </Nav.Item>
                               </ul>
@@ -679,10 +612,10 @@ const HeaderDefault = memo(() => {
                               href=""
                               onClick={() => setOpen6(!open6)}
                               className={`${
-                                location.asPath.split("/").includes("blogs") &&
-                                location.asPath.split("/").includes("sidebar")
-                                  ? "active"
-                                  : ""
+                                location.asPath.split('/').includes('blogs') &&
+                                location.asPath.split('/').includes('sidebar')
+                                  ? 'active'
+                                  : ''
                               }`}
                             >
                               <span className="item-name">Blog Sidebar</span>
@@ -703,35 +636,28 @@ const HeaderDefault = memo(() => {
                                 </span>
                               </span>
                             </Nav.Link>
-                            <Collapse
-                              in={open6}
-                              className="sub-nav list-unstyled"
-                            >
+                            <Collapse in={open6} className="sub-nav list-unstyled">
                               <ul>
                                 <Nav.Item as="li">
                                   <Link
                                     href="/blogs/sidebar/left"
                                     className={`${
-                                      location.asPath === "/blogs/sidebar/left"
-                                        ? "active"
-                                        : ""
+                                      location.asPath === '/blogs/sidebar/left' ? 'active' : ''
                                     } nav-link`}
                                   >
-                                    {" "}
-                                    Left Sidebar{" "}
+                                    {' '}
+                                    Left Sidebar{' '}
                                   </Link>
                                 </Nav.Item>
                                 <Nav.Item as="li">
                                   <Link
                                     href="/blogs/sidebar/right"
                                     className={`${
-                                      location.asPath === "/blogs/sidebar/right"
-                                        ? "active"
-                                        : ""
+                                      location.asPath === '/blogs/sidebar/right' ? 'active' : ''
                                     } nav-link`}
                                   >
-                                    {" "}
-                                    Right Sidebar{" "}
+                                    {' '}
+                                    Right Sidebar{' '}
                                   </Link>
                                 </Nav.Item>
                               </ul>
@@ -743,12 +669,12 @@ const HeaderDefault = memo(() => {
                               href=""
                               onClick={() => setOpen7(!open7)}
                               className={`${
-                                location.asPath === "/blogs/template" ||
-                                location.asPath === "/blogs/detail" ||
-                                (location.asPath.split("/").includes("blogs") &&
-                                  location.asPath.split("/").includes("single"))
-                                  ? "active"
-                                  : ""
+                                location.asPath === '/blogs/template' ||
+                                location.asPath === '/blogs/detail' ||
+                                (location.asPath.split('/').includes('blogs') &&
+                                  location.asPath.split('/').includes('single'))
+                                  ? 'active'
+                                  : ''
                               }`}
                             >
                               <span className="item-name">Blog Single</span>
@@ -769,101 +695,83 @@ const HeaderDefault = memo(() => {
                                 </span>
                               </span>
                             </Nav.Link>
-                            <Collapse
-                              in={open7}
-                              className="sub-nav list-unstyled"
-                            >
+                            <Collapse in={open7} className="sub-nav list-unstyled">
                               <ul>
                                 <Nav.Item as="li">
                                   <Link
                                     href="/blogs/template"
                                     className={`${
-                                      location.asPath === "/blogs/template"
-                                        ? "active"
-                                        : ""
+                                      location.asPath === '/blogs/template' ? 'active' : ''
                                     } nav-link`}
                                   >
-                                    {" "}
-                                    Blog Template{" "}
+                                    {' '}
+                                    Blog Template{' '}
                                   </Link>
                                 </Nav.Item>
                                 <Nav.Item as="li">
                                   <Link
                                     href="/blogs/detail"
                                     className={`${
-                                      location.asPath === "/blogs/detail"
-                                        ? "active"
-                                        : ""
+                                      location.asPath === '/blogs/detail' ? 'active' : ''
                                     } nav-link`}
                                   >
-                                    {" "}
-                                    Standard{" "}
+                                    {' '}
+                                    Standard{' '}
                                   </Link>
                                 </Nav.Item>
                                 <Nav.Item as="li">
                                   <Link
                                     href="/blogs/single/audio"
                                     className={`${
-                                      location.asPath === "/blogs/single/audio"
-                                        ? "active"
-                                        : ""
+                                      location.asPath === '/blogs/single/audio' ? 'active' : ''
                                     } nav-link`}
                                   >
-                                    {" "}
-                                    Audio{" "}
+                                    {' '}
+                                    Audio{' '}
                                   </Link>
                                 </Nav.Item>
                                 <Nav.Item as="li">
                                   <Link
                                     href="/blogs/single/video"
                                     className={`${
-                                      location.asPath === "/blogs/single/video"
-                                        ? "active"
-                                        : ""
+                                      location.asPath === '/blogs/single/video' ? 'active' : ''
                                     } nav-link`}
                                   >
-                                    {" "}
-                                    Video{" "}
+                                    {' '}
+                                    Video{' '}
                                   </Link>
                                 </Nav.Item>
                                 <Nav.Item as="li">
                                   <Link
                                     href="/blogs/single/link"
                                     className={`${
-                                      location.asPath === "/blogs/single/link"
-                                        ? "active"
-                                        : ""
+                                      location.asPath === '/blogs/single/link' ? 'active' : ''
                                     } nav-link`}
                                   >
-                                    {" "}
-                                    Link{" "}
+                                    {' '}
+                                    Link{' '}
                                   </Link>
                                 </Nav.Item>
                                 <Nav.Item as="li">
                                   <Link
                                     href="/blogs/single/quote"
                                     className={`${
-                                      location.asPath === "/blogs/single/quote"
-                                        ? "active"
-                                        : ""
+                                      location.asPath === '/blogs/single/quote' ? 'active' : ''
                                     } nav-link`}
                                   >
-                                    {" "}
-                                    Quote{" "}
+                                    {' '}
+                                    Quote{' '}
                                   </Link>
                                 </Nav.Item>
                                 <Nav.Item as="li">
                                   <Link
                                     href="/blogs/single/gallery"
                                     className={`${
-                                      location.asPath ===
-                                      "/blogs/single/gallery"
-                                        ? "active"
-                                        : ""
+                                      location.asPath === '/blogs/single/gallery' ? 'active' : ''
                                     } nav-link`}
                                   >
-                                    {" "}
-                                    Gallery{" "}
+                                    {' '}
+                                    Gallery{' '}
                                   </Link>
                                 </Nav.Item>
                               </ul>
@@ -878,10 +786,10 @@ const HeaderDefault = memo(() => {
                         href=""
                         onClick={() => setOpen8(!open8)}
                         className={`${
-                          location.asPath.split("/").includes("merchandise") &&
-                          location.asPath.split("/").length > 2
-                            ? "active"
-                            : ""
+                          location.asPath.split('/').includes('merchandise') &&
+                          location.asPath.split('/').length > 2
+                            ? 'active'
+                            : ''
                         }`}
                       >
                         <span className="item-name">Shop</span>
@@ -908,78 +816,66 @@ const HeaderDefault = memo(() => {
                             <Link
                               href="/merchandise/shop"
                               className={`${
-                                location.asPath === "/merchandise/shop"
-                                  ? "active"
-                                  : ""
+                                location.asPath === '/merchandise/shop' ? 'active' : ''
                               } nav-link`}
                             >
-                              {" "}
-                              Shop{" "}
+                              {' '}
+                              Shop{' '}
                             </Link>
                           </Nav.Item>
                           <Nav.Item as="li">
                             <Link
                               href="/merchandise/account"
                               className={`${
-                                location.asPath === "/merchandise/account"
-                                  ? "active"
-                                  : ""
+                                location.asPath === '/merchandise/account' ? 'active' : ''
                               } nav-link`}
                             >
-                              {" "}
-                              My Account Page{" "}
+                              {' '}
+                              My Account Page{' '}
                             </Link>
                           </Nav.Item>
                           <Nav.Item as="li">
                             <Link
                               href="/merchandise/cart"
                               className={`${
-                                location.asPath === "/merchandise/cart"
-                                  ? "active"
-                                  : ""
+                                location.asPath === '/merchandise/cart' ? 'active' : ''
                               } nav-link`}
                             >
-                              {" "}
-                              Cart Page{" "}
+                              {' '}
+                              Cart Page{' '}
                             </Link>
                           </Nav.Item>
                           <Nav.Item as="li">
                             <Link
                               href="/merchandise/wishlist"
                               className={`${
-                                location.asPath === "/merchandise/wishlist"
-                                  ? "active"
-                                  : ""
+                                location.asPath === '/merchandise/wishlist' ? 'active' : ''
                               } nav-link`}
                             >
-                              {" "}
-                              Wishlist Page{" "}
+                              {' '}
+                              Wishlist Page{' '}
                             </Link>
                           </Nav.Item>
                           <Nav.Item as="li">
                             <Link
                               href="/merchandise/checkout"
                               className={`${
-                                location.asPath === "/merchandise/checkout"
-                                  ? "active"
-                                  : ""
+                                location.asPath === '/merchandise/checkout' ? 'active' : ''
                               } nav-link`}
                             >
-                              {" "}
-                              Checkout Page{" "}
+                              {' '}
+                              Checkout Page{' '}
                             </Link>
                           </Nav.Item>
                           <Nav.Item as="li">
                             <Link
                               href="/merchandise/track-order"
                               className={`${
-                                location.asPath === "/merchandise/track-order"
-                                  ? "active"
-                                  : ""
+                                location.asPath === '/merchandise/track-order' ? 'active' : ''
                               } nav-link`}
                             >
-                              {" "}
-                              Order Tracking{" "}
+                              {' '}
+                              Order Tracking{' '}
                             </Link>
                           </Nav.Item>
                         </ul>
@@ -1003,22 +899,13 @@ const HeaderDefault = memo(() => {
                   </span>
                 </Button>
                 <div
-                  className={`navbar-collapse ${
-                    show === true ? "collapse show" : "collapse"
-                  }`}
+                  className={`navbar-collapse ${show === true ? 'collapse show' : 'collapse'}`}
                   id="navbarSupportedContent"
                 >
                   <ul className="navbar-nav align-items-center ms-auto mb-2 mb-xl-0">
-                    <Dropdown
-                      as="li"
-                      className="nav-item dropdown iq-responsive-menu"
-                    >
+                    <Dropdown as="li" className="nav-item dropdown iq-responsive-menu">
                       <div className="search-box">
-                        <Dropdown.Toggle
-                          as={CustomToggle}
-                          href="#"
-                          variant="nav-link p-0"
-                        >
+                        <Dropdown.Toggle as={CustomToggle} href="#" variant="nav-link p-0">
                           <div className="btn-icon btn-sm rounded-pill btn-action">
                             <span className="btn-inner">
                               <svg
@@ -1051,7 +938,7 @@ const HeaderDefault = memo(() => {
                         <Dropdown.Menu
                           as="ul"
                           className="p-0 dropdown-search m-0 iq-search-bar"
-                          style={{ width: "20rem" }}
+                          style={{ width: '20rem' }}
                         >
                           <li className="p-0">
                             <div className="form-group input-group mb-0">
@@ -1190,9 +1077,7 @@ const HeaderDefault = memo(() => {
                                 strokeLinejoin="round"
                               />
                             </svg>
-                            <h6 className="mb-0 font-size-14 fw-normal">
-                              My Account
-                            </h6>
+                            <h6 className="mb-0 font-size-14 fw-normal">My Account</h6>
                           </Link>
                         </li>
                         <li>
@@ -1217,9 +1102,7 @@ const HeaderDefault = memo(() => {
                                 fill="currentColor"
                               />
                             </svg>
-                            <h6 className="mb-0 font-size-14 fw-normal">
-                              Watchlist
-                            </h6>
+                            <h6 className="mb-0 font-size-14 fw-normal">Watchlist</h6>
                           </Link>
                         </li>
                         <li>
@@ -1242,9 +1125,7 @@ const HeaderDefault = memo(() => {
                                 strokeLinejoin="round"
                               />
                             </svg>
-                            <h6 className="mb-0 font-size-14 fw-normal">
-                              Subscription
-                            </h6>
+                            <h6 className="mb-0 font-size-14 fw-normal">Subscription</h6>
                           </Link>
                         </li>
                         <li>
@@ -1264,9 +1145,7 @@ const HeaderDefault = memo(() => {
                                 fill="currentColor"
                               ></path>
                             </svg>
-                            <h6 className="mb-0 font-size-14 fw-normal">
-                              Logout
-                            </h6>
+                            <h6 className="mb-0 font-size-14 fw-normal">Logout</h6>
                           </Link>
                         </li>
                       </Dropdown.Menu>
@@ -1279,8 +1158,8 @@ const HeaderDefault = memo(() => {
         </Navbar>
       </header>
     </Fragment>
-  );
-});
+  )
+})
 
-HeaderDefault.displayName = "HeaderDefault";
-export default HeaderDefault;
+HeaderDefault.displayName = 'HeaderDefault'
+export default HeaderDefault
