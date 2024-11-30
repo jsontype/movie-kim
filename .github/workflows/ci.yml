@@ -21,26 +21,26 @@ jobs:
     # runs-on: 작업이 실행되는 가상 환경을 설정
     runs-on: ubuntu-latest
     steps:
-    # name: 워크플로우 이름
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      # name: 워크플로우 이름
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: 18.18.0
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18.18.0
 
-    - name: Cache node modules
-      uses: actions/cache@v2
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-node-
+      - name: Cache node modules
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
 
-    - name: Install dependencies
-      run: yarn
+      - name: Install dependencies
+        run: yarn
 
-    - name: Run ESLint and Prettier
-      run: yarn lint
-      working-directory: ./src
+      - name: Run ESLint and Prettier
+        run: yarn lint
+        working-directory: ./src

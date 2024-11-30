@@ -23,11 +23,9 @@
     "choices.js": "^10.2.0",
     "fslightbox-react": "^1.7.6",
     "gsap": "^3.12.2",
-    "i": "^0.3.7",
     "lodash": "^4.17.21",
     "next": "^14.0.3",
     "next-redux-wrapper": "^8.1.0",
-    "npm": "^10.2.4",
     "react": "^18.2.0",
     "react-bootstrap": "^2.9.1",
     "react-countup": "^6.5.0",
@@ -52,5 +50,18 @@
     "prettier": "^3.4.1",
     "sass": "~1.64.2",
     "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=18.17.0"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "printWidth": 100,
+    "arrowParens": "avoid",
+    "bracketSpacing": true,
+    "jsxBracketSameLine": true,
+    "trailingComma": "all"
   }
 }
