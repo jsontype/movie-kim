@@ -18,6 +18,7 @@ import { verticleLatestMovies } from '@/StaticData/data'
 
 import { useEnterExit } from '@/utilities/usePage'
 
+// Home
 const Home = memo(() => {
   useEnterExit()
   return (
