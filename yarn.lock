@@ -254,7 +254,7 @@
 
 "@types/datatables.net@^1.12.3":
   version "1.12.3"
-  resolved "https://registry.npmjs.org/@types/datatables.net/-/datatables.net-1.12.3.tgz"
+  resolved "https://registry.yarnpkg.com/@types/datatables.net/-/datatables.net-1.12.3.tgz#9436712547fe543fd9f28ff3300ee8b6f52c56e5"
   integrity sha512-6Vguiqfey9UMweEJDrfi3K6PCizqAfVm8eW8oeFQPc7l/Pq/LjHmiBb5uu1nSWo8XE85yfjXFxcCHf3r2JmAMA==
   dependencies:
     datatables.net "*"
