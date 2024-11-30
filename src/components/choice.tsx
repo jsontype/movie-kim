@@ -1,12 +1,10 @@
 import { Fragment, useEffect, memo, createRef } from 'react'
 import _ from 'lodash'
 
-//choices
+// choices
 import Choices from 'choices.js'
-// import 'choices.js/public/assets/styles/choices.css'
-// import 'choices.js/public/assets/styles/choices.min.css';
 
-//interfaces
+// interfaces
 interface Props {
   options?: any
   select?: any
