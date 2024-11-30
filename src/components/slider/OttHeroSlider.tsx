@@ -22,13 +22,13 @@ import { theme_scheme_direction } from "../../store/setting/selectors";
 const OttHeroSlider = () => {
   const themeSchemeDirection = useSelector(theme_scheme_direction);
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore | null>(null);
-  const [render, setRender] = useState(true)
+  const [render, setRender] = useState(true);
   useEffect(() => {
-    setRender(false)
+    setRender(false);
     setTimeout(() => {
-      setRender(true)
+      setRender(true);
     }, 100);
-    return () => { };
+    return () => {};
   }, []);
 
   return (
@@ -105,7 +105,10 @@ const OttHeroSlider = () => {
                             sizes="100vw"
                           />
                           <div className="block-description ps-3">
-                            <h6 className="iq-title fw-500 mb-0"> The Mandalorian </h6>
+                            <h6 className="iq-title fw-500 mb-0">
+                              {" "}
+                              The Mandalorian{" "}
+                            </h6>
                             <span className="fs-12">2 hr 14 minute</span>
                           </div>
                         </div>
@@ -124,7 +127,9 @@ const OttHeroSlider = () => {
                             sizes="100vw"
                           />
                           <div className="block-description ps-3">
-                            <h6 className="iq-title fw-500 mb-0">Better call saul</h6>
+                            <h6 className="iq-title fw-500 mb-0">
+                              Better call saul
+                            </h6>
                             <span className="fs-12">2 hr 55 minute</span>
                           </div>
                         </div>
@@ -154,9 +159,14 @@ const OttHeroSlider = () => {
               >
                 <SwiperSlide className="p-0">
                   <div className="slider--image block-images">
-                    <Image src="/assets/images/movies/ott1.webp" loading="lazy" alt="banner" width={0}
+                    <Image
+                      src="/assets/images/movies/ott1.webp"
+                      loading="lazy"
+                      alt="banner"
+                      width={0}
                       height={0}
-                      sizes="100vw" />
+                      sizes="100vw"
+                    />
                   </div>
                   <div className="description">
                     <div className="row align-items-center h-100">
@@ -261,9 +271,14 @@ const OttHeroSlider = () => {
                 </SwiperSlide>
                 <SwiperSlide className="p-0">
                   <div className="slider--image block-images">
-                    <Image src="/assets/images/movies/ott2.webp" loading="lazy" alt="banner" width={0}
+                    <Image
+                      src="/assets/images/movies/ott2.webp"
+                      loading="lazy"
+                      alt="banner"
+                      width={0}
                       height={0}
-                      sizes="100vw" />
+                      sizes="100vw"
+                    />
                   </div>
                   <div className="description">
                     <div className="row align-items-center h-100">
@@ -359,9 +374,14 @@ const OttHeroSlider = () => {
                 </SwiperSlide>
                 <SwiperSlide className="p-0">
                   <div className="slider--image block-images">
-                    <Image src="/assets/images/movies/ott3.webp" loading="lazy" alt="banner" width={0}
+                    <Image
+                      src="/assets/images/movies/ott3.webp"
+                      loading="lazy"
+                      alt="banner"
+                      width={0}
                       height={0}
-                      sizes="100vw" />
+                      sizes="100vw"
+                    />
                   </div>
                   <div className="description">
                     <div className="row align-items-center h-100">

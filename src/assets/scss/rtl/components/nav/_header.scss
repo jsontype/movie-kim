@@ -72,7 +72,7 @@ header {
   }
 }
 
-@include media-breakpoint-down(xl){
+@include media-breakpoint-down(xl) {
   header {
     &.header-center-home {
       .mega-menu-content {
@@ -88,5 +88,5 @@ header {
         }
       }
     }
-  }  
+  }
 }

@@ -1,4 +1,4 @@
-import React, { Fragment} from "react";
+import React, { Fragment } from "react";
 
 //react bootstrap
 import { Col, Container, Row } from "react-bootstrap";
@@ -26,7 +26,7 @@ const ErrorPage1 = () => {
                 className="py-3 text-center mt-5 mb-4"
                 style={{
                   background: `url(${generateImgPath(
-                    "/assets/images/pages/404-bg-patten.webp"
+                    "/assets/images/pages/404-bg-patten.webp",
                   )})`,
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center center",
@@ -41,7 +41,10 @@ const ErrorPage1 = () => {
               </p>
               <div className="text-center mt-4 pt-3">
                 <div className="iq-button">
-                  <Link href="/" className="btn text-uppercase position-relative">
+                  <Link
+                    href="/"
+                    className="btn text-uppercase position-relative"
+                  >
                     <span className="button-text">Back to home</span>
                     <i className="fa-solid fa-play"></i>
                   </Link>

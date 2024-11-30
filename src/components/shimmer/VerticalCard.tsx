@@ -18,7 +18,7 @@ interface Props {
   style?: CustomStyle;
 }
 
-const VerticalShimmer = memo((props:Props) => {
+const VerticalShimmer = memo((props: Props) => {
   return (
     <Fragment>
       <div className="container">
@@ -31,7 +31,14 @@ const VerticalShimmer = memo((props:Props) => {
             }}
           >
             <Container className=" slider--col position-relative">
-              <Row style={{ "--bs-gutter-x": "0em", ...(props.style || {}) } as React.CSSProperties}>
+              <Row
+                style={
+                  {
+                    "--bs-gutter-x": "0em",
+                    ...(props.style || {}),
+                  } as React.CSSProperties
+                }
+              >
                 <Col
                   sm={12}
                   md={6}
@@ -59,7 +66,14 @@ const VerticalShimmer = memo((props:Props) => {
                 </Col>
               </Row>
               <br />
-              <Row style={{ "--bs-gutter-x": "0em", ...(props.style || {}) } as React.CSSProperties}>
+              <Row
+                style={
+                  {
+                    "--bs-gutter-x": "0em",
+                    ...(props.style || {}),
+                  } as React.CSSProperties
+                }
+              >
                 <Col
                   sm={12}
                   md={6}
@@ -81,7 +95,14 @@ const VerticalShimmer = memo((props:Props) => {
                 </Col>
               </Row>
               <br />
-              <Row style={{ "--bs-gutter-x": "0em", ...(props.style || {}) } as React.CSSProperties}>
+              <Row
+                style={
+                  {
+                    "--bs-gutter-x": "0em",
+                    ...(props.style || {}),
+                  } as React.CSSProperties
+                }
+              >
                 <Col
                   sm={12}
                   md={6}
@@ -103,7 +124,14 @@ const VerticalShimmer = memo((props:Props) => {
                 </Col>
               </Row>
               <br />
-              <Row style={{ "--bs-gutter-x": "0em", ...(props.style || {}) } as React.CSSProperties}>
+              <Row
+                style={
+                  {
+                    "--bs-gutter-x": "0em",
+                    ...(props.style || {}),
+                  } as React.CSSProperties
+                }
+              >
                 <Col
                   sm={12}
                   md={6}

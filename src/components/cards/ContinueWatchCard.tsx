@@ -21,11 +21,11 @@ const ContinueWatchCard: FC<ContinueWatchCardProps> = memo(
           <div className="block-images position-relative">
             <div className="iq-image-box overly-images">
               <Link className="d-block" href={link} passHref>
-                  <img
-                    src={imagePath}
-                    alt="movie-card"
-                    className="img-fluid object-cover w-100 d-block border-0"
-                  />
+                <img
+                  src={imagePath}
+                  alt="movie-card"
+                  className="img-fluid object-cover w-100 d-block border-0"
+                />
               </Link>
             </div>
             <div className="iq-preogress">
@@ -38,7 +38,7 @@ const ContinueWatchCard: FC<ContinueWatchCardProps> = memo(
         </div>
       </Fragment>
     );
-  }
+  },
 );
 
 ContinueWatchCard.displayName = "ContinueWatchCard";

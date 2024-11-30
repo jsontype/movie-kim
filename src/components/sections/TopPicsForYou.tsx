@@ -31,7 +31,7 @@ const TopPicsForYou = memo(() => {
       </SectionSlider>
     </Fragment>
   );
-})
+});
 
-TopPicsForYou.displayName = 'TopPicsForYou';
+TopPicsForYou.displayName = "TopPicsForYou";
 export default TopPicsForYou;

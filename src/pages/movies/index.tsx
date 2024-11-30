@@ -11,17 +11,15 @@ import MoviesRecommendedForYou from "@/components/sections/MoviesRecommendedForY
 import { useEnterExit } from "@/utilities/usePage";
 
 const Movies = memo(() => {
-    useEnterExit()
-    return (
-        <>
-
-            <MovieHeroSlider />
-            <PopularMovies />
-            <SpecialsLatestMovies />
-            <MoviesRecommendedForYou />
-
-        </>
-    );
+  useEnterExit();
+  return (
+    <>
+      <MovieHeroSlider />
+      <PopularMovies />
+      <SpecialsLatestMovies />
+      <MoviesRecommendedForYou />
+    </>
+  );
 });
 
 Movies.displayName = "Movies";

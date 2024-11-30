@@ -529,7 +529,7 @@ const HomeHeroSlider = memo(() => {
       />
     </Fragment>
   );
-})
+});
 
-HomeHeroSlider.displayName = "HomeHeroSlider"
-export default HomeHeroSlider
+HomeHeroSlider.displayName = "HomeHeroSlider";
+export default HomeHeroSlider;

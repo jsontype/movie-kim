@@ -5,11 +5,11 @@ import React, { Fragment, memo } from "react";
 import Link from "next/link";
 
 interface Props {
-  thumbnail?: string,
-  product_name: string,
-  price: string,
-  final_price: string,
-  stockStatus: string,
+  thumbnail?: string;
+  product_name: string;
+  price: string;
+  final_price: string;
+  stockStatus: string;
 }
 
 const WishlistCard = memo((props: Props) => {
@@ -56,5 +56,5 @@ const WishlistCard = memo((props: Props) => {
   );
 });
 
-WishlistCard.displayName = 'WishlistCard'
+WishlistCard.displayName = "WishlistCard";
 export default WishlistCard;

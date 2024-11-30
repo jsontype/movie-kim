@@ -9,7 +9,7 @@ import WorkSection from "./AboutSections/WorkSection";
 import { useBreadcrumb } from "@/utilities/usePage";
 
 const AboutUs = memo(() => {
-  useBreadcrumb('About us')
+  useBreadcrumb("About us");
   return (
     <Fragment>
       <TeamSection></TeamSection>

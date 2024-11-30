@@ -1,81 +1,79 @@
-import { SettingState, SettingDefaultState } from './interface'
+import { SettingState, SettingDefaultState } from "./interface";
 
 // Initial Setting State
 export const initialState: SettingState = {
-  "saveLocal": "sessionStorage",
-  "storeKey": "huisetting-react",
-  "setting": {
-    "app_name": {
-      "value": "StreamIt"
+  saveLocal: "sessionStorage",
+  storeKey: "huisetting-react",
+  setting: {
+    app_name: {
+      value: "StreamIt",
     },
-    "theme_scheme_direction": {
-      "value": "ltr"
+    theme_scheme_direction: {
+      value: "ltr",
     },
-    "theme_scheme": {
-      "value": "light"
+    theme_scheme: {
+      value: "light",
     },
-    "theme_style_appearance": {
-      "value": [
-        "theme-default"
-      ]
+    theme_style_appearance: {
+      value: ["theme-default"],
     },
-    "theme_color": {
-      "colors": {
+    theme_color: {
+      colors: {
         "--{{prefix}}primary": "#3a57e8",
-        "--{{prefix}}info": "#08B1BA"
+        "--{{prefix}}info": "#08B1BA",
       },
-      "value": "theme-color-default"
+      value: "theme-color-default",
     },
-    "theme_transition": {
-      "value": "theme-with-animation"
+    theme_transition: {
+      value: "theme-with-animation",
     },
-    "theme_font_size": {
-      "value": "theme-fs-md"
+    theme_font_size: {
+      value: "theme-fs-md",
     },
-    "page_layout": {
-      "value": "container-fluid"
+    page_layout: {
+      value: "container-fluid",
     },
-    "header_navbar": {
-      "value": "default"
+    header_navbar: {
+      value: "default",
     },
-    "card_style": {
-      "value": "card-default"
+    card_style: {
+      value: "card-default",
     },
-    "header_banner": {
-      "value": "default"
+    header_banner: {
+      value: "default",
     },
-    "sidebar_color": {
-      "value": "sidebar-white"
+    sidebar_color: {
+      value: "sidebar-white",
     },
-    "sidebar_type": {
-      "value": []
+    sidebar_type: {
+      value: [],
     },
-    "sidebar_show": {
-      "value": [],
+    sidebar_show: {
+      value: [],
     },
-    "navbar_show": {
-      "value": [],
+    navbar_show: {
+      value: [],
     },
-    "sidebar_menu_style": {
-      "value": "left-bordered"
+    sidebar_menu_style: {
+      value: "left-bordered",
     },
-    "footer": {
-      "value": "default"
+    footer: {
+      value: "default",
     },
-    "body_font_family": {
-      "value": null
+    body_font_family: {
+      value: null,
     },
-    "heading_font_family": {
-      "value": null
-    }
-  }
+    heading_font_family: {
+      value: null,
+    },
+  },
 };
 
 // Default Setting State
 export const defaultState: SettingDefaultState = {
-  "saveLocal": "sessionStorage",
-  "storeKey": "huisetting",
-  "setting": {
+  saveLocal: "sessionStorage",
+  storeKey: "huisetting",
+  setting: {
     app_name: {
       target: '[data-setting="app_name"]',
       choices: [],
@@ -96,12 +94,7 @@ export const defaultState: SettingDefaultState = {
     },
     theme_style_appearance: {
       target: "body",
-      choices: [
-        "theme-default",
-        "theme-flat",
-        "theme-bordered",
-        "theme-sharp",
-      ],
+      choices: ["theme-default", "theme-flat", "theme-bordered", "theme-sharp"],
       type: "layout_design",
       value: ["theme-default"],
     },
@@ -204,7 +197,7 @@ export const defaultState: SettingDefaultState = {
         "sidebar-default navs-pill",
         "sidebar-default navs-pill-all",
         "left-bordered",
-        "sidebar-default navs-full-width"
+        "sidebar-default navs-full-width",
       ],
       type: "layout_design",
       value: "left-bordered",
@@ -227,5 +220,5 @@ export const defaultState: SettingDefaultState = {
       type: "variable",
       value: "Inter",
     },
-  }
-}
+  },
+};

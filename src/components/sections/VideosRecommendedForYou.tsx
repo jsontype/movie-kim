@@ -29,7 +29,7 @@ const VideosRecommendedForYou = memo(() => {
       </SectionSlider>
     </Fragment>
   );
-})
+});
 
-VideosRecommendedForYou.displayName = 'VideosRecommendedForYou';
+VideosRecommendedForYou.displayName = "VideosRecommendedForYou";
 export default VideosRecommendedForYou;

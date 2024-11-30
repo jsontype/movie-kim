@@ -4,14 +4,13 @@ import React, { Fragment, memo } from "react";
 // import { Link } from "react-router-dom";
 import Link from "next/link";
 
-
-interface ProductCartProps{
-  thumbnail?:string
-  product_name?:string
-  final_price?:string
+interface ProductCartProps {
+  thumbnail?: string;
+  product_name?: string;
+  final_price?: string;
 }
 
-const ProductCart = memo((props:ProductCartProps) => {
+const ProductCart = memo((props: ProductCartProps) => {
   return (
     <Fragment>
       <tr className="cart-form__cart-item cart_item">
@@ -26,10 +25,7 @@ const ProductCart = memo((props:ProductCartProps) => {
                 loading="lazy"
               />
             </Link>
-            <Link
-              href="/merchandise/product-detail"
-              className="cart_item_name"
-            >
+            <Link href="/merchandise/product-detail" className="cart_item_name">
               {props.product_name}
             </Link>
           </div>

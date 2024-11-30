@@ -39,7 +39,7 @@ const VideoDetail = memo(() => {
     youtube: { iv_load_policy: 1 },
   };
 
-  const handlePlayerReady = (player:any) => {
+  const handlePlayerReady = (player: any) => {
     playerRef.current = player;
   };
 
@@ -243,11 +243,7 @@ const VideoDetail = memo(() => {
               <div className="content-details trending-info">
                 <Tab.Container defaultActiveKey="first">
                   <Nav className="iq-custom-tab tab-bg-gredient-center d-flex nav nav-pills align-items-center text-center mb-5 justify-content-center list-inline">
-                    <Nav
-                      className="nav-item"
-                      id="nav-tab"
-                      role="tablist"
-                    >
+                    <Nav className="nav-item" id="nav-tab" role="tablist">
                       <Nav.Link
                         eventKey="first"
                         className=" d-flex align-items-center"

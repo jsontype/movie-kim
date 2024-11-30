@@ -1,12 +1,12 @@
 import { memo, Fragment } from "react";
 
-interface Props{
-  count1?:any
-  count?:any
-  starColor?:any
+interface Props {
+  count1?: any;
+  count?: any;
+  starColor?: any;
   inactiveColor?: string;
-  activeColor?:any
-  onChange?:(value:number)=>void
+  activeColor?: any;
+  onChange?: (value: number) => void;
 }
 
 const fillstar = (
@@ -33,7 +33,7 @@ const StarRating: React.FC<Props> = memo(function StarRating({
   const stars1 = Array.from({ length: count1 }, () => unfill);
 
   const handleChange = (value: number) => {
-    if(onChange){
+    if (onChange) {
       onChange(value + 1);
     }
   };
@@ -75,7 +75,7 @@ const StarRating: React.FC<Props> = memo(function StarRating({
   );
 });
 
-const RatingStar = memo((props:Props) => {
+const RatingStar = memo((props: Props) => {
   return (
     <Fragment>
       <StarRating

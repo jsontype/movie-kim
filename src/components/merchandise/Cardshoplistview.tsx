@@ -4,7 +4,7 @@ import { Fragment, memo, useState } from "react";
 import { Col, Row } from "react-bootstrap";
 
 // Next-Link
-import Link from 'next/link'
+import Link from "next/link";
 
 //components
 import RatingStar from "../rating-star";
@@ -13,17 +13,16 @@ import ProductModal from "../merchandise/ProductModal";
 //sweetalert2
 import Swal from "sweetalert2";
 
-
 interface CardShopListViewProps {
-  thumbnail?: any
-  is_sale?: boolean
-  is_new?: boolean
-  product_name?: string
-  final_price?: string
-  price?: string
-  rating?: string
-  count1?: string
-  slug?:string
+  thumbnail?: any;
+  is_sale?: boolean;
+  is_new?: boolean;
+  product_name?: string;
+  final_price?: string;
+  price?: string;
+  rating?: string;
+  count1?: string;
+  slug?: string;
 }
 
 const CardShopListView = memo((props: CardShopListViewProps) => {
@@ -92,7 +91,10 @@ const CardShopListView = memo((props: CardShopListViewProps) => {
             <Col lg="8" md="8">
               <div className="product-caption">
                 <h5 className="product__title">
-                  <Link href="/merchandise/product-detail" className="product-title-link">
+                  <Link
+                    href="/merchandise/product-detail"
+                    className="product-title-link"
+                  >
                     {props.product_name}
                   </Link>
                 </h5>

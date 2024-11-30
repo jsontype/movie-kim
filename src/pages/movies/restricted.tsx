@@ -19,7 +19,6 @@ import FsLightBox from "../../components/fslight-box";
 //function
 import { generateImgPath } from "../../StaticData/data";
 
-
 //swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
@@ -116,8 +115,14 @@ const RestrictedPage = memo(() => {
                         {shows.title}
                       </h2>
                       <div className="slider-ratting d-flex align-items-center ms-lg-3 ms-0">
-                        <RatingStar count="5" count1="0" starColor="text-warning" />
-                        <span className="text-white ms-2">{shows.rating} ({shows.rating_from})</span>
+                        <RatingStar
+                          count="5"
+                          count1="0"
+                          starColor="text-warning"
+                        />
+                        <span className="text-white ms-2">
+                          {shows.rating} ({shows.rating_from})
+                        </span>
                       </div>
                     </div>
                     <ul className="p-0 mt-2 list-inline d-flex flex-wrap movie-tag">
@@ -386,7 +391,7 @@ const RestrictedPage = memo(() => {
                       },
                     }}
                   >
-                    {shows.cast.map((item:any, index:any) => {
+                    {shows.cast.map((item: any, index: any) => {
                       return (
                         <SwiperSlide key={index}>
                           <Row className="cast-images m-0 align-items-center position-relative">
@@ -454,7 +459,7 @@ const RestrictedPage = memo(() => {
                       },
                     }}
                   >
-                    {shows.crew.map((item:any, index:any) => {
+                    {shows.crew.map((item: any, index: any) => {
                       return (
                         <SwiperSlide key={index}>
                           <Row className="cast-images m-0 align-items-center position-relative">

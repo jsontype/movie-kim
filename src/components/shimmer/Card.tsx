@@ -21,14 +21,21 @@ interface Props {
   style?: CustomStyle;
 }
 
-const CardShimmer = memo((props:Props) => {
+const CardShimmer = memo((props: Props) => {
   return (
     <Fragment>
       <Container fluid style={{ paddingBottom: "6.25rem" }}>
         <Row style={{ paddingBottom: "1.5em" }}>
           {/* <SectionHeader title={props.title} /> */}
         </Row>
-        <Row style={{ "--bs-gutter-x": "2em", ...(props.style || {}) } as React.CSSProperties}>
+        <Row
+          style={
+            {
+              "--bs-gutter-x": "2em",
+              ...(props.style || {}),
+            } as React.CSSProperties
+          }
+        >
           <Col
             sm={12}
             md={6}

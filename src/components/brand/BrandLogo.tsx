@@ -1,8 +1,7 @@
 import { memo, Fragment } from "react";
 
 //react-router-dom
-import Link from 'next/link'
-
+import Link from "next/link";
 
 const BrandLogo = memo(() => {
   return (

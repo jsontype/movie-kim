@@ -24,25 +24,25 @@ const ProductDetail = memo(() => {
   const productDetail = products.find((item) => item.slug === product);
   return (
     <>
-       <div className="site-main">
+      <div className="site-main">
         <Container>
           <Row>
             <Col lg="12">
               {productDetail && (
-              <ProductDetailCard
-                product_name={productDetail.product_name}
-                description={productDetail.descriptio}
-                is_new={productDetail.is_new}
-                is_sale={productDetail.is_sale}
-                price={productDetail.price}
-                final_price={productDetail.final_price}
-                tags={productDetail.tags}
-                additional-info={productDetail.additional_info}
-                sku={productDetail.sku}
-                category={productDetail.category}
-                additional_info={productDetail.additional_info}
-                thumbnail={productDetail.thumbnail}
-              />
+                <ProductDetailCard
+                  product_name={productDetail.product_name}
+                  description={productDetail.descriptio}
+                  is_new={productDetail.is_new}
+                  is_sale={productDetail.is_sale}
+                  price={productDetail.price}
+                  final_price={productDetail.final_price}
+                  tags={productDetail.tags}
+                  additional-info={productDetail.additional_info}
+                  sku={productDetail.sku}
+                  category={productDetail.category}
+                  additional_info={productDetail.additional_info}
+                  thumbnail={productDetail.thumbnail}
+                />
               )}
             </Col>
           </Row>
@@ -54,8 +54,8 @@ const ProductDetail = memo(() => {
                 <h4>Related Products</h4>
               </div>
               <Swiper
-              key={String(themeSchemeDirection)}
-              dir={String(themeSchemeDirection)}
+                key={String(themeSchemeDirection)}
+                dir={String(themeSchemeDirection)}
                 slidesPerView={4}
                 navigation={{
                   prevEl: ".swiper-button-prev",
@@ -92,7 +92,7 @@ const ProductDetail = memo(() => {
                   disableOnInteraction: true,
                 }}
               >
-                {newProduct.map((item:any, index:any) => {
+                {newProduct.map((item: any, index: any) => {
                   return (
                     <SwiperSlide tag="li" key={index}>
                       <ProductCard

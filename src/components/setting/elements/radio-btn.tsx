@@ -11,21 +11,21 @@ import SettingAction from "../../../store/setting/actions";
 //   label?:string
 //   className?:string
 // }
-interface Props{
-  btnName: string | undefined
-  className?: string 
-  value?: string 
-  id?: string
-  children?: ReactNode
-  labelclassName?: string
-  imgComponent?: any
-  label?: string
-  defaultChecked?: any
+interface Props {
+  btnName: string | undefined;
+  className?: string;
+  value?: string;
+  id?: string;
+  children?: ReactNode;
+  labelclassName?: string;
+  imgComponent?: any;
+  label?: string;
+  defaultChecked?: any;
 }
 
-const RadioBtn = memo((props:Props) => {
+const RadioBtn = memo((props: Props) => {
   const dispatch = useDispatch();
-  const radioCheckValue = (selector:any, value:any) => {
+  const radioCheckValue = (selector: any, value: any) => {
     if (selector === value) {
       return true;
     }
@@ -41,7 +41,13 @@ const RadioBtn = memo((props:Props) => {
         id={props.id}
         autoComplete="off"
         defaultChecked={radioCheckValue(props.defaultChecked, props.value)}
-        onClick={() => dispatch(SettingAction[props.btnName as keyof typeof SettingAction](props.value))}
+        onClick={() =>
+          dispatch(
+            SettingAction[props.btnName as keyof typeof SettingAction](
+              props.value,
+            ),
+          )
+        }
       />
       <label
         className={"btn dir-btn cutomizer-button w-100"}

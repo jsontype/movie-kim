@@ -70,7 +70,13 @@ header {
           &::after {
             position: absolute;
             content: "";
-            background: transparent -webkit-gradient(linear, right top, left top, from(rgba(var(--bs-primary-rgb), 0)), to(rgba(var(--bs-primary-rgb), 0.3)));
+            background: transparent -webkit-gradient(
+                linear,
+                right top,
+                left top,
+                from(rgba(var(--bs-primary-rgb), 0)),
+                to(rgba(var(--bs-primary-rgb), 0.3))
+              );
             top: 0;
             bottom: 0;
             left: 0;
@@ -300,7 +306,8 @@ header {
         display: none;
         margin: 0;
         background: $white;
-        animation: menu-sub-dropdown-animation-fade-in 0.3s ease 1,
+        animation:
+          menu-sub-dropdown-animation-fade-in 0.3s ease 1,
           menu-sub-dropdown-animation-move-up 0.3s ease 1;
 
         ul {
@@ -498,7 +505,9 @@ header {
       z-index: 1200;
       overflow-y: scroll;
       overflow-x: hidden;
-      transition: visibility 0.3s ease-in-out, transform 0.3s ease-in-out,
+      transition:
+        visibility 0.3s ease-in-out,
+        transform 0.3s ease-in-out,
         -webkit-transform 0.3s ease-in-out;
 
       .sub-nav {
@@ -652,7 +661,13 @@ header {
           > a::after {
             position: absolute;
             content: "";
-            background: transparent -webkit-gradient(linear, right top, left top, from(rgba(var(--bs-primary-rgb), 0)), to(rgba(var(--bs-primary-rgb), 0.3)));
+            background: transparent -webkit-gradient(
+                linear,
+                right top,
+                left top,
+                from(rgba(var(--bs-primary-rgb), 0)),
+                to(rgba(var(--bs-primary-rgb), 0.3))
+              );
             top: 0;
             bottom: 0;
             left: 0;
@@ -881,7 +896,7 @@ header {
 .nav-link:focus {
   color: var(--bs-primary);
 
-  &:focus-visible{
+  &:focus-visible {
     box-shadow: none;
   }
 }
@@ -922,9 +937,11 @@ header {
         &:hover {
           & > .sub-menu {
             display: block !important;
-            -webkit-animation: menu-sub-dropdown-animation-fade-in 0.3s ease 1,
+            -webkit-animation:
+              menu-sub-dropdown-animation-fade-in 0.3s ease 1,
               menu-sub-dropdown-animation-move-up 0.3s ease 1;
-            animation: menu-sub-dropdown-animation-fade-in 0.3s ease 1,
+            animation:
+              menu-sub-dropdown-animation-fade-in 0.3s ease 1,
               menu-sub-dropdown-animation-move-up 0.3s ease 1;
           }
         }
@@ -948,7 +965,8 @@ header {
         margin: 0;
         background: var(--bs-gray-900);
         box-shadow: 0 0.625rem 1.875rem rgb(0 0 0 / 10%);
-        animation: menu-sub-dropdown-animation-fade-in 0.3s ease 1,
+        animation:
+          menu-sub-dropdown-animation-fade-in 0.3s ease 1,
           menu-sub-dropdown-animation-move-up 0.3s ease 1;
 
         li {

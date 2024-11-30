@@ -19,10 +19,9 @@ import { verticleLatestMovies } from "@/StaticData/data";
 import { useEnterExit } from "@/utilities/usePage";
 
 const Home = memo(() => {
-  useEnterExit()
+  useEnterExit();
   return (
     <>
-
       <HomeHeroSlider />
       <ContinueWatching />
       <UpcomingMovies />
@@ -32,7 +31,6 @@ const Home = memo(() => {
       <ParallexSection />
       <TrendingSlider />
       <RecommendedTVShow />
-
     </>
   );
 });

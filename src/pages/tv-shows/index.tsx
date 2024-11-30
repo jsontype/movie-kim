@@ -11,7 +11,7 @@ import ShowsWeRecommend from "@/components/sections/ShowsWeRecommend";
 import { useEnterExit } from "@/utilities/usePage";
 
 const TvShows = memo(() => {
-  useEnterExit()
+  useEnterExit();
   return (
     <Fragment>
       <TvShowHeroSlider />

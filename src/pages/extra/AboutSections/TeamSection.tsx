@@ -51,7 +51,7 @@ const TeamSection = memo(() => {
           </Row>
           <Row className="about-us-detail">
             {lists.map((data, index) => (
-              <Col md="3" className="mb-4" key={index} >
+              <Col md="3" className="mb-4" key={index}>
                 <ProfileCard
                   name={data.name}
                   designation={data.designation}

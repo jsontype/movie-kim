@@ -18,7 +18,6 @@ import GenreSlider from "@/components/sections/GenreSlider";
 import { ottVerticleLatestMovies } from "@/StaticData/data";
 
 const OTT = memo(() => {
-
   return (
     <>
       <OttHeroSlider />

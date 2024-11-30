@@ -41,7 +41,10 @@ const VideoHeroSlider = memo(() => {
               >
                 <SwiperSlide>
                   <div className="movie-banner-image">
-                    <img src="/assets/images/video/banner-1.webp" alt="movie-banner-image" />
+                    <img
+                      src="/assets/images/video/banner-1.webp"
+                      alt="movie-banner-image"
+                    />
                   </div>
                   <div className="shows-content h-100">
                     <Row className=" align-items-center h-100">
@@ -190,7 +193,10 @@ const VideoHeroSlider = memo(() => {
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className="movie-banner-image">
-                    <img src="/assets/images/video/banner-2.webp" alt="movie-banner-image" />
+                    <img
+                      src="/assets/images/video/banner-2.webp"
+                      alt="movie-banner-image"
+                    />
                   </div>
                   <div className="shows-content h-100">
                     <Row className="align-items-center h-100">
@@ -336,7 +342,10 @@ const VideoHeroSlider = memo(() => {
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className="movie-banner-image">
-                    <img src="/assets/images/video/banner-3.webp" alt="movie-banner-image" />
+                    <img
+                      src="/assets/images/video/banner-3.webp"
+                      alt="movie-banner-image"
+                    />
                   </div>
                   <div className="shows-content h-100">
                     <Row className="align-items-center h-100">

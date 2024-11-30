@@ -1,4 +1,4 @@
-import { Meta, STATUS_TYPE } from './common';
+import { Meta, STATUS_TYPE } from "./common";
 
 export type MovieParentalGuides = {
   status: STATUS_TYPE;
@@ -9,8 +9,8 @@ export type MovieParentalGuides = {
       {
         type: string;
         parental_guide_text: string;
-      }
+      },
     ];
   };
-  '@meta': Meta;
+  "@meta": Meta;
 };

@@ -108,42 +108,42 @@ export const blogCategories = [
   {
     id: 1,
     title: "drama",
-    post_count: '4',
+    post_count: "4",
   },
   {
     id: 2,
     title: "historical",
-    post_count: '7',
+    post_count: "7",
   },
   {
     id: 3,
     title: "movie",
-    post_count: '2',
+    post_count: "2",
   },
   {
     id: 4,
     title: "movie trailers",
-    post_count: '6',
+    post_count: "6",
   },
   {
     id: 5,
     title: "trailers",
-    post_count: '4',
+    post_count: "4",
   },
   {
     id: 6,
     title: "tv comedies",
-    post_count: '3',
+    post_count: "3",
   },
   {
     id: 7,
     title: "tv rumors",
-    post_count: '4',
+    post_count: "4",
   },
   {
     id: 8,
     title: "tv series",
-    post_count: '5',
+    post_count: "5",
   },
 ];
 

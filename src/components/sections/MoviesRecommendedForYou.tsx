@@ -7,7 +7,7 @@ import CardStyle from "../cards/CardStyle";
 //static data
 import { recommendedforYou } from "../../StaticData/data";
 
-const MoviesRecommendedForYou = memo(()=>  {
+const MoviesRecommendedForYou = memo(() => {
   const [title] = useState("Movies Recommended For You");
 
   return (
@@ -30,7 +30,7 @@ const MoviesRecommendedForYou = memo(()=>  {
       </SectionSlider>
     </Fragment>
   );
-})
+});
 
-MoviesRecommendedForYou.displayName = 'MoviesRecommendedForYou';
+MoviesRecommendedForYou.displayName = "MoviesRecommendedForYou";
 export default MoviesRecommendedForYou;

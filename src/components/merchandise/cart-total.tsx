@@ -1,10 +1,10 @@
 import React, { Fragment, memo } from "react";
 
-interface CartTotalProps{
-  final_price?:string
+interface CartTotalProps {
+  final_price?: string;
 }
 
-const CartTotal = memo((props:CartTotalProps) => {
+const CartTotal = memo((props: CartTotalProps) => {
   return (
     <Fragment>
       <tbody>

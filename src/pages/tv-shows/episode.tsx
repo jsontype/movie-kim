@@ -4,7 +4,7 @@ import React, { Fragment, memo } from "react";
 import { Row, Col, Container, Nav, Tab } from "react-bootstrap";
 
 // Next-Link
-import Link from 'next/link'
+import Link from "next/link";
 
 //components
 import ReviewComponent from "@/components/ReviewComponent";
@@ -47,7 +47,7 @@ const EpisodePage = memo(() => {
     youtube: { iv_load_policy: 1 },
   };
 
-  const handlePlayerReady = (player:any) => {
+  const handlePlayerReady = (player: any) => {
     playerRef.current = player;
 
     // You can handle player events here, for example:
@@ -172,278 +172,278 @@ const EpisodePage = memo(() => {
     created_at: "Feb 2019",
     ranking: "#1 in Series Today ",
     date: "Nov 2020",
-  };  
-  
+  };
+
   return (
     <Fragment>
-    <div className="iq-main-slider site-video">
-      <Container fluid>
-        <Row>
-          <Col lg="12">
-            <div className="pt-0">
-              {/* <VideoJS options={videoJsOptions} onReady={handlePlayerReady} /> */}
-            </div>
-          </Col>
-        </Row>
-      </Container>
-    </div>
-    <div className="details-part">
-      <Container fluid>
-        <div className="trending-info mt-4 pt-0 pb-4">
+      <div className="iq-main-slider site-video">
+        <Container fluid>
           <Row>
-            <Col md={9} className="col-12 mb-auto">
-              <div className="d-md-flex">
-                <h2 className="trending-text fw-bold texture-text text-uppercase mt-0 fadeInLeft animated">
-                  {shows.title}
-                </h2>
-                <div className="slider-ratting d-flex align-items-center gap-2 ms-md-3 ms-0">
-                  <RatingStar count="4" count1="1" starColor="text-primary" />
-                  <span className="text-white">
-                    {shows.rating}
-                    <img
-                      src={generateImgPath(
-                        "/assets/images/movies/imdb-logo.svg"
-                      )}
-                      alt="imdb-logo"
-                      className="img-fluid ms-2"
-                    />
-                  </span>
-                </div>
+            <Col lg="12">
+              <div className="pt-0">
+                {/* <VideoJS options={videoJsOptions} onReady={handlePlayerReady} /> */}
               </div>
-              <ul className="p-0 mt-2 list-inline d-flex flex-wrap movie-tag">
-                <li className="font-size-18">{shows.episode_no}</li>
-                <li className="font-size-18">{shows.title}</li>
-                <li className="font-size-18">{shows.views}</li>
-              </ul>
-              <ul className="list-inline p-0 share-icons music-play-lists mb-n2 mx-n2">
-                <li className="share">
-                  <span>
-                    <i className="fa-solid fa-share-nodes"></i>
-                  </span>
-                  <div className="share-box">
-                    <svg
-                      width="15"
-                      height="40"
-                      viewBox="0 0 15 40"
-                      className="share-shape"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z"
-                        fill="#191919"
-                      ></path>
-                    </svg>
-                    <div className="d-flex align-items-center">
-                      <Link href="#" className="share-ico">
-                        <i className="fa-brands fa-facebook-f"></i>
-                      </Link>
-                      <Link href="#" className="share-ico">
-                        <i className="fa-brands fa-twitter"></i>
-                      </Link>
-                      <Link href="#" className="share-ico">
-                        <i className="fa-solid fa-link"></i>
-                      </Link>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <span>
-                    <i className="fa-solid fa-heart"></i>
-                  </span>
-                </li>
-                <li>
-                  <span>
-                    <i className="fa-solid fa-plus"></i>
-                  </span>
-                </li>
-                <li>
-                  <span>
-                    <i className="fa-solid fa-download"></i>
-                  </span>
-                </li>
-              </ul>
             </Col>
-            <FsLightBox image={shows.thumbnail} />
           </Row>
-        </div>
-        <div className="content-details trending-info">
-          <Tab.Container defaultActiveKey="first">
-            <Nav className="iq-custom-tab tab-bg-gredient-center d-flex nav nav-pills align-items-center text-center mb-5 justify-content-center list-inline">
-              <Nav.Item>
-                <Nav.Link
-                  eventKey="first"
-                  className=" d-flex align-items-center"
-                  id="nav-description-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#nav-description"
-                  type="button"
-                  role="tab"
-                  aria-controls="nav-description"
-                  aria-selected="true"
-                >
-                  Description
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link
-                  eventKey="second"                  
-                  id="nav-review-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#nav-review"
-                  type="button"
-                  role="tab"
-                  aria-controls="nav-review"
-                  aria-selected="false"
-                >
-                  Rate & Review
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link
-                  eventKey="third"                  
-                  id="nav-sources-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#nav-sources"
-                  type="button"
-                  role="tab"
-                  aria-controls="nav-sources"
-                  aria-selected="false"
-                >
-                  Sources
-                </Nav.Link>
-              </Nav.Item>
-            </Nav>
-            <Tab.Content>
-              <Tab.Pane
-                className=" fade show"
-                eventKey="first"
-                id="nav-description"
-                role="tabpanel"
-                aria-labelledby="nav-description-tab"
-              >
-                <p>{shows.detail}</p>
-              </Tab.Pane>
-              <Tab.Pane
-                className=" fade"
-                id="nav-review"
-                eventKey="second"
-                role="tabpanel"
-                aria-labelledby="nav-review-tab"
-              >
-                <ReviewComponent />
-              </Tab.Pane>
-              <Tab.Pane
-                className=" fade"
-                id="nav-sources"
-                eventKey="third"
-                role="tabpanel"
-                aria-labelledby="nav-sources-tab"
-              >
-                <Sources />
-              </Tab.Pane>
-            </Tab.Content>
-          </Tab.Container>
-        </div>
-      </Container>
-    </div>
-    <div className="recommended-block">
-      <Container fluid>
-        <div className="overflow-hidden">
-          <div className="d-flex align-items-center justify-content-between px-3 pt-2 my-4">
-            <h5 className="main-title text-capitalize mb-0">
-              Latest Episodes
-            </h5>
-          </div>
-          <div className="card-style-slider">
-            <Swiper
-            key={String(themeSchemeDirection)}
-            dir={String(themeSchemeDirection)}
-              className="position-relative swiper-card"
-              slidesPerView={4}
-              modules={[Navigation]}
-              effect="fade"
-              loop={true}
-              spaceBetween={5}
-              // wrapperClass="p-0 m-0  list-inline"
-              navigation={{
-                prevEl: ".swiper-button-prev",
-                nextEl: ".swiper-button-next",
-              }}
-              breakpoints={{
-                0: {
-                  slidesPerView: 1,
-                  spaceBetween: 0,
-                },
-                576: {
-                  slidesPerView: 2,
-                  spaceBetween: 0,
-                },
-                768: {
-                  slidesPerView: 2,
-                  spaceBetween: 0,
-                },
-                1025: {
-                  slidesPerView: 4,
-                  spaceBetween: 0,
-                },
-                1500: {
-                  slidesPerView: 4,
-                  spaceBetween: 0,
-                },
-              }}
-            >
-              {shows.episodes.map((item, index) => {
-                return (
-                  <SwiperSlide key={index}>
-                    <div className="episode-block">
-                      <div className="block-image position-relative">
-                        <Link href="/tv-shows/episode">
-                          <img
-                            src={item.thumbnail}
-                            alt="showImg"
-                            className="img-fluid img-zoom"
-                            loading="lazy"
-                          />
+        </Container>
+      </div>
+      <div className="details-part">
+        <Container fluid>
+          <div className="trending-info mt-4 pt-0 pb-4">
+            <Row>
+              <Col md={9} className="col-12 mb-auto">
+                <div className="d-md-flex">
+                  <h2 className="trending-text fw-bold texture-text text-uppercase mt-0 fadeInLeft animated">
+                    {shows.title}
+                  </h2>
+                  <div className="slider-ratting d-flex align-items-center gap-2 ms-md-3 ms-0">
+                    <RatingStar count="4" count1="1" starColor="text-primary" />
+                    <span className="text-white">
+                      {shows.rating}
+                      <img
+                        src={generateImgPath(
+                          "/assets/images/movies/imdb-logo.svg",
+                        )}
+                        alt="imdb-logo"
+                        className="img-fluid ms-2"
+                      />
+                    </span>
+                  </div>
+                </div>
+                <ul className="p-0 mt-2 list-inline d-flex flex-wrap movie-tag">
+                  <li className="font-size-18">{shows.episode_no}</li>
+                  <li className="font-size-18">{shows.title}</li>
+                  <li className="font-size-18">{shows.views}</li>
+                </ul>
+                <ul className="list-inline p-0 share-icons music-play-lists mb-n2 mx-n2">
+                  <li className="share">
+                    <span>
+                      <i className="fa-solid fa-share-nodes"></i>
+                    </span>
+                    <div className="share-box">
+                      <svg
+                        width="15"
+                        height="40"
+                        viewBox="0 0 15 40"
+                        className="share-shape"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          clipRule="evenodd"
+                          d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z"
+                          fill="#191919"
+                        ></path>
+                      </svg>
+                      <div className="d-flex align-items-center">
+                        <Link href="#" className="share-ico">
+                          <i className="fa-brands fa-facebook-f"></i>
                         </Link>
-                        <div className="episode-number">
-                          {item.episode_no}
-                        </div>
-                        <div className="episode-play">
+                        <Link href="#" className="share-ico">
+                          <i className="fa-brands fa-twitter"></i>
+                        </Link>
+                        <Link href="#" className="share-ico">
+                          <i className="fa-solid fa-link"></i>
+                        </Link>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <span>
+                      <i className="fa-solid fa-heart"></i>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <i className="fa-solid fa-plus"></i>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <i className="fa-solid fa-download"></i>
+                    </span>
+                  </li>
+                </ul>
+              </Col>
+              <FsLightBox image={shows.thumbnail} />
+            </Row>
+          </div>
+          <div className="content-details trending-info">
+            <Tab.Container defaultActiveKey="first">
+              <Nav className="iq-custom-tab tab-bg-gredient-center d-flex nav nav-pills align-items-center text-center mb-5 justify-content-center list-inline">
+                <Nav.Item>
+                  <Nav.Link
+                    eventKey="first"
+                    className=" d-flex align-items-center"
+                    id="nav-description-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#nav-description"
+                    type="button"
+                    role="tab"
+                    aria-controls="nav-description"
+                    aria-selected="true"
+                  >
+                    Description
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link
+                    eventKey="second"
+                    id="nav-review-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#nav-review"
+                    type="button"
+                    role="tab"
+                    aria-controls="nav-review"
+                    aria-selected="false"
+                  >
+                    Rate & Review
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link
+                    eventKey="third"
+                    id="nav-sources-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#nav-sources"
+                    type="button"
+                    role="tab"
+                    aria-controls="nav-sources"
+                    aria-selected="false"
+                  >
+                    Sources
+                  </Nav.Link>
+                </Nav.Item>
+              </Nav>
+              <Tab.Content>
+                <Tab.Pane
+                  className=" fade show"
+                  eventKey="first"
+                  id="nav-description"
+                  role="tabpanel"
+                  aria-labelledby="nav-description-tab"
+                >
+                  <p>{shows.detail}</p>
+                </Tab.Pane>
+                <Tab.Pane
+                  className=" fade"
+                  id="nav-review"
+                  eventKey="second"
+                  role="tabpanel"
+                  aria-labelledby="nav-review-tab"
+                >
+                  <ReviewComponent />
+                </Tab.Pane>
+                <Tab.Pane
+                  className=" fade"
+                  id="nav-sources"
+                  eventKey="third"
+                  role="tabpanel"
+                  aria-labelledby="nav-sources-tab"
+                >
+                  <Sources />
+                </Tab.Pane>
+              </Tab.Content>
+            </Tab.Container>
+          </div>
+        </Container>
+      </div>
+      <div className="recommended-block">
+        <Container fluid>
+          <div className="overflow-hidden">
+            <div className="d-flex align-items-center justify-content-between px-3 pt-2 my-4">
+              <h5 className="main-title text-capitalize mb-0">
+                Latest Episodes
+              </h5>
+            </div>
+            <div className="card-style-slider">
+              <Swiper
+                key={String(themeSchemeDirection)}
+                dir={String(themeSchemeDirection)}
+                className="position-relative swiper-card"
+                slidesPerView={4}
+                modules={[Navigation]}
+                effect="fade"
+                loop={true}
+                spaceBetween={5}
+                // wrapperClass="p-0 m-0  list-inline"
+                navigation={{
+                  prevEl: ".swiper-button-prev",
+                  nextEl: ".swiper-button-next",
+                }}
+                breakpoints={{
+                  0: {
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                  },
+                  576: {
+                    slidesPerView: 2,
+                    spaceBetween: 0,
+                  },
+                  768: {
+                    slidesPerView: 2,
+                    spaceBetween: 0,
+                  },
+                  1025: {
+                    slidesPerView: 4,
+                    spaceBetween: 0,
+                  },
+                  1500: {
+                    slidesPerView: 4,
+                    spaceBetween: 0,
+                  },
+                }}
+              >
+                {shows.episodes.map((item, index) => {
+                  return (
+                    <SwiperSlide key={index}>
+                      <div className="episode-block">
+                        <div className="block-image position-relative">
                           <Link href="/tv-shows/episode">
-                            <i className="fa-solid fa-play"></i>
+                            <img
+                              src={item.thumbnail}
+                              alt="showImg"
+                              className="img-fluid img-zoom"
+                              loading="lazy"
+                            />
+                          </Link>
+                          <div className="episode-number">
+                            {item.episode_no}
+                          </div>
+                          <div className="episode-play">
+                            <Link href="/tv-shows/episode">
+                              <i className="fa-solid fa-play"></i>
+                            </Link>
+                          </div>
+                        </div>
+                        <div className="epi-desc p-3">
+                          <div className="d-flex align-items-center justify-content-between mb-3">
+                            <span className="border-gredient-left text-white rel-date">
+                              {item.release_date}
+                            </span>
+                            <span className="text-primary run-time">
+                              {item.duration}
+                            </span>
+                          </div>
+                          <Link href="/tv-shows/episode">
+                            <h5 className="epi-name text-white mb-0">
+                              {item.name}
+                            </h5>
                           </Link>
                         </div>
                       </div>
-                      <div className="epi-desc p-3">
-                        <div className="d-flex align-items-center justify-content-between mb-3">
-                          <span className="border-gredient-left text-white rel-date">
-                            {item.release_date}
-                          </span>
-                          <span className="text-primary run-time">
-                            {item.duration}
-                          </span>
-                        </div>
-                        <Link href="/tv-shows/episode">
-                          <h5 className="epi-name text-white mb-0">
-                            {item.name}
-                          </h5>
-                        </Link>
-                      </div>
-                    </div>
-                  </SwiperSlide>
-                );
-              })}
-              <div className="swiper-button swiper-button-next"></div>
-              <div className="swiper-button swiper-button-prev"></div>
-            </Swiper>
+                    </SwiperSlide>
+                  );
+                })}
+                <div className="swiper-button swiper-button-next"></div>
+                <div className="swiper-button swiper-button-prev"></div>
+              </Swiper>
+            </div>
           </div>
-        </div>
-      </Container>
-    </div>
-  </Fragment>
+        </Container>
+      </div>
+    </Fragment>
   );
 });
 

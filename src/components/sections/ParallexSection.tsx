@@ -3,7 +3,7 @@ import { Fragment, memo } from "react";
 // Next-Link
 import Link from "next/link";
 
-const ParallexSection =  memo(()=> {
+const ParallexSection = memo(() => {
   return (
     <Fragment>
       <section
@@ -90,7 +90,7 @@ const ParallexSection =  memo(()=> {
       </section>
     </Fragment>
   );
-})
+});
 
-ParallexSection.displayName = 'ParallexSection'
-export default ParallexSection
+ParallexSection.displayName = "ParallexSection";
+export default ParallexSection;

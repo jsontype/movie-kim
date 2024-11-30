@@ -3,11 +3,11 @@ import React, { Fragment, memo } from "react";
 // Next-Link
 import Link from "next/link";
 
-interface TagCardProps{
-  title?:string
+interface TagCardProps {
+  title?: string;
 }
 
-const TagsCard = memo((props:TagCardProps) => {
+const TagsCard = memo((props: TagCardProps) => {
   return (
     <Fragment>
       <Link href="/view-all">

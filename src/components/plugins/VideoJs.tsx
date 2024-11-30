@@ -21,7 +21,7 @@ export const VideoJS = (props: { options: any; onReady: any }) => {
       const videoElement = document.createElement("video-js");
 
       videoElement.classList.add("vjs-big-play-centered");
-      
+
       // @OLD
       // videoRef.current?.appendChild(videoElement);
 

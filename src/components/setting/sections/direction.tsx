@@ -1,11 +1,11 @@
 import { memo, Fragment } from "react";
 import RadioBtn from "../elements/radio-btn";
 
-interface Props{
-  themeSchemeDirection?:any
+interface Props {
+  themeSchemeDirection?: any;
 }
 
-const Direction = memo((props:Props) => {
+const Direction = memo((props: Props) => {
   return (
     <Fragment>
       <div className="modes row row-cols-2 gx-2">

@@ -15,7 +15,7 @@ import BreadCrumbWidget from "@/components/BreadcrumbWidget";
 //seetingoffCanvas
 import SettingOffCanvas from "../components/setting/SettingOffCanvas";
 
-const Frontend = (({ children }: any) => {
+const Frontend = ({ children }: any) => {
   const [animationClass, setAnimationClass] = useState("animate__fadeIn");
 
   const scrollToTop = () => {
@@ -63,7 +63,7 @@ const Frontend = (({ children }: any) => {
       </div>
       <SettingOffCanvas />
     </>
-  )
-})
+  );
+};
 
-export default Frontend
+export default Frontend;

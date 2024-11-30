@@ -7,7 +7,7 @@ import { Col, Row } from "react-bootstrap";
 import Link from "next/link";
 
 // Next-Image
-import Image from 'next/image'
+import Image from "next/image";
 
 //react fslight-box
 import FsLightbox from "fslightbox-react";
@@ -24,7 +24,6 @@ import { theme_scheme_direction } from "../../store/setting/selectors";
 import img1 from "../../../public//assets/images/movies/movie-banner-1.webp";
 import img2 from "../../../public//assets/images/movies/movie-banner-2.webp";
 import img3 from "../../../public//assets/images/movies/movie-banner-3.webp";
-
 
 const MovieHeroSlider = memo(() => {
   const themeSchemeDirection = useSelector(theme_scheme_direction);
@@ -148,7 +147,11 @@ const MovieHeroSlider = memo(() => {
                         md="12"
                         className="trailor-video iq-slider d-none d-lg-block"
                       >
-                        <Link href="#" className="video-open playbtn" tabIndex={0}>
+                        <Link
+                          href="#"
+                          className="video-open playbtn"
+                          tabIndex={0}
+                        >
                           <svg
                             version="1.1"
                             xmlns="http://www.w3.org/2000/svg"
@@ -290,7 +293,11 @@ const MovieHeroSlider = memo(() => {
                         md="12"
                         className="trailor-video iq-slider d-none d-lg-block"
                       >
-                        <Link href="#" className="video-open playbtn" tabIndex={0}>
+                        <Link
+                          href="#"
+                          className="video-open playbtn"
+                          tabIndex={0}
+                        >
                           <svg
                             version="1.1"
                             xmlns="http://www.w3.org/2000/svg"
@@ -437,7 +444,11 @@ const MovieHeroSlider = memo(() => {
                         md="12"
                         className="trailor-video iq-slider d-none d-lg-block"
                       >
-                        <Link href="#" className="video-open playbtn" tabIndex={0}>
+                        <Link
+                          href="#"
+                          className="video-open playbtn"
+                          tabIndex={0}
+                        >
                           <svg
                             version="1.1"
                             xmlns="http://www.w3.org/2000/svg"

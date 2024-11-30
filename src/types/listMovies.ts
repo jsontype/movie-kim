@@ -1,4 +1,4 @@
-import { Meta, Movies, STATUS_TYPE } from './common';
+import { Meta, Movies, STATUS_TYPE } from "./common";
 
 export interface ListMovies {
   status: STATUS_TYPE;
@@ -9,5 +9,5 @@ export interface ListMovies {
     page_number: number;
     movies: Movies[];
   };
-  '@meta': Meta;
-};
+  "@meta": Meta;
+}

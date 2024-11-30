@@ -4,7 +4,7 @@ import React, { Fragment, memo, useState } from "react";
 import { Container, Row, Col, Tab, Nav, Form } from "react-bootstrap";
 
 //react-router-dom
-import Link from 'next/link'
+import Link from "next/link";
 
 //components
 import RatingStar from "../rating-star";
@@ -21,19 +21,18 @@ import { FreeMode, Thumbs } from "swiper";
 //sweetalert2
 import Swal from "sweetalert2";
 
-interface ProductDetailCardProps{
+interface ProductDetailCardProps {
   [x: string]: any;
-  thumbnail?:any
-  id?:string
-  product_name?:string
-  count?:string
-  final_price?:string
-  sku?:string
-  description?:string
+  thumbnail?: any;
+  id?: string;
+  product_name?: string;
+  count?: string;
+  final_price?: string;
+  sku?: string;
+  description?: string;
 }
 
-const ProductDetailCard = memo((props:ProductDetailCardProps) => {
-
+const ProductDetailCard = memo((props: ProductDetailCardProps) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   const product = [
@@ -109,11 +108,10 @@ const ProductDetailCard = memo((props:ProductDetailCardProps) => {
                 <Swiper
                   thumbs={{
                     swiper:
-                      thumbsSwiper && typeof thumbsSwiper !== 'function'
+                      thumbsSwiper && typeof thumbsSwiper !== "function"
                         ? thumbsSwiper
                         : null,
                   }}
-                  
                   freeMode={true}
                   watchSlidesProgress={true}
                   modules={[Thumbs, FreeMode]}
@@ -182,7 +180,7 @@ const ProductDetailCard = memo((props:ProductDetailCardProps) => {
                     <span className="text-white fw-semibold">
                       Categories :{" "}
                     </span>
-                    {props.category.map((item:any, index:any) => {
+                    {props.category.map((item: any, index: any) => {
                       return (
                         <h6
                           className="d-inline text-primary text-capitalize"
@@ -196,7 +194,7 @@ const ProductDetailCard = memo((props:ProductDetailCardProps) => {
                   </li>
                   <li>
                     <span className="text-white fw-semibold">Tags : </span>
-                    {props.tags.map((item:any, index:any) => {
+                    {props.tags.map((item: any, index: any) => {
                       return (
                         <h6
                           className="d-inline text-primary text-capitalize"
@@ -268,41 +266,49 @@ const ProductDetailCard = memo((props:ProductDetailCardProps) => {
                           <tr className="text-body">
                             <th className="text-white">Color</th>
                             <td className="bordertd">
-                              {props.additional_info.map((item:any, index:any) => {
-                                return (
-                                  <div key={index}>
-                                    <span key={index}>{item.color[0]}, </span>
-                                    <span>{item.color[1]}, </span>
-                                    <span>{item.color[2]} </span>
-                                  </div>
-                                );
-                              })}
+                              {props.additional_info.map(
+                                (item: any, index: any) => {
+                                  return (
+                                    <div key={index}>
+                                      <span key={index}>{item.color[0]}, </span>
+                                      <span>{item.color[1]}, </span>
+                                      <span>{item.color[2]} </span>
+                                    </div>
+                                  );
+                                },
+                              )}
                             </td>
                           </tr>
                           <tr className="text-body">
                             <th className="text-white">Size</th>
                             <td className="bordertd">
-                              {props.additional_info.map((item:any, index:any) => {
-                                return (
-                                  <Link href="#" rel="color" key={index}>
-                                    {item.size.map((size:any, index:any) => {
-                                      return (
-                                        <span className="ms-2" key={index}>
-                                          {size},
-                                        </span>
-                                      );
-                                    })}
-                                  </Link>
-                                );
-                              })}
+                              {props.additional_info.map(
+                                (item: any, index: any) => {
+                                  return (
+                                    <Link href="#" rel="color" key={index}>
+                                      {item.size.map(
+                                        (size: any, index: any) => {
+                                          return (
+                                            <span className="ms-2" key={index}>
+                                              {size},
+                                            </span>
+                                          );
+                                        },
+                                      )}
+                                    </Link>
+                                  );
+                                },
+                              )}
                             </td>
                           </tr>
                           <tr className="text-body">
                             <th className="text-white">Weight</th>
                             <td className="bordertd">
-                              {props.additional_info.map((item:any, index:any) => {
-                                return <div key={index}>50ml, 100ml</div>;
-                              })}
+                              {props.additional_info.map(
+                                (item: any, index: any) => {
+                                  return <div key={index}>50ml, 100ml</div>;
+                                },
+                              )}
                             </td>
                           </tr>
                         </tbody>

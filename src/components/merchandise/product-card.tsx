@@ -4,49 +4,47 @@ import { memo, useState } from "react";
 // import { Link } from "react-router-dom";
 import Link from "next/link";
 
-
 //components
 import RatingStar from "../rating-star";
 import ProductModal from "./ProductModal";
 
-//sweetalert2 
-import Swal from 'sweetalert2'
-import 'sweetalert2/src/sweetalert2.scss'
+//sweetalert2
+import Swal from "sweetalert2";
+import "sweetalert2/src/sweetalert2.scss";
 
 interface Props {
-  thumbnail?: string,
-  is_sale?: boolean,
-  is_new?: boolean,
-  product_name: string,
-  price: string,
-  final_price: string,
-  rating: string,
-  count1: string,
-  slug?:string
+  thumbnail?: string;
+  is_sale?: boolean;
+  is_new?: boolean;
+  product_name: string;
+  price: string;
+  final_price: string;
+  rating: string;
+  count1: string;
+  slug?: string;
 }
-
 
 const ProductCard = memo((props: Props) => {
   const showSwal = () => {
     Swal.fire({
-      title: 'Added!',
-      text: 'Your item has been added to the wishlist.',
-      icon: 'success',
-      confirmButtonText: 'Ok',
+      title: "Added!",
+      text: "Your item has been added to the wishlist.",
+      icon: "success",
+      confirmButtonText: "Ok",
       background: "#141314",
-      color: "#ffffff"
-    })
-  }
+      color: "#ffffff",
+    });
+  };
   const cartSwal = () => {
     Swal.fire({
-      title: 'Added!',
-      text: 'Your item has been added to the cart.',
-      icon: 'success',
-      confirmButtonText: 'Ok',
+      title: "Added!",
+      text: "Your item has been added to the cart.",
+      icon: "success",
+      confirmButtonText: "Ok",
       background: "#141314",
-      color: "#ffffff"
-    })
-  }
+      color: "#ffffff",
+    });
+  };
 
   const [show, setShow] = useState(false);
 
@@ -67,7 +65,7 @@ const ProductCard = memo((props: Props) => {
         )}
 
         <div className="image-wrap">
-          <Link href='/merchandise/product-detail'>
+          <Link href="/merchandise/product-detail">
             <div className="product-image">
               <img
                 src={props.thumbnail}
@@ -87,7 +85,11 @@ const ProductCard = memo((props: Props) => {
               <li>
                 <div className="on-first-load">
                   <div className="add-button">
-                    <Link href="#" className="add_to_wishlist" onClick={showSwal}>
+                    <Link
+                      href="#"
+                      className="add_to_wishlist"
+                      onClick={showSwal}
+                    >
                       <i className="fa fa-heart" aria-hidden="true"></i>
                     </Link>
                   </div>
@@ -128,10 +130,7 @@ const ProductCard = memo((props: Props) => {
         </div>
         <div className="product-caption">
           <h5 className="product__title">
-            <Link
-              href='/merchandise/product-detail'
-              className="title-link"
-            >
+            <Link href="/merchandise/product-detail" className="title-link">
               {props.product_name}
             </Link>
           </h5>
@@ -143,7 +142,11 @@ const ProductCard = memo((props: Props) => {
           </div>
           <div className="container-rating">
             <div className="star-rating text-primary">
-              <RatingStar count={props.rating} count1={props.count1} starColor="text-warning" />
+              <RatingStar
+                count={props.rating}
+                count1={props.count1}
+                starColor="text-warning"
+              />
             </div>
           </div>
         </div>

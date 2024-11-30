@@ -1,17 +1,19 @@
 import React, { Fragment, memo } from "react";
 
-interface CheckOutProps{
-  thumbnail?:any
-  product_name?:string
-  final_price?:string
+interface CheckOutProps {
+  thumbnail?: any;
+  product_name?: string;
+  final_price?: string;
 }
-const CheckoutCard = memo((props:CheckOutProps) => {
+const CheckoutCard = memo((props: CheckOutProps) => {
   return (
     <Fragment>
       <table className="shop_table">
         <tbody>
           <tr className="cart_item">
-            <div><h5 className="mb-3">Product</h5></div>
+            <div>
+              <h5 className="mb-3">Product</h5>
+            </div>
             <td className="product-name">
               <div className="product-image">
                 <img
@@ -64,5 +66,5 @@ const CheckoutCard = memo((props:CheckOutProps) => {
   );
 });
 
-CheckoutCard.displayName = "CheckoutCard"
+CheckoutCard.displayName = "CheckoutCard";
 export default CheckoutCard;

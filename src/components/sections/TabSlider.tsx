@@ -161,7 +161,7 @@ const TabSlider = memo(() => {
       </div>
     </Fragment>
   );
-})
+});
 
-TabSlider.displayName = "TabSlider"
-export default TabSlider
+TabSlider.displayName = "TabSlider";
+export default TabSlider;

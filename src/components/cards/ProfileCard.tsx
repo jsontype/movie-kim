@@ -1,9 +1,9 @@
 import { Fragment, memo } from "react";
 
 interface ProfileCardProps {
-  designation?: string
-  name?: string
-  image?: any
+  designation?: string;
+  name?: string;
+  image?: any;
 }
 
 const ProfileCard = memo(({ designation, name, image }: ProfileCardProps) => {

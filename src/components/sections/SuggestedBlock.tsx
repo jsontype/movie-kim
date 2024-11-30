@@ -32,5 +32,5 @@ const SuggestedBlock = memo(() => {
   );
 });
 
-SuggestedBlock.displayName = 'SuggestedBlock';
+SuggestedBlock.displayName = "SuggestedBlock";
 export default SuggestedBlock;

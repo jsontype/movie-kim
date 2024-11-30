@@ -5,11 +5,8 @@ import Link from "next/link";
 // react-bootstrap
 import { Container, Row, Col } from "react-bootstrap";
 
-
-
 // components
 import Logo from "../logo";
-
 
 const FooterMega = memo(() => {
   const [animationClass, setAnimationClass] = useState("animate__fadeIn");
@@ -216,11 +213,19 @@ const FooterMega = memo(() => {
                   <h6 className="font-size-14 pb-1">Download Streamit Apps</h6>
                   <div className="d-flex align-items-center">
                     <Link className="app-image" href="#">
-                      <img src="/assets/images/footer/google-play.webp" loading="lazy" alt="play-store" />
+                      <img
+                        src="/assets/images/footer/google-play.webp"
+                        loading="lazy"
+                        alt="play-store"
+                      />
                     </Link>
                     <br />
                     <Link className="ms-3 app-image" href="#">
-                      <img src="/assets/images/footer/apple.webp" loading="lazy" alt="app-store" />
+                      <img
+                        src="/assets/images/footer/apple.webp"
+                        loading="lazy"
+                        alt="app-store"
+                      />
                     </Link>
                   </div>
                 </Col>

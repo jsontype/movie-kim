@@ -14,10 +14,10 @@ import { getBreadcrumb } from "@/store/streamit/selectors";
 const imagePath = generateImgPath("/assets/images/pages/01.webp");
 
 const BreadCrumbWidget = memo(() => {
-  const breadcrumb = useSelector(getBreadcrumb)
+  const breadcrumb = useSelector(getBreadcrumb);
   return (
     <Fragment>
-      {breadcrumb.show ?
+      {breadcrumb.show ? (
         <div
           className="iq-breadcrumb"
           style={{ backgroundImage: `url(${imagePath})` }}
@@ -40,7 +40,10 @@ const BreadCrumbWidget = memo(() => {
               </Col>
             </Row>
           </Container>
-        </div> : ''}
+        </div>
+      ) : (
+        ""
+      )}
     </Fragment>
   );
 });

@@ -1,17 +1,23 @@
 import { memo, Fragment, useState, useEffect } from "react";
 
 // react-bootstrap
-import { Button, Nav, Collapse, Navbar, Offcanvas, Container, Dropdown } from "react-bootstrap";
+import {
+  Button,
+  Nav,
+  Collapse,
+  Navbar,
+  Offcanvas,
+  Container,
+  Dropdown,
+} from "react-bootstrap";
 
 //router
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-
 // components
 import Logo from "../logo";
 import CustomToggle from "../CustomToggle";
-
 
 const HeaderDefault = memo(() => {
   const [isMega, setIsMega] = useState(true);
@@ -84,8 +90,9 @@ const HeaderDefault = memo(() => {
               </div>
               <Navbar
                 expand="xl"
-                className={`offcanvas mobile-offcanvas nav hover-nav horizontal-nav py-xl-0 ${show1 === true ? "show" : ""
-                  } ${isMega ? "mega-menu-content" : ""}`}
+                className={`offcanvas mobile-offcanvas nav hover-nav horizontal-nav py-xl-0 ${
+                  show1 === true ? "show" : ""
+                } ${isMega ? "mega-menu-content" : ""}`}
                 style={{
                   visibility: `${show1 === true ? "visible" : "hidden"}`,
                 }}
@@ -105,15 +112,16 @@ const HeaderDefault = memo(() => {
                       <Nav.Link
                         aria-expanded={open}
                         onClick={() => setOpen(!open)}
-                        className={`${location.asPath === "/" ||
+                        className={`${
+                          location.asPath === "/" ||
                           location.asPath === "/home" ||
                           location.asPath === "/movies" ||
                           location.asPath === "/tv-shows" ||
                           location.asPath === "/videos" ||
                           location.asPath === "/merchandise"
-                          ? "active"
-                          : ""
-                          }`}
+                            ? "active"
+                            : ""
+                        }`}
                       >
                         <span className="item-name">Home</span>
                         <span className="menu-icon ms-2">
@@ -134,14 +142,16 @@ const HeaderDefault = memo(() => {
                         </span>
                       </Nav.Link>
                       <Collapse
-                        className={`sub-nav justify-content-center list-unstyled ${isMega ? " mega-menu-item" : ""
-                          }`}
+                        className={`sub-nav justify-content-center list-unstyled ${
+                          isMega ? " mega-menu-item" : ""
+                        }`}
                       >
                         <ul>
                           <Nav.Item as="li">
                             <Link
-                              className={`${location.asPath === "/" ? "active" : ""
-                                } nav-link ${isMega ? "p-0" : ""}`}
+                              className={`${
+                                location.asPath === "/" ? "active" : ""
+                              } nav-link ${isMega ? "p-0" : ""}`}
                               href="/"
                             >
                               {isMega ? (
@@ -158,8 +168,9 @@ const HeaderDefault = memo(() => {
                           </Nav.Item>
                           <Nav.Item as="li">
                             <Link
-                              className={`${location.asPath === "/home" ? "active" : ""
-                                } nav-link ${isMega ? "p-0" : ""}`}
+                              className={`${
+                                location.asPath === "/home" ? "active" : ""
+                              } nav-link ${isMega ? "p-0" : ""}`}
                               href="/home"
                             >
                               {isMega ? (
@@ -176,8 +187,9 @@ const HeaderDefault = memo(() => {
                           </Nav.Item>
                           <Nav.Item as="li">
                             <Link
-                              className={`${location.asPath === "/movies" ? "active" : ""
-                                } nav-link ${isMega ? "p-0" : ""}`}
+                              className={`${
+                                location.asPath === "/movies" ? "active" : ""
+                              } nav-link ${isMega ? "p-0" : ""}`}
                               href="/movies"
                             >
                               {isMega ? (
@@ -194,10 +206,9 @@ const HeaderDefault = memo(() => {
                           </Nav.Item>
                           <Nav.Item as="li">
                             <Link
-                              className={`${location.asPath === "/tv-shows"
-                                ? "active"
-                                : ""
-                                } nav-link ${isMega ? "p-0" : ""}`}
+                              className={`${
+                                location.asPath === "/tv-shows" ? "active" : ""
+                              } nav-link ${isMega ? "p-0" : ""}`}
                               href="/tv-shows"
                             >
                               {isMega ? (
@@ -214,8 +225,9 @@ const HeaderDefault = memo(() => {
                           </Nav.Item>
                           <Nav.Item as="li">
                             <Link
-                              className={`${location.asPath === "/videos" ? "active" : ""
-                                } nav-link ${isMega ? "p-0" : ""}`}
+                              className={`${
+                                location.asPath === "/videos" ? "active" : ""
+                              } nav-link ${isMega ? "p-0" : ""}`}
                               href="/videos"
                             >
                               {isMega ? (
@@ -232,10 +244,11 @@ const HeaderDefault = memo(() => {
                           </Nav.Item>
                           <Nav.Item as="li">
                             <Link
-                              className={`${location.asPath === "/merchandise"
-                                ? "active"
-                                : ""
-                                } nav-link ${isMega ? "p-0" : ""}`}
+                              className={`${
+                                location.asPath === "/merchandise"
+                                  ? "active"
+                                  : ""
+                              } nav-link ${isMega ? "p-0" : ""}`}
                               href="/merchandise"
                             >
                               {isMega ? (
@@ -260,15 +273,17 @@ const HeaderDefault = memo(() => {
                         aria-expanded={open1}
                         href=""
                         onClick={() => setOpen1(!open1)}
-                        className={`${location.asPath === "/movies/related" ||
+                        className={`${
+                          location.asPath === "/movies/related" ||
                           location.asPath === "/movies/restricted" ||
                           location.asPath === "/play-list" ||
                           location.asPath === "/genres" ||
                           location.asPath === "/cast" ||
-                          location.asPath === "/tags" || location.asPath === "/watchlist-detail"
-                          ? "active"
-                          : ""
-                          }`}
+                          location.asPath === "/tags" ||
+                          location.asPath === "/watchlist-detail"
+                            ? "active"
+                            : ""
+                        }`}
                       >
                         <span className="item-name">Features</span>
                         <span className="menu-icon ms-2">
@@ -293,10 +308,11 @@ const HeaderDefault = memo(() => {
                           <Nav.Item as="li">
                             <Link
                               href="/movies/restricted"
-                              className={`${location.asPath === "/movies/restricted"
-                                ? "active"
-                                : ""
-                                } nav-link`}
+                              className={`${
+                                location.asPath === "/movies/restricted"
+                                  ? "active"
+                                  : ""
+                              } nav-link`}
                             >
                               {" "}
                               Restricted Content{" "}
@@ -305,10 +321,11 @@ const HeaderDefault = memo(() => {
                           <Nav.Item as="li">
                             <Link
                               href="/movies/related"
-                              className={`${location.asPath === "/movies/related"
-                                ? "active"
-                                : ""
-                                } nav-link`}
+                              className={`${
+                                location.asPath === "/movies/related"
+                                  ? "active"
+                                  : ""
+                              } nav-link`}
                             >
                               {" "}
                               Related Merchandise{" "}
@@ -317,10 +334,12 @@ const HeaderDefault = memo(() => {
                           <Nav.Item as="li">
                             <Link
                               href="/play-list"
-                              className={`${location.asPath === "/play-list" || location.asPath === "/watchlist-detail"
-                                ? "active"
-                                : ""
-                                } nav-link`}
+                              className={`${
+                                location.asPath === "/play-list" ||
+                                location.asPath === "/watchlist-detail"
+                                  ? "active"
+                                  : ""
+                              } nav-link`}
                             >
                               {" "}
                               Playlist{" "}
@@ -329,8 +348,9 @@ const HeaderDefault = memo(() => {
                           <Nav.Item as="li">
                             <Link
                               href="/genres"
-                              className={`${location.asPath === "/genres" ? "active" : ""
-                                } nav-link`}
+                              className={`${
+                                location.asPath === "/genres" ? "active" : ""
+                              } nav-link`}
                             >
                               {" "}
                               Genres{" "}
@@ -339,8 +359,9 @@ const HeaderDefault = memo(() => {
                           <Nav.Item as="li">
                             <Link
                               href="/cast"
-                              className={`${location.asPath === "/cast" ? "active" : ""
-                                } nav-link`}
+                              className={`${
+                                location.asPath === "/cast" ? "active" : ""
+                              } nav-link`}
                             >
                               {" "}
                               Cast{" "}
@@ -349,8 +370,9 @@ const HeaderDefault = memo(() => {
                           <Nav.Item as="li">
                             <Link
                               href="/tags"
-                              className={`${location.asPath === "/tags" ? "active" : ""
-                                } nav-link`}
+                              className={`${
+                                location.asPath === "/tags" ? "active" : ""
+                              } nav-link`}
                             >
                               {" "}
                               Tags{" "}
@@ -364,10 +386,11 @@ const HeaderDefault = memo(() => {
                         aria-expanded={open2}
                         href=""
                         onClick={() => setOpen2(!open2)}
-                        className={`${location.asPath.split('/').includes('extra')
-                          ? "active"
-                          : ""
-                          }`}
+                        className={`${
+                          location.asPath.split("/").includes("extra")
+                            ? "active"
+                            : ""
+                        }`}
                       >
                         <span className="item-name">Pages</span>
                         <span className="menu-icon ms-2">
@@ -392,10 +415,11 @@ const HeaderDefault = memo(() => {
                           <Nav.Item as="li">
                             <Link
                               href="/extra/about-us"
-                              className={`${location.asPath === "/extra/about-us"
-                                ? "active"
-                                : ""
-                                } nav-link`}
+                              className={`${
+                                location.asPath === "/extra/about-us"
+                                  ? "active"
+                                  : ""
+                              } nav-link`}
                             >
                               {" "}
                               About Us{" "}
@@ -404,10 +428,11 @@ const HeaderDefault = memo(() => {
                           <Nav.Item as="li">
                             <Link
                               href="/extra/contact-us"
-                              className={`${location.asPath === "/extra/contact-us"
-                                ? "active"
-                                : ""
-                                } nav-link`}
+                              className={`${
+                                location.asPath === "/extra/contact-us"
+                                  ? "active"
+                                  : ""
+                              } nav-link`}
                             >
                               {" "}
                               Contact Us{" "}
@@ -416,8 +441,9 @@ const HeaderDefault = memo(() => {
                           <Nav.Item as="li">
                             <Link
                               href="/extra/faq"
-                              className={`${location.asPath === "/extra/faq" ? "active" : ""
-                                } nav-link`}
+                              className={`${
+                                location.asPath === "/extra/faq" ? "active" : ""
+                              } nav-link`}
                             >
                               {" "}
                               FAQ{" "}
@@ -426,10 +452,11 @@ const HeaderDefault = memo(() => {
                           <Nav.Item as="li">
                             <Link
                               href="/extra/privacy-policy"
-                              className={`${location.asPath === "/extra/privacy-policy"
-                                ? "active"
-                                : ""
-                                } nav-link`}
+                              className={`${
+                                location.asPath === "/extra/privacy-policy"
+                                  ? "active"
+                                  : ""
+                              } nav-link`}
                             >
                               {" "}
                               Privacy Policy{" "}
@@ -438,8 +465,11 @@ const HeaderDefault = memo(() => {
                           <Nav.Item as="li">
                             <Link
                               href="/extra/pricing-plan"
-                              className={`${location.asPath === "/extra/pricing-plan" ? "active" : ""
-                                } nav-link`}
+                              className={`${
+                                location.asPath === "/extra/pricing-plan"
+                                  ? "active"
+                                  : ""
+                              } nav-link`}
                             >
                               {" "}
                               Pricing Plan{" "}
@@ -512,10 +542,11 @@ const HeaderDefault = memo(() => {
                         aria-expanded={open4}
                         href=""
                         onClick={() => setOpen4(!open4)}
-                        className={`${location.asPath.split('/').includes('blogs')
-                          ? "active"
-                          : ""
-                          }`}
+                        className={`${
+                          location.asPath.split("/").includes("blogs")
+                            ? "active"
+                            : ""
+                        }`}
                       >
                         <span className="item-name">Blog</span>
                         <span className="menu-icon ms-2">
@@ -540,8 +571,9 @@ const HeaderDefault = memo(() => {
                           <Nav.Item as="li">
                             <Link
                               href="/blogs"
-                              className={`${location.asPath === "/blogs" ? "active" : ""
-                                } nav-link`}
+                              className={`${
+                                location.asPath === "/blogs" ? "active" : ""
+                              } nav-link`}
                             >
                               {" "}
                               Listing{" "}
@@ -549,10 +581,12 @@ const HeaderDefault = memo(() => {
                           </Nav.Item>
                           <Nav.Item as="li">
                             <Nav.Link
-                              className={`${location.asPath.split('/').includes('blogs') && location.asPath.split('/').includes('grid')
-                                ? "active"
-                                : ""
-                                }`}
+                              className={`${
+                                location.asPath.split("/").includes("blogs") &&
+                                location.asPath.split("/").includes("grid")
+                                  ? "active"
+                                  : ""
+                              }`}
                               aria-expanded={open5}
                               href=""
                               onClick={() => setOpen5(!open5)}
@@ -583,10 +617,12 @@ const HeaderDefault = memo(() => {
                                 <Nav.Item as="li">
                                   <Link
                                     href="/blogs/grid/one-column"
-                                    className={`${location.asPath === "/blogs/grid/one-column"
-                                      ? "active"
-                                      : ""
-                                      } nav-link`}
+                                    className={`${
+                                      location.asPath ===
+                                      "/blogs/grid/one-column"
+                                        ? "active"
+                                        : ""
+                                    } nav-link`}
                                   >
                                     {" "}
                                     1 Column{" "}
@@ -595,10 +631,12 @@ const HeaderDefault = memo(() => {
                                 <Nav.Item as="li">
                                   <Link
                                     href="/blogs/grid/two-column"
-                                    className={`${location.asPath === "/blogs/grid/two-column"
-                                      ? "active"
-                                      : ""
-                                      } nav-link`}
+                                    className={`${
+                                      location.asPath ===
+                                      "/blogs/grid/two-column"
+                                        ? "active"
+                                        : ""
+                                    } nav-link`}
                                   >
                                     {" "}
                                     2 column
@@ -607,10 +645,12 @@ const HeaderDefault = memo(() => {
                                 <Nav.Item as="li">
                                   <Link
                                     href="/blogs/grid/three-column"
-                                    className={`${location.asPath === "/blogs/grid/three-column"
-                                      ? "active"
-                                      : ""
-                                      } nav-link`}
+                                    className={`${
+                                      location.asPath ===
+                                      "/blogs/grid/three-column"
+                                        ? "active"
+                                        : ""
+                                    } nav-link`}
                                   >
                                     {" "}
                                     3 column{" "}
@@ -619,10 +659,12 @@ const HeaderDefault = memo(() => {
                                 <Nav.Item as="li">
                                   <Link
                                     href="/blogs/grid/four-column"
-                                    className={`${location.asPath === "/blogs/grid/four-column"
-                                      ? "active"
-                                      : ""
-                                      } nav-link`}
+                                    className={`${
+                                      location.asPath ===
+                                      "/blogs/grid/four-column"
+                                        ? "active"
+                                        : ""
+                                    } nav-link`}
                                   >
                                     {" "}
                                     4 column{" "}
@@ -636,10 +678,12 @@ const HeaderDefault = memo(() => {
                               aria-expanded={open6}
                               href=""
                               onClick={() => setOpen6(!open6)}
-                              className={`${location.asPath.split('/').includes('blogs') && location.asPath.split('/').includes('sidebar')
-                                ? "active"
-                                : ""
-                                }`}
+                              className={`${
+                                location.asPath.split("/").includes("blogs") &&
+                                location.asPath.split("/").includes("sidebar")
+                                  ? "active"
+                                  : ""
+                              }`}
                             >
                               <span className="item-name">Blog Sidebar</span>
                               <span className="menu-icon">
@@ -667,11 +711,11 @@ const HeaderDefault = memo(() => {
                                 <Nav.Item as="li">
                                   <Link
                                     href="/blogs/sidebar/left"
-                                    className={`${location.asPath ===
-                                      "/blogs/sidebar/left"
-                                      ? "active"
-                                      : ""
-                                      } nav-link`}
+                                    className={`${
+                                      location.asPath === "/blogs/sidebar/left"
+                                        ? "active"
+                                        : ""
+                                    } nav-link`}
                                   >
                                     {" "}
                                     Left Sidebar{" "}
@@ -680,11 +724,11 @@ const HeaderDefault = memo(() => {
                                 <Nav.Item as="li">
                                   <Link
                                     href="/blogs/sidebar/right"
-                                    className={`${location.asPath ===
-                                      "/blogs/sidebar/right"
-                                      ? "active"
-                                      : ""
-                                      } nav-link`}
+                                    className={`${
+                                      location.asPath === "/blogs/sidebar/right"
+                                        ? "active"
+                                        : ""
+                                    } nav-link`}
                                   >
                                     {" "}
                                     Right Sidebar{" "}
@@ -698,14 +742,14 @@ const HeaderDefault = memo(() => {
                               aria-expanded={open7}
                               href=""
                               onClick={() => setOpen7(!open7)}
-                              className={`${location.asPath ===
-                                "/blogs/template" ||
-                                location.asPath ===
-                                "/blogs/detail" ||
-                                location.asPath.split('/').includes('blogs') && location.asPath.split('/').includes('single')
-                                ? "active"
-                                : ""
-                                }`}
+                              className={`${
+                                location.asPath === "/blogs/template" ||
+                                location.asPath === "/blogs/detail" ||
+                                (location.asPath.split("/").includes("blogs") &&
+                                  location.asPath.split("/").includes("single"))
+                                  ? "active"
+                                  : ""
+                              }`}
                             >
                               <span className="item-name">Blog Single</span>
                               <span className="menu-icon">
@@ -733,11 +777,11 @@ const HeaderDefault = memo(() => {
                                 <Nav.Item as="li">
                                   <Link
                                     href="/blogs/template"
-                                    className={`${location.asPath ===
-                                      "/blogs/template"
-                                      ? "active"
-                                      : ""
-                                      } nav-link`}
+                                    className={`${
+                                      location.asPath === "/blogs/template"
+                                        ? "active"
+                                        : ""
+                                    } nav-link`}
                                   >
                                     {" "}
                                     Blog Template{" "}
@@ -746,11 +790,11 @@ const HeaderDefault = memo(() => {
                                 <Nav.Item as="li">
                                   <Link
                                     href="/blogs/detail"
-                                    className={`${location.asPath ===
-                                      "/blogs/detail"
-                                      ? "active"
-                                      : ""
-                                      } nav-link`}
+                                    className={`${
+                                      location.asPath === "/blogs/detail"
+                                        ? "active"
+                                        : ""
+                                    } nav-link`}
                                   >
                                     {" "}
                                     Standard{" "}
@@ -759,10 +803,11 @@ const HeaderDefault = memo(() => {
                                 <Nav.Item as="li">
                                   <Link
                                     href="/blogs/single/audio"
-                                    className={`${location.asPath === "/blogs/single/audio"
-                                      ? "active"
-                                      : ""
-                                      } nav-link`}
+                                    className={`${
+                                      location.asPath === "/blogs/single/audio"
+                                        ? "active"
+                                        : ""
+                                    } nav-link`}
                                   >
                                     {" "}
                                     Audio{" "}
@@ -771,10 +816,11 @@ const HeaderDefault = memo(() => {
                                 <Nav.Item as="li">
                                   <Link
                                     href="/blogs/single/video"
-                                    className={`${location.asPath === "/blogs/single/video"
-                                      ? "active"
-                                      : ""
-                                      } nav-link`}
+                                    className={`${
+                                      location.asPath === "/blogs/single/video"
+                                        ? "active"
+                                        : ""
+                                    } nav-link`}
                                   >
                                     {" "}
                                     Video{" "}
@@ -783,10 +829,11 @@ const HeaderDefault = memo(() => {
                                 <Nav.Item as="li">
                                   <Link
                                     href="/blogs/single/link"
-                                    className={`${location.asPath === "/blogs/single/link"
-                                      ? "active"
-                                      : ""
-                                      } nav-link`}
+                                    className={`${
+                                      location.asPath === "/blogs/single/link"
+                                        ? "active"
+                                        : ""
+                                    } nav-link`}
                                   >
                                     {" "}
                                     Link{" "}
@@ -795,10 +842,11 @@ const HeaderDefault = memo(() => {
                                 <Nav.Item as="li">
                                   <Link
                                     href="/blogs/single/quote"
-                                    className={`${location.asPath === "/blogs/single/quote"
-                                      ? "active"
-                                      : ""
-                                      } nav-link`}
+                                    className={`${
+                                      location.asPath === "/blogs/single/quote"
+                                        ? "active"
+                                        : ""
+                                    } nav-link`}
                                   >
                                     {" "}
                                     Quote{" "}
@@ -807,11 +855,12 @@ const HeaderDefault = memo(() => {
                                 <Nav.Item as="li">
                                   <Link
                                     href="/blogs/single/gallery"
-                                    className={`${location.asPath ===
+                                    className={`${
+                                      location.asPath ===
                                       "/blogs/single/gallery"
-                                      ? "active"
-                                      : ""
-                                      } nav-link`}
+                                        ? "active"
+                                        : ""
+                                    } nav-link`}
                                   >
                                     {" "}
                                     Gallery{" "}
@@ -828,10 +877,12 @@ const HeaderDefault = memo(() => {
                         aria-expanded={open8}
                         href=""
                         onClick={() => setOpen8(!open8)}
-                        className={`${location.asPath.split('/').includes('merchandise') && location.asPath.split('/').length > 2
-                          ? "active"
-                          : ""
-                          }`}
+                        className={`${
+                          location.asPath.split("/").includes("merchandise") &&
+                          location.asPath.split("/").length > 2
+                            ? "active"
+                            : ""
+                        }`}
                       >
                         <span className="item-name">Shop</span>
                         <span className="menu-icon ms-2">
@@ -856,8 +907,11 @@ const HeaderDefault = memo(() => {
                           <Nav.Item as="li">
                             <Link
                               href="/merchandise/shop"
-                              className={`${location.asPath === "/merchandise/shop" ? "active" : ""
-                                } nav-link`}
+                              className={`${
+                                location.asPath === "/merchandise/shop"
+                                  ? "active"
+                                  : ""
+                              } nav-link`}
                             >
                               {" "}
                               Shop{" "}
@@ -866,8 +920,11 @@ const HeaderDefault = memo(() => {
                           <Nav.Item as="li">
                             <Link
                               href="/merchandise/account"
-                              className={`${location.asPath === "/merchandise/account" ? "active" : ""
-                                } nav-link`}
+                              className={`${
+                                location.asPath === "/merchandise/account"
+                                  ? "active"
+                                  : ""
+                              } nav-link`}
                             >
                               {" "}
                               My Account Page{" "}
@@ -876,8 +933,11 @@ const HeaderDefault = memo(() => {
                           <Nav.Item as="li">
                             <Link
                               href="/merchandise/cart"
-                              className={`${location.asPath === "/merchandise/cart" ? "active" : ""
-                                } nav-link`}
+                              className={`${
+                                location.asPath === "/merchandise/cart"
+                                  ? "active"
+                                  : ""
+                              } nav-link`}
                             >
                               {" "}
                               Cart Page{" "}
@@ -886,10 +946,11 @@ const HeaderDefault = memo(() => {
                           <Nav.Item as="li">
                             <Link
                               href="/merchandise/wishlist"
-                              className={`${location.asPath === "/merchandise/wishlist"
-                                ? "active"
-                                : ""
-                                } nav-link`}
+                              className={`${
+                                location.asPath === "/merchandise/wishlist"
+                                  ? "active"
+                                  : ""
+                              } nav-link`}
                             >
                               {" "}
                               Wishlist Page{" "}
@@ -898,10 +959,11 @@ const HeaderDefault = memo(() => {
                           <Nav.Item as="li">
                             <Link
                               href="/merchandise/checkout"
-                              className={`${location.asPath === "/merchandise/checkout"
-                                ? "active"
-                                : ""
-                                } nav-link`}
+                              className={`${
+                                location.asPath === "/merchandise/checkout"
+                                  ? "active"
+                                  : ""
+                              } nav-link`}
                             >
                               {" "}
                               Checkout Page{" "}
@@ -910,10 +972,11 @@ const HeaderDefault = memo(() => {
                           <Nav.Item as="li">
                             <Link
                               href="/merchandise/track-order"
-                              className={`${location.asPath === "/merchandise/track-order"
-                                ? "active"
-                                : ""
-                                } nav-link`}
+                              className={`${
+                                location.asPath === "/merchandise/track-order"
+                                  ? "active"
+                                  : ""
+                              } nav-link`}
                             >
                               {" "}
                               Order Tracking{" "}
@@ -940,8 +1003,9 @@ const HeaderDefault = memo(() => {
                   </span>
                 </Button>
                 <div
-                  className={`navbar-collapse ${show === true ? "collapse show" : "collapse"
-                    }`}
+                  className={`navbar-collapse ${
+                    show === true ? "collapse show" : "collapse"
+                  }`}
                   id="navbarSupportedContent"
                 >
                   <ul className="navbar-nav align-items-center ms-auto mb-2 mb-xl-0">

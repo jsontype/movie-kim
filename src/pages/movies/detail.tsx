@@ -4,7 +4,7 @@ import React, { memo, Fragment } from "react";
 import { Row, Col, Container, Nav, Tab, Form } from "react-bootstrap";
 
 //react-router-dom
-import Link from 'next/link'
+import Link from "next/link";
 
 //components
 import ReviewComponent from "@/components/ReviewComponent";
@@ -28,7 +28,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 
 const MoviesDetail = memo(() => {
-
   // date, type
   const shows = {
     id: 1,
@@ -101,7 +100,7 @@ const MoviesDetail = memo(() => {
     youtube: { iv_load_policy: 1 },
   };
 
-  const handlePlayerReady = (player:any) => {
+  const handlePlayerReady = (player: any) => {
     playerRef.current = player;
   };
 

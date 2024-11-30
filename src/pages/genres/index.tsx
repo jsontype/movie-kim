@@ -16,7 +16,7 @@ import { geners, tvShowGenres, videoGenres } from "@/StaticData/data";
 import { useBreadcrumb } from "@/utilities/usePage";
 
 const GenresPage = memo(() => {
-  useBreadcrumb('Genres')
+  useBreadcrumb("Genres");
   return (
     <Fragment>
       <section className="section-padding">
@@ -38,10 +38,7 @@ const GenresPage = memo(() => {
           </Row>
           <div className="text-center">
             <div className="iq-button">
-              <Link
-                href="#"
-                className="btn text-uppercase position-relative"
-              >
+              <Link href="#" className="btn text-uppercase position-relative">
                 <span className="button-text">load more</span>
                 <i className="fa-solid fa-play"></i>
               </Link>
@@ -68,10 +65,7 @@ const GenresPage = memo(() => {
           </Row>
           <div className="text-center">
             <div className="iq-button">
-              <Link
-                href="#"
-                className="btn text-uppercase position-relative"
-              >
+              <Link href="#" className="btn text-uppercase position-relative">
                 <span className="button-text">load more</span>
                 <i className="fa-solid fa-play"></i>
               </Link>
@@ -98,10 +92,7 @@ const GenresPage = memo(() => {
           </Row>
           <div className="text-center">
             <div className="iq-button">
-              <Link
-                href="#"
-                className="btn text-uppercase position-relative"
-              >
+              <Link href="#" className="btn text-uppercase position-relative">
                 <span className="button-text">load more</span>
                 <i className="fa-solid fa-play"></i>
               </Link>

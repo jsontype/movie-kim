@@ -7,7 +7,7 @@ import { Col, Row } from "react-bootstrap";
 import Link from "next/link";
 
 // Next-Image
-import Image from 'next/image'
+import Image from "next/image";
 
 //swiper
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -136,7 +136,11 @@ const TvShowHeroSlider = memo(() => {
                       md="12"
                       className="trailor-video iq-slider d-none d-lg-block"
                     >
-                      <Link href="#" className="video-open playbtn" tabIndex={0}>
+                      <Link
+                        href="#"
+                        className="video-open playbtn"
+                        tabIndex={0}
+                      >
                         <svg
                           version="1.1"
                           xmlns="http://www.w3.org/2000/svg"
@@ -268,7 +272,11 @@ const TvShowHeroSlider = memo(() => {
                       md="12"
                       className="trailor-video iq-slider d-none d-lg-block"
                     >
-                      <Link href="#" className="video-open playbtn" tabIndex={0}>
+                      <Link
+                        href="#"
+                        className="video-open playbtn"
+                        tabIndex={0}
+                      >
                         <svg
                           version="1.1"
                           xmlns="http://www.w3.org/2000/svg"
@@ -405,7 +413,11 @@ const TvShowHeroSlider = memo(() => {
                       md="12"
                       className="trailor-video iq-slider d-none d-lg-block"
                     >
-                      <Link href="#" className="video-open playbtn" tabIndex={0}>
+                      <Link
+                        href="#"
+                        className="video-open playbtn"
+                        tabIndex={0}
+                      >
                         <svg
                           version="1.1"
                           xmlns="http://www.w3.org/2000/svg"
@@ -470,5 +482,5 @@ const TvShowHeroSlider = memo(() => {
 });
 
 // TvShowHeroSlider.displayName = TvShowHeroSlider;
-TvShowHeroSlider.displayName= 'TvShowHeroSlider'
+TvShowHeroSlider.displayName = "TvShowHeroSlider";
 export default TvShowHeroSlider;

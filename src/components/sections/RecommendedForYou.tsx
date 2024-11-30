@@ -25,7 +25,7 @@ const RecommendedForYou = memo(() => {
       </SectionSlider>
     </Fragment>
   );
-})
+});
 
-RecommendedForYou.displayName = 'RecommendedForYou';
+RecommendedForYou.displayName = "RecommendedForYou";
 export default RecommendedForYou;

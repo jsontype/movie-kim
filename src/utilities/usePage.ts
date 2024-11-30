@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 
 // Redux Selector / Action
-import { useDispatch } from 'react-redux';
+import { useDispatch } from "react-redux";
 
 // import state selectors
-import { set_breadcrumb } from '@/store/streamit/actions'
+import { set_breadcrumb } from "@/store/streamit/actions";
 
 export const useEnterExit = () => {
   useEffect(() => {
@@ -15,14 +15,13 @@ export const useEnterExit = () => {
   }, []);
 };
 
-
-export const useBreadcrumb = (name: string = 'View All') => {
-  const dispatch = useDispatch()
+export const useBreadcrumb = (name: string = "View All") => {
+  const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(set_breadcrumb({ show: true, name: name }))
+    dispatch(set_breadcrumb({ show: true, name: name }));
 
     return () => {
-      dispatch(set_breadcrumb({ show: false, name: '' }))
-    }
-  }, [])
+      dispatch(set_breadcrumb({ show: false, name: "" }));
+    };
+  }, []);
 };

@@ -12,7 +12,7 @@ import VideosRecommendedForYou from "../../components/sections/VideosRecommended
 import { useEnterExit } from "@/utilities/usePage";
 
 const VideosPage = () => {
-  useEnterExit()
+  useEnterExit();
   return (
     <Fragment>
       <VideoHeroSlider />

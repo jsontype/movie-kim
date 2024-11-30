@@ -1,15 +1,15 @@
 import React, { memo, Fragment } from "react";
 
 // react-router-dom
-import Link from 'next/link'
+import Link from "next/link";
 
-interface props{
-  linkButton: string,
-  link: string,
-  buttonTitle: string
+interface props {
+  linkButton: string;
+  link: string;
+  buttonTitle: string;
 }
 
-const CustomButton = memo((props : props) => {
+const CustomButton = memo((props: props) => {
   return (
     <Fragment>
       {props.linkButton === "true" && (

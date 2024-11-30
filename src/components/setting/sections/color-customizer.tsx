@@ -10,16 +10,16 @@ import { theme_color } from "../../../store/setting/actions";
 
 // Images
 
-interface Props{
-  themeColor?:any
+interface Props {
+  themeColor?: any;
 }
 
-const ColorCustomizer = memo((props:Props) => {
+const ColorCustomizer = memo((props: Props) => {
   const dispatch = useDispatch();
 
   const colorValue = props.themeColor;
 
-  const colorChange = (colorClassName:any) => {
+  const colorChange = (colorClassName: any) => {
     dispatch(theme_color(colorClassName));
   };
 

@@ -103,7 +103,7 @@ const RelatedPage = memo(() => {
     youtube: { iv_load_policy: 1 },
   };
 
-  const handlePlayerReady = (player:any) => {
+  const handlePlayerReady = (player: any) => {
     playerRef.current = player;
   };
   return (
@@ -234,7 +234,10 @@ const RelatedPage = memo(() => {
                       {shows.tags.map((item, index) => {
                         return (
                           <li key={index}>
-                            <Link href="/view-all" className="title text-capitalize">
+                            <Link
+                              href="/view-all"
+                              className="title text-capitalize"
+                            >
                               {item}
                             </Link>
                             <span className="text-secondary">,</span>
@@ -555,7 +558,7 @@ const RelatedPage = memo(() => {
                   },
                 }}
               >
-                {newProduct.map((item:any, index:any) => {
+                {newProduct.map((item: any, index: any) => {
                   return (
                     <SwiperSlide tag="li" key={index}>
                       <ProductCard

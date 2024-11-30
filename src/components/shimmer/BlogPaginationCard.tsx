@@ -12,12 +12,11 @@ const shimmerCardStyle = {
   width: "23em",
 };
 
-interface Props{
-  grid:any
+interface Props {
+  grid: any;
 }
 
-
-const CardblogPaginationShimmer = memo((props:Props) => {
+const CardblogPaginationShimmer = memo((props: Props) => {
   let height;
   switch (props.grid) {
     case "single":

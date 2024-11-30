@@ -1,8 +1,8 @@
-import React, { Fragment, memo , useState} from 'react'
+import React, { Fragment, memo, useState } from "react";
 
 //components
-import SectionSlider from '../slider/SectionSlider';
-import CardStyle from '../cards/CardStyle';
+import SectionSlider from "../slider/SectionSlider";
+import CardStyle from "../cards/CardStyle";
 
 //static data
 import { sectionSliders } from "../../StaticData/data";
@@ -31,5 +31,5 @@ const RelatedVideos = memo(() => {
   );
 });
 
-RelatedVideos.displayName = "RelatedVideos"
-export default RelatedVideos
+RelatedVideos.displayName = "RelatedVideos";
+export default RelatedVideos;

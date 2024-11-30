@@ -29,7 +29,7 @@ const ShowsWeRecommend = memo(() => {
       </SectionSlider>
     </Fragment>
   );
-})
+});
 
-ShowsWeRecommend.displayName = 'ShowsWeRecommend';
+ShowsWeRecommend.displayName = "ShowsWeRecommend";
 export default ShowsWeRecommend;

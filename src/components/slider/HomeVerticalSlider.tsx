@@ -83,7 +83,7 @@ const HomeVerticalSlider = memo(() => {
                     // }}
                     thumbs={{ swiper: thumbsSwiper }}
                   >
-                    {latestMovies.map((item:any, index:any) => {
+                    {latestMovies.map((item: any, index: any) => {
                       return (
                         <SwiperSlide
                           key={index}
@@ -115,7 +115,7 @@ const HomeVerticalSlider = memo(() => {
                               </div>
                               <div className="hover-buttons">
                                 <Link
-                                  href='/movies/detail'
+                                  href="/movies/detail"
                                   role="button"
                                   className="btn btn-hover iq-button"
                                 >
@@ -200,7 +200,7 @@ const HomeVerticalSlider = memo(() => {
             className="swiper-container"
             // onSwiper={setThumbsSwiper}
           >
-            {latestMovies.map((item:any, index:any) => {
+            {latestMovies.map((item: any, index: any) => {
               return (
                 <SwiperSlide key={index} tag="li" className="swiper-slide">
                   <div className="slider--image block-images">

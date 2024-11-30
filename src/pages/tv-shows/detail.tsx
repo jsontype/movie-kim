@@ -4,7 +4,7 @@ import React, { Fragment, memo } from "react";
 import { Row, Col, Container, Nav, Tab, Form } from "react-bootstrap";
 
 // Next-Link
-import Link from 'next/link'
+import Link from "next/link";
 
 //components
 import ReviewComponent from "@/components/ReviewComponent";
@@ -20,7 +20,6 @@ import { useEnterExit } from "@/utilities/usePage";
 //swiper
 import { Navigation } from "swiper";
 const ShowsDetailPage = memo(() => {
-
   useEnterExit();
   // date, type
   const shows = {
@@ -115,7 +114,7 @@ const ShowsDetailPage = memo(() => {
             className="overlay-wrapper iq-main-slider "
             style={{
               background: `url(${generateImgPath(
-                "/assets/images/tv-show/episodes/main-banner.webp"
+                "/assets/images/tv-show/episodes/main-banner.webp",
               )}`,
               backgroundRepeat: "no-repeat",
             }}
@@ -451,7 +450,7 @@ const ShowsDetailPage = memo(() => {
                   >
                     {shows.cast.map((item, index) => {
                       return (
-                        <SwiperSlide key={index} >
+                        <SwiperSlide key={index}>
                           <Row className="cast-images m-0 align-items-center position-relative">
                             <div className="col-4 img-box p-0">
                               <img
@@ -517,7 +516,7 @@ const ShowsDetailPage = memo(() => {
                   >
                     {shows.crew.map((item, index) => {
                       return (
-                        <SwiperSlide key={index} >
+                        <SwiperSlide key={index}>
                           <Row className="cast-images m-0 align-items-center position-relative">
                             <div className="col-4 img-box p-0">
                               <img

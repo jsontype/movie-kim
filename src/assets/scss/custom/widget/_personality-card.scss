@@ -44,7 +44,8 @@
     &:first-child {
       &:hover {
         .block-images {
-          transform: scale3d(1.1, 1.1, 1) translate3d(6%, 0, 0) perspective(31.25em);
+          transform: scale3d(1.1, 1.1, 1) translate3d(6%, 0, 0)
+            perspective(31.25em);
         }
       }
     }
@@ -52,7 +53,8 @@
     &:last-child {
       &:hover {
         .block-images {
-          transform: scale3d(1.1, 1.1, 1) translate3d(-7%, 0, 0) perspective(31.25em);
+          transform: scale3d(1.1, 1.1, 1) translate3d(-7%, 0, 0)
+            perspective(31.25em);
         }
       }
     }
@@ -60,9 +62,10 @@
     &:hover {
       .block-images {
         z-index: 99;
-        transform: scale3d(1.1, 1.1, 1) translate3d(0, 0, 0) perspective(31.25em);
+        transform: scale3d(1.1, 1.1, 1) translate3d(0, 0, 0)
+          perspective(31.25em);
         transform-origin: 50% 50%;
-        transition: all .6s ease 0s;
+        transition: all 0.6s ease 0s;
         overflow: visible;
 
         &::before {
@@ -86,7 +89,7 @@
       overflow: hidden;
       backface-visibility: hidden;
       transform: translate3d(0, 0, 0);
-      transition: all .6s ease 0s;
+      transition: all 0.6s ease 0s;
 
       &::before {
         position: absolute;
@@ -101,13 +104,13 @@
         height: 100%;
         opacity: 0;
         z-index: 9;
-        transition: all .5s ease-in-out;
+        transition: all 0.5s ease-in-out;
       }
 
       .img-box {
         position: relative;
         background: rgba(var(--bs-black), 0.8);
-        transition: all .5s ease-in-out;
+        transition: all 0.5s ease-in-out;
       }
     }
 
@@ -141,8 +144,6 @@
       }
     }
   }
-
-
 }
 
 @media (max-width: 767px) {

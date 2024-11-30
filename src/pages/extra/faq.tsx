@@ -8,7 +8,7 @@ import { useBreadcrumb } from "@/utilities/usePage";
 
 const FAQPage = memo(() => {
   const [faq, setfaq] = useState("1");
-  useBreadcrumb('FAQ')
+  useBreadcrumb("FAQ");
   return (
     <Fragment>
       <div className="section-padding">

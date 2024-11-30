@@ -1,7 +1,7 @@
 import React, { memo, Fragment } from "react";
 
 // react-bootsrap
-import {  Row, Col, Placeholder } from "react-bootstrap";
+import { Row, Col, Placeholder } from "react-bootstrap";
 
 const shimmerCardStyle = {
   // backgroundColor: "#1e1e1e",
@@ -10,8 +10,7 @@ const shimmerCardStyle = {
   width: "48em",
 };
 
-
-const CardBlogShimmer = memo((props:any) => {
+const CardBlogShimmer = memo((props: any) => {
   return (
     <Fragment>
       <div
@@ -44,42 +43,37 @@ const CardBlogShimmer = memo((props:any) => {
                 <Placeholder as="p" animation="glow">
                   <Placeholder
                     style={{
-                      
                       height: 25,
                       width: 100,
                     }}
                   />
                   <Placeholder
                     style={{
-                      
                       height: 25,
                       width: 180,
                     }}
                   />
                 </Placeholder>
               </Row>
-              <Placeholder as="p" animation="glow" className='mb-3'>
+              <Placeholder as="p" animation="glow" className="mb-3">
                 <Placeholder
                   style={{
-                    
                     height: 25,
                     width: 350,
                   }}
                 />
               </Placeholder>
-              <Placeholder as="p" animation="glow" className='mb-3'>
+              <Placeholder as="p" animation="glow" className="mb-3">
                 <Placeholder
                   style={{
-                    
                     height: 25,
                     width: 500,
                   }}
                 />
               </Placeholder>
-              <Placeholder as="p" animation="glow" className='mb-3'>
+              <Placeholder as="p" animation="glow" className="mb-3">
                 <Placeholder
                   style={{
-                    
                     height: 25,
                     width: 430,
                   }}
@@ -88,21 +82,19 @@ const CardBlogShimmer = memo((props:any) => {
               <Placeholder as="p" animation="glow">
                 <Placeholder
                   bg=" btn btn-hover"
-                  style={{ height: 30, width: 120, }}
+                  style={{ height: 30, width: 120 }}
                 />
               </Placeholder>
               <Row>
                 <Placeholder as="p" animation="glow">
                   <Placeholder
                     style={{
-                      
                       height: 25,
                       width: 60,
                     }}
                   />
                   <Placeholder
                     style={{
-                      
                       height: 25,
                       width: 100,
                     }}
@@ -114,28 +106,24 @@ const CardBlogShimmer = memo((props:any) => {
                 <Placeholder as="p" animation="glow">
                   <Placeholder
                     style={{
-                      
                       height: 25,
                       width: 70,
                     }}
                   />
                   <Placeholder
                     style={{
-                     
                       height: 25,
                       width: 100,
                     }}
                   />
                   <Placeholder
                     style={{
-                      
                       height: 25,
                       width: 120,
                     }}
                   />
                   <Placeholder
                     style={{
-                      
                       height: 25,
                       width: 140,
                     }}
@@ -149,11 +137,6 @@ const CardBlogShimmer = memo((props:any) => {
     </Fragment>
   );
 });
-
-
-
-
-
 
 CardBlogShimmer.displayName = "CardBlogShimmer";
 

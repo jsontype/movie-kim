@@ -16,7 +16,7 @@ import { cast } from "../../StaticData/data";
 import { useBreadcrumb } from "@/utilities/usePage";
 
 export const CastPage = memo(() => {
-  useBreadcrumb('Cast')
+  useBreadcrumb("Cast");
   return (
     <Fragment>
       <section className="section-padding">
@@ -34,10 +34,7 @@ export const CastPage = memo(() => {
           </Row>
           <div className="text-center">
             <div className="iq-button">
-              <Link
-                href="#"
-                className="btn text-uppercase position-relative"
-              >
+              <Link href="#" className="btn text-uppercase position-relative">
                 <span className="button-text">load more</span>{" "}
                 <i className="fa-solid fa-play"></i>
               </Link>

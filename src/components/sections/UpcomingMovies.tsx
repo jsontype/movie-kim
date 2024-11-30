@@ -32,5 +32,5 @@ const UpcomingMovies = memo(() => {
   );
 });
 
-UpcomingMovies.displayName = "UpcomingMovies"
+UpcomingMovies.displayName = "UpcomingMovies";
 export default UpcomingMovies;

@@ -2,10 +2,9 @@ import { Fragment, useEffect, memo, createRef } from "react";
 import _ from "lodash";
 
 //choices
-import Choices from 'choices.js'
+import Choices from "choices.js";
 // import 'choices.js/public/assets/styles/choices.css'
 // import 'choices.js/public/assets/styles/choices.min.css';
-
 
 //interfaces
 interface Props {

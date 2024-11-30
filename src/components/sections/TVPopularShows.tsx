@@ -29,7 +29,7 @@ const TVPopularShows = memo(() => {
       </SectionSlider>
     </Fragment>
   );
-})
+});
 
-TVPopularShows.displayName = 'TVPopularShows';
+TVPopularShows.displayName = "TVPopularShows";
 export default TVPopularShows;

@@ -2,7 +2,14 @@ import React, { Fragment, memo, useState } from "react";
 
 //react bootstrap
 import {
-  Col, Container, Row, Nav, Tab, Button, Modal, Form,
+  Col,
+  Container,
+  Row,
+  Nav,
+  Tab,
+  Button,
+  Modal,
+  Form,
 } from "react-bootstrap";
 
 //router
@@ -107,10 +114,7 @@ const PlaylistPage = memo(() => {
             <Tab.Container defaultActiveKey="first">
               <Nav className="d-flex justify-content-center nav nav-pills tab-header">
                 <Nav className="" id="nav-tab" role="tablist">
-                  <Nav.Link
-                    eventKey="first"
-                    id="nav-playlist-tab"
-                  >
+                  <Nav.Link eventKey="first" id="nav-playlist-tab">
                     Playlist
                   </Nav.Link>
                   <Nav.Link
@@ -430,5 +434,5 @@ const PlaylistPage = memo(() => {
   );
 });
 
-PlaylistPage.displayName = "PlaylistPage"
+PlaylistPage.displayName = "PlaylistPage";
 export default PlaylistPage;

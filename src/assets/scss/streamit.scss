@@ -1,7 +1,6 @@
 @import "./bootstrap/mixins/banner";
 @include bsBanner("");
 
-
 // scss-docs-start import-stack
 // Configuration
 @import "./bootstrap/functions";
@@ -61,4 +60,3 @@
 
 // custom bootstrap component
 @import "./streamit-design-system/components/components";
-

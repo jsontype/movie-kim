@@ -8,88 +8,96 @@
 *	
 **/
 
-
-
 @font-face {
-	font-family: iconly;
-	font-style: normal;
-	font-weight: 200;
-	src: url('../fonts/Iconly-light.eot');
-	src: url('../fonts/Iconly-light.eot') format('embedded-opentype'),  /* IE6-8 */
-		 url('../fonts/Iconly-light.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-		 url('../fonts/Iconly-light.ttf') format('truetype'),
-         url('../fonts/Iconly-light.svg') format('svg');;
-}
-
-
-@font-face {
-	font-family: iconly;
-	font-style: normal;
-	font-weight: normal;
-	src: url('../fonts/Iconly-Broken.eot');
-	src: url('../fonts/Iconly-Broken.eot') format('embedded-opentype'),  /* IE6-8 */
-		 url('../fonts/Iconly-Broken.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-		 url('../fonts/Iconly-Broken.ttf') format('truetype'),
-         url('../fonts/Iconly-Broken.svg') format('svg');;
+  font-family: iconly;
+  font-style: normal;
+  font-weight: 200;
+  src: url("../fonts/Iconly-light.eot");
+  src:
+    url("../fonts/Iconly-light.eot") format("embedded-opentype"),
+    /* IE6-8 */ url("../fonts/Iconly-light.woff") format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url("../fonts/Iconly-light.ttf")
+      format("truetype"),
+    url("../fonts/Iconly-light.svg") format("svg");
 }
 
 @font-face {
-	font-family: iconly;
-	font-style: normal;
-	font-weight: 700;
-	src: url('../fonts/Iconly-Bold.eot');
-	src: url('../fonts/Iconly-Bold.eot') format('embedded-opentype'),  /* IE6-8 */
-		 url('../fonts/Iconly-Bold.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-		 url('../fonts/Iconly-Bold.ttf') format('truetype'),
-         url('../fonts/Iconly-Bold.svg') format('svg');;
+  font-family: iconly;
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Iconly-Broken.eot");
+  src:
+    url("../fonts/Iconly-Broken.eot") format("embedded-opentype"),
+    /* IE6-8 */ url("../fonts/Iconly-Broken.woff") format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url("../fonts/Iconly-Broken.ttf")
+      format("truetype"),
+    url("../fonts/Iconly-Broken.svg") format("svg");
 }
 
 @font-face {
-	font-family: iconly;
-	font-style: normal;
-	font-weight: 900;
-	src: url('../fonts/Iconly-bulk.eot');
-	src: url('../fonts/Iconly-bulk.eot') format('embedded-opentype'),  /* IE6-8 */
-		 url('../fonts/Iconly-bulk.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-		 url('../fonts/Iconly-bulk.ttf') format('truetype'),
-         url('../fonts/Iconly-bulk.svg') format('svg');;
+  font-family: iconly;
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Iconly-Bold.eot");
+  src:
+    url("../fonts/Iconly-Bold.eot") format("embedded-opentype"),
+    /* IE6-8 */ url("../fonts/Iconly-Bold.woff") format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url("../fonts/Iconly-Bold.ttf")
+      format("truetype"),
+    url("../fonts/Iconly-Bold.svg") format("svg");
 }
 
 @font-face {
-	font-family: iconly;
-	font-style: normal;
-	font-weight: 200;
-	src: url('../fonts/iconly.eot');
-	src: url('../fonts/iconly.eot') format('embedded-opentype'),  /* IE6-8 */
-		 url('../fonts/iconly.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-		 url('../fonts/iconly.ttf') format('truetype'),
-         url('../fonts/iconly.svg') format('svg');;
+  font-family: iconly;
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/Iconly-bulk.eot");
+  src:
+    url("../fonts/Iconly-bulk.eot") format("embedded-opentype"),
+    /* IE6-8 */ url("../fonts/Iconly-bulk.woff") format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url("../fonts/Iconly-bulk.ttf")
+      format("truetype"),
+    url("../fonts/Iconly-bulk.svg") format("svg");
 }
 
-[class^="iconly-"], [class*="iconly-"] {
+@font-face {
+  font-family: iconly;
+  font-style: normal;
+  font-weight: 200;
+  src: url("../fonts/iconly.eot");
+  src:
+    url("../fonts/iconly.eot") format("embedded-opentype"),
+    /* IE6-8 */ url("../fonts/iconly.woff") format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url("../fonts/iconly.ttf")
+      format("truetype"),
+    url("../fonts/iconly.svg") format("svg");
+}
+
+[class^="iconly-"],
+[class*="iconly-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'iconly' !important;
+  font-family: "iconly" !important;
   speak: never;
   font-style: normal;
   font-variant: normal;
   text-transform: none;
   font-weight: normal;
   line-height: 1;
-/*   Better Font Rendering =========== */
+  /*   Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icli{
+.icli {
   font-weight: 200;
 }
-.icbr{
+.icbr {
   font-weight: normal;
 }
-.icbo{
+.icbo {
   font-weight: 700;
 }
-.icbu{
+.icbu {
   font-weight: 900;
 }
 
@@ -394,7 +402,6 @@
   content: "\e963";
 }
 
-
 .icon-setting:before {
   content: "\e000";
 }
@@ -402,4 +409,3 @@
 .icon-send:before {
   content: "\e001";
 }
-

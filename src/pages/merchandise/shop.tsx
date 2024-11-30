@@ -6,10 +6,10 @@ import { useBreadcrumb } from "@/utilities/usePage";
 import { Col, Container, Row, Tab, Nav } from "react-bootstrap";
 
 // Next-link
-import Link from 'next/link'
+import Link from "next/link";
 
 //components
-import ShopCategorySidebar from '@/components/merchandise/ShopCategorySidebar'
+import ShopCategorySidebar from "@/components/merchandise/ShopCategorySidebar";
 import CardShopListView from "@/components/merchandise/Cardshoplistview";
 import CardShopGridView from "@/components/merchandise/Cardshowgridview";
 
@@ -26,17 +26,16 @@ import { getnewProductAsync } from "@/store/shop/actions";
 import * as SettingSelector from "@/store/shop/selectors";
 import { AnyAction } from "@reduxjs/toolkit";
 
-
 const ShopPage = () => {
-  useBreadcrumb('Shop')
+  useBreadcrumb("Shop");
 
   // selector
   const newProduct = useSelector(SettingSelector.newProduct);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getnewProductAsync() as unknown as AnyAction)
-  })
-  let filterWiseProducts = products
+    dispatch(getnewProductAsync() as unknown as AnyAction);
+  });
+  let filterWiseProducts = products;
 
   return (
     <>
@@ -44,7 +43,7 @@ const ShopPage = () => {
         <Row>
           <Col lg="3">
             <ShopCategorySidebar>
-              {newProduct.map((item:any, index:any) => {
+              {newProduct.map((item: any, index: any) => {
                 return (
                   <span key={index}>
                     <ul className="list-unstyled m-0 p-0 shop-product">
@@ -70,9 +69,7 @@ const ShopPage = () => {
           <Col xl="9">
             <Tab.Container defaultActiveKey="third">
               <div className="d-flex align-items-center justify-content-between mb-5 shop-filter flex-wrap">
-                <p>
-                  Showing 1–10 of 31 results{" "}
-                </p>
+                <p>Showing 1–10 of 31 results </p>
                 <div className="d-flex align-items-center">
                   <div className="product-view-button">
                     <Nav
@@ -343,10 +340,7 @@ const ShopPage = () => {
                     </Nav>
                   </div>
                   <div className="iq-custom-select d-inline-block shop-select">
-                    <select
-                      name="cars"
-                      className="form-select season-select"
-                    >
+                    <select name="cars" className="form-select season-select">
                       <option value="season1">Default sorting</option>
                       <option>Sort by popularity</option>
                       <option>Sort by average rating</option>
@@ -357,7 +351,7 @@ const ShopPage = () => {
                   </div>
                 </div>
               </div>
-              <Tab.Content >
+              <Tab.Content>
                 {/* <!-- List View --> */}
                 <Tab.Pane
                   id="pills-list-view"

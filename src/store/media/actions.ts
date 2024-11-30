@@ -47,7 +47,7 @@ const sleepTime = 500;
 export const getMoviesTagsAsync =
   () =>
   (
-    dispatch: (arg0: { payload: any; type: "media/media_moviesTags" }) => void
+    dispatch: (arg0: { payload: any; type: "media/media_moviesTags" }) => void,
   ) => {
     // You can call api here
     setTimeout(() => {
@@ -57,7 +57,7 @@ export const getMoviesTagsAsync =
 export const getTvShowTagsAsync =
   () =>
   (
-    dispatch: (arg0: { payload: any; type: "media/media_tvShowsTags" }) => void
+    dispatch: (arg0: { payload: any; type: "media/media_tvShowsTags" }) => void,
   ) => {
     // You can call api here
     setTimeout(() => {
@@ -67,7 +67,7 @@ export const getTvShowTagsAsync =
 export const getVideoTagsAsync =
   () =>
   (
-    dispatch: (arg0: { payload: any; type: "media/media_videoTags" }) => void
+    dispatch: (arg0: { payload: any; type: "media/media_videoTags" }) => void,
   ) => {
     // You can call api here
     setTimeout(() => {
@@ -86,7 +86,7 @@ export const getLatestMoviesAsync =
 export const getTrendingSliderAsync =
   () =>
   (
-    dispatch: (arg0: { payload: any; type: "media/trending_slider" }) => void
+    dispatch: (arg0: { payload: any; type: "media/trending_slider" }) => void,
   ) => {
     setTimeout(() => {
       dispatch(trending_slider(trending_slider));

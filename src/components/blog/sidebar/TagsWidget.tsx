@@ -1,10 +1,10 @@
-import React, { Fragment, memo } from 'react'
+import React, { Fragment, memo } from "react";
 
 //react-router-dom
 import Link from "next/link";
 
 //static data
-import { blogTags } from '../../../StaticData/blogs'
+import { blogTags } from "../../../StaticData/blogs";
 
 const TagsWidget = memo(() => {
   return (
@@ -16,16 +16,18 @@ const TagsWidget = memo(() => {
             {blogTags.map((tags, index) => {
               return (
                 <li key={index}>
-                  <Link href="/blogs/filter/tags" className="position-relative">{tags.name}</Link>
+                  <Link href="/blogs/filter/tags" className="position-relative">
+                    {tags.name}
+                  </Link>
                 </li>
-              )
+              );
             })}
           </ul>
         </div>
       </div>
     </Fragment>
-  )
-})
+  );
+});
 
-TagsWidget.displayName = "TagsWidget"
-export default TagsWidget
+TagsWidget.displayName = "TagsWidget";
+export default TagsWidget;

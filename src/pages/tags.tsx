@@ -16,7 +16,7 @@ import { movieTags, tvShowsTags, videoTags } from "../StaticData/data";
 import { useBreadcrumb } from "@/utilities/usePage";
 
 const TagsPage = memo(() => {
-  useBreadcrumb('Tags')
+  useBreadcrumb("Tags");
   return (
     <Fragment>
       <section className="section-padding">
@@ -27,18 +27,13 @@ const TagsPage = memo(() => {
           <Row as="ul" className="mb-0 list-inline">
             {movieTags.map((item, index) => (
               <Col as="li" xl="2" lg="3" md="4" sm="6" key={index}>
-                <TagsCard
-                  title={item.title}
-                />
+                <TagsCard title={item.title} />
               </Col>
             ))}
           </Row>
           <div className="text-center">
             <div className="iq-button">
-              <Link
-                href="#"
-                className="btn text-uppercase position-relative"
-              >
+              <Link href="#" className="btn text-uppercase position-relative">
                 <span className="button-text">load more</span>
                 <i className="fa-solid fa-play"></i>
               </Link>
@@ -54,18 +49,13 @@ const TagsPage = memo(() => {
           <Row as="ul" className="row mb-0 list-inline">
             {tvShowsTags.map((item, index) => (
               <Col as="li" xl="2" lg="3" md="4" sm="6" key={index}>
-                <TagsCard
-                  title={item.title}
-                />
+                <TagsCard title={item.title} />
               </Col>
             ))}
           </Row>
           <div className="text-center">
             <div className="iq-button">
-              <Link
-                href="#"
-                className="btn text-uppercase position-relative"
-              >
+              <Link href="#" className="btn text-uppercase position-relative">
                 <span className="button-text">load more</span>
                 <i className="fa-solid fa-play"></i>
               </Link>
@@ -81,18 +71,13 @@ const TagsPage = memo(() => {
           <Row as="ul" className="mb-0 list-inline">
             {videoTags.map((item, index) => (
               <Col as="li" xl="2" lg="3" md="4" sm="6" key={index}>
-                <TagsCard
-                  title={item.title}
-                />
+                <TagsCard title={item.title} />
               </Col>
             ))}
           </Row>
           <div className="text-center">
             <div className="iq-button">
-              <Link
-                href="#"
-                className="btn text-uppercase position-relative"
-              >
+              <Link href="#" className="btn text-uppercase position-relative">
                 <span className="button-text">load more</span>
                 <i className="fa-solid fa-play"></i>
               </Link>

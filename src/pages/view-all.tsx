@@ -13,7 +13,7 @@ import { generateImgPath } from "../StaticData/data";
 import { useBreadcrumb } from "@/utilities/usePage";
 
 const ViewAll = memo(() => {
-  useBreadcrumb('View All')
+  useBreadcrumb("View All");
   const viewAll = [
     {
       image: generateImgPath("/assets/images/movies/related/01.webp"),

@@ -1,4 +1,4 @@
-export type STATUS_TYPE = 'ok' | 'error';
+export type STATUS_TYPE = "ok" | "error";
 
 export interface Torrents {
   url: string;
@@ -15,7 +15,7 @@ export interface Torrents {
   size_bytes: number;
   date_uploaded: string;
   date_uploaded_unix: number;
-};
+}
 
 export interface Movies {
   id: number;
@@ -44,7 +44,7 @@ export interface Movies {
   torrents: Torrents[];
   date_uploaded: string;
   date_uploaded_unix: number;
-};
+}
 
 export interface Movie {
   id: number;
@@ -72,11 +72,11 @@ export interface Movie {
   torrents: Torrents[];
   date_uploaded: string;
   date_uploaded_unix: number;
-};
+}
 
 export interface Meta {
   server_time: number;
   server_timezone: string;
   api_version: number;
   execution_time: string;
-};
+}

@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from 'react'
+import React, { Fragment, useEffect, useState } from "react";
 
 import { useInView } from "react-intersection-observer";
 
@@ -6,10 +6,10 @@ import { useInView } from "react-intersection-observer";
 import { Container, Row, Nav, Tab } from "react-bootstrap";
 
 // react-router-dom
-import Link from 'next/link';
+import Link from "next/link";
 
 // shimmer-card
-import TrendingShimer from '@/components/shimmer/Trending';
+import TrendingShimer from "@/components/shimmer/Trending";
 
 // img
 import logo from "/assets/images/logo.png";
@@ -25,12 +25,10 @@ import * as SettingSelector from "@/store/media/selectors";
 //swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { EffectFade, Navigation, Thumbs, FreeMode } from "swiper";
-import { AnyAction } from '@reduxjs/toolkit';
-import Image from 'next/image';
+import { AnyAction } from "@reduxjs/toolkit";
+import Image from "next/image";
 
 SwiperCore.use([EffectFade, Navigation, Thumbs, FreeMode]);
-
-
 
 const HomeTrendingslider = () => {
   const trendingSlider = useSelector(SettingSelector.trendingSlider);
@@ -49,15 +47,16 @@ const HomeTrendingslider = () => {
   return (
     <Fragment>
       <div ref={ref}>
-
         {trendingSlider.length === 0 ? (
           <TrendingShimer />
         ) : (
           <section>
             <Container fluid>
               <Row className="m-0 p-0">
-                <div id="iq-trending" className="s-margin iq-tvshow-tabs iq-rtl-direction iq-trending-tabs">
-
+                <div
+                  id="iq-trending"
+                  className="s-margin iq-tvshow-tabs iq-rtl-direction iq-trending-tabs"
+                >
                   <div className="iq-main-header d-flex align-items-center justify-content-between">
                     <h4 className="main-title">Trending</h4>
                   </div>
@@ -91,9 +90,13 @@ const HomeTrendingslider = () => {
                         loop={true}
                         className="swiper-wrapper list-inline p-0 m-0  trending-slider-nav align-items-center"
                       >
-                        {trendingSlider.map((item:any, index:any) => {
+                        {trendingSlider.map((item: any, index: any) => {
                           return (
-                            <SwiperSlide tag="li" key={index} className="swiper-slide">
+                            <SwiperSlide
+                              tag="li"
+                              key={index}
+                              className="swiper-slide"
+                            >
                               <Link href="#">
                                 <div className="movie-swiper position-relative">
                                   <img
@@ -108,7 +111,11 @@ const HomeTrendingslider = () => {
                         })}
                       </Swiper>
                     </div>
-                    <div id="gallery-bottom" className="swiper trending-tab-slider" data-swiper="gallery-bottom">
+                    <div
+                      id="gallery-bottom"
+                      className="swiper trending-tab-slider"
+                      data-swiper="gallery-bottom"
+                    >
                       <Swiper
                         tag="ul"
                         // onSwiper={setThumbsSwiper}
@@ -118,17 +125,22 @@ const HomeTrendingslider = () => {
                         watchSlidesProgress={true}
                         loop={true}
                         id="trending-slider"
-                        className="swiper-wrapper  list-inline p-0 m-0 d-flex align-items-center trending-slider">
-                        {trendingSlider.map((item:any, index:any) => {
+                        className="swiper-wrapper  list-inline p-0 m-0 d-flex align-items-center trending-slider"
+                      >
+                        {trendingSlider.map((item: any, index: any) => {
                           return (
-                            <SwiperSlide tag="li" key={index} className="swiper-slide swiper-bg slider-big-img-1">
+                            <SwiperSlide
+                              tag="li"
+                              key={index}
+                              className="swiper-slide swiper-bg slider-big-img-1"
+                            >
                               <div
                                 className="tranding-block position-relative"
-                                style={{ backgroundImage: `url(${item.thumbnail})` }}
+                                style={{
+                                  backgroundImage: `url(${item.thumbnail})`,
+                                }}
                               >
-                                <Tab.Container
-                                  defaultActiveKey="trending-data1"
-                                >
+                                <Tab.Container defaultActiveKey="trending-data1">
                                   <div className="tab-title-info position-relative iq-ltr-direction">
                                     <Nav
                                       as="ul"
@@ -136,16 +148,21 @@ const HomeTrendingslider = () => {
                                       className="trending-pills d-flex nav nav-pills justify-content-center align-items-center text-center"
                                     >
                                       <Nav.Item as="li" className="nav-item">
-                                        <Nav.Link href="" eventKey="trending-data1">
+                                        <Nav.Link
+                                          href=""
+                                          eventKey="trending-data1"
+                                        >
                                           Overview
                                         </Nav.Link>
                                       </Nav.Item>
                                       <Nav.Item as="li" className="nav-item">
-                                        <Nav.Link href="" eventKey="trending-data2">
+                                        <Nav.Link
+                                          href=""
+                                          eventKey="trending-data2"
+                                        >
                                           Episodes
                                         </Nav.Link>
                                       </Nav.Item>
-
                                     </Nav>
                                   </div>
                                   <Tab.Content className="trending-content">
@@ -172,7 +189,9 @@ const HomeTrendingslider = () => {
                                           <span className="badge bg-secondary p-3">
                                             18+
                                           </span>
-                                          <span className="ms-3">{item.season_type}</span>
+                                          <span className="ms-3">
+                                            {item.season_type}
+                                          </span>
                                           <span className="trending-year">
                                             {item.date}
                                           </span>
@@ -195,7 +214,7 @@ const HomeTrendingslider = () => {
                                         <div className="p-btns">
                                           <div className="d-flex align-items-center p-0">
                                             <Link
-                                              href='/tv-shows/detail'
+                                              href="/tv-shows/detail"
                                               className="btn btn-hover me-2"
                                               tabIndex={0}
                                             >
@@ -210,26 +229,43 @@ const HomeTrendingslider = () => {
                                               className="btn btn-link"
                                               tabIndex={0}
                                             >
-                                              <i className="ri-add-line"></i>My List
+                                              <i className="ri-add-line"></i>My
+                                              List
                                             </Link>
                                           </div>
                                         </div>
                                         <div className="trending-list mt-4">
                                           <div className="text-primary title">
                                             Starring:
-                                            {item.cast.map((item:any, index:any) => {
-                                              return (
-                                                <Link className='text-capitalize ms-2' key={index} href="cast/detail">{item},</Link>
-                                              )
-                                            })}
+                                            {item.cast.map(
+                                              (item: any, index: any) => {
+                                                return (
+                                                  <Link
+                                                    className="text-capitalize ms-2"
+                                                    key={index}
+                                                    href="cast/detail"
+                                                  >
+                                                    {item},
+                                                  </Link>
+                                                );
+                                              },
+                                            )}
                                           </div>
                                           <div className="text-primary title">
                                             Genres:
-                                            {item.geners.map((item:any, index:any) => {
-                                              return (
-                                                <Link className='text-capitalize ms-2' key={index} href="/view-all">{item},</Link>
-                                              )
-                                            })}
+                                            {item.geners.map(
+                                              (item: any, index: any) => {
+                                                return (
+                                                  <Link
+                                                    className="text-capitalize ms-2"
+                                                    key={index}
+                                                    href="/view-all"
+                                                  >
+                                                    {item},
+                                                  </Link>
+                                                );
+                                              },
+                                            )}
                                           </div>
                                           <div className="text-primary title">
                                             This Is:
@@ -260,57 +296,64 @@ const HomeTrendingslider = () => {
                                           {item.title}
                                         </h1>
                                         <div className="d-flex align-items-center text-white text-detail">
-                                          <span className="ms-3">{item.season_type}</span>
+                                          <span className="ms-3">
+                                            {item.season_type}
+                                          </span>
                                           <span className="trending-year">
                                             {item.date}
                                           </span>
                                         </div>
                                         <div className="show-movie">
-                                          <h4 className="ms-4 mb-2">Latest Episodes</h4>
+                                          <h4 className="ms-4 mb-2">
+                                            Latest Episodes
+                                          </h4>
                                           <div className="animated fadeInUp">
                                             <div className="row episodes list-inline p-0 mb-0 iq-rtl-direction ms-4">
-                                              {item.latest_episodes.map((item1:any, index:any) => {
-                                                return (
-                                                  <div className="e-item col-lg-3 col-sm-12 col-md-6" key={index}>
-                                                    <div className="block-image position-relative">
-                                                      <Link
-                                                        href="/tv-shows/episode"
-                                                      >
-                                                        <img
-                                                          src={item1.thumbnail}
-                                                          className="img-fluid img-zoom"
-                                                          alt="showImg-"
-                                                          loading="lazy"
-                                                        />
-                                                      </Link>
-                                                      <div className="episode-play-info">
-                                                        <div className="episode-play">
-                                                          <Link
-                                                            href="/tv-shows/episode"
-                                                          >
-                                                            <i className="ri-play-fill"></i>
-                                                          </Link>
+                                              {item.latest_episodes.map(
+                                                (item1: any, index: any) => {
+                                                  return (
+                                                    <div
+                                                      className="e-item col-lg-3 col-sm-12 col-md-6"
+                                                      key={index}
+                                                    >
+                                                      <div className="block-image position-relative">
+                                                        <Link href="/tv-shows/episode">
+                                                          <img
+                                                            src={
+                                                              item1.thumbnail
+                                                            }
+                                                            className="img-fluid img-zoom"
+                                                            alt="showImg-"
+                                                            loading="lazy"
+                                                          />
+                                                        </Link>
+                                                        <div className="episode-play-info">
+                                                          <div className="episode-play">
+                                                            <Link href="/tv-shows/episode">
+                                                              <i className="ri-play-fill"></i>
+                                                            </Link>
+                                                          </div>
                                                         </div>
                                                       </div>
-                                                    </div>
-                                                    <div className="epi-desc p-3">
-                                                      <div className="d-flex align-items-center justify-content-between mb-3">
-                                                        <span className="text-white rel-date text-capitalize">
-                                                          {item1.created}
-                                                        </span>
-                                                        <span className="text-primary run-time">
-                                                          {item1.duration}
-                                                        </span>
+                                                      <div className="epi-desc p-3">
+                                                        <div className="d-flex align-items-center justify-content-between mb-3">
+                                                          <span className="text-white rel-date text-capitalize">
+                                                            {item1.created}
+                                                          </span>
+                                                          <span className="text-primary run-time">
+                                                            {item1.duration}
+                                                          </span>
+                                                        </div>
+                                                        <Link href="/tv-shows/episode">
+                                                          <h5 className="epi-name text-white mb-0">
+                                                            {item1.title}
+                                                          </h5>
+                                                        </Link>
                                                       </div>
-                                                      <Link
-                                                        href="/tv-shows/episode"
-                                                      >
-                                                        <h5 className="epi-name text-white mb-0">{item1.title}</h5>
-                                                      </Link>
                                                     </div>
-                                                  </div>
-                                                );
-                                              })}
+                                                  );
+                                                },
+                                              )}
                                             </div>
                                           </div>
                                         </div>
@@ -337,11 +380,10 @@ const HomeTrendingslider = () => {
               </Row>
             </Container>
           </section>
-        )
-        }
+        )}
       </div>
     </Fragment>
-  )
-}
+  );
+};
 
-export default HomeTrendingslider
+export default HomeTrendingslider;

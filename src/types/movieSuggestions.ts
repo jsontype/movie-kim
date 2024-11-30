@@ -1,4 +1,4 @@
-import { Meta, Movies, STATUS_TYPE } from './common';
+import { Meta, Movies, STATUS_TYPE } from "./common";
 
 export type MovieSuggestions = {
   status: STATUS_TYPE;
@@ -7,5 +7,5 @@ export type MovieSuggestions = {
     movie_count: number;
     movies: Movies[];
   };
-  '@meta': Meta;
+  "@meta": Meta;
 };

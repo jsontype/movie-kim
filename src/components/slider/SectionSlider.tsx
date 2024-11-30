@@ -53,7 +53,7 @@ const SectionSlider: FC<SectionSliderProps> = memo(
           .forEach((separateSlide) => separateSlide.classList.remove("last"));
 
         const swiperSlide = slider.current.querySelectorAll(
-          ".swiper-slide-visible"
+          ".swiper-slide-visible",
         );
 
         const lastVisibleSlide = swiperSlide[swiperSlide.length - 1];
@@ -129,7 +129,7 @@ const SectionSlider: FC<SectionSliderProps> = memo(
         </Container>
       </div>
     );
-  }
+  },
 );
 
 SectionSlider.displayName = "SectionSlider";

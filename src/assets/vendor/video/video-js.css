@@ -823,14 +823,18 @@ body.vjs-full-window {
   display: flex;
   visibility: visible;
   opacity: 1;
-  transition: visibility 0.1s, opacity 0.1s;
+  transition:
+    visibility 0.1s,
+    opacity 0.1s;
 }
 
 .vjs-has-started.vjs-user-inactive.vjs-playing .vjs-control-bar {
   visibility: visible;
   opacity: 0;
   pointer-events: none;
-  transition: visibility 1s, opacity 1s;
+  transition:
+    visibility 1s,
+    opacity 1s;
 }
 
 .vjs-controls-disabled .vjs-control-bar,
@@ -1020,7 +1024,9 @@ body.vjs-full-window {
 .video-js.vjs-user-inactive .vjs-progress-control .vjs-mouse-display {
   visibility: hidden;
   opacity: 0;
-  transition: visibility 1s, opacity 1s;
+  transition:
+    visibility 1s,
+    opacity 1s;
 }
 
 .video-js.vjs-user-inactive.vjs-no-flex
@@ -1098,7 +1104,12 @@ body.vjs-full-window {
   visibility: visible;
   opacity: 1;
   position: relative;
-  transition: visibility 0.1s, opacity 0.1s, height 0.1s, width 0.1s, left 0s,
+  transition:
+    visibility 0.1s,
+    opacity 0.1s,
+    height 0.1s,
+    width 0.1s,
+    left 0s,
     top 0s;
 }
 .video-js .vjs-volume-panel.vjs-hover .vjs-volume-control.vjs-volume-horizontal,
@@ -1144,12 +1155,22 @@ body.vjs-full-window {
   height: 8em;
   width: 3em;
   left: -3000em;
-  transition: visibility 1s, opacity 1s, height 1s 1s, width 1s 1s, left 1s 1s,
+  transition:
+    visibility 1s,
+    opacity 1s,
+    height 1s 1s,
+    width 1s 1s,
+    left 1s 1s,
     top 1s 1s;
 }
 
 .video-js .vjs-volume-panel .vjs-volume-control.vjs-volume-horizontal {
-  transition: visibility 1s, opacity 1s, height 1s 1s, width 1s, left 1s 1s,
+  transition:
+    visibility 1s,
+    opacity 1s,
+    height 1s 1s,
+    width 1s,
+    left 1s 1s,
     top 1s 1s;
 }
 
@@ -1309,7 +1330,9 @@ body.vjs-full-window {
 .video-js.vjs-user-inactive .vjs-volume-control .vjs-mouse-display {
   visibility: hidden;
   opacity: 0;
-  transition: visibility 1s, opacity 1s;
+  transition:
+    visibility 1s,
+    opacity 1s;
 }
 
 .video-js.vjs-user-inactive.vjs-no-flex .vjs-volume-control .vjs-mouse-display {
@@ -1584,10 +1607,11 @@ video::-webkit-media-text-track-display {
 .vjs-seeking .vjs-loading-spinner:after,
 .vjs-waiting .vjs-loading-spinner:before,
 .vjs-waiting .vjs-loading-spinner:after {
-  -webkit-animation: vjs-spinner-spin 1.1s cubic-bezier(0.6, 0.2, 0, 0.8)
-      infinite,
+  -webkit-animation:
+    vjs-spinner-spin 1.1s cubic-bezier(0.6, 0.2, 0, 0.8) infinite,
     vjs-spinner-fade 1.1s linear infinite;
-  animation: vjs-spinner-spin 1.1s cubic-bezier(0.6, 0.2, 0, 0.8) infinite,
+  animation:
+    vjs-spinner-spin 1.1s cubic-bezier(0.6, 0.2, 0, 0.8) infinite,
     vjs-spinner-fade 1.1s linear infinite;
 }
 

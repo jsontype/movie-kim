@@ -5,7 +5,7 @@ import Image from "next/image";
 
 // img
 // import Loader from '/assets/images/loader.gif'
-import LoaderImg from '../../public/assets/images/loader.gif'
+import LoaderImg from "../../public/assets/images/loader.gif";
 
 const Loader = memo(() => {
   return (

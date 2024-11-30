@@ -52,7 +52,7 @@ const Trending = memo(() => {
       episodDate: "October 1, 2022",
       episodTime: "45min",
       episodTitle: "Episode 1",
-      link: ''
+      link: "",
     },
     {
       image: "/assets/images/tv-show/episodes/02.webp",
@@ -60,7 +60,7 @@ const Trending = memo(() => {
       episodDate: "October 8, 2022",
       episodTime: "35min",
       episodTitle: "Episode 2",
-      link: ''
+      link: "",
     },
     {
       image: "/assets/images/tv-show/episodes/03.webp",
@@ -68,7 +68,7 @@ const Trending = memo(() => {
       episodDate: "October 15, 2022",
       episodTime: "36min",
       episodTitle: "Episode 3",
-      link: ''
+      link: "",
     },
     {
       image: "/assets/images/tv-show/episodes/04.webp",
@@ -76,7 +76,7 @@ const Trending = memo(() => {
       episodDate: "October 22, 2022",
       episodTime: "41min",
       episodTitle: "Episode 4",
-      link: ''
+      link: "",
     },
     {
       image: "/assets/images/tv-show/episodes/05.webp",
@@ -84,7 +84,7 @@ const Trending = memo(() => {
       episodDate: "October 22, 2022",
       episodTime: "41min",
       episodTitle: "Episode 5",
-      link: ''
+      link: "",
     },
   ]);
   return (
@@ -130,7 +130,6 @@ const Trending = memo(() => {
                     {trendingSlider.map((data) => (
                       <SwiperSlide
                         key={data.image + "thumb"}
-
                         className="swiper-slide"
                       >
                         <Link href="#">
@@ -158,7 +157,6 @@ const Trending = memo(() => {
                   {trendingSlider.map((data) => (
                     <SwiperSlide
                       key={data.image + "main"}
-
                       className="slider-big-img-1 p-0"
                     >
                       <div className="trending-tab-slider-image">
@@ -213,7 +211,7 @@ const Trending = memo(() => {
                                           </div>
                                           <div className="d-flex align-items-center flex-wrap series mb-4 gap-3">
                                             {/* <router-link to="#"> */}
-                                            <Link href='#'>
+                                            <Link href="#">
                                               <img
                                                 src="/assets/images/movies/trending-label.webp"
                                                 className="img-fluid"
@@ -321,7 +319,6 @@ const Trending = memo(() => {
                                             >
                                               {episode.map((edata, index) => (
                                                 <SwiperSlide
-
                                                   key={index}
                                                   className="swiper-slide"
                                                 >
@@ -372,7 +369,9 @@ const Trending = memo(() => {
                                                   href="#"
                                                   className="video-open playbtn text-decoration-none"
                                                   tabIndex={0}
-                                                  onClick={() => setToggler(!toggler)}
+                                                  onClick={() =>
+                                                    setToggler(!toggler)
+                                                  }
                                                 >
                                                   <svg
                                                     version="1.1"
@@ -440,7 +439,6 @@ const Trending = memo(() => {
                                             >
                                               {episode.map((eData, index) => (
                                                 <SwiperSlide
-
                                                   key={index}
                                                   className="swiper-slide"
                                                 >
@@ -490,7 +488,7 @@ const Trending = memo(() => {
       />
     </Fragment>
   );
-})
+});
 
-Trending.displayName = 'Trending'
-export default Trending
+Trending.displayName = "Trending";
+export default Trending;

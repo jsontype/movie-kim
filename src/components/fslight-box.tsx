@@ -4,13 +4,13 @@ import React, { memo, Fragment, useState } from "react";
 import { Col } from "react-bootstrap";
 
 // Next-Link
-import Link from 'next/link'
+import Link from "next/link";
 
 //react fslight-box
 import FsLightbox from "fslightbox-react";
 
 interface Props {
-  image: string
+  image: string;
 }
 const FsLightBox = memo((props: Props) => {
   const [toggler, setToggler] = useState(false);
@@ -31,7 +31,10 @@ const FsLightBox = memo((props: Props) => {
             loading="lazy"
           />
           <span className="content btn btn-transparant iq-button">
-            <i className="fa fa-play me-2 text-white" onClick={() => setToggler(!toggler)}></i>
+            <i
+              className="fa fa-play me-2 text-white"
+              onClick={() => setToggler(!toggler)}
+            ></i>
             <span onClick={() => setToggler(!toggler)}>Trailer Link</span>
           </span>
         </Link>

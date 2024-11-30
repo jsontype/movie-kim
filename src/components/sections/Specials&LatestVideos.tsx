@@ -29,7 +29,7 @@ const SpecialsLatestVideos = memo(() => {
       </SectionSlider>
     </Fragment>
   );
-})
+});
 
-SpecialsLatestVideos.displayName = 'SpecialsLatestVideos';
+SpecialsLatestVideos.displayName = "SpecialsLatestVideos";
 export default SpecialsLatestVideos;

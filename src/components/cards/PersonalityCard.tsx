@@ -4,10 +4,10 @@ import { Fragment, memo } from "react";
 import Link from "next/link";
 
 interface Props {
-  image: string,
-  title: string,
-  category: string
-  categoryLink?: string
+  image: string;
+  title: string;
+  category: string;
+  categoryLink?: string;
 }
 
 const PersonalityCard = memo((props: Props) => {
@@ -21,9 +21,9 @@ const PersonalityCard = memo((props: Props) => {
       <div className="text-center">
         <h6 className="cast-title fw-500">
           <Link href="/cast/detail">{props.title}</Link>
-          </h6>
-          <span className="cast-subtitle"> {props.category}</span>
-          </div>
+        </h6>
+        <span className="cast-subtitle"> {props.category}</span>
+      </div>
     </Fragment>
   );
 });

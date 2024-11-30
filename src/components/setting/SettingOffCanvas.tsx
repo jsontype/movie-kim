@@ -14,12 +14,13 @@ import * as SettingSelector from "../../store/setting/selectors";
 import ColorCustomizer from "./sections/color-customizer";
 import Direction from "./sections/direction";
 
-
 const SettingOffCanvas = memo(() => {
   const [show, setShow] = useState(false);
-  
+
   // Define selectors
-  const themeSchemeDirection = useSelector(SettingSelector.theme_scheme_direction);
+  const themeSchemeDirection = useSelector(
+    SettingSelector.theme_scheme_direction,
+  );
   const themeColor = useSelector(SettingSelector.theme_color);
   return (
     <Fragment>
@@ -90,7 +91,9 @@ const SettingOffCanvas = memo(() => {
               <Col lg={12}>
                 <div>
                   <div>
-                    <Direction themeSchemeDirection={themeSchemeDirection}></Direction>
+                    <Direction
+                      themeSchemeDirection={themeSchemeDirection}
+                    ></Direction>
                     <ColorCustomizer themeColor={themeColor}></ColorCustomizer>
                   </div>
                 </div>

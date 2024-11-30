@@ -4,9 +4,9 @@ import React, { Fragment, memo } from "react";
 import Link from "next/link";
 
 interface Props {
-  image: string,
-  title: string,
-  category: string
+  image: string;
+  title: string;
+  category: string;
 }
 
 const CastCard = memo((props: Props) => {

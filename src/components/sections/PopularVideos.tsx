@@ -7,7 +7,7 @@ import CardStyle from "../cards/CardStyle";
 //static data
 import { populerSlider } from "../../StaticData/data";
 
-const PopularVideos = memo(()=> {
+const PopularVideos = memo(() => {
   const [title] = useState("Popular Videos");
 
   return (
@@ -29,7 +29,7 @@ const PopularVideos = memo(()=> {
       </SectionSlider>
     </Fragment>
   );
-})
+});
 
-PopularVideos.displayName = 'PopularVideos';
+PopularVideos.displayName = "PopularVideos";
 export default PopularVideos;
