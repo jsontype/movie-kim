@@ -1,7 +1,7 @@
-import { meta, status } from './common';
+import { Meta, STATUS_TYPE } from './common';
 
-export type movieParentalGuides = {
-  status: status;
+export type MovieParentalGuides = {
+  status: STATUS_TYPE;
   status_message: string;
   data: {
     parental_guide_count: number;
@@ -12,5 +12,5 @@ export type movieParentalGuides = {
       }
     ];
   };
-  '@meta': meta;
+  '@meta': Meta;
 };

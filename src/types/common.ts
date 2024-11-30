@@ -1,6 +1,6 @@
-export type status = 'ok' | 'error';
+export type STATUS_TYPE = 'ok' | 'error';
 
-export type torrents = {
+export interface Torrents {
   url: string;
   hash: string;
   quality: string;
@@ -17,7 +17,7 @@ export type torrents = {
   date_uploaded_unix: number;
 };
 
-export type movies = {
+export interface Movies {
   id: number;
   url: string;
   imdb_code: string;
@@ -40,13 +40,13 @@ export type movies = {
   small_cover_image: string;
   medium_cover_image: string;
   large_cover_image: string;
-  state: status;
-  torrents: torrents[];
+  state: STATUS_TYPE;
+  torrents: Torrents[];
   date_uploaded: string;
   date_uploaded_unix: number;
 };
 
-export type movie = {
+export interface Movie {
   id: number;
   url: string;
   imdb_code: string;
@@ -69,12 +69,12 @@ export type movie = {
   small_cover_image: string;
   medium_cover_image: string;
   large_cover_image: string;
-  torrents: torrents[];
+  torrents: Torrents[];
   date_uploaded: string;
   date_uploaded_unix: number;
 };
 
-export type meta = {
+export interface Meta {
   server_time: number;
   server_timezone: string;
   api_version: number;

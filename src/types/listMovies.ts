@@ -1,13 +1,13 @@
-import { meta, movies, status } from './common';
+import { Meta, Movies, STATUS_TYPE } from './common';
 
-export type listMovies = {
-  status: status;
+export interface ListMovies {
+  status: STATUS_TYPE;
   status_message: string;
   data: {
     movie_count: number;
     limit: number;
     page_number: number;
-    movies: movies[];
+    movies: Movies[];
   };
-  '@meta': meta;
+  '@meta': Meta;
 };

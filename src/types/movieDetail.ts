@@ -1,16 +1,16 @@
-import { meta, movie, status } from './common';
+import { Meta, Movie, STATUS_TYPE } from './common';
 
-export type movieDetail = {
-  status: status;
+export interface MovieDetail extends Partial<WithImages>{
+  status: STATUS_TYPE;
   status_message: string;
   data: {
-    movie: movie;
+    movie: Movie;
   };
-  cast?: cast[];
-  '@meta': meta;
-} & Partial<withImages>;
+  cast?: Cast[];
+  '@meta': Meta;
+};
 
-export type withImages = {
+export interface WithImages {
   medium_screenshot_image1: string;
   medium_screenshot_image2: string;
   medium_screenshot_image3: string;
@@ -19,7 +19,7 @@ export type withImages = {
   large_screenshot_image3: string;
 };
 
-export type cast = {
+export type Cast = {
   name: string;
   character_name: string;
   url_small_image: string;

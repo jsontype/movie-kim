@@ -1,11 +1,11 @@
-import { meta, movies, status } from './common';
+import { Meta, Movies, STATUS_TYPE } from './common';
 
-export type movieSuggestions = {
-  status: status;
+export type MovieSuggestions = {
+  status: STATUS_TYPE;
   status_message: string;
   data: {
     movie_count: number;
-    movies: movies[];
+    movies: Movies[];
   };
-  '@meta': meta;
+  '@meta': Meta;
 };
