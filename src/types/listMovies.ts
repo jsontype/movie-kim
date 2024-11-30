@@ -1,5 +1,7 @@
 import { Meta, Movies, STATUS_TYPE } from "./common";
 
+console.log('test')
+
 export interface ListMovies {
   status: STATUS_TYPE;
   status_message: string;
