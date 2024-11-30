@@ -18,8 +18,8 @@
     "paths": {
       "@/*": ["./src/*"]
     },
-    "typeRoots": ["./typings", "./node_modules/@types"],
-    "types": ["jquery", "datatables.net"],
+    "typeRoots": ["node_modules/@types"], // "typings" 제거
+    "types": ["jquery"], // 'datatables.net' 제거
     "plugins": [
       {
         "name": "next"
